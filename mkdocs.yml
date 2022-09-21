@@ -1,0 +1,68 @@
+site_name: "Supercomputers for Starters"
+site_url: https://klust.github.io/SupercomputersForStarters
+site_dir: "site/SupercomputersForStarters"
+
+theme:
+  name: material
+  features:
+    - navigation.instant
+    - navigation.tracking
+    #- navigation.tabs
+    - navigation.top
+    - navigation.indexes
+    - header.autohide
+    - toc.follow
+  palette:
+    - primary: black
+
+nav:
+  - Home: index.md
+  - Preliminary words: 0_00_preliminary.md
+  - Introduction:
+    - 1_Introduction/index.md
+  - Processors for Supercomputers:
+    - 2_Processors/index.md
+  - The memory hierarchy:
+    - 3_Memory/index.md
+  - Storing data on Supercomputers:
+    - 4_Storage/index.md
+  - Middleware:
+    - 5_Middleware/index.md
+  - What can we expect?:
+    - 6_Expectations/index.md
+  - Accelerators:
+    - 7_Accelerators/index.md
+  - Conclusions:
+    - 8_Conclusions/index.md
+
+
+plugins:
+  # show revision date at bottom of each page
+  - git-revision-date-localized
+  # necessary for search to work
+  - search
+
+markdown_extensions:
+  # notes, warnings, hints, ...
+  - admonition
+  # code blocks with syntax highlighting, graphs
+  - pymdownx.superfences:
+        custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  # clickable details
+  - pymdownx.details
+  # tabbed contents
+  - pymdownx.tabbed
+  - toc:
+      permalink: true
+
+extra:
+  # add links in bottom right
+  social:
+    #- type: github
+    #  icon: octicons/logo-github
+    #  link: https://github.com/klust
+    - icon: fontawesome/brands/youtube
+      link: https://www.youtube.com/channel/UC3szWMS7glcfWsEZTZXQ1oQ
