@@ -20,6 +20,7 @@ nav:
   - Preliminary words: 0_00_preliminary.md
   - Introduction:
     - 1_Introduction/index.md
+    - Goals: 1_Introduction/1_01_Goals.md
   - Processors for Supercomputers:
     - 2_Processors/index.md
   - The memory hierarchy:
