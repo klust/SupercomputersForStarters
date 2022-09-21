@@ -21,7 +21,10 @@ you are using and the needs of the software you're using. In fact, if the softwa
 exploit the hardware of the supercomputer, you should be using a different type of computing such as simply
 a more powerful PC, or in some cases a cloud workstation.
 
-Some inspiration for these lecture n otes comes from looking at the manuals of some software packages that
+Another goal is also to make it very clear that a supercomputer is not a superscaled PC that does
+everything in a magical way much faster than a PC.
+
+Some inspiration for these lecture notes comes from looking at the manuals of some software packages that
 users of the CalcUA infrastrucgture use or have used, including CP2K, OpenMX, QuantumESPRESSO, Gromacs and SAMtools,
 and checking which terminology those packages use. In fact, the GROMACS manual even contains a section that tries 
 to explain in short many of the terms (and even some more) that we discuss in these notes.
