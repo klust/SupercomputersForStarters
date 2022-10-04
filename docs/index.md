@@ -30,5 +30,7 @@
 
     -   [Offloading](7_Accelerators/7_02_Offloading.md)
 
+    -   [CPUs with accelerator features](7_Accelerators/7_03_CPUs_accelerator_features.md)
+
 -   [Conclusions](8_Conclusions/index.md)
 
