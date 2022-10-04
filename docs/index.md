@@ -10,7 +10,7 @@
 
     -   [What it is not](1_Introduction/1_03_What_it_is_not.md)
 
-    -   [A compartmentalised machine](1_Introduction/1_04_Compartmentalised.md)
+    -   [A compartmentalised supercomputer](1_Introduction/1_04_Compartmentalised.md)
 
     -   [Overview of the notes](1_Introduction/1_05_Overview.md)
 

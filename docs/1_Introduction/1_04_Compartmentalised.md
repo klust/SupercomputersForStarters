@@ -1,4 +1,4 @@
-# A compmartmentalised supercomputer
+# A compartmentalised supercomputer
 
 Even though a supercomputer usually runs some variant of Linux, it does work differently
 from a regular Linux workstation or server. When you log on on a PC, you immediately get
