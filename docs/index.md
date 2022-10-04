@@ -26,5 +26,9 @@
 
 -   [Accelerators](7_Accelerators/index.md)
 
+    -   [What are accelerators?](7_Accelerators/7_01_What_are_accelerators.md)
+
+    -   [Offloading](7_Accelerators/7_02_Offloading.md)
+
 -   [Conclusions](8_Conclusions/index.md)
 
