@@ -34,5 +34,9 @@
 
     -   [Accelerator programming](7_Accelerators/7_04_Programming_accelerators.md)
 
+    -   [Status of GPU computing](7_Accelerators/7_05_Status_GPU_computing.md)
+
+    -   [Further reading](7_Accelerators/7_06_Further_reading.md)
+
 -   [Conclusions](8_Conclusions/index.md)
 
