@@ -31,6 +31,8 @@ nav:
     - 3_Memory/index.md
   - Storing data on Supercomputers:
     - 4_Storage/index.md
+    - Introduction: 7_Accelerators/7_06_Further_reading.md
+    - Problems: 4_Storage/4_02_Problems.md
   - Middleware:
     - 5_Middleware/index.md
   - What can we expect?:

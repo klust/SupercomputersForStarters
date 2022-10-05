@@ -20,6 +20,10 @@
 
 -   [Storing data on supercomputers](4_Storage/index.md)
 
+    -   [Introduction](4_Storage/4_01_Introduction.md)
+
+    -   [Problemms with a parallel disk setup](4_Storage/4_02_Problems.md)
+
 -   [Middleware](5_Middleware/index.md)
 
 -   [What can we expect?](6_Expectations/index.md)
