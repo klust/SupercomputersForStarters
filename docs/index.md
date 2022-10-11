@@ -26,6 +26,8 @@
 
     -   [Parallel file systems](4_Storage/4_03_Parallel_filesystems.md)
 
+    -   [A storage revolution?](4_Storage/4_04_Revolution.md)
+
 -   [Middleware](5_Middleware/index.md)
 
 -   [What can we expect?](6_Expectations/index.md)
