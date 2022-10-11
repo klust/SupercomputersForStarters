@@ -85,5 +85,123 @@ Examples of this approach are the [Lustre](https://www.lustre.org/) and
 
 ## Physics and the network
 
+On your PC, the storage sits both physically and logically very close to the processor. 
+The fastest SSDs, NVMe drives, are often even directly connected to the CPU, and on the
+M-series MAc this is even taken one step further, with part of the drive (the controller) 
+integrated into the CPU (though this probably saves more on power consumption than it
+gives additional speed). Moreover, at the logical level, there is only one file system
+in between your program and the drive. The program talks directly to the OS which talks 
+directly to the drive.
+
+With shared storage on a supercomputer the picture is very different. The storage is
+both physically and logically further away from your application. Physically because
+there are (at least) two processors and a network involved (and on the server side disks
+usually not be as close to the processor as on your PC, except in some of the most expensive
+storage systems). The physical delay caused by the network may not be that important with
+hard disk storage, but it is important when accdessing SSDs or cached storage. 
+The software adds even more delays. After all, your program talks to a network file system
+which then sends the request to the server where it also has to pass through multiple layers
+of software: through the network stack, to the file server software, to the file system (which may
+be similar to that on your PC but doesn't have to), and back through the network stack before
+the answer to the request is off again to your application, where it also first has to pass
+through the network stack and network file system again.
+
+Parallel file systems often have an optimised and shorter route for reading and writing data,
+but often at the cost of more costly open and close operations and hence a very high cost
+for access to small files. And the path is still much, much longer than that to a local drive.
+
+This comes with a number of consequences:
+
+-   Programs that open and close hundreds of small files in a short time may work slower than
+    on a PC. This is particularly true if all data access comes from a simgle thread as your
+    program will be waiting for data all the time. That software also puts a very high load on\
+    the file systems of a supercomputer, to the extent that several supercomputer centres nowadays
+    take measures to keep that software off the supercomputers.
+
+-   Unpredictable file access patterns may make things even worse as any logic to prefetch data\
+    and hide latency will fail.
+
+One may wonder why supercomputers don't always provide local drives to cope with the slowness of
+shared storage. There are many reasons:
+
+-   From a management point of view, there are several problems. The management environment has
+    to clean them at the end of a job, but it is not always clear which files can be removed if
+    multiple jobs are allowed to run on a single node of the supercomputer. And the software that
+    needs to local storage most, also tends to be the software that cannot use a full node of a
+    supercomputer efficiently.
+
+    Modern Linux does have a solution to the cleaning problem (namespaces), but that solution then comes with
+    other restrictions that users may have trouble living with, e.g., starting processes on
+    other nodes should always be done through the resource manager software to ensure that the
+    processes start in the right namespace. Which implies that, e.g., `ssh`, a very popular
+    mechanism to start a session on a different host, should not be used. 
+
+    Moreover, the data becomes inaccessible to the user when the job ends, so if the so-called
+    *job script*, the script that instructs the supercomputer what to do, is ended because the
+    resources expire or because of a crash, the data on the local drive will be lost to the user.
+    For reading one also loses time as the data needs to be copied first to the local drive.
+
+-   It is physically also not easy to add local drives to a supercomputer node. Supercomputer nodes
+    are built with very high density as it is important to keep all links in a supercomputer as short
+    as possible to minimise communication delays between nodes. Modern CPUs and GPUs run very hot,
+    while storage prefers a lower temperature. 
+
+    On an air cooled node, the storage has to be early in the air flow through the node as once the
+    air has gone through the CPU or GPU coolers, it is way too hot to cool the storage sufficiently.
+    But given the small size of a supercomputer node, those storage devices may hinder the air flow
+    through the node and hence make the cooling less effective. 
+
+    On a water cooled node, things aren't that much easier though the situation is improving. As 
+    M-type SSDs (those that you insert in a slot on the motherboard close to the CPU) nowadays
+    even need cooling in a regular PC, they have been made more friendly to the addition of cooling
+    elements.
+
+-   However, reliability of SSD drives is also an issue. SSD drives based on flash memory (which is
+    currently practically any drive still in production) have a limited life span under a heavy write
+    load, while the use suggested here, as a temporary buffer for the duration of a job, is precisely
+    a scenario with a high write load. 
+
+    Replacing broken hardware is an issue, made worst because of the dense construction of a supercomputer.
+
+One may wonder why local drives are so much more common in cloud infrastructure. The constraints in cloud
+infrastructure are different. 
+
+-   Supercomputers, with the exception of some commercial clusters, are built to be as cost-effective as
+    possible. So one tends to solve problems with better software rather than adding more hardware.
+
+    Cloud infrastructures on the other hand are usually commercial offerings. They are built at a very
+    large scale, with often an even more custom hardware design, and they are simply overprovisioned.
+    E.g., a server may have two SSD drives where the software will simply switch over to the second\
+    drive when the first one breaks, but the broken one will never be replaced.
+
+-   The management model of a cloud infrastructure is also very different. Cloud is based on virtualisation
+    technologies to isolate users, and let users built a virtual network of servers in which regular Linux
+    access methods can be used. These layers of software add additional overhead (even with hardware features
+    to support virtualisation) which is undesirable on a supercomputer where each additional 100 nanoseconds of
+    communication delay may limit how far a job can scale on the computer. Note though that the virtualisation
+    overhead, thanks to hardware support, has become low enough that small supercomputer jobs can run very
+    well on some cloud infrastructures.
 
 
+## Metadata
+
+Each file contains both the actual data in the file, and so-called metadata such as the name of the file,
+access rights to the file, the date of creation and of last use, ... 
+This metadata is stored in a directory which on a traditional file system with folder and subfolder structure
+is a special type of file for each (sub)directory. 
+This implies that if you do many small disk accesses to files in the same directory, or store a lot of files
+in a single directory and access them simultaneously, you create a bottleneck as many updates are needed 
+to that directory. Most file systems are not very good at parallelising that directory access.
+
+Bad patterns of metadata access are probably the most common source for performance problems on supercomputer
+file systems. A typical scenario is when in a distributed memory application, each process creates its own
+set of files in the same shared directory, rather than use a feature called parallel file I/O to create
+a few giant files to which data is written in orchestrated multi-node operations. This can bring almost
+every supercomputer file system to its knees. Building a file system that can cope with this load might
+be technologically impossible or would at least make storage an order of magnitude more expensive.
+
+An equally stupid idea is to open a file before every write and then close it again to ensure that data is
+written to disk immediately. This is already an expensive operation on a PC with local storage that will
+slow down your program a lot if those writes are very frequent, but it will kill almost any networked file
+system and is even worse for the so-called parallel file systems on supercomputers as they tend to have
+more expensive open and close operations.
