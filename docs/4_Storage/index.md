@@ -4,3 +4,5 @@
 
 -   [Problems with a parallel disk setup](4_02_Problems.md)
 
+-   [Parallel file systems](4_03_Parallel_filesystems.md)
+

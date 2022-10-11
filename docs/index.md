@@ -24,6 +24,8 @@
 
     -   [Problemms with a parallel disk setup](4_Storage/4_02_Problems.md)
 
+    -   [Parallel file systems](4_Storage/4_03_Parallel_filesystems.md)
+
 -   [Middleware](5_Middleware/index.md)
 
 -   [What can we expect?](6_Expectations/index.md)

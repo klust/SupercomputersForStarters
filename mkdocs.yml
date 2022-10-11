@@ -33,6 +33,7 @@ nav:
     - 4_Storage/index.md
     - Introduction: 4_Storage/4_01_Introduction.md
     - Problems: 4_Storage/4_02_Problems.md
+    - Parallel file systems: 4_Storage/4_03_Parallel_filesystems.md
   - Middleware:
     - 5_Middleware/index.md
   - What can we expect?:
