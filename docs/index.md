@@ -28,6 +28,8 @@
 
     -   [A storage revolution?](4_Storage/4_04_Revolution.md)
 
+    -   [To remember](4_Storage/4_05_To_remember.md)
+
 -   [Middleware](5_Middleware/index.md)
 
 -   [What can we expect?](6_Expectations/index.md)
