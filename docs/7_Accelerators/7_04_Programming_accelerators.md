@@ -134,11 +134,12 @@ spin-off creating tools for accelerator programming that failed in 2013.
 The OpenACC standard is currently controlled by the OpenACC Organization, and though it does
 count other companies that develop GPUs among its members, it still seems rather dominated by
 NVIDIA which may explain why other companies are somewhat hesitant to pick up the standard.
-The standard is at the time of writing of this section at version 2.7, released in November 2018.
+The standard is at the time of writing of this section at version 3.1, released in November 2021,
+but is updated almost annually in November.
 
 OpenACC is well supported on NVIDIA hardware through the NVIDIA HPC compilers (which is the 
 new name of the PGI compilers adopted after the integration of PGI in NVIDIA). GCC offers some 
-support on NVIDIA and some AMD hardware for version 2.6 of the standard since version 10 of the
+support on NVIDIA and some AMD hardware for version 2.6 of the standard (the Nobemver 2017 version) since version 10 of the
 GCC compilers., but the evolution is slow and performance is often not that great.
 More promising for the future is the work going on in the clang/LLVM community to support
 OpenACC, as this effort is largely driven by the USA national labs who want to avoid having
@@ -151,7 +152,8 @@ C++-support, with NVIDIA and AMD still using a Fortran front-end developed by PG
 to the LLVM project while Intel is already experimenting with a new community-developed
 more modern front-end for Fortran. OpenACC support in the LLVM ecosystem will build upon the
 OpenMP support, the technology that we will discuss next, using extensions for those OpenACC
-features that still have no equivalent in OpenMP.
+features that still have no equivalent in OpenMP. Howver, as of version 2015 (summer 2022)
+this support is still very incomplete and experimental.
 
 
 ### OpenMP

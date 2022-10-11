@@ -44,6 +44,8 @@
 
     -   [The OpenACC Organization](https://www.openacc.org)
 
+    -   [Clacc, OpenACC in LLVM project page](https://csmd.ornl.gov/project/clacc)
+
 -   OpenMP
 
     -   [OpenMP Architecture Review Board web site](https://www.openmp.org/)
