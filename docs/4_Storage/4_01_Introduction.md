@@ -17,7 +17,7 @@ to appear as one large and very fast disk.
 In fact, some of this technology is even used in PCs and smartphones as an SSD
 drive also uses multiple memory chips and exploits parallelism to get more performance
 out of the drive as would be possible with a single chip. This is why, e.g.,
-[the 256 GB hard drive in the M2 MAcBook Pro is slower than the 512 GB one](https://arstechnica.com/gadgets/2022/06/m2-macbook-pros-256gb-ssd-is-only-about-half-as-fast-as-the-m1-versions/)
+[the 256 GB hard drive in the M2 MacBook Pro is slower than the 512 GB one](https://arstechnica.com/gadgets/2022/06/m2-macbook-pros-256gb-ssd-is-only-about-half-as-fast-as-the-m1-versions/)
 as it simply doesn't contain enough memory chips to get sufficient parallelism
 and saturate the drive controller.
 
