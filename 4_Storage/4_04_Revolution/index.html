@@ -8,14 +8,14 @@
       
       
       
-        <link rel="canonical" href="https://klust.github.io/SupercomputersForStarters/4_Storage/4_02_Problems/">
+        <link rel="canonical" href="https://klust.github.io/SupercomputersForStarters/4_Storage/4_04_Revolution/">
       
       <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.2.5">
     
     
       
-        <title>Problems - Supercomputers for Starters</title>
+        <title>A storage revolution? - Supercomputers for Starters</title>
       
     
     
@@ -65,7 +65,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#problems-with-a-parallel-disk-setup" class="md-skip">
+        <a href="#a-storage-revolution" class="md-skip">
           Skip to content
         </a>
       
@@ -98,7 +98,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Problems
+              A storage revolution?
             
           </span>
         </div>
@@ -503,73 +503,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Problems
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../4_02_Problems/" class="md-nav__link">
         Problems
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#disks-break" class="md-nav__link">
-    Disks break
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#file-system-block-size" class="md-nav__link">
-    File system block size
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#physics-and-the-network" class="md-nav__link">
-    Physics and the network
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#metadata" class="md-nav__link">
-    Metadata
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -593,11 +531,66 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../4_04_Revolution/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          A storage revolution?
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         A storage revolution?
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#why-are-flash-based-ssds-not-the-solution" class="md-nav__link">
+    Why are flash-based SSDs (not) the solution?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#new-memory-types-for-a-revolution" class="md-nav__link">
+    New memory types for a revolution?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#local-storage-in-supercomputer-nodes" class="md-nav__link">
+    Local storage in supercomputer nodes
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -926,29 +919,22 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#disks-break" class="md-nav__link">
-    Disks break
+  <a href="#why-are-flash-based-ssds-not-the-solution" class="md-nav__link">
+    Why are flash-based SSDs (not) the solution?
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#file-system-block-size" class="md-nav__link">
-    File system block size
+  <a href="#new-memory-types-for-a-revolution" class="md-nav__link">
+    New memory types for a revolution?
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#physics-and-the-network" class="md-nav__link">
-    Physics and the network
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#metadata" class="md-nav__link">
-    Metadata
+  <a href="#local-storage-in-supercomputer-nodes" class="md-nav__link">
+    Local storage in supercomputer nodes
   </a>
   
 </li>
@@ -967,195 +953,341 @@
                 
 
 
-<h1 id="problems-with-a-parallel-disk-setup">Problems with a parallel disk setup<a class="headerlink" href="#problems-with-a-parallel-disk-setup" title="Permanent link">&para;</a></h1>
-<h2 id="disks-break">Disks break<a class="headerlink" href="#disks-break" title="Permanent link">&para;</a></h2>
-<p>Hard drives fail rather often. And though SSDs may not contain moving parts, when not
-used in the right way they are not that much more reliable. Given that a single drive
-on average fails after 1 or 2 million hours (which may seem a lot), in a stack of 
-a thousand drives one can expect that a drive might fail every 50 to 100 days.
-Loosing some data every 50 days is already bad, but if all disks are combined with
-software to a single giant disks with even average sized files spread out over 
-multiple disks for performance, much more data will be damaged than that single disk
-can contain. This is clearly unacceptable. Moreover, we don't want to stop
-a supercomputer every 50 or 100 days because the file system needs repairs. 
-Let alone that big supercomputers have even bigger disk systems...</p>
-<p>The solution is to use extra disks to store enough information to recover lost
-data by using error correcting codes. Now hard disks and SSDs are block-oriented media:
-data is stored in blocks, often 4 kiB in size, so the error correction is done at the
-block level. A typical setup would be to use 8 drives with 2 drives for the error 
-correction information, which can support up to two drive failures in the group of 10.
-But that has implications for reading and writing data. This is especially true for
-writing data, as whenever data is written to a block on one disk, the corresponding blocks
-on the disks with the error correction information must also be updated. And that requires
-also first reading data to be able to compute the changes in the error correcting information.
-Unless of course all corresponding blocks on the 8 disks would be written concurrently, as
-the we already have all the information to also compute the error correction 
-information. But that makes the optimal block size for writing data effectively 8 times 
-larger...</p>
-<p>For reading data in such a setup you can actually already benefit as you can read from
-all drives involved in parallel.</p>
-<p>This technique is also known as RAID, Redundant Array of Inexpensive Disks, and there
-exist several variants of this technique, some only to increase performance and others to
-improve reliability also.</p>
-<p>Error correction codes are in fact also used to protect
-RAM memory in servers and supercomputers, or internally in flash drives, and sometimes
-also in communication protocols (though they may use other techniques also).</p>
-<h2 id="file-system-block-size">File system block size<a class="headerlink" href="#file-system-block-size" title="Permanent link">&para;</a></h2>
-<p>A file system organizes files in one or more blocks (which can be different from the blocks
-on disk). A block in a file system is the smallest element of data that a file system can 
-allocate and manage.</p>
-<p>On a PC, the block size of the file system used to be 512 bytes though now it is often 4 kiB.
-However, on a supercomputer this would lead to an enormous amount of blocks which would become
-impossible to manage. </p>
-<p>There are two solutions for that. One solution is to simply use a larger block size, which is the
-case in, e.g., the IBM Spectrum Scale file system. Larger blocks are also a better fit with the
-RAID techniques used to increase the reliability of the storage system. However, as the block is
-the smallest amount of storage that can be allocated in a file system, it also implies that very small
-files will still take a lot of space on such a file system (the size of a block), though some file systems
-may have a solution for really small files. This can lead to a waste of space if many small files
-are used like that. The disk setup used at the UAntwerp HPC service until 2020 suffered from this problem.
-In fact, we once had a user who managed to store 36 bytes worth of data while consuming over 640 kiB on the file 
-system as each of the 5 numbers were written to a separate file, effectively using 128 kiB per number (the block
-size of that file system) and 512 bytes to store the directory information for each file. Now the first 
-IBM-compatible PCs had a memory limit of 640 kiB...</p>
-<p>The second solution is to use a 2-level hierarchy. Big files are split in a special way in smaller files
-called objects that are then stored on smaller separate servers called the object servers. 
-As these servers are smaller, they can use
-a smaller block size. And small files would use only a single object, making the smallest amount of disk space
-consumed by a file the block size of a single object server. 
-Examples of this approach are the <a href="https://www.lustre.org/">Lustre</a> and 
-<a href="https://thinkparq.com/products/beegfs/">BeeGFS</a> file system used in supercomputing.</p>
-<details class="info">
-<summary>UAntwerp-specific</summary>
-<p>The supercomputer storage of the CalcUA facility of the University of Antwerp used the IBM Spectrum Scale
-file system (then still known as GPFS) for its disk volumes. The scratch storage had a block size
-of 128 kiB. One user managed to store 36 bytes worth of data while consuming over 640 kiB on the file 
-system as each of the 5 numbers were written to a separate file, effectively using 128 kiB per number (the block
-size of that file system) and 512 bytes to store the directory information for each file. 
-And that user ran thousands of tests each storing
-5 such files... Now remember the first IBM-compatible PCs had a memory limit of 640 kiB and students had
-to use those to write a complete Ph.D. thesis...</p>
-<p>The storage that was installed in 2020 at the CalcUA service uses <a href="https://thinkparq.com/products/beegfs/">BeeGFS</a>
-for the file system. Which comes with its own problems as we shall see later.</p>
+<h1 id="a-storage-revolution">A storage revolution?<a class="headerlink" href="#a-storage-revolution" title="Permanent link">&para;</a></h1>
+<h2 id="why-are-flash-based-ssds-not-the-solution">Why are flash-based SSDs (not) the solution?<a class="headerlink" href="#why-are-flash-based-ssds-not-the-solution" title="Permanent link">&para;</a></h2>
+<details>
+<summary>University of Antwerp-specific</summary>
+<p>The joint bandwidth on the BeeGFS scratch file system at the CalcUA compute
+service in use in 2022 is on the order of 7 GB/s. At the same time,
+some NVMe SSDs for PCIe 4 also claim to offer a read bandwidht of 7 GB/s
+and a write bandwidth that is not that much lower.</p>
+<p>So one could wonder if we shouldn't use 105 of those drives instead.</p>
+<p>There is of course the cost of the drives. But also a lot more server
+hardware would be needed simply to connect the drives and also to
+support the bandwidth over the interconnect.</p>
 </details>
-<h2 id="physics-and-the-network">Physics and the network<a class="headerlink" href="#physics-and-the-network" title="Permanent link">&para;</a></h2>
-<p>On your PC, the storage sits both physically and logically very close to the processor. 
-The fastest SSDs, NVMe drives, are often even directly connected to the CPU, and on the
-M-series MAc this is even taken one step further, with part of the drive (the controller) 
-integrated into the CPU (though this probably saves more on power consumption than it
-gives additional speed). Moreover, at the logical level, there is only one file system
-in between your program and the drive. The program talks directly to the OS which talks 
-directly to the drive.</p>
-<p>With shared storage on a supercomputer the picture is very different. The storage is
-both physically and logically further away from your application. Physically because
-there are (at least) two processors and a network involved (and on the server side disks
-usually not be as close to the processor as on your PC, except in some of the most expensive
-storage systems). The physical delay caused by the network may not be that important with
-hard disk storage, but it is important when accdessing SSDs or cached storage. 
-The software adds even more delays. After all, your program talks to a network file system
-which then sends the request to the server where it also has to pass through multiple layers
-of software: through the network stack, to the file server software, to the file system (which may
-be similar to that on your PC but doesn't have to), and back through the network stack before
-the answer to the request is off again to your application, where it also first has to pass
-through the network stack and network file system again.</p>
-<p>Parallel file systems often have an optimised and shorter route for reading and writing data,
-but often at the cost of more costly open and close operations and hence a very high cost
-for access to small files. And the path is still much, much longer than that to a local drive.</p>
-<p>This comes with a number of consequences:</p>
-<ul>
-<li>
-<p>Programs that open and close hundreds of small files in a short time may work slower than
-    on a PC. This is particularly true if all data access comes from a simgle thread as your
-    program will be waiting for data all the time. That software also puts a very high load on\
-    the file systems of a supercomputer, to the extent that several supercomputer centres nowadays
-    take measures to keep that software off the supercomputers.</p>
-</li>
-<li>
-<p>Unpredictable file access patterns may make things even worse as any logic to prefetch data\
-    and hide latency will fail.</p>
-</li>
-</ul>
-<p>One may wonder why supercomputers don't always provide local drives to cope with the slowness of
-shared storage. There are many reasons:</p>
-<ul>
-<li>
-<p>From a management point of view, there are several problems. The management environment has
-    to clean them at the end of a job, but it is not always clear which files can be removed if
-    multiple jobs are allowed to run on a single node of the supercomputer. And the software that
-    needs to local storage most, also tends to be the software that cannot use a full node of a
-    supercomputer efficiently.</p>
-<p>Modern Linux does have a solution to the cleaning problem (namespaces), but that solution then comes with
-other restrictions that users may have trouble living with, e.g., starting processes on
-other nodes should always be done through the resource manager software to ensure that the
-processes start in the right namespace. Which implies that, e.g., <code>ssh</code>, a very popular
-mechanism to start a session on a different host, should not be used. </p>
-<p>Moreover, the data becomes inaccessible to the user when the job ends, so if the so-called
-<em>job script</em>, the script that instructs the supercomputer what to do, is ended because the
-resources expire or because of a crash, the data on the local drive will be lost to the user.
-For reading one also loses time as the data needs to be copied first to the local drive.</p>
-</li>
-<li>
-<p>It is physically also not easy to add local drives to a supercomputer node. Supercomputer nodes
-    are built with very high density as it is important to keep all links in a supercomputer as short
-    as possible to minimise communication delays between nodes. Modern CPUs and GPUs run very hot,
-    while storage prefers a lower temperature. </p>
-<p>On an air cooled node, the storage has to be early in the air flow through the node as once the
-air has gone through the CPU or GPU coolers, it is way too hot to cool the storage sufficiently.
-But given the small size of a supercomputer node, those storage devices may hinder the air flow
-through the node and hence make the cooling less effective. </p>
-<p>On a water cooled node, things aren't that much easier though the situation is improving. As 
-M-type SSDs (those that you insert in a slot on the motherboard close to the CPU) nowadays
-even need cooling in a regular PC, they have been made more friendly to the addition of cooling
-elements.</p>
-</li>
-<li>
-<p>However, reliability of SSD drives is also an issue. SSD drives based on flash memory (which is
-    currently practically any drive still in production) have a limited life span under a heavy write
-    load, while the use suggested here, as a temporary buffer for the duration of a job, is precisely
-    a scenario with a high write load. </p>
-<p>Replacing broken hardware is an issue, made worst because of the dense construction of a supercomputer.</p>
-</li>
-</ul>
-<p>One may wonder why local drives are so much more common in cloud infrastructure. The constraints in cloud
-infrastructure are different. </p>
-<ul>
-<li>
-<p>Supercomputers, with the exception of some commercial clusters, are built to be as cost-effective as
-    possible. So one tends to solve problems with better software rather than adding more hardware.</p>
-<p>Cloud infrastructures on the other hand are usually commercial offerings. They are built at a very
-large scale, with often an even more custom hardware design, and they are simply overprovisioned.
-E.g., a server may have two SSD drives where the software will simply switch over to the second\
-drive when the first one breaks, but the broken one will never be replaced.</p>
-</li>
-<li>
-<p>The management model of a cloud infrastructure is also very different. Cloud is based on virtualisation
-    technologies to isolate users, and let users built a virtual network of servers in which regular Linux
-    access methods can be used. These layers of software add additional overhead (even with hardware features
-    to support virtualisation) which is undesirable on a supercomputer where each additional 100 nanoseconds of
-    communication delay may limit how far a job can scale on the computer. Note though that the virtualisation
-    overhead, thanks to hardware support, has become low enough that small supercomputer jobs can run very
-    well on some cloud infrastructures.</p>
-</li>
-</ul>
-<h2 id="metadata">Metadata<a class="headerlink" href="#metadata" title="Permanent link">&para;</a></h2>
-<p>Each file contains both the actual data in the file, and so-called metadata such as the name of the file,
-access rights to the file, the date of creation and of last use, ... 
-This metadata is stored in a directory which on a traditional file system with folder and subfolder structure
-is a special type of file for each (sub)directory. 
-This implies that if you do many small disk accesses to files in the same directory, or store a lot of files
-in a single directory and access them simultaneously, you create a bottleneck as many updates are needed 
-to that directory. Most file systems are not very good at parallelising that directory access.</p>
-<p>Bad patterns of metadata access are probably the most common source for performance problems on supercomputer
-file systems. A typical scenario is when in a distributed memory application, each process creates its own
-set of files in the same shared directory, rather than use a feature called parallel file I/O to create
-a few giant files to which data is written in orchestrated multi-node operations. This can bring almost
-every supercomputer file system to its knees. Building a file system that can cope with this load might
-be technologically impossible or would at least make storage an order of magnitude more expensive.</p>
-<p>An equally stupid idea is to open a file before every write and then close it again to ensure that data is
-written to disk immediately. This is already an expensive operation on a PC with local storage that will
-slow down your program a lot if those writes are very frequent, but it will kill almost any networked file
-system and is even worse for the so-called parallel file systems on supercomputers as they tend to have
-more expensive open and close operations.</p>
+<p>The following table shows prices and properties for some drives in early 2022:</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Seagate Exos X20</th>
+<th>Seagate Nytro 3732</th>
+<th>Seagate  Nytro 3332</th>
+<th>Samsung 980 Pro</th>
+<th>Samsung 970 EVO Plus</th>
+<th>Samsung 870 QVO</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Technology</td>
+<td>spinning magnetic disks</td>
+<td>3D eTLC NAND flash</td>
+<td>3D eTLC NAND flash</td>
+<td>TLC V-NAND flash</td>
+<td>TLC V-NAND flash</td>
+<td>QLC V-NAND Flash</td>
+</tr>
+<tr>
+<td>Market</td>
+<td>datacenter (SAS)</td>
+<td>datacenter (SAS)</td>
+<td>datacenter (2xSAS)</td>
+<td>prosumer (NVMe)</td>
+<td>consumer (NVMe)</td>
+<td>consumer (SATA)</td>
+</tr>
+<tr>
+<td>Capacity</td>
+<td>20 TB</td>
+<td>3.2 TB</td>
+<td>15.36 TB</td>
+<td>2 TB</td>
+<td>2 TB</td>
+<td>8 TB</td>
+</tr>
+<tr>
+<td>Read speed</td>
+<td>0.28 GB/s</td>
+<td>1.1 GB/s</td>
+<td>1.05-2.1 GB/s</td>
+<td>7 GB/s</td>
+<td>3.5 GB/s</td>
+<td>0.56 GB/s</td>
+</tr>
+<tr>
+<td>Write speed</td>
+<td>0.28 GB/s</td>
+<td>1 GB/s</td>
+<td>0.95-1 GB/s</td>
+<td>5.1 GB/s</td>
+<td>3.3 GB/s</td>
+<td>0.53 GB/s</td>
+</tr>
+<tr>
+<td>Latency</td>
+<td>4,16 ms</td>
+<td>20 µs ???</td>
+<td>20 µs ???</td>
+<td>20 µs ???</td>
+<td>20 µs ???</td>
+<td>20 µs ???</td>
+</tr>
+<tr>
+<td>Endurance</td>
+<td>?</td>
+<td>58.4 PB</td>
+<td>28 PB</td>
+<td>1.2 PB</td>
+<td>1.2 PB</td>
+<td>2.88 PB</td>
+</tr>
+<tr>
+<td>DWPD</td>
+<td>?</td>
+<td>10</td>
+<td>1</td>
+<td>0,33</td>
+<td>0.33</td>
+<td>0.2 (@5 year)</td>
+</tr>
+<tr>
+<td>Data written/day</td>
+<td>?</td>
+<td>32 TB/day</td>
+<td>15.3 TB/day</td>
+<td>0.66 TB/day</td>
+<td>0.66 TB/day</td>
+<td>1.5 TB/day</td>
+</tr>
+<tr>
+<td>Time needed</td>
+<td></td>
+<td>8h50m</td>
+<td>4h15m</td>
+<td>2m9s</td>
+<td>3m20 s</td>
+<td>50 m</td>
+</tr>
+<tr>
+<td>Price</td>
+<td>0.025-0.05 €/GB</td>
+<td>0,85 €/GB</td>
+<td>0,31 €/GB</td>
+<td>0.16 €/GB</td>
+<td>0.12 €/GB</td>
+<td>0.08 €/GB</td>
+</tr>
+</tbody>
+</table>
+<p>In this table we compare a popular high-quality hard drive for use in the datacenter with several
+NAND flash based drives, ordered from the highest to the lowest quality measured in durability first
+and speed second.</p>
+<p>The Nytro 3732 is a very high endurance drive but only exists in relatively small capacities.
+It uses a SAS interface which is very popular in servers as it is a good interface to build
+large disk systems, where the drives are also further away from the CPU or in this case the
+drive controller. The 3332 is a somewhat similar drive but with much higher capacity but lower
+endurance. It has two SAS interfaces that can be used to get double the bandwidth.
+The Samsung 980 Pro is a NVMe drive in M.2-format, meant to be put in a PCIe 4 slot on
+the motherboard. This is a much faster interface than the one used in the two Nytro drives,
+which also explains its very high speed. But it is also a less scalable interface as long
+distance connections would be expensive, as are the switches that would be needed if the
+CPU does ot provide enough PCIe connections itself. The Samsung 970 EVO Plus is a slightly
+lower-end drive with a slower interface. All these drives use so-called TCL NAND, which
+stands for Triple Level Cell NAND, meaning that it stores 3 bits per memory cell. 
+The last drive, the Samsung 870 QVO differs in two aspects from the other SAMSUNG drives
+and the datacenter drives: It uses QLC NAND, which stores 4 bits per cell, making it a bit
+cheaper, but also uses a much slower interface, SATA, which is an older interface that was
+very popular for hard disks in PCs. It also has a hard disk form factor and is not one that
+you plug in on the motherboard as the other two Samsung drives.</p>
+<p>For each of the drive series, we compare the larger capacity SKUs that one can get as after
+all we are interested in building big storage systems and as they also tend to be relatively
+cheaper. For SSDs, the larger capacity drives are sometimes also a bit faster than the lower
+capacity ones in the same series. This is because a flash drive itself is already a highly
+parallel device using parallelism over multiple banks of flash memory chips to increase
+the speed. The smaller drives in a given series may not have enough banks of flash memory
+to fully exploit all the parallelism that the controller chip of the drive (itself a
+processor more powerful than those in the first smartphones) is capable of using.</p>
+<p>The main weakness of hard drives and strength of flash drives becomes immediately clean
+when we look at the rows for (peak) read and write speed and for latency: Hard disks have 
+much lower peak read and write speeds and a latency that is orders of magnitude higher.
+Note that we did not find precise latency numbers for the flash drives in the table,
+but the numbers are a reasonable estimate based on other drives for which the data
+was available. One should be careful interpreting the write bandwidth. Hard disks become
+slower for both reading and writing as they fill up partly because of mechanical reasons as 
+the outer zones of the drive are also used and the read and write heads have to move more,
+and partly because of a phenomenon known as drive fragmentation, where data that belongs
+together gets spread all over the disk instead of stored in a single zone of the disk. 
+There is software to try to correct the latter. But SSDs also get slower the more data
+is already on them, and this is more pronounced the more bits are stored per memory cell. 
+But SSDs have another problem: Just as regular hard drives, data is written in blocks.
+But data cannot be erased or overwritten in single blocks. Before overwriting data,
+the block has to be erased, but this can only be done in clusters of blocks. Therefore,
+if a drive is getting full and data is written and rewritten all the time, the drive
+has to reorganise its storage all the time which can lead to write speeds that are 
+much lower than on a well-organised hard disk. Some modern hard disks with very high capacity
+also have a similar problem, but those are only used for archiving while slightly lower
+capacity drives that don't have this problem are used for more active storage.
+And another problem is with drives that store multiple bits per cell, which is currently
+basically all drives. When the drive is rather empty and only one bit needs to be stored
+per cell, write speeds are much higher than when the drive is filling up and 3 or 4 bits are
+stored per cell.</p>
+<p>The table does however clearly show another problem of SSDs: endurance. Unfortunately 
+endurance for hard disks and SSDs is measure differently so that it is hard to compare
+in the table. But basically, the Seagate Exos is suitable for near continuous reading
+and writing and will last for the 5 years of its warranty period. For SSDs the story 
+is very different. In the early years, an SSD memory cell could be erased and rewritten
+several thousands of times without failing. However, both the miniaturisation and the use
+of multiple bits per cell have severely lowered that life span. Some flash memory cell
+can be erased and rewritten only 150 to 500 times without failing. Drives try to compensate
+for that by very clever write and erase strategies and by keeping some spare storage on the
+drive that can be used to replace worn out parts, so that a fixed size can be reported to
+the operating system. This technique is called <em>wear leveling</em>. This complex management of
+data on the drive to appear as a regular drive to the operating system is also one of the
+reasons why flash drives have actually rather powerful processors. Endurand of SSDs is 
+measured in Drive Writes Per Day, abbreviated PWPD. In the table above, these have all been
+normalised to a 5-year life span of the drive. Another measure is the amount of data
+that can be written per day to have a 5 year life span of the drive. It is obvious that the
+larger the drive, the more data can be written also. We compare this with how long it would
+take to write that daily capacity to the drive in the (invalid) assumption that we could 
+write at the maximum write bandwidth. Now we see that the Nytro 3732 is a very good drive.
+It supports 10 DWPD and even at its relatively small capacity this is still so much data per day 
+that one could probably write almost continuously to it. It is certainly a drive suitable for
+a scenario with high write loads, as is the case for supercomputer scratch storage.
+For the Nytro 3332 which is 1 DWPD it is really only the capacity that saves us. It is slow
+enough that one can still write a lot of data to it. But if we would use a smaller and cheaper
+1 DWPD in, e.g., a compute node, we would probably run into problems as that local drive in the
+compute node would typically be used to contain a temporary copy of large data sets, and hence 
+have a lot of data written to it in each job. The Samsung NVMe drives are meant for a totally
+different access scenario though. They can only sustain 0.33 DWPD, and if you could write that
+data at the full write speed, this really means that you could only write to them for a few 
+minutes per day. That high speed is certainly not meant to put a higher write load on the drives.
+On the contrary, these drives are meant for use in PCs under a typical workload for a PC, where
+much of the data on the drive is very static and consists of files that may be read often,
+or are archived for long times. The QVO drive can sustain only 0.2 DWPD, but still ingest
+quite a lot of data per day due to its high capacity. And due to its slow write speed due 
+largely to the slow SATA interface, it also looks as if one can write for quite some time
+to it, but also given how much quad level cells can slow down when filling up, it is really
+a drive for archiving, and for storing data where the speed of the write operations doesn't
+really matter.</p>
+<p>This brings us to the last line of the table, the cost of the drives and here we see the 
+big problem of SSDs. The cheaper Samsung drives may only be 2 to 5 times more expensive 
+then the enterprise quality hard drive that we are comparing with, but this is really an
+apples-and-oranges comparison. Those cheaper SSDs are not really suitable for datacenter use.
+One could imagine building a storage system with high capacity for high read
+load scenarios from the QVO drives, and some companies build such storage, but these drives
+are not suited for the typical load on supercomputer file systems, neither for a local drive
+or for, e.g., the scratch file system. Some SSDs are suitable (and the Nytro 3732 certainly
+is) but then the cost is easily 10 times or more higher per byte than for good quality hard
+drives. This is one of the reasons why SSDs are not used more in supercomputer storage.
+After all, in supercomputer storage we need storage with a high capacity that can deal with
+a high write load.</p>
+<details>
+<summary>Nice to know</summary>
+<p>Around 2010 a file storage expert at KU Leuven looked at how storage was used on their
+cluster to determine which type of storage should be bought. It turned out that the
+load was 90% write and only 10% read, which means that most of the data written to
+disk was even never read... It is hoped that this text makes clear that writing data
+is all but free.</p>
+</details>
+<h2 id="new-memory-types-for-a-revolution">New memory types for a revolution?<a class="headerlink" href="#new-memory-types-for-a-revolution" title="Permanent link">&para;</a></h2>
+<p>As we can see from the previous discussion, flash memory comes with a higher price tag than
+one would think from looking at prices for drives for PCs, and it has some other issues also,
+like durability issues as each memory cell has a very short lifespan in terms of number of
+rewrites, and the unpredictable slow-down especially under a random small writes load when the
+drive starts to fill up.</p>
+<p>Several companies have worked on other types of solid state memory for permanent storage
+that does not have those issues. Two memory types have been considered that would
+allow byte level access instead of block level, have much better write endurance and
+that also could be rewritten at the byte level rather than having to erase whole blocks
+and copying data round in the drive to free such a big block.
+HPE (then still called HP) and Sandisk explored a type of memory cell called 
+<a href="https://en.wikipedia.org/wiki/Memristor"><em>memristor</em></a>. 
+Intel and Micron worked together on a type of memory cell which they
+called <a href="https://en.wikipedia.org/wiki/3D_XPoint"><em>3D-Xpoint</em></a>, 
+sometimes marketed by Intel as Optane (though that name was later recycled for
+other types of storage also). The memristor never made it to market. 3D-Xpoint did
+result in a couple of products, but they were only competivie for some very special markets.</p>
+<p>3D-Xpoint memory appeared in several forms. It was used to build datacenter solid state drives
+with excellent endurance. Even though the I/O performance wasn't stellar on paper, the fine
+print in the specs really mattered: 3D-Xpoint drives coped much better with read and write
+loads that lacked enough parallelism, while most flash drives must look at a larger number of 
+read and write requests simultaneously and reorder them to get close to their quoted speed.
+They were also used as a cache for flash drives, buffering writes and keeping some data that
+was read a lot also available as in some cases it could be read faster from the 3D-Xpoint cache.
+And finally, it could also be plugged in some servers instead of RAM. However, it didn't act as 
+RAM at all as it is still a lot slower than regular RAM, and as its write endurance doesn't come
+close to that of RAM memory. Instead, it was marketed as memory for large database servers where
+much of the database could be kept in 3D-Xpoint memory yet accessed as if it were RAM, at a lower
+cost as a fully RAM-equipped system and at a higher reliability in case of, e.g., power problems.
+The last usage scenario is an example of so-called Storage Class Memory (sometimes abbreviated
+as SCM): Memory that can operate as (slower) RAM but that just as regular disks storage maintains
+its state when the system is powered off.</p>
+<p>However, developing a new memory technology to compete with an already established and very far
+developed technology is hard and requires extremely deep pockets. In the end, technological evolution
+created good enough alternatives for many of the use cases of 3D-Xpoint memory, or people simply
+didn't see enough benefits to pay for it, and the development was stopped in 2021 by Micron and
+2022 by Intel.</p>
+<p>High-endurance SSDs are simply much cheaper than 3D-Xpoint drives and are a good alternative for
+all but a few cases where software has a really bad drive access pattern. But then for bigger companies
+it is probably cheaper to simply rework the software to shine on cheaper drives. The benefit of 3D-Xpoint
+as a cache for SSDs was questionable because of the small size and also because of the way it was
+implemented, increasing the complexity of the system, and nowadays some drive use some SLC (single bit per cell)
+flash memory as a cache. The RAM capacity per socket has also increased a lot with more memory channels
+per socket and larger memory modules. </p>
+<p>Another technology that would allow larger RAM memories is also coming up. 
+<em>Compute eXpress Link</em> (\CXL) is an open standard that build upon the PCIe standards to provide
+an interface that would be suitable for connecting several kinds of components in large systems:
+CPUs, GPUs, other accelerators with compute capability, additional RAM memory, ... It also builds
+on the experience with other technologies, as IBM's OpenCAPI, that tried to reach some of these
+goals though it is not compatible with any of those. It would even be possible to build networks
+of CXL connections to build a reconfigurable computer: A user can select the number of CPUs, GPUs, memory
+blocks, etc., and those are connected on the fly the the CXL fabric. </p>
+<p>This may sound nice but it remains to be seen how useful this will be in practice. It is not possible
+to make very large switched fabrics as the latency would simply be too large to use this in a way 
+current memory and accelerators are used. On the contrary, as we shall also see in 
+<a href="../../7_Accelerators/">the chapter on accelerators</a> and as we have already seen to some extent
+in the <a href="../../3_Memory/">chapter on memory technology</a>, the needs for many supercomputer applications
+but also regular applications are exactly the opposite. Large memories are useless if they also come with
+much higher latency unless applications are reworked to hide the latency and make clever use of the 
+memory hierarchy with nearby faster RAM and more remote larger but slower RAM. As we shall see, the 
+performance improvement that one can obtain from using accelerators can also be limited by the data
+transfers to and from the accelerators. Not all applications can be reworked to cope with the much higher
+latency in such a CXL-based reconfigurable system or even just an ordinary server with a large bank of 
+slower memory. In fact, many applications need in fact the opposite, a much closer integration of 
+memory, CPU and accelerators. This is precisely the reason why, e.g., the Apple M-series processors 
+sometimes provide much better performance than one would expect from the chip in applications.</p>
+<h2 id="local-storage-in-supercomputer-nodes">Local storage in supercomputer nodes<a class="headerlink" href="#local-storage-in-supercomputer-nodes" title="Permanent link">&para;</a></h2>
+<p>As the speed difference between the processing capacity of a supercomputer node and the storage
+keeps increasing, there is a renewed interest in adding local storage again to compute nodes,
+something that certainly the large supercomputers avoided because of reliability and management
+issues.</p>
+<p>Modern high-end SSDs have become fairly reliable and as shapes have mostly standardised, it 
+does become possible to build them into water cooled nodes without having a negative impact 
+on the cooling of other components or a performance impact because of a too high temperature.</p>
+<p>Manufacturers are also working on software to make them more manageable in a supercomputer
+context and more useful also to parallel programs as those local SSDs cannot be accessed
+directly from other compute nodes.</p>
+<p><a href="https://docs.daos.io/">Intel DAOS</a> was originally developed for the much delayed USA Aurora
+exascale system where it would work with 3D-Xpoint drives in the compute nodes. It is also 
+designed to integrate with the Lustre file system that will be used on Aurora. It is not clear
+how Intel envisions using DAOS though as it does rely on storage class memory and not only
+NVMe drives, and was really designed with 3D-Xpoint in mind and its server processors with
+built-in support for that memory.</p>
+<p>HPE is working a what they call a 
+<a href="https://www.hpcwire.com/2021/02/18/livermores-el-capitan-supercomputer-hpe-rabbit-storage-nodes/">near-node storage system code-named Rabbits</a>
+for the third USA exascale computer, El Capitan. 
+It consists of a storage server that sits close to a number of compute nodes with
+fast dedicated PCIe connection to each of them. The server has its own processor so can
+work independently from the compute nodes to, e.g., transfer data that was written
+by the job to the larger remote Lustre file system. Each server has 16 SSDs but also two
+spares so that it can reconfigure automatically when an SSD fails. These SSDs can be
+accessed as if they are a directly attached drive, essentially operating as an SSD in
+the node, or as a network drive acting as a cache to the larger remote Lustre file
+system. It will work in conjunction with a new scheduler as Slurm cannot easily be
+made sufficiently aware of the architecture of the attached software to manage it and
+allocate proper resources.</p>
 
   <hr>
 <div class="md-source-file">
@@ -1185,7 +1317,7 @@ more expensive open and close operations.</p>
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="../4_01_Introduction/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Introduction" rel="prev">
+        <a href="../4_03_Parallel_filesystems/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Parallel file systems" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -1194,20 +1326,20 @@ more expensive open and close operations.</p>
               <span class="md-footer__direction">
                 Previous
               </span>
-              Introduction
+              Parallel file systems
             </div>
           </div>
         </a>
       
       
         
-        <a href="../4_03_Parallel_filesystems/" class="md-footer__link md-footer__link--next" aria-label="Next: Parallel file systems" rel="next">
+        <a href="../4_05_To_remember/" class="md-footer__link md-footer__link--next" aria-label="Next: To remember" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Parallel file systems
+              To remember
             </div>
           </div>
           <div class="md-footer__button md-icon">
