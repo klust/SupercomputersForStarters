@@ -180,6 +180,9 @@ RAM at all as it is still a lot slower than regular RAM, and as its write endura
 close to that of RAM memory. Instead, it was marketed as memory for large database servers where
 much of the database could be kept in 3D-Xpoint memory yet accessed as if it were RAM, at a lower
 cost as a fully RAM-equipped system and at a higher reliability in case of, e.g., power problems.
+The last usage scenario is an example of so-called Storage Class Memory (sometimes abbreviated
+as SCM): Memory that can operate as (slower) RAM but that just as regular disks storage maintains
+its state when the system is powered off.
 
 However, developing a new memory technology to compete with an already established and very far
 developed technology is hard and requires extremely deep pockets. In the end, technological evolution
@@ -218,3 +221,40 @@ latency in such a CXL-based reconfigurable system or even just an ordinary serve
 slower memory. In fact, many applications need in fact the opposite, a much closer integration of 
 memory, CPU and accelerators. This is precisely the reason why, e.g., the Apple M-series processors 
 sometimes provide much better performance than one would expect from the chip in applications.
+
+
+## Local storage in supercomputer nodes
+
+As the speed difference between the processing capacity of a supercomputer node and the storage
+keeps increasing, there is a renewed interest in adding local storage again to compute nodes,
+something that certainly the large supercomputers avoided because of reliability and management
+issues.
+
+Modern high-end SSDs have become fairly reliable and as shapes have mostly standardised, it 
+does become possible to build them into water cooled nodes without having a negative impact 
+on the cooling of other components or a performance impact because of a too high temperature.
+
+Manufacturers are also working on software to make them more manageable in a supercomputer
+context and more useful also to parallel programs as those local SSDs cannot be accessed
+directly from other compute nodes.
+
+[Intel DAOS](https://docs.daos.io/) was originally developed for the much delayed USA Aurora
+exascale system where it would work with 3D-Xpoint drives in the compute nodes. It is also 
+designed to integrate with the Lustre file system that will be used on Aurora. It is not clear
+how Intel envisions using DAOS though as it does rely on storage class memory and not only
+NVMe drives, and was really designed with 3D-Xpoint in mind and its server processors with
+built-in support for that memory.
+
+HPE is working a what they call a 
+[near-node storage system code-named Rabbits](https://www.hpcwire.com/2021/02/18/livermores-el-capitan-supercomputer-hpe-rabbit-storage-nodes/)
+for the third USA exascale computer, El Capitan. 
+It consists of a storage server that sits close to a number of compute nodes with
+fast dedicated PCIe connection to each of them. The server has its own processor so can
+work independently from the compute nodes to, e.g., transfer data that was written
+by the job to the larger remote Lustre file system. Each server has 16 SSDs but also two
+spares so that it can reconfigure automatically when an SSD fails. These SSDs can be
+accessed as if they are a directly attached drive, essentially operating as an SSD in
+the node, or as a network drive acting as a cache to the larger remote Lustre file
+system. It will work in conjunction with a new scheduler as Slurm cannot easily be
+made sufficiently aware of the architecture of the attached software to manage it and
+allocate proper resources.
