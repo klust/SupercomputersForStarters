@@ -40,7 +40,7 @@ factor of approximately three and the conversion to and from binary data is very
 When discussing scaling a storage system from the size of a PC storage system to the size of a 
 supercomputer storage system, one should realise:
 
--   Scaling capacity is cheap. Often one only needs to add disks and disk enclosers and not so
+-   Scaling capacity is cheap. Often one only needs to add disks and disk enclosures and not so
     much servers when using drives with interfaces that are specifically made for that (and in
     particular SAS drives as we have seen in the drive technology comparison table).
 
@@ -64,7 +64,7 @@ supercomputer storage system, one should realise:
         run a lot slower than on a PC with fast local storage.
 
         In fact, it is doable to make supercomputer storage with very high IOPS when there are a lot of 
-        parallel I/O requests, from many users to files allover the file system so that metadata and data
+        parallel I/O requests, from many users to files all over the file system so that metadata and data
         access can be spread over many servers. But it is not possible to improve IOPS for a single threaded
         application with synchronous file access.
 

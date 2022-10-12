@@ -97,7 +97,7 @@ of multiple bits per cell have severely lowered that life span. Some flash memor
 can be erased and rewritten only 150 to 500 times without failing. Drives try to compensate
 for that by very clever write and erase strategies and by keeping some spare storage on the
 drive that can be used to replace worn out parts, so that a fixed size can be reported to
-the operating system. This technique is called *wear leveling*. This complex management of
+the operating system. This technique is called *wear levelling*. This complex management of
 data on the drive to appear as a regular drive to the operating system is also one of the
 reasons why flash drives have actually rather powerful processors. Endurance of SSDs is 
 measured in Drive Writes Per Day, abbreviated DWPD. In the table above, these have all been

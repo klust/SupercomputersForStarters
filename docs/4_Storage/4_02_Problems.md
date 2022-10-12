@@ -171,7 +171,7 @@ infrastructure are different.
 
     Cloud infrastructures on the other hand are usually commercial offerings. They are built at a very
     large scale, with often an even more custom hardware design, and they are simply overprovisioned.
-    E.g., a server may have two SSD drives where the software will simply switch over to the second\
+    E.g., a server may have two SSD drives where the software will simply switch over to the second
     drive when the first one breaks, but the broken one will never be replaced.
 
 -   The management model of a cloud infrastructure is also very different. Cloud is based on virtualisation

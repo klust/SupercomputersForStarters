@@ -82,7 +82,7 @@ both typically need some manual intervention.
 ### OpenCL
 
 OpenCL or Open Compute Language is a framework for heterogeneous computing developed by
-the non-prpfit, member-driven technology consortium Khronos Group which manages many
+the non-profit, member-driven technology consortium Khronos Group which manages many
 standards for GPU software (including also OpenGL and its offsprings and Vulkan). It
 develops vendor-neutral standards.
 
@@ -139,7 +139,7 @@ but is updated almost annually in November.
 
 OpenACC is well supported on NVIDIA hardware through the NVIDIA HPC compilers (which is the 
 new name of the PGI compilers adopted after the integration of PGI in NVIDIA). GCC offers some 
-support on NVIDIA and some AMD hardware for version 2.6 of the standard (the Nobemver 2017 version) since version 10 of the
+support on NVIDIA and some AMD hardware for version 2.6 of the standard (the November 2017 version) since version 10 of the
 GCC compilers., but the evolution is slow and performance is often not that great.
 More promising for the future is the work going on in the clang/LLVM community to support
 OpenACC, as this effort is largely driven by the USA national labs who want to avoid having
@@ -165,7 +165,7 @@ support for offloading to accelerators. That support was greatly improved in
 version 5.0 of the standard which was released at the SC'18 supercomputer conference.
 It became a more descriptive and less prescriptive model (offering the compiler enough information
 to decide what it should do rather then enforcing the compiler to do something in a particular way),
-with the prescriptive nature being critisized a lot by the OpenACC community who claimed superiority
+with the prescriptive nature being criticised a lot by the OpenACC community who claimed superiority
 because of this. It also contained much better support for debuggers, performance monitoring tools, etc.
 
 OpenMP has since had minor extensions i the form of version 5.1 at SC'20 and 5.2 at SC'21. The
