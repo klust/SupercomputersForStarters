@@ -1037,7 +1037,7 @@ it performs way better in some applications that use acceleration than one would
 looking at systems with discrete GPUs with similar theoretical performance.</p>
 <h2 id="evolution-of-gpu-nodes">Evolution of GPU nodes<a class="headerlink" href="#evolution-of-gpu-nodes" title="Permanent link">&para;</a></h2>
 <p>Around 2016, a typical GPU compute node consisted of a dual socket server with 1-4 GPUs attached
-to the CPUs. A typcial design would have been:</p>
+to the CPUs. A typical design would have been:</p>
 <p><img alt="2016 GPU design" src="../../img/7_05_01_2016_GPU.jpg" /></p>
 <p>The red line between the two CPUs denotes a fully cache coherent link between the CPUs. 
 In 2016 this would very likely have been either Intel CPUs or IBM POWER CPUs, and both
@@ -1067,7 +1067,7 @@ is:</p>
 <p>The GPU compute nodes of LUMI and Frontier use a special variant of the Zen3-based
 AMD Epyc processor. In this variant, the PCIe lanes are replaced by InfinityFabric
 connections. In an MI250X, the 4 GPU packages are connected with each other and with 
-the CPU through InfinitFabric links. Each GPU package connects to its own quarter of
+the CPU through Infinity Fabric links. Each GPU package connects to its own quarter of
 the AMD Epyc processor (remember from earlier that the I/O die is subdivided in 4
 quarters, in this case each connected to two CPU chiplets with 8 cores each).
 This creates a fully unified and coherent memory space. Also noteworthy is that the
@@ -1077,13 +1077,13 @@ node really a GPU-first system, almost a system where the CPU is only used for
 those parts of the code that cannot be accelerated at all by a GPU and to run the 
 Linux operating system.</p>
 <p>The true picture of the GPU node is a bit more complicated though. Each GPU package
-contains two GPU dies, and these are connected to each other through some InfinitFabric
+contains two GPU dies, and these are connected to each other through some Infinity Fabric
 links. Each GPU die connects to 4 memory packages, with 64 GB of memory per GPU die.
 However, the connection between two GPU dies is sufficiently bandwidth-starved that
 programming wise a single GPU package should be considered as two separate GPUs. 
 Each individual GPU die has its own InfinityFabric link to the CPU and seems to have a
 preferential CPU chiplet. Even though the connection between the GPU packages appears to 
-be an all-to-all conection, this is not true when one looks at the connections between
+be an all-to-all connection, this is not true when one looks at the connections between
 the GPU dies. </p>
 <p>The AMD MI250X is really just a transition to the MI300 series and the 
 Intel Falcon Shores architecture. In that generation, expected to come to market in
@@ -1095,9 +1095,9 @@ to smaller but much higher bandwidth memory in the package. The AMD MI300 and In
 will fully integrate the CPU and GPU chiplets and memory controllers with memory in a single
 package, which would lead so a supercomputer node similar to</p>
 <p><img alt="A MI300 supercomputer node" src="../../img/7_05_04_MI300.jpg" /></p>
-<p>Here we see four packages intgrating one or more CPU chiplets, one or more GPU dies and
+<p>Here we see four packages integrating one or more CPU chiplets, one or more GPU dies and
 memory in a single packages. The four packages have an all-to-all connection likely using
-a new generation of InfinityFabric, and each GPYU packages also connects to a network card
+a new generation of InfinityFabric, and each GPU packages also connects to a network card
 using PCIe. It is expected that the techniques to connect dies will have evolved enough
 that the GPU dies in a single package will work as a single GPU. In fact, those improved
 connections will also be needed to have equal access to memory from the GPU and CPU chiplets.</p>
@@ -1107,7 +1107,7 @@ connections will also be needed to have equal access to memory from the GPU and 
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 5, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 12, 2022</span>
       
     
   </small>

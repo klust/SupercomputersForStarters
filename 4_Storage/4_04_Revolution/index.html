@@ -959,7 +959,7 @@
 <summary>University of Antwerp-specific</summary>
 <p>The joint bandwidth on the BeeGFS scratch file system at the CalcUA compute
 service in use in 2022 is on the order of 7 GB/s. At the same time,
-some NVMe SSDs for PCIe 4 also claim to offer a read bandwidht of 7 GB/s
+some NVMe SSDs for PCIe 4 also claim to offer a read bandwidth of 7 GB/s
 and a write bandwidth that is not that much lower.</p>
 <p>So one could wonder if we shouldn't use 105 of those drives instead.</p>
 <p>There is of course the cost of the drives. But also a lot more server
@@ -1145,8 +1145,8 @@ for that by very clever write and erase strategies and by keeping some spare sto
 drive that can be used to replace worn out parts, so that a fixed size can be reported to
 the operating system. This technique is called <em>wear leveling</em>. This complex management of
 data on the drive to appear as a regular drive to the operating system is also one of the
-reasons why flash drives have actually rather powerful processors. Endurand of SSDs is 
-measured in Drive Writes Per Day, abbreviated PWPD. In the table above, these have all been
+reasons why flash drives have actually rather powerful processors. Endurance of SSDs is 
+measured in Drive Writes Per Day, abbreviated DWPD. In the table above, these have all been
 normalised to a 5-year life span of the drive. Another measure is the amount of data
 that can be written per day to have a 5 year life span of the drive. It is obvious that the
 larger the drive, the more data can be written also. We compare this with how long it would
@@ -1205,33 +1205,33 @@ and copying data round in the drive to free such a big block.
 HPE (then still called HP) and Sandisk explored a type of memory cell called 
 <a href="https://en.wikipedia.org/wiki/Memristor"><em>memristor</em></a>. 
 Intel and Micron worked together on a type of memory cell which they
-called <a href="https://en.wikipedia.org/wiki/3D_XPoint"><em>3D-Xpoint</em></a>, 
+called <a href="https://en.wikipedia.org/wiki/3D_XPoint"><em>3D-XPoint</em></a>, 
 sometimes marketed by Intel as Optane (though that name was later recycled for
-other types of storage also). The memristor never made it to market. 3D-Xpoint did
-result in a couple of products, but they were only competivie for some very special markets.</p>
-<p>3D-Xpoint memory appeared in several forms. It was used to build datacenter solid state drives
+other types of storage also). The memristor never made it to market. 3D-XPoint did
+result in a couple of products, but they were only competitive for some very special markets.</p>
+<p>3D-XPoint memory appeared in several forms. It was used to build datacenter solid state drives
 with excellent endurance. Even though the I/O performance wasn't stellar on paper, the fine
-print in the specs really mattered: 3D-Xpoint drives coped much better with read and write
+print in the specs really mattered: 3D-XPoint drives coped much better with read and write
 loads that lacked enough parallelism, while most flash drives must look at a larger number of 
 read and write requests simultaneously and reorder them to get close to their quoted speed.
 They were also used as a cache for flash drives, buffering writes and keeping some data that
-was read a lot also available as in some cases it could be read faster from the 3D-Xpoint cache.
+was read a lot also available as in some cases it could be read faster from the 3D-XPoint cache.
 And finally, it could also be plugged in some servers instead of RAM. However, it didn't act as 
 RAM at all as it is still a lot slower than regular RAM, and as its write endurance doesn't come
 close to that of RAM memory. Instead, it was marketed as memory for large database servers where
-much of the database could be kept in 3D-Xpoint memory yet accessed as if it were RAM, at a lower
+much of the database could be kept in 3D-XPoint memory yet accessed as if it were RAM, at a lower
 cost as a fully RAM-equipped system and at a higher reliability in case of, e.g., power problems.
 The last usage scenario is an example of so-called Storage Class Memory (sometimes abbreviated
 as SCM): Memory that can operate as (slower) RAM but that just as regular disks storage maintains
 its state when the system is powered off.</p>
 <p>However, developing a new memory technology to compete with an already established and very far
 developed technology is hard and requires extremely deep pockets. In the end, technological evolution
-created good enough alternatives for many of the use cases of 3D-Xpoint memory, or people simply
+created good enough alternatives for many of the use cases of 3D-XPoint memory, or people simply
 didn't see enough benefits to pay for it, and the development was stopped in 2021 by Micron and
 2022 by Intel.</p>
-<p>High-endurance SSDs are simply much cheaper than 3D-Xpoint drives and are a good alternative for
+<p>High-endurance SSDs are simply much cheaper than 3D-XPoint drives and are a good alternative for
 all but a few cases where software has a really bad drive access pattern. But then for bigger companies
-it is probably cheaper to simply rework the software to shine on cheaper drives. The benefit of 3D-Xpoint
+it is probably cheaper to simply rework the software to shine on cheaper drives. The benefit of 3D-XPoint
 as a cache for SSDs was questionable because of the small size and also because of the way it was
 implemented, increasing the complexity of the system, and nowadays some drive use some SLC (single bit per cell)
 flash memory as a cache. The RAM capacity per socket has also increased a lot with more memory channels
@@ -1270,10 +1270,10 @@ on the cooling of other components or a performance impact because of a too high
 context and more useful also to parallel programs as those local SSDs cannot be accessed
 directly from other compute nodes.</p>
 <p><a href="https://docs.daos.io/">Intel DAOS</a> was originally developed for the much delayed USA Aurora
-exascale system where it would work with 3D-Xpoint drives in the compute nodes. It is also 
+exascale system where it would work with 3D-XPoint drives in the compute nodes. It is also 
 designed to integrate with the Lustre file system that will be used on Aurora. It is not clear
 how Intel envisions using DAOS though as it does rely on storage class memory and not only
-NVMe drives, and was really designed with 3D-Xpoint in mind and its server processors with
+NVMe drives, and was really designed with 3D-XPoint in mind and its server processors with
 built-in support for that memory.</p>
 <p>HPE is working a what they call a 
 <a href="https://www.hpcwire.com/2021/02/18/livermores-el-capitan-supercomputer-hpe-rabbit-storage-nodes/">near-node storage system code-named Rabbits</a>
@@ -1294,7 +1294,7 @@ allocate proper resources.</p>
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 11, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 12, 2022</span>
       
     
   </small>

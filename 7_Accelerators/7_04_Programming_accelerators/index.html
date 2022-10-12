@@ -1270,7 +1270,7 @@ C++-support, with NVIDIA and AMD still using a Fortran front-end developed by PG
 to the LLVM project while Intel is already experimenting with a new community-developed
 more modern front-end for Fortran. OpenACC support in the LLVM ecosystem will build upon the
 OpenMP support, the technology that we will discuss next, using extensions for those OpenACC
-features that still have no equivalent in OpenMP. Howver, as of version 2015 (summer 2022)
+features that still have no equivalent in OpenMP. However, as of version 15 (summer 2022)
 this support is still very incomplete and experimental.</p>
 <h3 id="openmp">OpenMP<a class="headerlink" href="#openmp" title="Permanent link">&para;</a></h3>
 <p>We've already discussed OpenMP as a technology for shared memory parallelism and for 
@@ -1304,10 +1304,10 @@ from a single code base. Though the programmer is of course free to provide alte
 implementations for different hardware for better performance, it is not needed
 by design. SYCL is heavily based on C++ template libraries, but to generate code
 for accelerators it still needs a specific compiler.</p>
-<p>There are several compilers in developmentwith varying levels of support for
+<p>There are several compilers in development with varying levels of support for
 the standard, targeting not only GPUs, but also, e.g., the NEC SX Aurora Tsubasa vector
 boards. 
-Most if not all of these implemenations are again based on Clang and LLVM.
+Most if not all of these implementations are again based on Clang and LLVM.
 One implementation worth mentioning is hipSYCL, which as its name suggests
 targets hip for the backend and hence can support both AMD and NVIDIA GPUs, but
 can also target pure CPU systems and now even contains experimental support for 
@@ -1337,8 +1337,8 @@ code that is portable to regular CPUs and GPU systems of various vendors. They l
 you exploit all levels of parallelism in a supercomputer except distributed 
 computing.</p>
 <p><a href="https://kokkos.org/">Kokkos</a> is a framework developed by Sandia National Labs and probably the most popular one
-of the frameworks mentioned here. It was first rteleased in 2011 already but grew to a
-complete ecosystem with tools to support debuging, profiling and tuning also, and now even
+of the frameworks mentioned here. It was first released in 2011 already but grew to a
+complete ecosystem with tools to support debugging, profiling and tuning also, and now even
 some support for distributed computing also. Kokkos already supports backends for CUDA
 and ROCm, and there are experimental backends that can also support the Intel GPUs that will
 be used in the Aurora supercomputer.</p>
@@ -1357,9 +1357,9 @@ support for Intel GPUs coming through an OpenMP offload backend. </p>
 <h2 id="libraries">Libraries<a class="headerlink" href="#libraries" title="Permanent link">&para;</a></h2>
 <p>One can often rely on already existing libraries when developing software for GPUs.</p>
 <p>NVIDIA CUDA comes with a wide range of libraries.</p>
-<p>MAD ROCm provides several libraries that mimic (subsets of) libraries in the CUDA ecosystem,
+<p>AMD ROCm provides several libraries that mimic (subsets of) libraries in the CUDA ecosystem,
 also easing porting from NVIDIA to AMD hardware.</p>
-<p>Intel has adapted several of its CPU librararies to use GPU acceleration also in its oneAPI platform.</p>
+<p>Intel has adapted several of its CPU libraries to use GPU acceleration also in its oneAPI platform.</p>
 <p>However, there are also several vendor-neutral libraries, e.g.,</p>
 <ul>
 <li>
@@ -1376,7 +1376,7 @@ also easing porting from NVIDIA to AMD hardware.</p>
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 11, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 12, 2022</span>
       
     
   </small>
