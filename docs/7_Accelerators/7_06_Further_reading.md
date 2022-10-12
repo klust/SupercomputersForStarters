@@ -9,12 +9,12 @@
         that will be used in the El Capitan supercomputer.
 
     -   [AnandTech article on the MI300](https://www.anandtech.com/show/17445/amd-combining-cdna-3-and-zen-4-for-mi300-data-center-apu-in-2023),
-        based on information from AMD's 2022 Inverstors Day. The article shows some not very detailed slides about the memory architecture.
+        based on information from AMD's 2022 Investors Day. The article shows some not very detailed slides about the memory architecture.
 
 -   NVIDIA GPUs
 
     -   [Whitepaper: Summit and Sierra Supercomputers: An Inside Look at the U.S. Department of Energy’s New Pre-Exascale Systems](http://www.teratec.eu/actu/calcul/Nvidia_Coral_White_Paper_Final_3_1.pdf) 
-        for information on the physically unified memory spece made possible by the NVLink connections
+        for information on the physically unified memory space made possible by the NVLink connections
         between the CPUs and GPUs. 
 
     -   [Whitepaper: NVIDIA Grace Hopper Superchip Architecture](https://nvdam.widen.net/s/qjzrmfdn2j/nvidia-grace-hopper-superchip-architecture-whitepaper-v1.0)

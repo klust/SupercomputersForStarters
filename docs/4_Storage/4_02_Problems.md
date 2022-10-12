@@ -98,7 +98,7 @@ both physically and logically further away from your application. Physically bec
 there are (at least) two processors and a network involved (and on the server side disks
 usually not be as close to the processor as on your PC, except in some of the most expensive
 storage systems). The physical delay caused by the network may not be that important with
-hard disk storage, but it is important when accdessing SSDs or cached storage. 
+hard disk storage, but it is important when accessing SSDs or cached storage. 
 The software adds even more delays. After all, your program talks to a network file system
 which then sends the request to the server where it also has to pass through multiple layers
 of software: through the network stack, to the file server software, to the file system (which may
@@ -113,7 +113,7 @@ for access to small files. And the path is still much, much longer than that to 
 This comes with a number of consequences:
 
 -   Programs that open and close hundreds of small files in a short time may work slower than
-    on a PC. This is particularly true if all data access comes from a simgle thread as your
+    on a PC. This is particularly true if all data access comes from a single thread as your
     program will be waiting for data all the time. That software also puts a very high load on\
     the file systems of a supercomputer, to the extent that several supercomputer centres nowadays
     take measures to keep that software off the supercomputers.

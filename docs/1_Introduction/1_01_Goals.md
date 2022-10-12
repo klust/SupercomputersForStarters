@@ -13,8 +13,8 @@ questions such as:
 
 The reader may be very much tempted to say **"I'm not a programmer, do I need to know all this?"**
 but one should realise a supercomputer is a very expensive machine and a large research infrastructure
-that should be used efficiently unless a chep PC or smartphone. Whether a supercomputer will be used well
-dpeends on your choice of software. It also depends on the resources that you request when starting a program.
+that should be used efficiently unless a cheap PC or smartphone. Whether a supercomputer will be used well
+depends on your choice of software. It also depends on the resources that you request when starting a program.
 Unlike your PC, a supercomputer is a large shared infrastructure and you have to specify which part of the
 computer you need for your computations. And this requires an understanding of both the supercomputer that
 you are using and the needs of the software you're using. In fact, if the software cannot sufficiently well
@@ -25,14 +25,14 @@ Another goal is also to make it very clear that a supercomputer is not a supersc
 everything in a magical way much faster than a PC.
 
 Some inspiration for these lecture notes comes from looking at the manuals of some software packages that
-users of the CalcUA infrastrucgture use or have used, including CP2K, OpenMX, QuantumESPRESSO, Gromacs and SAMtools,
+users of the CalcUA infrastructure use or have used, including CP2K, OpenMX, QuantumESPRESSO, Gromacs and SAMtools,
 and checking which terminology those packages use. In fact, the GROMACS manual even contains a section that tries 
 to explain in short many of the terms (and even some more) that we discuss in these notes.
 
 ![GROMACS manual page](../img/1_01_01_GROMACS_manual.jpg)
 
 The above figure shows an extract from the GROMACS manual with a lot of terms that one needs to know
-to tune the paramters of the GROMACS ``mdrun`` command for good performance. Most of these will be covered
+to tune the parameters of the GROMACS ``mdrun`` command for good performance. Most of these will be covered
 in these lecture nodes.
 
 Next, let's have a look at the manual page of the SAMtools ``sort`` command.
@@ -55,7 +55,7 @@ The reader is confronted with a lot of technical terms that they need to underst
 optimal way. In fact, a vASP run may even fail if the parameters used in the simulations do not correspond 
 to the properties of the hardware used for the run. 
 
-In general, running software on a supercomputer is not at all as transparant as it is on a PC, and there are many
+In general, running software on a supercomputer is not at all as transparent as it is on a PC, and there are many
 reasons for that. Some of the complexity comes from the fact that a supercomputer is shared among users and hence 
 needs a system to allocate capacity to users. To keep the usage efficient, most of the work on a supercomputer is 
 done through a so-called batch service where a user must write a (Linux/bash) script (a small program by itself) to

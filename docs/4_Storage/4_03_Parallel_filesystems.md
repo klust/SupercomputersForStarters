@@ -2,14 +2,14 @@
 
 On PCs and many more regular file server file systems, each block on disk can 
 be used for either metadata or data. (Well, in practice there will be a zone
-that is used exclusively for metadata but that zone is extended transparantly
+that is used exclusively for metadata but that zone is extended transparently
 when needed.) These file systems are very flexible and support small file
 sizes very well. But at the same time it is very difficult to ge very high
 bandwidth, as a file will be managed by a single storage server, so even with
 the fastest and most expensive storage attached to the storage servers, the 
 single server would ultimately be a performance bottleneck.
 
-Larger supercomputers need a different kind of file system for highe performance,
+Larger supercomputers need a different kind of file system for higher performance,
 one where multiple servers can be used concurrently to access a single file.
 This is called a parallel file system. 
 
@@ -64,7 +64,7 @@ Such a setup can produce very high bandwidth for large read and write operations
 optimised parallel software using the right libraries to optimise that data transport, and this
 at a very reasonable cost. However, it has trouble dealing with lots of small files, and
 metadata access, certainly to files in one directory, can be a bottleneck. Moreover, the
-amount of storage space for metadata is determined when the system is purcnhased or 
+amount of storage space for metadata is determined when the system is purchased or 
 configured as it is on separate servers, so there is also a strict limit to the number
 of files such a system can store.
 
@@ -96,7 +96,7 @@ way to scale to supercomputer storage.
     can deal better with small files than a parallel file system can. It is, e.g., a 
     good file system for users who want to build their own Python or R installation.
 
-    The largest file system is a rougly 0.6 PB scratch file system. That uses 105
+    The largest file system is a roughly 0.6 PB scratch file system. That uses 105
     regular hard drives spread over 7 object servers for the storage of the data,
     and a number of SSDs for the metadata. The low latency of SSDs is very important
     to get good performance from the metadata servers, and again a broken SSD won't

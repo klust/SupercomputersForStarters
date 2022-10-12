@@ -4,7 +4,7 @@ Around 2010 the author of these notes got a phone call from a prospective user
 with the question: "I have a Turbo Pascal program that runs too slow on my PC,
 so I want to run it on the supercomputer." Now Turbo Pascal is a programming
 language that was very popular in the '80s and the early '90s of the previous
-centuty. It is almost a miracle that the program even still ran on the PC of that
+century. It is almost a miracle that the program even still ran on the PC of that
 user, and it is also very limited in the amount of memory a program can use.
 
 Assuming that prospective user had a modern PC on their desk, and forgetting for a
@@ -17,7 +17,7 @@ developed for supercomputers. This was different in the '60s and early '70s of t
 century, the early days of supercomputing. In those days one had smaller computers with 
 slower processors, and bigger machines with much faster processors, but one could essentially
 recompile the software for the faster machine if needed. That started to change in the second
-half of the '70s, with the advent of so-called vectorsupercomputers. There one really needed
+half of the '70s, with the advent of so-called vector supercomputers. There one really needed
 to adapt software to extract the full performance of the machine. Since then things only got
 worse. Due to physical limitations it is simply not possible to build ever faster processors,
 so modern supercomputers are instead parallel computers combining thousands of regular processors

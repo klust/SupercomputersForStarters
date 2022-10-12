@@ -90,7 +90,7 @@ looking at systems with discrete GPUs with similar theoretical performance.
 ## Evolution of GPU nodes
 
 Around 2016, a typical GPU compute node consisted of a dual socket server with 1-4 GPUs attached
-to the CPUs. A typcial design would have been:
+to the CPUs. A typical design would have been:
 
 ![2016 GPU design](../img/7_05_01_2016_GPU.jpg)
 
@@ -128,7 +128,7 @@ is:
 The GPU compute nodes of LUMI and Frontier use a special variant of the Zen3-based
 AMD Epyc processor. In this variant, the PCIe lanes are replaced by InfinityFabric
 connections. In an MI250X, the 4 GPU packages are connected with each other and with 
-the CPU through InfinitFabric links. Each GPU package connects to its own quarter of
+the CPU through Infinity Fabric links. Each GPU package connects to its own quarter of
 the AMD Epyc processor (remember from earlier that the I/O die is subdivided in 4
 quarters, in this case each connected to two CPU chiplets with 8 cores each).
 This creates a fully unified and coherent memory space. Also noteworthy is that the
@@ -139,13 +139,13 @@ those parts of the code that cannot be accelerated at all by a GPU and to run th
 Linux operating system.
 
 The true picture of the GPU node is a bit more complicated though. Each GPU package
-contains two GPU dies, and these are connected to each other through some InfinitFabric
+contains two GPU dies, and these are connected to each other through some Infinity Fabric
 links. Each GPU die connects to 4 memory packages, with 64 GB of memory per GPU die.
 However, the connection between two GPU dies is sufficiently bandwidth-starved that
 programming wise a single GPU package should be considered as two separate GPUs. 
 Each individual GPU die has its own InfinityFabric link to the CPU and seems to have a
 preferential CPU chiplet. Even though the connection between the GPU packages appears to 
-be an all-to-all conection, this is not true when one looks at the connections between
+be an all-to-all connection, this is not true when one looks at the connections between
 the GPU dies. 
 
 The AMD MI250X is really just a transition to the MI300 series and the 
@@ -160,9 +160,9 @@ package, which would lead so a supercomputer node similar to
 
 ![A MI300 supercomputer node](../img/7_05_04_MI300.jpg)
 
-Here we see four packages intgrating one or more CPU chiplets, one or more GPU dies and
+Here we see four packages integrating one or more CPU chiplets, one or more GPU dies and
 memory in a single packages. The four packages have an all-to-all connection likely using
-a new generation of InfinityFabric, and each GPYU packages also connects to a network card
+a new generation of InfinityFabric, and each GPU packages also connects to a network card
 using PCIe. It is expected that the techniques to connect dies will have evolved enough
 that the GPU dies in a single package will work as a single GPU. In fact, those improved
 connections will also be needed to have equal access to memory from the GPU and CPU chiplets.

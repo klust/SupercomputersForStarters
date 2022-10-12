@@ -13,7 +13,7 @@ of many compartments:
 -   Each supercomputer also has a management section. This consists of a number of servers that
     are not accessible to regular users. The management section is responsible for controlling and
     managing the operation of the supercomputer, including deciding when a job may start and properly
-    startingh that job.
+    starting that job.
 
 -   Each supercomputer also has a storage section, a part of the hardware that provides permanent storage
     for data or a scratch space that can be used on the complete machine.

@@ -28,12 +28,12 @@ the digital processing of the sound.
 
 Graphic cards were originally very specialised fixed-function hardware that was not
 really programmable but this changed in the early '00s with graphics cards as the
-NVIDIA GeForce 3 and ATI Radeon 9300 (ATI was later aquired by AMD which still uses the
+NVIDIA GeForce 3 and ATI Radeon 9300 (ATI was later acquired by AMD which still uses the
 Radeon brand). It didn't take long before scientist looking for more and cheaper compute
 power took note and started experimenting with using that programmability to accelerate
 certain scientific computations. Manufacturers, and certainly NVIDIA, took note and started
 adding features specifically for broader use. This led to the birth of NVIDIA CUDA 1.0 in 
-2007, the first succesful platform and programming model for programming graphics cards that
+2007, the first successful platform and programming model for programming graphics cards that
 were now called Graphics Processing Units (or GPU) as they became real programmable processors.
 And the term GPGPU for General-Purpose GPU is also used for hardware that is particularly
 suited to be used for non-graphics work also. GPGPU programming quickly became popular,
@@ -55,7 +55,7 @@ GPUs fall in this family. Examples are
     also support scatter/gather instructions and predication, features that are missing from, e.g., 
     the AVX/AVX2 instruction set).
 
--   AMD has the Instinct series for GPGPU computing. They employ a seperate architecture for their 
+-   AMD has the Instinct series for GPGPU computing. They employ a separate architecture for their 
     compute cards, called CDNA, while their current graphics cards use various generations of the RDNA
     architecture. The CDNA architecture is a further evolution of their previous graphics architecture
     GCN though (used in, e.g., the Vega cards).
@@ -64,7 +64,7 @@ GPUs fall in this family. Examples are
     ranking of June 2022) and in the European LUMI system (fastest European system in the Top500 ranking
     of June 2022). These computers use the CDNA2 architecture. A future USA exascale system, El Capitan, 
     planned for 2023 (or possibly 2024 with the supply chain disruptions largely due to Covid), will
-    emply a future version of the architecture, RDNA3, which will bring CPU and GPU very close together.
+    employ a future version of the architecture, RDNA3, which will bring CPU and GPU very close together.
 
 -   Intel is also moving into the market of GPGPU computing with their Xe graphics products. They
     have supported using their integrated GPUs for computations for many years already, with even support
@@ -99,7 +99,7 @@ accelerators. The ones integrated in GPUs are most popular for supercomputing th
 
 -   The NVIDIA tensor cores, AMD matrix cores and Intel matrix engines are all integrated very closely with
     the vector processing hardware on their GPGPUs, However, there are also dedicated matrix computing accelerators,
-    in particular in accelerators specifically designed for AI, siuch as the Google TPU (Tensor Processing Unit).
+    in particular in accelerators specifically designed for AI, such as the Google TPU (Tensor Processing Unit).
 
     Most neural network accelerators on smartphone processors also fall in this category as they are usually
     in a physically distinct area from the GPU hardware in the SOC (though not a separate chip or die).
