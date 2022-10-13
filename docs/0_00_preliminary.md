@@ -11,3 +11,9 @@ Disclaimer: This is unofficial documentation and work-in-progress. It is the res
 of the [University of Antwerp](https://www.uantwerpen.be/) for the 
 [Vlaams Supercomputer Centrum](https://vscentrum.be/). 
 
+The latest version of the corresponding slides is available on the
+[CalcUA training web page](https://www.uantwerpen.be/en/core-facilities/calcua/training/).
+There are also [video recordings from the November 2020 edition with some
+updates from the spring 2021 edition](https://www.uantwerpen.be/en/core-facilities/calcua/support/recordings/)
+but these may not be world-visible.
+
