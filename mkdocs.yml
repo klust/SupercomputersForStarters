@@ -27,6 +27,11 @@ nav:
     - Overview of the notes: 1_Introduction/1_05_Overview.md
   - Processors for supercomputers:
     - 2_Processors/index.md
+    - Introduction: 2_Processors/2_01_Intro.md
+    - A basic CPU: 2_Processors/2_02_Basic_CPU.md
+    - ILP I - Pipelining: 2_Processors/2_03_ILP_I_Pipelining.md
+    - ILP II - Superscalar: 2_Processors/2_04_ILP_II_Superscalar.md
+    - Vector computing: 2_Processors/2_05_Vectorisation.md
   - The memory hierarchy:
     - 3_Memory/index.md
   - Storing data on Supercomputers:
