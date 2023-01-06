@@ -2,7 +2,7 @@
 
 -   AMD GPUs
   
-    -   [Whitepaper: Introducing AMD CDNA<sup>TM</sub> 2 Architecture](https://www.amd.com/system/files/documents/amd-cdna2-white-paper.pdf)
+    -   [Whitepaper: Introducing AMD CDNA<sup>TM</sup> 2 Architecture](https://www.amd.com/system/files/documents/amd-cdna2-white-paper.pdf)
         which includes information on how the MI250X connects to the CPU, and on the vector and matrix cores of the GPU.
   
     -   [HPCwire article on the AMD MI300 APU](https://www.hpcwire.com/2022/06/21/amds-mi300-apus-to-power-exascale-el-capitan-supercomputer/)
@@ -10,6 +10,10 @@
 
     -   [AnandTech article on the MI300](https://www.anandtech.com/show/17445/amd-combining-cdna-3-and-zen-4-for-mi300-data-center-apu-in-2023),
         based on information from AMD's 2022 Investors Day. The article shows some not very detailed slides about the memory architecture.
+
+    -   [GPU comuting at the AMD Financial Analyst Day 2022 on YouTube (not an official AMD recording)](https://youtu.be/-VYHtSseX9k?t=4130). The CDNA3 part starts at 1:07:50.
+
+    -   [MI300 @ AMD CES'2023 keynote (YouTube)](https://youtu.be/OMxU4BDIm4M?t=5382). The MI300 part starts at 1:29:42.
 
 -   NVIDIA GPUs
 
