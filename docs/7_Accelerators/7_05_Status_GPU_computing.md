@@ -231,8 +231,7 @@ of CPU codes becomes memory bandwidth bound, so even for the CPU it makes sense 
 to smaller but much higher bandwidth memory in the package. The AMD MI300 and Intel Falcon Shores
 will fully integrate the CPU and GPU chiplets and memory controllers with memory in a single
 package. 
-Whereas the MI250x (featured in the European supercomputer LUMI and American exascale
-system Frontier) has cache coherent memory but still a lot of overhead when the GPU wants to
+Whereas the MI250x has cache coherent memory but still a lot of overhead when the GPU wants to
 access CPU memory or the other way around, in the MI300 generation the CPU and GPU memory
 is fully unified (physical and virtual), with both sharing the same memory controllers and memory, which will enable
 to fully eliminate redundant memory copies.
