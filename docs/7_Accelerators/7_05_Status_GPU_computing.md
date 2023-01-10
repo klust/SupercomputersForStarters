@@ -240,9 +240,9 @@ MI300 was first mentioned at the AMD Financial Analyst Day in June 2022 and at
 where a full package was shown, but still with very little detail.
 It was announced the one MI300 package will combine a powerful GPU with 24 CPU cores 
 (presumably 3 Zen4 chiplets) and 8 HBM3 modules for a total of 128 GB RAM. The chip
-will consists of 9 chiplets stacked in two layers, with 4 chiplets at the bottom (presumably 
-the memory controllers as they produce less heat) and 5 chiplets at the top 
-(which could be 3 CPU chiplets and 2 CDNA3 GPU dies?). 
+will consists of 13 chiplets stacked in two layers, with 4 chiplets at the bottom (presumably 
+the memory controllers as they produce less heat) and 9 chiplets at the top 
+(which could be 3 CPU chiplets and 6 CDNA3 GPU dies?). 
 A supercomputer node based on this
 chip could look a bit like
 
