@@ -94,7 +94,7 @@ We will discuss this evolution in some more detail in the next section.
 Around 2016, a typical GPU compute node consisted of a dual socket server with 1-4 GPUs attached
 to the CPUs. A typical design would have been:
 
-![2016 GPU design](../img/7_05_01_2016_GPU.jpg)
+![2016 GPU design](../img/8_05_01_2016_GPU.jpg)
 
 The red line between the two CPUs denotes a fully cache coherent link between the CPUs. 
 In 2016 this would very likely have been either Intel CPUs or IBM POWER CPUs, and both
@@ -110,7 +110,7 @@ perform the majority of the calculations and hence also contain the data that sh
 be send to other nodes. A typical 4-GPU node based on the NVIDIA Ampere A100 GPU launched
 in 2020 would look similar to:
 
-![2020 NVIDIA A100](../img/7_05_02_2020_A100.jpg)
+![2020 NVIDIA A100](../img/8_05_02_2020_A100.jpg)
 
 There are many variants of quad GPU designs with the A100 GPU, with single and dual
 socket CPU servers. However, it is often advantageous to have all GPUs connected to
@@ -131,7 +131,7 @@ GPU compute nodes of the Frontier
 and LUMI supercomputers based on the MI250X GPU. A simplified diagram of the
 LUMI and Frontier GPU nodes is:
 
-![A simplified MI250X node](../img/7_05_03_MI250X.jpg)
+![A simplified MI250X node](../img/8_05_03_MI250X.jpg)
 
 The GPU compute nodes of LUMI and Frontier use a special variant of the Zen3-based
 AMD Epyc processor. In this variant, the PCIe lanes are replaced by InfinityFabric
@@ -211,7 +211,7 @@ Build supercomputer nodes with up to 8 superchips with a single NVLINK switch le
 and link those nodes together using a traditional HPC interconnect. A possible layout of such a node 
 is shown in the following figure:
 
-![A 4-GPU GH100 node](../img/7_05_04_GH100.jpg)
+![A 4-GPU GH100 node](../img/8_05_04_GH100.jpg)
 
 In this figure we combine 4 Grace Hopper packages in a single node and have chose to connect each
 package directly to the interconnect for additional bandwidth.
@@ -246,7 +246,7 @@ the memory controllers as they produce less heat) and 9 chiplets at the top
 A supercomputer node based on this
 chip could look a bit like
 
-![A MI300 supercomputer node](../img/7_05_05_MI300.jpg)
+![A MI300 supercomputer node](../img/8_05_05_MI300.jpg)
 
 Here we see four packages integrating one or more CPU chiplets, one or more GPU dies and
 memory in a single packages. The four packages have an all-to-all connection likely using

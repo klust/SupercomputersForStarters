@@ -30,23 +30,23 @@
 
     -   [To remember](4_Storage/4_05_To_remember.md)
 
--   [Middleware](5_Middleware/index.md)
+-   [Middleware](6_Middleware/index.md)
 
--   [What can we expect?](6_Expectations/index.md)
+-   [What can we expect?](7_Expectations/index.md)
 
--   [Accelerators](7_Accelerators/index.md)
+-   [Accelerators](8_Accelerators/index.md)
 
-    -   [What are accelerators?](7_Accelerators/7_01_What_are_accelerators.md)
+    -   [What are accelerators?](8_Accelerators/8_01_What_are_accelerators.md)
 
-    -   [Offloading](7_Accelerators/7_02_Offloading.md)
+    -   [Offloading](8_Accelerators/8_02_Offloading.md)
 
-    -   [CPUs with accelerator features](7_Accelerators/7_03_CPUs_accelerator_features.md)
+    -   [CPUs with accelerator features](8_Accelerators/8_03_CPUs_accelerator_features.md)
 
-    -   [Accelerator programming](7_Accelerators/7_04_Programming_accelerators.md)
+    -   [Accelerator programming](8_Accelerators/8_04_Programming_accelerators.md)
 
-    -   [Status of GPU computing](7_Accelerators/7_05_Status_GPU_computing.md)
+    -   [Status of GPU computing](8_Accelerators/8_05_Status_GPU_computing.md)
 
-    -   [Further reading](7_Accelerators/7_06_Further_reading.md)
+    -   [Further reading](8_Accelerators/8_06_Further_reading.md)
 
--   [Conclusions](8_Conclusions/index.md)
+-   [Conclusions](9_Conclusions/index.md)
 
