@@ -1,0 +1,2 @@
+# Dennard scaling
+
