@@ -45,6 +45,10 @@ nav:
     - 5_Summary1/index.md
     - Scaling: 5_Summary1/05_01_Scaling.md
     - Dennard scaling: 5_Summary1/05_02_Dennard_scaling.md
+    - Transistor cost: 5_Summary1/05_03_Cost_transistor.md
+    - 3 keywords: 5_Summary1/05_04_Keywords.md
+    - Andy and Bill's law: 5_Summary1/05_05_Andy_Bill.md
+    - Software, not hardware: 5_Summary1/05_06_Software_not_hardware.md
   - Middleware:
     - 6_Middleware/index.md
   - What can we expect?:
