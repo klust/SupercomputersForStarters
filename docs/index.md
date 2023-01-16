@@ -22,13 +22,28 @@
 
     -   [Introduction](4_Storage/4_01_Introduction.md)
 
-    -   [Problemms with a parallel disk setup](4_Storage/4_02_Problems.md)
+    -   [Problems with a parallel disk setup](4_Storage/4_02_Problems.md)
 
     -   [Parallel file systems](4_Storage/4_03_Parallel_filesystems.md)
 
     -   [A storage revolution?](4_Storage/4_04_Revolution.md)
 
     -   [To remember](4_Storage/4_05_To_remember.md)
+
+-   [Putting it all together](5_Summary1/index.md)
+
+    -   [Scaling](5_Summary1/05_01_Scaling.md)
+
+    -   [Dennard scaling](5_Summary1/05_02_Dennard_scaling.md)
+
+    -   [Transistor cost](5_Summary1/05_03_Cost_transistor.md)
+
+    -   [Three keywords: Streaming, Parallelism, and Hierarchy](5_Summary1/05_04_Keywords.md)
+
+    -   [Andy and Bill's law](5_Summary1/05_05_Andy_Bill.md)
+
+    -   [Software first, not hardware](5_Summary1/05_06_Software_not_hardware.md)
+
 
 -   [Middleware](6_Middleware/index.md)
 
