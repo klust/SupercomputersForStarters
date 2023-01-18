@@ -28,13 +28,18 @@ of running it properly, move to a (larger) supercomputer, and not the
 other way around, first move to a supercomputer and then if it still doesn't
 work think about developing better code.
 
+This becomes even more important as we can no longer rely on a rapid 
+improvement of performance at a constant budget. To be able to advance
+research, it will only become more important to use all available computing
+resources properly.
+
 
 ## Cost-concious computing as a software user
 
 It is important to select the software that you use with care and to follow
 the evolutions in your field. Hardware evolves, and some software packages
 evolve with the hardware while others stay behind.
-EuroHPC, the European initiative for supercomputer, adn the USA funding agencies
+EuroHPC, the European initiative for supercomputer, and the USA funding agencies
 and in particular the national labs, invest a lot of resources into improving
 or rewriting popular scientific software packages, and these are often available
 as open source or free to license for academic research.
@@ -45,7 +50,9 @@ may not be adequate anymore either.
 It is also important to learn to use the software packages efficiently,
 with a balance between execution efficiency and time-to-solution.
 Most packages, and this is even more true for the free ones, have no
-auto-tune facility. Users need to do that work instead.
+auto-tune facility. Users need to do that work instead, which implies
+that you also need some understanding of the computer that you are
+using.
 For a numerical simulation it is also important to understand the limits
 of the models (accuracy-wise) and of the numerics. Asking for more precision
 than makes sense given the errors in the model and the stability of the numerical
@@ -128,11 +135,12 @@ your program while you were having lunch or going to a party, by
 designing better, faster processors. In those days, code would run
 considerably faster on a new processor even without recompiling,
 though recompiling would improve that even more. However, these
-days are long over. Around 2005, further increasing the clock
+days are long over. Around 2005, Dennard scaling started to 
+break down and further increasing the clock
 speed became very hard. We've moved from 4 MHz in 1980 to 
 almost 4 GHz in 2005, but from then on evolution slowed down
 (and took even a step back for a while) and now we are somewhere
-around 5.5 GHz for processors that are really optimised for sequential
+close to 6 GHz for processors that are really optimised for sequential
 code and consume a lot of power. It also became harder and harder
 to get gains from increased instruction level parallelism. Instead of
 that, we saw growing popularity of vector instructions and the use
@@ -148,8 +156,10 @@ can be put on a chip is no longer growing as fast, the power consumption
 per transistor is no longer decreasing much with every new generation,
 and the cost of a transistor isn't really decreasing anymore, but in 
 fact is starting to increase again when moving to a smaller manufacturing process.
+It looks like the days of further significant performance gains without 
+growing budgets to match are mostly over.
 
-The focus in computing is more and more on performance per Watt as
+The focus in computing is also more and more on performance per Watt as
 energy bills become prohibitively high for supercomputer centres and 
 centres operating large server farms or as portability matters as in 
 smartphones, where you want more and more performance while the battery

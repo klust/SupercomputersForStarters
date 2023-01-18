@@ -19,7 +19,8 @@ be avoided where possible.
 A good step towards improved use of supercomputer file systems is to use appropriate 
 data formats. Libraries such as
 [HDF5](https://www.hdfgroup.org/solutions/hdf5/),
-[netCDF](https://www.unidata.ucar.edu/software/netcdf/)
+[netCDF](https://www.unidata.ucar.edu/software/netcdf/),
+[ADIOS](https://csmd.ornl.gov/adios)
 and [SIONlib](https://apps.fz-juelich.de/jsc/sionlib/docu/index.html)
 help to organise large amounts of data in a small number of files that work well
 on supercomputers. 
@@ -28,6 +29,11 @@ compressed archive directly into memory which may already improve performance wh
 a lot of small files would otherwise be read in, but of course it requires adapting
 the code to use such a library rather than the functions calls to read from the 
 file system.
+You can think of such libraries as creating a hierarchy to manage the complexity: 
+the file system manages datasets as a single file for each dataset, and the file
+library creates a kind of a file system in the application to store the different 
+data objects that compose the dataset, also in a format that can be optimised for
+that specific dataset.
 
 Another remark that we have not yet really discussed is that it is not a good idea to
 read or write numeric data in text (ASCII or UTF) format. There is hardly a portability

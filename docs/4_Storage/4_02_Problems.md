@@ -68,6 +68,9 @@ a smaller block size. And small files would use only a single object, making the
 consumed by a file the block size of a single object server. 
 Examples of this approach are the [Lustre](https://www.lustre.org/) and 
 [BeeGFS](https://thinkparq.com/products/beegfs/) file system used in supercomputing.
+However, in such systems it often turns out to be necessary for optimal peformance to tell the
+system how to distribute the data across objects as that depends strongly on the size of the files
+and how the files are used.
 
 ??? info "UAntwerp-specific"
     The supercomputer storage of the CalcUA facility of the University of Antwerp used the IBM Spectrum Scale

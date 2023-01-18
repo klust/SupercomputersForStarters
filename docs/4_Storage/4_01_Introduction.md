@@ -23,9 +23,11 @@ and saturate the drive controller.
 
 However, just as not all programs can benefit from using multiple processors, not all
 programs can benefit from a supercomputer disk setup. A parallel disk setup only
-works when programs access large amounts of data in large files.
+works when programs access large amounts of data in large files. It can improve bandwidth a lot,
+but the latency of each individual device still restricts the latency of the system as a whole.
 And the same is true for storage as for computing: The storage of your PC can be
-faster than the shared storage of a supercomputer if you don't use it in the proper way.
+faster than the shared storage of a supercomputer if you don't use 
+the supercomputer storage in the proper way.
 But similarly accessing files in the right way may make your already fast PC storage
 even faster as there are applications that are so badly written that they use the
-SSD in your PC also at only 5% of its potential data transfer speed...
+SSD in your PC also at only 5% or 10% of its potential data transfer speed...
