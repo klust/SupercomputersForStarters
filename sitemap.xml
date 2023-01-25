@@ -6,192 +6,192 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://klust.github.io/SupercomputersForStarters/0_00_preliminary/</loc>
+         <loc>https://klust.github.io/SupercomputersForStarters/C00_S00_preliminary/</loc>
          <lastmod>2023-01-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://klust.github.io/SupercomputersForStarters/1_Introduction/</loc>
+         <loc>https://klust.github.io/SupercomputersForStarters/C01_Introduction/</loc>
          <lastmod>2023-01-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://klust.github.io/SupercomputersForStarters/1_Introduction/1_01_Goals/</loc>
+         <loc>https://klust.github.io/SupercomputersForStarters/C01_Introduction/C01_S01_Goals/</loc>
          <lastmod>2023-01-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://klust.github.io/SupercomputersForStarters/1_Introduction/1_02_Why/</loc>
+         <loc>https://klust.github.io/SupercomputersForStarters/C01_Introduction/C01_S02_Why/</loc>
          <lastmod>2023-01-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://klust.github.io/SupercomputersForStarters/1_Introduction/1_03_What_it_is_not/</loc>
+         <loc>https://klust.github.io/SupercomputersForStarters/C01_Introduction/C01_S03_What_it_is_not/</loc>
          <lastmod>2023-01-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://klust.github.io/SupercomputersForStarters/1_Introduction/1_04_Compartmentalised/</loc>
+         <loc>https://klust.github.io/SupercomputersForStarters/C01_Introduction/C01_S04_Compartmentalised/</loc>
          <lastmod>2023-01-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://klust.github.io/SupercomputersForStarters/1_Introduction/1_05_Overview/</loc>
+         <loc>https://klust.github.io/SupercomputersForStarters/C01_Introduction/C01_S05_Overview/</loc>
          <lastmod>2023-01-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://klust.github.io/SupercomputersForStarters/2_Processors/</loc>
+         <loc>https://klust.github.io/SupercomputersForStarters/C02_Processors/</loc>
          <lastmod>2023-01-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://klust.github.io/SupercomputersForStarters/2_Processors/2_01_Intro/</loc>
+         <loc>https://klust.github.io/SupercomputersForStarters/C02_Processors/C02_S01_Intro/</loc>
          <lastmod>2023-01-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://klust.github.io/SupercomputersForStarters/2_Processors/2_02_Basic_CPU/</loc>
+         <loc>https://klust.github.io/SupercomputersForStarters/C02_Processors/C02_S02_Basic_CPU/</loc>
          <lastmod>2023-01-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://klust.github.io/SupercomputersForStarters/2_Processors/2_03_ILP_I_Pipelining/</loc>
+         <loc>https://klust.github.io/SupercomputersForStarters/C02_Processors/C02_S03_ILP_I_Pipelining/</loc>
          <lastmod>2023-01-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://klust.github.io/SupercomputersForStarters/2_Processors/2_04_ILP_II_Superscalar/</loc>
+         <loc>https://klust.github.io/SupercomputersForStarters/C02_Processors/C02_S04_ILP_II_Superscalar/</loc>
          <lastmod>2023-01-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://klust.github.io/SupercomputersForStarters/2_Processors/2_05_Vectorisation/</loc>
+         <loc>https://klust.github.io/SupercomputersForStarters/C02_Processors/C02_S05_Vectorisation/</loc>
          <lastmod>2023-01-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://klust.github.io/SupercomputersForStarters/3_Memory/</loc>
+         <loc>https://klust.github.io/SupercomputersForStarters/C03_Memory/</loc>
          <lastmod>2023-01-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://klust.github.io/SupercomputersForStarters/4_Storage/</loc>
+         <loc>https://klust.github.io/SupercomputersForStarters/C04_Storage/</loc>
          <lastmod>2023-01-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://klust.github.io/SupercomputersForStarters/4_Storage/4_01_Introduction/</loc>
+         <loc>https://klust.github.io/SupercomputersForStarters/C04_Storage/C04_S01_Introduction/</loc>
          <lastmod>2023-01-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://klust.github.io/SupercomputersForStarters/4_Storage/4_02_Problems/</loc>
+         <loc>https://klust.github.io/SupercomputersForStarters/C04_Storage/C04_S02_Problems/</loc>
          <lastmod>2023-01-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://klust.github.io/SupercomputersForStarters/4_Storage/4_03_Parallel_filesystems/</loc>
+         <loc>https://klust.github.io/SupercomputersForStarters/C04_Storage/C04_S03_Parallel_filesystems/</loc>
          <lastmod>2023-01-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://klust.github.io/SupercomputersForStarters/4_Storage/4_04_Revolution/</loc>
+         <loc>https://klust.github.io/SupercomputersForStarters/C04_Storage/C04_S04_Revolution/</loc>
          <lastmod>2023-01-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://klust.github.io/SupercomputersForStarters/4_Storage/4_05_To_remember/</loc>
+         <loc>https://klust.github.io/SupercomputersForStarters/C04_Storage/C04_S05_To_remember/</loc>
          <lastmod>2023-01-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://klust.github.io/SupercomputersForStarters/5_Summary1/</loc>
+         <loc>https://klust.github.io/SupercomputersForStarters/C05_Summary1/</loc>
          <lastmod>2023-01-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://klust.github.io/SupercomputersForStarters/5_Summary1/05_01_Scaling/</loc>
+         <loc>https://klust.github.io/SupercomputersForStarters/C05_Summary1/C05_S01_Scaling/</loc>
          <lastmod>2023-01-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://klust.github.io/SupercomputersForStarters/5_Summary1/05_02_Dennard_scaling/</loc>
+         <loc>https://klust.github.io/SupercomputersForStarters/C05_Summary1/C05_S02_Dennard_scaling/</loc>
          <lastmod>2023-01-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://klust.github.io/SupercomputersForStarters/5_Summary1/05_03_Cost_transistor/</loc>
+         <loc>https://klust.github.io/SupercomputersForStarters/C05_Summary1/C05_S03_Cost_transistor/</loc>
          <lastmod>2023-01-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://klust.github.io/SupercomputersForStarters/5_Summary1/05_04_Keywords/</loc>
+         <loc>https://klust.github.io/SupercomputersForStarters/C05_Summary1/C05_S04_Keywords/</loc>
          <lastmod>2023-01-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://klust.github.io/SupercomputersForStarters/5_Summary1/05_05_Andy_Bill/</loc>
+         <loc>https://klust.github.io/SupercomputersForStarters/C05_Summary1/C05_S05_Andy_Bill/</loc>
          <lastmod>2023-01-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://klust.github.io/SupercomputersForStarters/5_Summary1/05_06_Software_not_hardware/</loc>
+         <loc>https://klust.github.io/SupercomputersForStarters/C05_Summary1/C05_S06_Software_not_hardware/</loc>
          <lastmod>2023-01-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://klust.github.io/SupercomputersForStarters/5_Summary1/05_07_Building_up_the_supercomputer/</loc>
+         <loc>https://klust.github.io/SupercomputersForStarters/C05_Summary1/C05_S07_Building_up_the_supercomputer/</loc>
          <lastmod>2023-01-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://klust.github.io/SupercomputersForStarters/6_Middleware/</loc>
+         <loc>https://klust.github.io/SupercomputersForStarters/C06_Middleware/</loc>
          <lastmod>2023-01-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://klust.github.io/SupercomputersForStarters/7_Expectations/</loc>
+         <loc>https://klust.github.io/SupercomputersForStarters/C07_Expectations/</loc>
          <lastmod>2023-01-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://klust.github.io/SupercomputersForStarters/8_Accelerators/</loc>
+         <loc>https://klust.github.io/SupercomputersForStarters/C08_Accelerators/</loc>
          <lastmod>2023-01-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://klust.github.io/SupercomputersForStarters/8_Accelerators/8_01_What_are_accelerators/</loc>
+         <loc>https://klust.github.io/SupercomputersForStarters/C08_Accelerators/C08_S01_What_are_accelerators/</loc>
          <lastmod>2023-01-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://klust.github.io/SupercomputersForStarters/8_Accelerators/8_02_Offloading/</loc>
+         <loc>https://klust.github.io/SupercomputersForStarters/C08_Accelerators/C08_S02_Offloading/</loc>
          <lastmod>2023-01-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://klust.github.io/SupercomputersForStarters/8_Accelerators/8_03_CPUs_accelerator_features/</loc>
+         <loc>https://klust.github.io/SupercomputersForStarters/C08_Accelerators/C08_S03_CPUs_accelerator_features/</loc>
          <lastmod>2023-01-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://klust.github.io/SupercomputersForStarters/8_Accelerators/8_04_Programming_accelerators/</loc>
+         <loc>https://klust.github.io/SupercomputersForStarters/C08_Accelerators/C08_S04_Programming_accelerators/</loc>
          <lastmod>2023-01-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://klust.github.io/SupercomputersForStarters/8_Accelerators/8_05_Status_GPU_computing/</loc>
+         <loc>https://klust.github.io/SupercomputersForStarters/C08_Accelerators/C08_S05_Status_GPU_computing/</loc>
          <lastmod>2023-01-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://klust.github.io/SupercomputersForStarters/8_Accelerators/8_06_Further_reading/</loc>
+         <loc>https://klust.github.io/SupercomputersForStarters/C08_Accelerators/C08_S06_Further_reading/</loc>
          <lastmod>2023-01-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://klust.github.io/SupercomputersForStarters/9_Conclusions/</loc>
+         <loc>https://klust.github.io/SupercomputersForStarters/C09_Conclusions/</loc>
          <lastmod>2023-01-25</lastmod>
          <changefreq>daily</changefreq>
     </url>

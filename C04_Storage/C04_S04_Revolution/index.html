@@ -1,0 +1,1650 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://klust.github.io/SupercomputersForStarters/C04_Storage/C04_S04_Revolution/">
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.10">
+    
+    
+      
+        <title>A storage revolution? - Supercomputers for Starters</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.975780f9.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.2505c338.min.css">
+        
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#a-storage-revolution" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Supercomputers for Starters" class="md-header__button md-logo" aria-label="Supercomputers for Starters" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Supercomputers for Starters
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              A storage revolution?
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent=""  aria-hidden="true"  type="radio" name="__palette" id="__palette_1">
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Supercomputers for Starters" class="md-nav__button md-logo" aria-label="Supercomputers for Starters" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Supercomputers for Starters
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../C00_S00_preliminary/" class="md-nav__link">
+        Preliminary words
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../C01_Introduction/">Introduction</a>
+          
+            <label for="__nav_3">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="Introduction" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Introduction
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../C01_Introduction/C01_S01_Goals/" class="md-nav__link">
+        Goals
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../C01_Introduction/C01_S02_Why/" class="md-nav__link">
+        Why supercomputing?
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../C01_Introduction/C01_S03_What_it_is_not/" class="md-nav__link">
+        What it is not
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../C01_Introduction/C01_S04_Compartmentalised/" class="md-nav__link">
+        A compartmentalised supercomputer
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../C01_Introduction/C01_S05_Overview/" class="md-nav__link">
+        Overview of the notes
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../C02_Processors/">Processors for supercomputers</a>
+          
+            <label for="__nav_4">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="Processors for supercomputers" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Processors for supercomputers
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../C02_Processors/C02_S01_Intro/" class="md-nav__link">
+        Introduction
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../C02_Processors/C02_S02_Basic_CPU/" class="md-nav__link">
+        A basic CPU
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../C02_Processors/C02_S03_ILP_I_Pipelining/" class="md-nav__link">
+        ILP I - Pipelining
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../C02_Processors/C02_S04_ILP_II_Superscalar/" class="md-nav__link">
+        ILP II - Superscalar
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../C02_Processors/C02_S05_Vectorisation/" class="md-nav__link">
+        Vector computing
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      
+      
+        
+          
+            
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../C03_Memory/">The memory hierarchy</a>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="The memory hierarchy" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          The memory hierarchy
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" checked>
+      
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../">Storing data on Supercomputers</a>
+          
+            <label for="__nav_6">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="Storing data on Supercomputers" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          Storing data on Supercomputers
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../C04_S01_Introduction/" class="md-nav__link">
+        Introduction
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../C04_S02_Problems/" class="md-nav__link">
+        Problems
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../C04_S03_Parallel_filesystems/" class="md-nav__link">
+        Parallel file systems
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          A storage revolution?
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        A storage revolution?
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#why-are-flash-based-ssds-not-the-solution" class="md-nav__link">
+    Why are flash-based SSDs (not) the solution?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#new-memory-types-for-a-revolution" class="md-nav__link">
+    New memory types for a revolution?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#local-storage-in-supercomputer-nodes" class="md-nav__link">
+    Local storage in supercomputer nodes
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../C04_S05_To_remember/" class="md-nav__link">
+        To remember
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" >
+      
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../C05_Summary1/">Putting it all together</a>
+          
+            <label for="__nav_7">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="Putting it all together" data-md-level="1">
+        <label class="md-nav__title" for="__nav_7">
+          <span class="md-nav__icon md-icon"></span>
+          Putting it all together
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../C05_Summary1/C05_S01_Scaling/" class="md-nav__link">
+        Scaling
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../C05_Summary1/C05_S02_Dennard_scaling/" class="md-nav__link">
+        Dennard scaling
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../C05_Summary1/C05_S03_Cost_transistor/" class="md-nav__link">
+        Transistor cost
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../C05_Summary1/C05_S04_Keywords/" class="md-nav__link">
+        3 keywords
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../C05_Summary1/C05_S05_Andy_Bill/" class="md-nav__link">
+        Andy and Bill's law
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../C05_Summary1/C05_S06_Software_not_hardware/" class="md-nav__link">
+        Software, not hardware
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../C05_Summary1/C05_S07_Building_up_the_supercomputer/" class="md-nav__link">
+        Building up the supercomputer
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8" type="checkbox" id="__nav_8" >
+      
+      
+      
+        
+          
+            
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../C06_Middleware/">Middleware</a>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="Middleware" data-md-level="1">
+        <label class="md-nav__title" for="__nav_8">
+          <span class="md-nav__icon md-icon"></span>
+          Middleware
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_9" type="checkbox" id="__nav_9" >
+      
+      
+      
+        
+          
+            
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../C07_Expectations/">What can we expect?</a>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="What can we expect?" data-md-level="1">
+        <label class="md-nav__title" for="__nav_9">
+          <span class="md-nav__icon md-icon"></span>
+          What can we expect?
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10" type="checkbox" id="__nav_10" >
+      
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../C08_Accelerators/">Accelerators</a>
+          
+            <label for="__nav_10">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="Accelerators" data-md-level="1">
+        <label class="md-nav__title" for="__nav_10">
+          <span class="md-nav__icon md-icon"></span>
+          Accelerators
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../C08_Accelerators/C08_S01_What_are_accelerators/" class="md-nav__link">
+        What are accelerators?
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../C08_Accelerators/C08_S02_Offloading/" class="md-nav__link">
+        Offloading
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../C08_Accelerators/C08_S03_CPUs_accelerator_features/" class="md-nav__link">
+        CPUs with accelerator features
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../C08_Accelerators/C08_S04_Programming_accelerators/" class="md-nav__link">
+        Accelerator prorgramming
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../C08_Accelerators/C08_S05_Status_GPU_computing/" class="md-nav__link">
+        Status of GPU computing
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../C08_Accelerators/C08_S06_Further_reading/" class="md-nav__link">
+        Further reading
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_11" type="checkbox" id="__nav_11" >
+      
+      
+      
+        
+          
+            
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../C09_Conclusions/">Conclusions</a>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="Conclusions" data-md-level="1">
+        <label class="md-nav__title" for="__nav_11">
+          <span class="md-nav__icon md-icon"></span>
+          Conclusions
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#why-are-flash-based-ssds-not-the-solution" class="md-nav__link">
+    Why are flash-based SSDs (not) the solution?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#new-memory-types-for-a-revolution" class="md-nav__link">
+    New memory types for a revolution?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#local-storage-in-supercomputer-nodes" class="md-nav__link">
+    Local storage in supercomputer nodes
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="a-storage-revolution">A storage revolution?<a class="headerlink" href="#a-storage-revolution" title="Permanent link">&para;</a></h1>
+<h2 id="why-are-flash-based-ssds-not-the-solution">Why are flash-based SSDs (not) the solution?<a class="headerlink" href="#why-are-flash-based-ssds-not-the-solution" title="Permanent link">&para;</a></h2>
+<details>
+<summary>University of Antwerp-specific</summary>
+<p>The joint bandwidth on the BeeGFS scratch file system at the CalcUA compute
+service in use in 2022 is on the order of 7 GB/s. At the same time,
+some NVMe SSDs for PCIe 4 also claim to offer a read bandwidth of 7 GB/s
+and a write bandwidth that is not that much lower.</p>
+<p>So one could wonder if we shouldn't use 105 of those drives instead.</p>
+<p>There is of course the cost of the drives. But also a lot more server
+hardware would be needed simply to connect the drives and also to
+support the bandwidth over the interconnect.</p>
+</details>
+<p>The following table shows prices and properties for some drives in early 2022:</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Seagate Exos X20</th>
+<th>Seagate Nytro 3732</th>
+<th>Seagate  Nytro 3332</th>
+<th>Samsung 980 Pro</th>
+<th>Samsung 970 EVO Plus</th>
+<th>Samsung 870 QVO</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Technology</td>
+<td>spinning magnetic disks</td>
+<td>3D eTLC NAND flash</td>
+<td>3D eTLC NAND flash</td>
+<td>TLC V-NAND flash</td>
+<td>TLC V-NAND flash</td>
+<td>QLC V-NAND Flash</td>
+</tr>
+<tr>
+<td>Market</td>
+<td>datacenter (SAS)</td>
+<td>datacenter (SAS)</td>
+<td>datacenter (2xSAS)</td>
+<td>prosumer (NVMe)</td>
+<td>consumer (NVMe)</td>
+<td>consumer (SATA)</td>
+</tr>
+<tr>
+<td>Capacity</td>
+<td>20 TB</td>
+<td>3.2 TB</td>
+<td>15.36 TB</td>
+<td>2 TB</td>
+<td>2 TB</td>
+<td>8 TB</td>
+</tr>
+<tr>
+<td>Read speed</td>
+<td>0.28 GB/s</td>
+<td>1.1 GB/s</td>
+<td>1.05-2.1 GB/s</td>
+<td>7 GB/s</td>
+<td>3.5 GB/s</td>
+<td>0.56 GB/s</td>
+</tr>
+<tr>
+<td>Write speed</td>
+<td>0.28 GB/s</td>
+<td>1 GB/s</td>
+<td>0.95-1 GB/s</td>
+<td>5.1 GB/s</td>
+<td>3.3 GB/s</td>
+<td>0.53 GB/s</td>
+</tr>
+<tr>
+<td>Latency</td>
+<td>4,16 ms</td>
+<td>20 µs ???</td>
+<td>20 µs ???</td>
+<td>20 µs ???</td>
+<td>20 µs ???</td>
+<td>20 µs ???</td>
+</tr>
+<tr>
+<td>Endurance</td>
+<td>?</td>
+<td>58.4 PB</td>
+<td>28 PB</td>
+<td>1.2 PB</td>
+<td>1.2 PB</td>
+<td>2.88 PB</td>
+</tr>
+<tr>
+<td>DWPD</td>
+<td>?</td>
+<td>10</td>
+<td>1</td>
+<td>0,33</td>
+<td>0.33</td>
+<td>0.2 (@5 year)</td>
+</tr>
+<tr>
+<td>Data written/day</td>
+<td>?</td>
+<td>32 TB/day</td>
+<td>15.3 TB/day</td>
+<td>0.66 TB/day</td>
+<td>0.66 TB/day</td>
+<td>1.5 TB/day</td>
+</tr>
+<tr>
+<td>Time needed</td>
+<td></td>
+<td>8h50m</td>
+<td>4h15m</td>
+<td>2m9s</td>
+<td>3m20 s</td>
+<td>50 m</td>
+</tr>
+<tr>
+<td>Price</td>
+<td>0.025-0.05 €/GB</td>
+<td>0,85 €/GB</td>
+<td>0,31 €/GB</td>
+<td>0.16 €/GB</td>
+<td>0.12 €/GB</td>
+<td>0.08 €/GB</td>
+</tr>
+</tbody>
+</table>
+<p>In this table we compare a popular high-quality hard drive for use in the datacenter with several
+NAND flash based drives, ordered from the highest to the lowest quality measured in durability first
+and speed second.</p>
+<p>The Nytro 3732 is a very high endurance drive but only exists in relatively small capacities.
+It uses a SAS interface which is very popular in servers as it is a good interface to build
+large disk systems, where the drives are also further away from the CPU or in this case the
+drive controller. The 3332 is a somewhat similar drive but with much higher capacity but lower
+endurance. It has two SAS interfaces that can be used to get double the bandwidth.
+The Samsung 980 Pro is a NVMe drive in M.2-format, meant to be put in a PCIe 4 slot on
+the motherboard. This is a much faster interface than the one used in the two Nytro drives,
+which also explains its very high speed. But it is also a less scalable interface as long
+distance connections would be expensive, as are the switches that would be needed if the
+CPU does ot provide enough PCIe connections itself. The Samsung 970 EVO Plus is a slightly
+lower-end drive with a slower interface. All these drives use so-called TCL NAND, which
+stands for Triple Level Cell NAND, meaning that it stores 3 bits per memory cell. 
+The last drive, the Samsung 870 QVO differs in two aspects from the other SAMSUNG drives
+and the datacenter drives: It uses QLC NAND, which stores 4 bits per cell, making it a bit
+cheaper, but also uses a much slower interface, SATA, which is an older interface that was
+very popular for hard disks in PCs. It also has a hard disk form factor and is not one that
+you plug in on the motherboard as the other two Samsung drives.</p>
+<p>For each of the drive series, we compare the larger capacity SKUs that one can get as after
+all we are interested in building big storage systems and as they also tend to be relatively
+cheaper. For SSDs, the larger capacity drives are sometimes also a bit faster than the lower
+capacity ones in the same series. This is because a flash drive itself is already a highly
+parallel device using parallelism over multiple banks of flash memory chips to increase
+the speed. The smaller drives in a given series may not have enough banks of flash memory
+to fully exploit all the parallelism that the controller chip of the drive (itself a
+processor more powerful than those in the first smartphones) is capable of using.</p>
+<p>The main weakness of hard drives and strength of flash drives becomes immediately clean
+when we look at the rows for (peak) read and write speed and for latency: Hard disks have 
+much lower peak read and write speeds and a latency that is orders of magnitude higher.
+Note that we did not find precise latency numbers for the flash drives in the table,
+but the numbers are a reasonable estimate based on other drives for which the data
+was available. One should be careful interpreting the write bandwidth. Hard disks become
+slower for both reading and writing as they fill up partly because of mechanical reasons as 
+the outer zones of the drive are also used and the read and write heads have to move more,
+and partly because of a phenomenon known as drive fragmentation, where data that belongs
+together gets spread all over the disk instead of stored in a single zone of the disk. 
+There is software to try to correct the latter. But SSDs also get slower the more data
+is already on them, and this is more pronounced the more bits are stored per memory cell. 
+But SSDs have another problem: Just as regular hard drives, data is written in blocks.
+But data cannot be erased or overwritten in single blocks. Before overwriting data,
+the block has to be erased, but this can only be done in clusters of blocks. Therefore,
+if a drive is getting full and data is written and rewritten all the time, the drive
+has to reorganise its storage all the time which can lead to write speeds that are 
+much lower than on a well-organised hard disk. Some modern hard disks with very high capacity
+also have a similar problem, but those are only used for archiving while slightly lower
+capacity drives that don't have this problem are used for more active storage.
+And another problem is with drives that store multiple bits per cell, which is currently
+basically all drives. When the drive is rather empty and only one bit needs to be stored
+per cell, write speeds are much higher than when the drive is filling up and 3 or 4 bits are
+stored per cell.</p>
+<p>The table does however clearly show another problem of SSDs: endurance. Unfortunately 
+endurance for hard disks and SSDs is measure differently so that it is hard to compare
+in the table. But basically, the Seagate Exos is suitable for near continuous reading
+and writing and will last for the 5 years of its warranty period. For SSDs the story 
+is very different. In the early years, an SSD memory cell could be erased and rewritten
+several thousands of times without failing. However, both the miniaturisation and the use
+of multiple bits per cell have severely lowered that life span. Some flash memory cell
+can be erased and rewritten only 150 to 500 times without failing. Drives try to compensate
+for that by very clever write and erase strategies and by keeping some spare storage on the
+drive that can be used to replace worn out parts, so that a fixed size can be reported to
+the operating system. This technique is called <em>wear levelling</em>. This complex management of
+data on the drive to appear as a regular drive to the operating system is also one of the
+reasons why flash drives have actually rather powerful processors. Endurance of SSDs is 
+measured in Drive Writes Per Day, abbreviated DWPD. In the table above, these have all been
+normalised to a 5-year life span of the drive. Another measure is the amount of data
+that can be written per day to have a 5 year life span of the drive. It is obvious that the
+larger the drive, the more data can be written also. We compare this with how long it would
+take to write that daily capacity to the drive in the (invalid) assumption that we could 
+write at the maximum write bandwidth. Now we see that the Nytro 3732 is a very good drive.
+It supports 10 DWPD and even at its relatively small capacity this is still so much data per day 
+that one could probably write almost continuously to it. It is certainly a drive suitable for
+a scenario with high write loads, as is the case for supercomputer scratch storage.
+For the Nytro 3332 which is 1 DWPD it is really only the capacity that saves us. It is slow
+enough that one can still write a lot of data to it. But if we would use a smaller and cheaper
+1 DWPD in, e.g., a compute node, we would probably run into problems as that local drive in the
+compute node would typically be used to contain a temporary copy of large data sets, and hence 
+have a lot of data written to it in each job. The Samsung NVMe drives are meant for a totally
+different access scenario though. They can only sustain 0.33 DWPD, and if you could write that
+data at the full write speed, this really means that you could only write to them for a few 
+minutes per day. That high speed is certainly not meant to put a higher write load on the drives.
+On the contrary, these drives are meant for use in PCs under a typical workload for a PC, where
+much of the data on the drive is very static and consists of files that may be read often,
+or are archived for long times. The QVO drive can sustain only 0.2 DWPD, but still ingest
+quite a lot of data per day due to its high capacity. And due to its slow write speed due 
+largely to the slow SATA interface, it also looks as if one can write for quite some time
+to it, but also given how much quad level cells can slow down when filling up, it is really
+a drive for archiving, and for storing data where the speed of the write operations doesn't
+really matter.</p>
+<p>This brings us to the last line of the table, the cost of the drives and here we see the 
+big problem of SSDs. The cheaper Samsung drives may only be 2 to 5 times more expensive 
+then the enterprise quality hard drive that we are comparing with, but this is really an
+apples-and-oranges comparison. Those cheaper SSDs are not really suitable for datacenter use.
+One could imagine building a storage system with high capacity for high read
+load scenarios from the QVO drives, and some companies build such storage, but these drives
+are not suited for the typical load on supercomputer file systems, neither for a local drive
+or for, e.g., the scratch file system. Some SSDs are suitable (and the Nytro 3732 certainly
+is) but then the cost is easily 10 times or more higher per byte than for good quality hard
+drives. This is one of the reasons why SSDs are not used more in supercomputer storage.
+After all, in supercomputer storage we need storage with a high capacity that can deal with
+a high write load.</p>
+<details>
+<summary>Nice to know</summary>
+<p>Around 2010 a file storage expert at KU Leuven looked at how storage was used on their
+cluster to determine which type of storage should be bought. It turned out that the
+load was 90% write and only 10% read, which means that most of the data written to
+disk was even never read... It is hoped that this text makes clear that writing data
+is all but free.</p>
+</details>
+<h2 id="new-memory-types-for-a-revolution">New memory types for a revolution?<a class="headerlink" href="#new-memory-types-for-a-revolution" title="Permanent link">&para;</a></h2>
+<p>As we can see from the previous discussion, flash memory comes with a higher price tag than
+one would think from looking at prices for drives for PCs, and it has some other issues also,
+like durability issues as each memory cell has a very short lifespan in terms of number of
+rewrites, and the unpredictable slow-down especially under a random small writes load when the
+drive starts to fill up.</p>
+<p>Several companies have worked on other types of solid state memory for permanent storage
+that does not have those issues. Two memory types have been considered that would
+allow byte level access instead of block level, have much better write endurance and
+that also could be rewritten at the byte level rather than having to erase whole blocks
+and copying data round in the drive to free such a big block.
+HPE (then still called HP) and Sandisk explored a type of memory cell called 
+<a href="https://en.wikipedia.org/wiki/Memristor"><em>memristor</em></a>. 
+Intel and Micron worked together on a type of memory cell which they
+called <a href="https://en.wikipedia.org/wiki/3D_XPoint"><em>3D-XPoint</em></a>, 
+sometimes marketed by Intel as Optane (though that name was later recycled for
+other types of storage also). The memristor never made it to market. 3D-XPoint did
+result in a couple of products, but they were only competitive for some very special markets.</p>
+<p>3D-XPoint memory appeared in several forms. It was used to build datacenter solid state drives
+with excellent endurance. Even though the I/O performance wasn't stellar on paper, the fine
+print in the specs really mattered: 3D-XPoint drives coped much better with read and write
+loads that lacked enough parallelism, while most flash drives must look at a larger number of 
+read and write requests simultaneously and reorder them to get close to their quoted speed.
+They were also used as a cache for flash drives, buffering writes and keeping some data that
+was read a lot also available as in some cases it could be read faster from the 3D-XPoint cache.
+And finally, it could also be plugged in some servers instead of RAM. However, it didn't act as 
+RAM at all as it is still a lot slower than regular RAM, and as its write endurance doesn't come
+close to that of RAM memory. Instead, it was marketed as memory for large database servers where
+much of the database could be kept in 3D-XPoint memory yet accessed as if it were RAM, at a lower
+cost as a fully RAM-equipped system and at a higher reliability in case of, e.g., power problems.
+The last usage scenario is an example of so-called Storage Class Memory (sometimes abbreviated
+as SCM): Memory that can operate as (slower) RAM but that just as regular disks storage maintains
+its state when the system is powered off.</p>
+<p>However, developing a new memory technology to compete with an already established and very far
+developed technology is hard and requires extremely deep pockets. In the end, technological evolution
+created good enough alternatives for many of the use cases of 3D-XPoint memory, or people simply
+didn't see enough benefits to pay for it, and the development was stopped in 2021 by Micron and
+2022 by Intel.</p>
+<p>High-endurance SSDs are simply much cheaper than 3D-XPoint drives and are a good alternative for
+all but a few cases where software has a really bad drive access pattern. But then for bigger companies
+it is probably cheaper to simply rework the software to shine on cheaper drives. The benefit of 3D-XPoint
+as a cache for SSDs was questionable because of the small size and also because of the way it was
+implemented, increasing the complexity of the system, and nowadays some drive use some SLC (single bit per cell)
+flash memory as a cache. The RAM capacity per socket has also increased a lot with more memory channels
+per socket and larger memory modules. </p>
+<p>Another technology that would allow larger RAM memories is also coming up. 
+<em>Compute eXpress Link</em> (\CXL) is an open standard that build upon the PCIe standards to provide
+an interface that would be suitable for connecting several kinds of components in large systems:
+CPUs, GPUs, other accelerators with compute capability, additional RAM memory, ... It also builds
+on the experience with other technologies, as IBM's OpenCAPI, that tried to reach some of these
+goals though it is not compatible with any of those. It would even be possible to build networks
+of CXL connections to build a reconfigurable computer: A user can select the number of CPUs, GPUs, memory
+blocks, etc., and those are connected on the fly the the CXL fabric. </p>
+<p>This may sound nice but it remains to be seen how useful this will be in practice. It is not possible
+to make very large switched fabrics as the latency would simply be too large to use this in a way 
+current memory and accelerators are used. On the contrary, as we shall also see in 
+<a href="../7_Accelerators/index.md">the chapter on accelerators</a> and as we have already seen to some extent
+in the <a href="../3_Memory/index.md">chapter on memory technology</a>, the needs for many supercomputer applications
+but also regular applications are exactly the opposite. Large memories are useless if they also come with
+much higher latency unless applications are reworked to hide the latency and make clever use of the 
+memory hierarchy with nearby faster RAM and more remote larger but slower RAM. As we shall see, the 
+performance improvement that one can obtain from using accelerators can also be limited by the data
+transfers to and from the accelerators. Not all applications can be reworked to cope with the much higher
+latency in such a CXL-based reconfigurable system or even just an ordinary server with a large bank of 
+slower memory. In fact, many applications need in fact the opposite, a much closer integration of 
+memory, CPU and accelerators. This is precisely the reason why, e.g., the Apple M-series processors 
+sometimes provide much better performance than one would expect from the chip in applications.</p>
+<h2 id="local-storage-in-supercomputer-nodes">Local storage in supercomputer nodes<a class="headerlink" href="#local-storage-in-supercomputer-nodes" title="Permanent link">&para;</a></h2>
+<p>As the speed difference between the processing capacity of a supercomputer node and the storage
+keeps increasing, there is a renewed interest in adding local storage again to compute nodes,
+something that certainly the large supercomputers avoided because of reliability and management
+issues.</p>
+<p>Modern high-end SSDs have become fairly reliable and as shapes have mostly standardised, it 
+does become possible to build them into water cooled nodes without having a negative impact 
+on the cooling of other components or a performance impact because of a too high temperature.</p>
+<p>Manufacturers are also working on software to make them more manageable in a supercomputer
+context and more useful also to parallel programs as those local SSDs cannot be accessed
+directly from other compute nodes.</p>
+<p><a href="https://docs.daos.io/">Intel DAOS</a> was originally developed for the much delayed USA Aurora
+exascale system where it would work with 3D-XPoint drives in the compute nodes. It is also 
+designed to integrate with the Lustre file system that will be used on Aurora. It is not clear
+how Intel envisions using DAOS though as it does rely on storage class memory and not only
+NVMe drives, and was really designed with 3D-XPoint in mind and its server processors with
+built-in support for that memory.</p>
+<p>HPE is working a what they call a 
+<a href="https://www.hpcwire.com/2021/02/18/livermores-el-capitan-supercomputer-hpe-rabbit-storage-nodes/">near-node storage system code-named Rabbits</a>
+for the third USA exascale computer, El Capitan. 
+It consists of a storage server that sits close to a number of compute nodes with
+fast dedicated PCIe connection to each of them. The server has its own processor so can
+work independently from the compute nodes to, e.g., transfer data that was written
+by the job to the larger remote Lustre file system. Each server has 16 SSDs but also two
+spares so that it can reconfigure automatically when an SSD fails. These SSDs can be
+accessed as if they are a directly attached drive, essentially operating as an SSD in
+the node, or as a network drive acting as a cache to the larger remote Lustre file
+system. It will work in conjunction with a new scheduler as Slurm cannot easily be
+made sufficiently aware of the architecture of the attached software to manage it and
+allocate proper resources.</p>
+
+  <hr>
+<div class="md-source-file">
+  <small>
+    
+      Last update:
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">January 25, 2023</span>
+      
+    
+  </small>
+</div>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+          <a href="#" class="md-top md-icon" data-md-component="top" hidden>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            Back to top
+          </a>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="Footer" >
+      
+        
+        <a href="../C04_S03_Parallel_filesystems/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Parallel file systems" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Parallel file systems
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../C04_S05_To_remember/" class="md-footer__link md-footer__link--next" aria-label="Next: To remember" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              To remember
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+      
+      
+    
+    <a href="https://www.youtube.com/channel/UC3szWMS7glcfWsEZTZXQ1oQ" target="_blank" rel="noopener" title="www.youtube.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.tracking", "navigation.top", "navigation.indexes", "header.autohide", "toc.follow"], "search": "../../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.5a2dcb6a.min.js"></script>
+      
+    
+    
+  </body>
+</html>
