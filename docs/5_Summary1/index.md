@@ -6,3 +6,4 @@
 -   [Three keywords: Streaming, Parallelism, and Hierarchy](05_04_Keywords.md)
 -   [Andy and Bill's law](05_05_Andy_Bill.md)
 -   [Software first, not hardware](05_06_Software_not_hardware.md)
+-   [Building up the supercomputer](05_07_Building_up_the_supercomputer.md)

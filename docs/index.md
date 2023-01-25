@@ -44,6 +44,8 @@
 
     -   [Software first, not hardware](5_Summary1/05_06_Software_not_hardware.md)
 
+    -   [Building up the supercomputer](5_Summary1/05_07_Building_up_the_supercomputer.md)
+
 
 -   [Middleware](6_Middleware/index.md)
 
