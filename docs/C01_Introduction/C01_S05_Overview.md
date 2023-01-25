@@ -6,15 +6,15 @@ A supercomputer is not a superscaled PC that runs regular PC software much faste
 but it is a parallel computer:
 
 -   In a supercomputer, many processors work together to create a fast system, and this is even multi-level
-    parallelism. We will discuss this in the [section on Processors](../2_Processors/index.md).
+    parallelism. We will discuss this in the [section on Processors](../C02_Processors/index.md).
 
 -   The memory of a supercomputer is also organised in a hierarchy: from fast buffer memory close
     to the processor to slower memory and then all the way to slow disks. Most of this
-    will be explained in the [section on the memory hierarchy](../3_Memory/index.md).
+    will be explained in the [section on the memory hierarchy](../C03_Memory/index.md).
 
 -   The permanent storage system of a supercomputer consists of many hard disks and solid state
     drives that are combined to a powerful storage system with the help of software. This is 
-    explained in the [section on storage for supercomputers](../4_Storage/index.md).
+    explained in the [section on storage for supercomputers](../C04_Storage/index.md).
 
 In the current state of technology this is far from transparent. It may be mostly transparent
 for correctness of the program but it is not al all for performance, which is why one needs 
@@ -61,12 +61,12 @@ For developers even better hardware knowledge is required to understand how to w
 efficiently, and you also need a good understanding of the middleware that will be used to develop
 your program.
 
-The sections on [processors](../2_Processors/index.md), [memory hierarchy](../3_Memory/index.md)
-and [storage](../4_Storage/index.md) discuss the hardware of a supercomputer.
-The [section on middleware](../5_Middleware/index.md) then gives an overview of the most popular
+The sections on [processors](../C02_Processors/index.md), [memory hierarchy](../C03_Memory/index.md)
+and [storage](../C04_Storage/index.md) discuss the hardware of a supercomputer.
+The [section on middleware](../C06_Middleware/index.md) then gives an overview of the most popular
 middleware used to develop software that exploits parallelism. 
 We cannot discuss much about the application layer in these notes, as that quickly becomes too
-domain-specific, but we will discuss [what you can expect from a supercomputer](../6_Expectations/index.md).
+domain-specific, but we will discuss [what you can expect from a supercomputer](../C07_Expectations/index.md).
 
 In recent years, accelerators have also become a hot topic. As the cost, both the investment cost
 and energy cost, of supercomputers that are fully based on general-purpose hardware has become
@@ -74,4 +74,4 @@ too high to sustain the growth of compute capacity, scientists have turned into 
 collectively known as accelerators, to further increase the performance at a lower investment and
 energy cost, but losing some of the easy-of-use and versatility of general purpose hardware.
 The most important types of compute accelerators and their programming models (and corresponding
-middleware) will be discussed in the [section on accelerators](../7_Accelerators/index.md).
+middleware) will be discussed in the [section on accelerators](../C08_Accelerators/index.md).

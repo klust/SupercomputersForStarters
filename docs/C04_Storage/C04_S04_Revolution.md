@@ -210,8 +210,8 @@ blocks, etc., and those are connected on the fly the the CXL fabric.
 This may sound nice but it remains to be seen how useful this will be in practice. It is not possible
 to make very large switched fabrics as the latency would simply be too large to use this in a way 
 current memory and accelerators are used. On the contrary, as we shall also see in 
-[the chapter on accelerators](../7_Accelerators/index.md) and as we have already seen to some extent
-in the [chapter on memory technology](../3_Memory/index.md), the needs for many supercomputer applications
+[the chapter on accelerators](../C08_Accelerators/index.md) and as we have already seen to some extent
+in the [chapter on memory technology](../C03_Memory/index.md), the needs for many supercomputer applications
 but also regular applications are exactly the opposite. Large memories are useless if they also come with
 much higher latency unless applications are reworked to hide the latency and make clever use of the 
 memory hierarchy with nearby faster RAM and more remote larger but slower RAM. As we shall see, the 
