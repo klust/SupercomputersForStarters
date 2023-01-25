@@ -8,7 +8,7 @@ and the defect rate. It is however an easy number to work with.
 The following graph is based on numbers found in a report of the Marvell Technology Inc 2020 Investor Day. 
 (Marvell Technology Inc is a fabless semiconductor company.)
 
-![Cost per 100M gates](../img/05_03_01_cost_transistor.png)
+![Cost per 100M gates](../img/C05_S03_01_cost_transistor.png)
 
 For a long time the cost per gate (or transistor) decreased rapidly with each 
 new process generation. In fact, the cost per wafer did not increase much while the

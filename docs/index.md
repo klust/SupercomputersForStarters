@@ -1,69 +1,69 @@
 # Supercomputers for Starters
 
--   [Some preliminary words](0_00_preliminary)
+-   [Some preliminary words](C00_S00_preliminary)
 
--   [Introduction](1_Introduction/index.md)
+-   [Introduction](C01_Introduction/index.md)
 
-    -   [Goals](1_Introduction/1_01_Goals.md)
+    -   [Goals](C01_Introduction/C01_S01_Goals.md)
 
-    -   [Why supercomputing](1_Introduction/1_02_Why.md)
+    -   [Why supercomputing](C01_Introduction/C01_S02_Why.md)
 
-    -   [What it is not](1_Introduction/1_03_What_it_is_not.md)
+    -   [What it is not](C01_Introduction/C01_S03_What_it_is_not.md)
 
-    -   [A compartmentalised supercomputer](1_Introduction/1_04_Compartmentalised.md)
+    -   [A compartmentalised supercomputer](C01_Introduction/C01_S04_Compartmentalised.md)
 
-    -   [Overview of the notes](1_Introduction/1_05_Overview.md)
+    -   [Overview of the notes](C01_Introduction/C01_S05_Overview.md)
 
--   [Processors for supercomputers](2_Processors/index.md)
+-   [Processors for supercomputers](C02_Processors/index.md)
 
--   [The memory hierarchy](3_Memory/index.md)
+-   [The memory hierarchy](C03_Memory/index.md)
 
--   [Storing data on supercomputers](4_Storage/index.md)
+-   [Storing data on supercomputers](C04_Storage/index.md)
 
-    -   [Introduction](4_Storage/4_01_Introduction.md)
+    -   [Introduction](C04_Storage/C04_S01_Introduction.md)
 
-    -   [Problems with a parallel disk setup](4_Storage/4_02_Problems.md)
+    -   [Problems with a parallel disk setup](C04_Storage/C04_S02_Problems.md)
 
-    -   [Parallel file systems](4_Storage/4_03_Parallel_filesystems.md)
+    -   [Parallel file systems](C04_Storage/C04_S03_Parallel_filesystems.md)
 
-    -   [A storage revolution?](4_Storage/4_04_Revolution.md)
+    -   [A storage revolution?](C04_Storage/C04_S04_Revolution.md)
 
-    -   [To remember](4_Storage/4_05_To_remember.md)
+    -   [To remember](C04_Storage/C04_S05_To_remember.md)
 
--   [Putting it all together](5_Summary1/index.md)
+-   [Putting it all together](C05_Summary1/index.md)
 
-    -   [Scaling](5_Summary1/05_01_Scaling.md)
+    -   [Scaling](C05_Summary1/C05_S01_Scaling.md)
 
-    -   [Dennard scaling](5_Summary1/05_02_Dennard_scaling.md)
+    -   [Dennard scaling](C05_Summary1/C05_S02_Dennard_scaling.md)
 
-    -   [Transistor cost](5_Summary1/05_03_Cost_transistor.md)
+    -   [Transistor cost](C05_Summary1/C05_S03_Cost_transistor.md)
 
-    -   [Three keywords: Streaming, Parallelism, and Hierarchy](5_Summary1/05_04_Keywords.md)
+    -   [Three keywords: Streaming, Parallelism, and Hierarchy](C05_Summary1/C05_S04_Keywords.md)
 
-    -   [Andy and Bill's law](5_Summary1/05_05_Andy_Bill.md)
+    -   [Andy and Bill's law](C05_Summary1/C05_S05_Andy_Bill.md)
 
-    -   [Software first, not hardware](5_Summary1/05_06_Software_not_hardware.md)
+    -   [Software first, not hardware](C05_Summary1/C05_S06_Software_not_hardware.md)
 
-    -   [Building up the supercomputer](5_Summary1/05_07_Building_up_the_supercomputer.md)
+    -   [Building up the supercomputer](C05_Summary1/C05_S07_Building_up_the_supercomputer.md)
 
 
--   [Middleware](6_Middleware/index.md)
+-   [Middleware](C06_Middleware/index.md)
 
--   [What can we expect?](7_Expectations/index.md)
+-   [What can we expect?](C07_Expectations/index.md)
 
--   [Accelerators](8_Accelerators/index.md)
+-   [Accelerators](C08_Accelerators/index.md)
 
-    -   [What are accelerators?](8_Accelerators/8_01_What_are_accelerators.md)
+    -   [What are accelerators?](C08_Accelerators/C08_S01_What_are_accelerators.md)
 
-    -   [Offloading](8_Accelerators/8_02_Offloading.md)
+    -   [Offloading](C08_Accelerators/C08_S02_Offloading.md)
 
-    -   [CPUs with accelerator features](8_Accelerators/8_03_CPUs_accelerator_features.md)
+    -   [CPUs with accelerator features](C08_Accelerators/C08_S03_CPUs_accelerator_features.md)
 
-    -   [Accelerator programming](8_Accelerators/8_04_Programming_accelerators.md)
+    -   [Accelerator programming](C08_Accelerators/C08_S04_Programming_accelerators.md)
 
-    -   [Status of GPU computing](8_Accelerators/8_05_Status_GPU_computing.md)
+    -   [Status of GPU computing](C08_Accelerators/C08_S05_Status_GPU_computing.md)
 
-    -   [Further reading](8_Accelerators/8_06_Further_reading.md)
+    -   [Further reading](C08_Accelerators/C08_S06_Further_reading.md)
 
--   [Conclusions](9_Conclusions/index.md)
+-   [Conclusions](C09_Conclusions/index.md)
 

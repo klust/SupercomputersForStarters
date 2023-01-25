@@ -29,7 +29,7 @@ users of the CalcUA infrastructure use or have used, including CP2K, OpenMX, Qua
 and checking which terminology those packages use. In fact, the GROMACS manual even contains a section that tries 
 to explain in short many of the terms (and even some more) that we discuss in these notes.
 
-![GROMACS manual page](../img/1_01_01_GROMACS_manual.jpg)
+![GROMACS manual page](../img/C01_S01_01_GROMACS_manual.jpg)
 
 The above figure shows an extract from the GROMACS manual with a lot of terms that one needs to know
 to tune the parameters of the GROMACS ``mdrun`` command for good performance. Most of these will be covered
@@ -37,7 +37,7 @@ in these lecture nodes.
 
 Next, let's have a look at the manual page of the SAMtools ``sort`` command.
 
-![SAMtools sort manual page](../img/1_01_02_SAMtools_sort.jpg)
+![SAMtools sort manual page](../img/C01_S01_02_SAMtools_sort.jpg)
 
 Note that the SAMtools ``sort`` command has parameters to specify the maximum amount of memory that it should
 use and the number of threads. Hence the user should have an idea of how much memory can be realistically used,
@@ -49,7 +49,7 @@ in 2005, but not for a supercomputer in 2022 (or not even a PC in 2022).
 
 Finally, the next picture shows a number of terms copied from a VASP manual
 
-![VASP terminology](../img/1_01_03_VASP_terms.jpg)
+![VASP terminology](../img/C01_S01_03_VASP_terms.jpg)
 
 The reader is confronted with a lot of technical terms that they need to understand to use VASP in a sufficiently
 optimal way. In fact, a vASP run may even fail if the parameters used in the simulations do not correspond 

@@ -38,7 +38,7 @@ claimed in the specifications.
 
 ## A supercomputer has a layered architecture
 
-![Layered architecture](../img/1_05_01_layers.jpg)
+![Layered architecture](../img/C01_S05_01_layers.jpg)
 
 A supercomputer is much more than some hardware on which you run your application. As already
 suggested above, between the hardware and your applications sits a lot of other software that
