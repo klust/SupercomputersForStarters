@@ -40,7 +40,7 @@ suited to be used for non-graphics work also. GPGPU programming quickly became p
 and even a bit overhyped, as not all applications are suitable for GPGPU computing.
 
 
-### Types of accelerators
+## Types of accelerators
 
 The most popular type of accelerators are accelerators for **vector computing**. All modern
 GPUs fall in this family. Examples are
@@ -61,19 +61,22 @@ GPUs fall in this family. Examples are
     GCN though (used in, e.g., the Vega cards).
 
     AMD Instinct GPUs are used in the first USA exaflop computer Frontier (fastest system in the Top500
-    ranking of June 2022) and in the European LUMI system (fastest European system in the Top500 ranking
-    of June 2022). These computers use the CDNA2 architecture. A future USA exascale system, El Capitan, 
+    ranking of June and November 2022) and in the European LUMI system (fastest European system in the Top500 ranking
+    of June and November 2022). These computers use the CDNA2 architecture. A future USA exascale system, El Capitan, 
     planned for 2023 (or possibly 2024 with the supply chain disruptions largely due to Covid), will
-    employ a future version of the architecture, RDNA3, which will bring CPU and GPU very close together.
+    employ a future version of the architecture, RDNA3, which will bring CPU and GPU very close together
+    (but more about this later in this section).
 
 -   Intel is also moving into the market of GPGPU computing with their Xe graphics products. They
     have supported using their integrated GPUs for computations for many years already, with even support
     in their C/C++/Fortran compilers, but are now making a separate products for the supercomputing market
-    with the Xe<sup>HPC</sup> product lines which support additional data formats that are very needed for
-    scientific computing applications. The first product in this line is the GPU code named Ponte Vecchio that
+    with the Intel Data Center GPU MAX series based on the Xe<sup>HPC</sup> architecture,
+    which support additional data formats that are very needed for
+    scientific computing applications. The first product in this line is 
+    is also known as the GPU code named Ponte Vecchio that
     will be used in the USA Aurora supercomputer, which should become the second USA exaflop computer.
     A future European pre-exascale system will also have a compute section with the successor of that 
-    chip, Rialto Bridge.
+    chip, code named Rialto Bridge.
 
 -   The NEC SX Aurora TSUBASA has a more traditional vector computing architecture, but is physically also
     an expansion card that is put in a regular Intel-compatible server. It is special in the sense that the
@@ -108,3 +111,31 @@ A third and so far less popular accelerator in supercomputing is an FPGA acceler
 Field Programmable Gate Array. This is hardware designed to be fully configured after manufacturing,
 allowing the user to create a specialised processor for their application. One could, e.g., imagine creating
 specialised 2-bit CPUs for working with generic data. 
+
+### A note on the name "GPU"
+
+Though usually called GPU computing or GPGPU computing, the accelerators still have an architecture 
+similar to the programmable GPUs from 2010 and later, but may lack the full hardware rendering pipeline
+that one would expect on a true GPU. The increasing demand for performance while the cost per transistor
+tends to stay flat or even increase a bit and while new semiconductor manufacturing processes don't deliver
+the gains they used to 15 years ago, resulted in an evolution towards distinct "GPUs" for compute (traditional HPC and AI) and
+graphics rendering. We've outlined this already a bit when discussing the types of accelerators earlier
+on this page. It also implies that compute GPUs doe not always support typical graphics software stacks 
+such as OpenGL or Vulcan, or that part of these stacks have to rely on software-based rendering accelerated
+by the vector functions of the GPU rather than full hardware rendering.
+
+E.g., the NVIDIA Hopper compute GPUs and Ada Lovelace rendering GPUS were clearly designed together and
+share some characteristics, but are different enough that NVIDIA chose to give them different code names.
+The ray tracing units present in the Ada architecture are not in the Hopper architecture, the raster
+engines also seem to be gone, and there is also no trace of video encoding blocks in the architectural
+documentation, though there is hardware decoding for some video formats and JPEG images as these can
+be useful in AI applications.
+
+AMD went a step further and their architectures for compute and rendering GPUs have been diverging since 2019.
+AMD's rendering GPUs use the RDNA architecture of which the third iteration was launched by the end of 2022,
+while the compute GPUs use the CDNA architecture which is a descendant of the VEGA architecture with a relatively
+different structure of the compute units. The CDNA GPUs also lack the ray tracing units of RDNA2/3. 
+The texture units and raster engine also are missing.
+
+It is to be expected that compute and render GPUs will only diverge more over time as it is increasingly impossible
+to build hardware that does both well and is still cost-effective for a large enough market. 
