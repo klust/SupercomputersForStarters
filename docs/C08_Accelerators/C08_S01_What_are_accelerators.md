@@ -124,15 +124,29 @@ on this page. It also implies that compute GPUs doe not always support typical g
 such as OpenGL or Vulcan, or that part of these stacks have to rely on software-based rendering accelerated
 by the vector functions of the GPU rather than full hardware rendering.
 
-E.g., the NVIDIA Hopper compute GPUs and Ada Lovelace rendering GPUS were clearly designed together and
-share some characteristics, but are different enough that NVIDIA chose to give them different code names.
+The NVIDIA line-up has had different cards for compute and rendering for quite a while already. 
+The Volta architecture launched in 2017, which was the first one to offer the tensor cores for AI, 
+was used in a few high-end video cards, but the Turing architecture launched a year later was the
+main architecture for rendering GPUs (though that one in turn was also used in some compute cards).
+The Ampere generation succeeded both in 2020, but with distinct chips for compute (the A100) and
+for rendering (with the GA102 as the most powerful one) and distinct differences between
+both chips. E.g., the A100 had much more FP64 hardware and more tensor hardware, 
+while the GA102 had ray tracing cores and offered much more regular precision CUDA cores,
+even though it had only half as many transistors and a 30% smaller die in a slightly larger 
+process node. 
+The NVIDIA Hopper compute GPUs and Ada Lovelace rendering GPUS launched in late 2022
+were clearly designed together and
+share some characteristics, but are still very different beasts, this time stressed by
+different code names.
 The ray tracing units present in the Ada architecture are not in the Hopper architecture, the raster
 engines also seem to be gone, and there is also no trace of video encoding blocks in the architectural
 documentation, though there is hardware decoding for some video formats and JPEG images as these can
 be useful in AI applications.
 
-AMD went a step further and their architectures for compute and rendering GPUs have been diverging since 2019.
-AMD's rendering GPUs use the RDNA architecture of which the third iteration was launched by the end of 2022,
+AMD only really started in GPU compute architectures towards late 2018 (with basically a first product
+just to try the software stack) and it architecture for compute and rendering GPUs have been diverging from the start.
+AMD's rendering GPUs use the RDNA architecture of which the first iteration launched in 2019 and the 
+third iteration was launched by the end of 2022,
 while the compute GPUs use the CDNA architecture which is a descendant of the VEGA architecture with a relatively
 different structure of the compute units. The CDNA GPUs also lack the ray tracing units of RDNA2/3. 
 The texture units and raster engine also are missing.
