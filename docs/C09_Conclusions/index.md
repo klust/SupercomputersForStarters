@@ -169,3 +169,42 @@ There are only a few markets that don't care much about this, but those
 markets are becoming too small to carry the cost of designing faster and 
 faster processors with limited parallelism.
 
+
+## Software quality matters
+
+We've seen that even though further shrinking dimensions in semiconductor
+manufacturing remains possible, we are bumping into economical constraints.
+Basically the cost per gate or transistor for the manufacturing processes used
+for CPUs and GPU accelerators isn't really decreasing anymore. As a consequence,
+
+-   We can only expect moderate performance increases for a constant budget, unless
+    a switch would be made to very different architectures. The switch from CPU to
+    GPU computing has offered such increase for some applications.
+-   We cannot expect that performance per Watt will improve as quickly as it did in
+    the past, again unless big architectural changes would bring a solution.
+
+Even though microprocessor and GPU manufacturers claims that computers 1000x as fast
+as current computers will be possible in ten years, it remains to be seen for what
+applications this will be the case. Statements of that kind are usually misleading.
+E.g., when going from generation 1 to 2 one saw a twofold speed increase for application A,
+while going from generation 2 to 3 one saw a twofold speed increase for a very different
+application B, hence generation 3 is 4 times faster than generation 1. While it is more 
+likely that both application A and B run only twice as fast.
+
+Further speed increases will largely have to come from better software. 
+This implies that we need an increased focus on both more efficient algorithms and
+a more efficient implementation of those algorithms. It also implies that we must
+be willing to adapt to architectural changes in computers and adapt codes, and not
+program them as if we are still in the '90s. We again need computer languages with
+a strong focus on performance, preferably combined with attention to programmer
+productivity also, but can no longer rely on languages that only focus on 
+programmer productivity.
+
+The term "computational" in "computational science" means more than ever that one pays
+a lot of attention to the computational aspects also and that there is a willingness
+to understand what you're doing at the computational level also. 
+You cannot drive a big truck or a Formula 1 car with just a regular driver's license and
+no further training as they are very different things that react very differently.
+Similarly you cannot use a supercomputer in the same way as a regular PC or a smartphone.
+
+It is more and more the software that makes the supercomputer!
