@@ -245,9 +245,9 @@ The picture below shows the whole LUMI system as installed in the data centre:
 ![LUMI supercomputer](../img/C05_S07_15_LUMI.jpg)
 
 At the front there are 5 rows of cabinets similar to the ones in the exploded Cray EX picture above.
-Each row has 2 CDUs and 6 cabinets with compute nodes. At the back of the room there are more 
+Each row has 2 CDUs and 6 cabinets with compute nodes, roughly 9.6 m by 1.75 m. At the back of the room there are more 
 regular server racks that house the storage, management nodes, some special compute nodes , etc.
-The size is roughly the size of a tennis court. 
+The total floor space (including storage etc.) is roughly 300 m<sup>2</sup>, the size of a tennis court. 
 
 !!! Remark
     The water temperature that a system like the Cray EX can handle is so high that in fact the water can
@@ -256,3 +256,43 @@ The size is roughly the size of a tennis court.
     colder climate. The LUMI supercomputer is housed in Kajaani in Finland, with moderate temperature almost 
     year round, and the heat produced by the supercomputer is fed into the central heating system of the
     city, making it one of the greenest supercomputers in the world as it is also fed with renewable energy.
+
+
+## An older example: The Cray-2
+
+The Cray-2 is a vector computer launched in 1985, and then one of the fastest machines one
+could buy. The processing part of the machine was build in a 300 degree arch and can be seen on the
+picture below.
+
+![Cray2 in the brochure](../img/C05_S07_16_Cray2_brochure.png)
+
+It consisted of roughly 240,000 chips of which 75,000 were memory chips. 
+It was also one of the first shared memory supercomputers, having up to four independent
+vector processors running at a for that time incredible 240 MHz. The diameter was about 1.35 m, and the 
+height about 1.14 m. The floor surface for this unit was about 1.5 m<sup>2</sup>, and its power consupmption
+was close to 200 kW for the most powerful models in the series.
+It is clear that if you produce that much heat in such a small volume very special cooling was needed.
+The processing unit was cooled with immersion cooling. Next to the processing unit was a heat 
+exchanger to link to the cooling circuit of the data center. The system also needed some more
+external boxes to house disk drives, a front end, etc.
+
+Compare this to LUMI and other large supercomputers of today. The racks with processors of LUMI require
+over 60 m<sup>2</sup> not counting the empty space needed between the racks that is needed to access the
+parts and not counting the heat exchangers to keep the comparison fair with the Cray-2 that needed only
+1.5 m<sup>2</sup>. For Frontier, the fastest supercomputer in the world according to the November 2023 Top-500 list,
+the floor space of the processing units alone would be close to 200 m<sup>2</sup>.
+The power consumption of LUMI is around 6 MW, and that of Frontier, is closer to 20 MW. 
+So one of the fastest supercomputers of 1985 consumed only 1% of the power of the fastest one in early 2023.
+The cost of the Cray-2 is approximately 40-50 M$ in dollars of today, while the current cost of the 
+exascale machines is estimated at 500 M$ or more, so the cost was about 10% of today's fastest computers.
+
+??? Note "Funny fact"
+    In 1986, the University of Stuttgart got funding to buy a 4-processor Cray-2 system.
+    It is still on display today, and it is a common practice to check if you still fit
+    inside the system. But the picture below also gives a good impression of the small
+    size of the system:
+
+    ![Cray-2 in Stuttgart](../img/C05_S07_17_Cray2_Stuttgart.png)
+
+    (with thanks to the willing model).
+
