@@ -58,7 +58,7 @@
 
     -   [Khronos Group SYCL documentation](https://www.khronos.org/sycl/resources)
 
-    -   [hipSYCL](https://github.com/illuhad/hipSYCL)
+    -   [Open SYCL (formerly hipSYCL)](https://github.com/OpenSYCL/OpenSYCL)
 
     -   [Intel oneAPI DPC++/C++ compiler](https://www.intel.com/content/www/us/en/developer/tools/oneapi/dpc-compiler.html)
 

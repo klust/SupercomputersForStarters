@@ -200,10 +200,12 @@ There are several compilers in development with varying levels of support for
 the standard, targeting not only GPUs, but also, e.g., the NEC SX Aurora Tsubasa vector
 boards. 
 Most if not all of these implementations are again based on Clang and LLVM.
-One implementation worth mentioning is hipSYCL, which as its name suggests
-targets hip for the backend and hence can support both AMD and NVIDIA GPUs, but
-can also target pure CPU systems and now even contains experimental support for 
-Intel GPUs.
+One implementation worth mentioning is Open SYCL. This project started under the
+name hipSYCL, which as its name suggests
+targets HIP for the backend to support AMD CPUs, but it has been extended to
+support all three major GPU families now using ptx for NVIDIA, amdgcn code for AMD and 
+SPIR-V for Intel GPUs, and the project is also working
+on multi-CPU support.
 
 
 ### DPC++ or Data Parallel C++
