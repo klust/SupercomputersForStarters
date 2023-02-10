@@ -32,6 +32,13 @@ nav:
     - ILP I - Pipelining: C02_Processors/C02_S03_ILP_I_Pipelining.md
     - ILP II - Superscalar: C02_Processors/C02_S04_ILP_II_Superscalar.md
     - Vector computing: C02_Processors/C02_S05_Vectorisation.md
+    - Shared memory: C02_Processors/C02_S06_Shared_memory.md
+    - Distributed memory: C02_Processors/C02_S07_Distributed_memory.md
+    - A modern (super)computer: C02_Processors/C02_S08_Modern_supercomputer.md
+    - Node architecture: C02_Processors/C02_S09_Node_architecture.md
+    - Fast (past) evolution: C02_Processors/C02_S10_Fast_evolution.md
+    - An important difference...: C02_Processors/C02_S11_Difference.md
+    - Lessons learnt: C02_Processors/C02_S12_Lessons_learnt.md
   - The memory hierarchy:
     - C03_Memory/index.md
   - Storing data on Supercomputers:
