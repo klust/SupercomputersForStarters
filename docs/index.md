@@ -27,6 +27,7 @@
     -   [Parallel file systems](C04_Storage/C04_S03_Parallel_filesystems.md)
     -   [A storage revolution?](C04_Storage/C04_S04_Revolution.md)
     -   [To remember](C04_Storage/C04_S05_To_remember.md)
+    -   [Further reading](C04_Storage/C04_S06_Further_reading.md)
 -   [Putting it all together](C05_Summary1/index.md)
     -   [Scaling](C05_Summary1/C05_S01_Scaling.md)
     -   [Dennard scaling](C05_Summary1/C05_S02_Dennard_scaling.md)
