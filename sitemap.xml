@@ -191,6 +191,31 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://klust.github.io/SupercomputersForStarters/C06_Middleware/C06_S01_Introduction/</loc>
+         <lastmod>2023-02-13</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://klust.github.io/SupercomputersForStarters/C06_Middleware/C06_S02_Shared_memory/</loc>
+         <lastmod>2023-02-13</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://klust.github.io/SupercomputersForStarters/C06_Middleware/C06_S03_Vector_computing/</loc>
+         <lastmod>2023-02-13</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://klust.github.io/SupercomputersForStarters/C06_Middleware/C06_S04_Distributed_memory/</loc>
+         <lastmod>2023-02-13</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://klust.github.io/SupercomputersForStarters/C06_Middleware/C06_S06_Further_reading/</loc>
+         <lastmod>2023-02-13</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://klust.github.io/SupercomputersForStarters/C07_Expectations/</loc>
          <lastmod>2023-02-13</lastmod>
          <changefreq>daily</changefreq>

@@ -8,21 +8,21 @@
       
       
       
-        <link rel="canonical" href="https://klust.github.io/SupercomputersForStarters/C06_Middleware/">
+        <link rel="canonical" href="https://klust.github.io/SupercomputersForStarters/C06_Middleware/C06_S02_Shared_memory/">
       
-      <link rel="icon" href="../assets/images/favicon.png">
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.10">
     
     
       
-        <title>Middleware: Turning the hardware into a usable supercomputer - Supercomputers for Starters</title>
+        <title>Middleware for shared memory computing - Supercomputers for Starters</title>
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.975780f9.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.975780f9.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.2505c338.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.2505c338.min.css">
         
       
       
@@ -39,7 +39,7 @@
       
     
     
-    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -68,7 +68,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#middleware-turning-the-hardware-into-a-usable-supercomputer" class="md-skip">
+        <a href="#middleware-for-shared-memory-computing" class="md-skip">
           Skip to content
         </a>
       
@@ -82,7 +82,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href=".." title="Supercomputers for Starters" class="md-header__button md-logo" aria-label="Supercomputers for Starters" data-md-component="logo">
+    <a href="../.." title="Supercomputers for Starters" class="md-header__button md-logo" aria-label="Supercomputers for Starters" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -101,7 +101,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Middleware: Turning the hardware into a usable supercomputer
+              Middleware for shared memory computing
             
           </span>
         </div>
@@ -178,7 +178,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="Supercomputers for Starters" class="md-nav__button md-logo" aria-label="Supercomputers for Starters" data-md-component="logo">
+    <a href="../.." title="Supercomputers for Starters" class="md-nav__button md-logo" aria-label="Supercomputers for Starters" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -197,7 +197,7 @@
   
   
     <li class="md-nav__item">
-      <a href=".." class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         Home
       </a>
     </li>
@@ -212,7 +212,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../C00_S00_preliminary/" class="md-nav__link">
+      <a href="../../C00_S00_preliminary/" class="md-nav__link">
         Preliminary words
       </a>
     </li>
@@ -254,7 +254,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../C01_Introduction/">Introduction</a>
+          <a href="../../C01_Introduction/">Introduction</a>
           
             <label for="__nav_3">
               <span class="md-nav__icon md-icon"></span>
@@ -277,7 +277,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../C01_Introduction/C01_S01_Goals/" class="md-nav__link">
+      <a href="../../C01_Introduction/C01_S01_Goals/" class="md-nav__link">
         Goals
       </a>
     </li>
@@ -291,7 +291,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../C01_Introduction/C01_S02_Why/" class="md-nav__link">
+      <a href="../../C01_Introduction/C01_S02_Why/" class="md-nav__link">
         Why supercomputing?
       </a>
     </li>
@@ -305,7 +305,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../C01_Introduction/C01_S03_What_it_is_not/" class="md-nav__link">
+      <a href="../../C01_Introduction/C01_S03_What_it_is_not/" class="md-nav__link">
         What it is not
       </a>
     </li>
@@ -319,7 +319,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../C01_Introduction/C01_S04_Compartmentalised/" class="md-nav__link">
+      <a href="../../C01_Introduction/C01_S04_Compartmentalised/" class="md-nav__link">
         A compartmentalised supercomputer
       </a>
     </li>
@@ -333,7 +333,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../C01_Introduction/C01_S05_Overview/" class="md-nav__link">
+      <a href="../../C01_Introduction/C01_S05_Overview/" class="md-nav__link">
         Overview of the notes
       </a>
     </li>
@@ -396,7 +396,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../C02_Processors/">Processors for supercomputers</a>
+          <a href="../../C02_Processors/">Processors for supercomputers</a>
           
             <label for="__nav_4">
               <span class="md-nav__icon md-icon"></span>
@@ -419,7 +419,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../C02_Processors/C02_S01_Intro/" class="md-nav__link">
+      <a href="../../C02_Processors/C02_S01_Intro/" class="md-nav__link">
         Introduction
       </a>
     </li>
@@ -433,7 +433,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../C02_Processors/C02_S02_Basic_CPU/" class="md-nav__link">
+      <a href="../../C02_Processors/C02_S02_Basic_CPU/" class="md-nav__link">
         A basic CPU
       </a>
     </li>
@@ -447,7 +447,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../C02_Processors/C02_S03_ILP_I_Pipelining/" class="md-nav__link">
+      <a href="../../C02_Processors/C02_S03_ILP_I_Pipelining/" class="md-nav__link">
         ILP I - Pipelining
       </a>
     </li>
@@ -461,7 +461,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../C02_Processors/C02_S04_ILP_II_Superscalar/" class="md-nav__link">
+      <a href="../../C02_Processors/C02_S04_ILP_II_Superscalar/" class="md-nav__link">
         ILP II - Superscalar
       </a>
     </li>
@@ -475,7 +475,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../C02_Processors/C02_S05_Vectorisation/" class="md-nav__link">
+      <a href="../../C02_Processors/C02_S05_Vectorisation/" class="md-nav__link">
         Vector computing
       </a>
     </li>
@@ -489,7 +489,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../C02_Processors/C02_S06_Shared_memory/" class="md-nav__link">
+      <a href="../../C02_Processors/C02_S06_Shared_memory/" class="md-nav__link">
         Shared memory
       </a>
     </li>
@@ -503,7 +503,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../C02_Processors/C02_S07_Distributed_memory/" class="md-nav__link">
+      <a href="../../C02_Processors/C02_S07_Distributed_memory/" class="md-nav__link">
         Distributed memory
       </a>
     </li>
@@ -517,7 +517,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../C02_Processors/C02_S08_Modern_supercomputer/" class="md-nav__link">
+      <a href="../../C02_Processors/C02_S08_Modern_supercomputer/" class="md-nav__link">
         A modern (super)computer
       </a>
     </li>
@@ -531,7 +531,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../C02_Processors/C02_S09_Node_architecture/" class="md-nav__link">
+      <a href="../../C02_Processors/C02_S09_Node_architecture/" class="md-nav__link">
         Node architecture
       </a>
     </li>
@@ -545,7 +545,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../C02_Processors/C02_S10_Fast_evolution/" class="md-nav__link">
+      <a href="../../C02_Processors/C02_S10_Fast_evolution/" class="md-nav__link">
         Fast (past) evolution
       </a>
     </li>
@@ -559,7 +559,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../C02_Processors/C02_S11_Difference/" class="md-nav__link">
+      <a href="../../C02_Processors/C02_S11_Difference/" class="md-nav__link">
         An important difference...
       </a>
     </li>
@@ -573,7 +573,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../C02_Processors/C02_S12_Lessons_learnt/" class="md-nav__link">
+      <a href="../../C02_Processors/C02_S12_Lessons_learnt/" class="md-nav__link">
         Lessons learnt
       </a>
     </li>
@@ -612,7 +612,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../C03_Memory/">The memory hierarchy</a>
+          <a href="../../C03_Memory/">The memory hierarchy</a>
           
         </div>
       
@@ -668,7 +668,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../C04_Storage/">Storing data on Supercomputers</a>
+          <a href="../../C04_Storage/">Storing data on Supercomputers</a>
           
             <label for="__nav_6">
               <span class="md-nav__icon md-icon"></span>
@@ -691,7 +691,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../C04_Storage/C04_S01_Introduction/" class="md-nav__link">
+      <a href="../../C04_Storage/C04_S01_Introduction/" class="md-nav__link">
         Introduction
       </a>
     </li>
@@ -705,7 +705,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../C04_Storage/C04_S02_Problems/" class="md-nav__link">
+      <a href="../../C04_Storage/C04_S02_Problems/" class="md-nav__link">
         Problems
       </a>
     </li>
@@ -719,7 +719,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../C04_Storage/C04_S03_Parallel_filesystems/" class="md-nav__link">
+      <a href="../../C04_Storage/C04_S03_Parallel_filesystems/" class="md-nav__link">
         Parallel file systems
       </a>
     </li>
@@ -733,7 +733,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../C04_Storage/C04_S04_Revolution/" class="md-nav__link">
+      <a href="../../C04_Storage/C04_S04_Revolution/" class="md-nav__link">
         A storage revolution?
       </a>
     </li>
@@ -747,7 +747,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../C04_Storage/C04_S05_To_remember/" class="md-nav__link">
+      <a href="../../C04_Storage/C04_S05_To_remember/" class="md-nav__link">
         To remember
       </a>
     </li>
@@ -761,7 +761,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../C04_Storage/C04_S06_Further_reading/" class="md-nav__link">
+      <a href="../../C04_Storage/C04_S06_Further_reading/" class="md-nav__link">
         Further reading
       </a>
     </li>
@@ -814,7 +814,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../C05_Summary1/">Putting it all together</a>
+          <a href="../../C05_Summary1/">Putting it all together</a>
           
             <label for="__nav_7">
               <span class="md-nav__icon md-icon"></span>
@@ -837,7 +837,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../C05_Summary1/C05_S01_Scaling/" class="md-nav__link">
+      <a href="../../C05_Summary1/C05_S01_Scaling/" class="md-nav__link">
         Scaling
       </a>
     </li>
@@ -851,7 +851,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../C05_Summary1/C05_S02_Dennard_scaling/" class="md-nav__link">
+      <a href="../../C05_Summary1/C05_S02_Dennard_scaling/" class="md-nav__link">
         Dennard scaling
       </a>
     </li>
@@ -865,7 +865,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../C05_Summary1/C05_S03_Cost_transistor/" class="md-nav__link">
+      <a href="../../C05_Summary1/C05_S03_Cost_transistor/" class="md-nav__link">
         Transistor cost
       </a>
     </li>
@@ -879,7 +879,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../C05_Summary1/C05_S04_Keywords/" class="md-nav__link">
+      <a href="../../C05_Summary1/C05_S04_Keywords/" class="md-nav__link">
         3 keywords
       </a>
     </li>
@@ -893,7 +893,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../C05_Summary1/C05_S05_Andy_Bill/" class="md-nav__link">
+      <a href="../../C05_Summary1/C05_S05_Andy_Bill/" class="md-nav__link">
         Andy and Bill's law
       </a>
     </li>
@@ -907,7 +907,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../C05_Summary1/C05_S06_Software_not_hardware/" class="md-nav__link">
+      <a href="../../C05_Summary1/C05_S06_Software_not_hardware/" class="md-nav__link">
         Software, not hardware
       </a>
     </li>
@@ -921,7 +921,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../C05_Summary1/C05_S07_Building_up_the_supercomputer/" class="md-nav__link">
+      <a href="../../C05_Summary1/C05_S07_Building_up_the_supercomputer/" class="md-nav__link">
         Building up the supercomputer
       </a>
     </li>
@@ -941,14 +941,12 @@
 
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8" type="checkbox" id="__nav_8" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8" type="checkbox" id="__nav_8" >
       
       
       
@@ -961,8 +959,8 @@
       
         
         
-        <div class="md-nav__link md-nav__link--index md-nav__link--active">
-          <a href="./">Middleware</a>
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../">Middleware</a>
           
         </div>
       
@@ -1006,7 +1004,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../C07_Expectations/">What can we expect?</a>
+          <a href="../../C07_Expectations/">What can we expect?</a>
           
         </div>
       
@@ -1062,7 +1060,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../C08_Accelerators/">Accelerators</a>
+          <a href="../../C08_Accelerators/">Accelerators</a>
           
             <label for="__nav_10">
               <span class="md-nav__icon md-icon"></span>
@@ -1085,7 +1083,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../C08_Accelerators/C08_S01_What_are_accelerators/" class="md-nav__link">
+      <a href="../../C08_Accelerators/C08_S01_What_are_accelerators/" class="md-nav__link">
         What are accelerators?
       </a>
     </li>
@@ -1099,7 +1097,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../C08_Accelerators/C08_S02_Offloading/" class="md-nav__link">
+      <a href="../../C08_Accelerators/C08_S02_Offloading/" class="md-nav__link">
         Offloading
       </a>
     </li>
@@ -1113,7 +1111,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../C08_Accelerators/C08_S03_CPUs_accelerator_features/" class="md-nav__link">
+      <a href="../../C08_Accelerators/C08_S03_CPUs_accelerator_features/" class="md-nav__link">
         CPUs with accelerator features
       </a>
     </li>
@@ -1127,7 +1125,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../C08_Accelerators/C08_S04_Programming_accelerators/" class="md-nav__link">
+      <a href="../../C08_Accelerators/C08_S04_Programming_accelerators/" class="md-nav__link">
         Accelerator prorgramming
       </a>
     </li>
@@ -1141,7 +1139,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../C08_Accelerators/C08_S05_Status_GPU_computing/" class="md-nav__link">
+      <a href="../../C08_Accelerators/C08_S05_Status_GPU_computing/" class="md-nav__link">
         Status of GPU computing
       </a>
     </li>
@@ -1155,7 +1153,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../C08_Accelerators/C08_S06_Further_reading/" class="md-nav__link">
+      <a href="../../C08_Accelerators/C08_S06_Further_reading/" class="md-nav__link">
         Further reading
       </a>
     </li>
@@ -1194,7 +1192,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../C09_Conclusions/">Conclusions</a>
+          <a href="../../C09_Conclusions/">Conclusions</a>
           
         </div>
       
@@ -1233,6 +1231,28 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#openmp" class="md-nav__link">
+    OpenMP
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#other-approaches" class="md-nav__link">
+    Other approaches
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1246,13 +1266,65 @@
                   
 
 
-<h1 id="middleware-turning-the-hardware-into-a-usable-supercomputer">Middleware: Turning the hardware into a usable supercomputer<a class="headerlink" href="#middleware-turning-the-hardware-into-a-usable-supercomputer" title="Permanent link">&para;</a></h1>
-<ul>
-<li><a href="C06_S01_Introduction/">Introduction</a></li>
-<li><a href="C06_S02_Shared_memory/">Shared memory computing</a></li>
-<li><a href="C06_S03_Vector_computing/">Vector computing</a></li>
-<li><a href="C06_S06_Further_reading/">Further reading</a></li>
-</ul>
+<h1 id="middleware-for-shared-memory-computing">Middleware for shared memory computing<a class="headerlink" href="#middleware-for-shared-memory-computing" title="Permanent link">&para;</a></h1>
+<p>When discussing shared memory parallelism in the 
+<a href="../../C02_Processors/C02_S06_Shared_memory/">section on processors</a>,
+we've already said that automatic shared memory parallelisation has not been
+ver successful so far.</p>
+<h2 id="openmp">OpenMP<a class="headerlink" href="#openmp" title="Permanent link">&para;</a></h2>
+<p>One of the more popular ways today to develop scientific software that makes use
+of shared memory parallelism, is OpenMP.</p>
+<p>OpenMP works through compiler pragmas which are hints placed in the code in such
+a way that they would be neglected by compilers that don't know the pragmas.
+In C and C++ this is done via lines starting with <code>#pragma</code> while in Fortran a notation
+that would be interpreted as just another comment in the code is used.</p>
+<p>OpenMP supports two styles of parallelism: data-parallel and task-parallel computing.
+In data-parallel computing each thread works on a part of the data and it is a type of
+parallelism that is very popular in scientific applications as it has the potential to
+scale to more and more processors the larger the data set is. 
+In task-parallel computing each thread works on a specific task instead. 
+Though in fact one could consider data parallelism as a special case of task parallelism
+where each task is "operate on a particular part of the data".</p>
+<p>OpenMP is a fairly open standard. OpenMP pragmas are not vendor-specific. 
+The latest version at the last revision of this chapter is OpenMP 5.2, which was launched
+at the Supercomputing Conference in November 2021. That standard nature implies that code
+developed with one compiler with OpenMP support will also compile with another compiler as long
+as the code and the compilers adhere to the language standards and OpenMP standard. </p>
+<p>OpenMP originally only supported shared memory parallelism. Version 4 however was a major revision
+introducing support for vectorisation and for offload to coprocessors (really designed with GPU computing in mind).</p>
+<p>In OpenMP, the runtime behaviour such as the number of threads used and the mapping of those 
+threads on the cores of the node, are often set through environment variables that are in
+fact also partly standardised. Some codes will use OpenMP library functions instead and will
+expect information from the user in, e.g., the input files.</p>
+<p>OpenMP for shared memory parallelism is currently widely supported in C/C++ and Fortran compilers
+for scientific use. On the VSC clusters it is supported in both the GNU C/C++ and Fortran compilers
+and the Intel compilers.
+Also on LUMI it is supported in all available C/C++ and Fortran compilers (GCC, AMD aocc and ROCm, and
+the Cray Compiling Environment compilers).</p>
+<h2 id="other-approaches">Other approaches<a class="headerlink" href="#other-approaches" title="Permanent link">&para;</a></h2>
+<p>In C++ frameworks such as the Intel Thread Building Blocks (TBB) are also often used.
+The Intel TBB library is open-sourced and can be used with other compilers also.
+It has also been adopted in Intel's oneAPI specifications and is called oneTBB in
+that context.</p>
+<p>Some languages also have thread concepts or other concurrent processing concepts built
+into the language or its standard runtime library.
+Java is one such example, but Java is not really suited for distributed memory applications
+as the garbage collection strategy causes performance problems in the typical scientific
+distributed memory applications as many of those applications tend to use data parallelism
+which typically requires all processes to run quasi-synchronised as they frequently exchange data.
+Whenever a garbage collector kicks in at random it also slows down the other processes as they cannot
+communicate properly anymore with the process where the garbage collection is going on.
+Microsoft C# is another such language, but not really used in scientific computing at scale. 
+Another such language is Google Go but that one also is not very suitable for supercomputing 
+partly due to high memory consumption due to poor memory management which is also why Google isn't
+using the language as much anymore as they used to. A language really designed for scientific computing
+with parallelism in mind is Julia which can offer a nice and more performant alternative to 
+Python and Matlab. Strangely enough though the language designers focused on distributed memory
+computing first and have only started adding shared memory computing concepts in more recent years.</p>
+<p>Lastly, one can use explicit OS threading, especially for task-based parallelism.
+Linux supports the POSIX standard for threads via the Pthreads library.
+This is very low-level thoug and rather cumbersome as now the programmer has to code all
+thread managment themselves. Certainly for data parallelism this is rarely a good idea.</p>
 
   <hr>
 <div class="md-source-file">
@@ -1284,42 +1356,6 @@
       </main>
       
         <footer class="md-footer">
-  
-    
-    <nav class="md-footer__inner md-grid" aria-label="Footer" >
-      
-        
-        <a href="../C05_Summary1/C05_S07_Building_up_the_supercomputer/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Building up the supercomputer" rel="prev">
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
-          </div>
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Previous
-              </span>
-              Building up the supercomputer
-            </div>
-          </div>
-        </a>
-      
-      
-        
-        <a href="../C07_Expectations/" class="md-footer__link md-footer__link--next" aria-label="Next: What can we expect?" rel="next">
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Next
-              </span>
-              What can we expect?
-            </div>
-          </div>
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
-          </div>
-        </a>
-      
-    </nav>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
@@ -1355,10 +1391,10 @@
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.tracking", "navigation.top", "navigation.indexes", "header.autohide", "toc.follow"], "search": "../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.tracking", "navigation.top", "navigation.indexes", "header.autohide", "toc.follow"], "search": "../../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.5a2dcb6a.min.js"></script>
+      <script src="../../assets/javascripts/bundle.5a2dcb6a.min.js"></script>
       
     
     
