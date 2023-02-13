@@ -377,6 +377,20 @@
         
           
         
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
       
       
         
@@ -469,6 +483,104 @@
 
             
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../C02_Processors/C02_S06_Shared_memory/" class="md-nav__link">
+        Shared memory
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../C02_Processors/C02_S07_Distributed_memory/" class="md-nav__link">
+        Distributed memory
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../C02_Processors/C02_S08_Modern_supercomputer/" class="md-nav__link">
+        A modern (super)computer
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../C02_Processors/C02_S09_Node_architecture/" class="md-nav__link">
+        Node architecture
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../C02_Processors/C02_S10_Fast_evolution/" class="md-nav__link">
+        Fast (past) evolution
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../C02_Processors/C02_S11_Difference/" class="md-nav__link">
+        An important difference...
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../C02_Processors/C02_S12_Lessons_learnt/" class="md-nav__link">
+        Lessons learnt
+      </a>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -537,6 +649,8 @@
         
           
             
+          
+        
           
         
           
@@ -635,6 +749,20 @@
     <li class="md-nav__item">
       <a href="../../C04_Storage/C04_S05_To_remember/" class="md-nav__link">
         To remember
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../C04_Storage/C04_S06_Further_reading/" class="md-nav__link">
+        Further reading
       </a>
     </li>
   
@@ -1557,10 +1685,12 @@ for accelerators it still needs a specific compiler.</p>
 the standard, targeting not only GPUs, but also, e.g., the NEC SX Aurora Tsubasa vector
 boards. 
 Most if not all of these implementations are again based on Clang and LLVM.
-One implementation worth mentioning is hipSYCL, which as its name suggests
-targets hip for the backend and hence can support both AMD and NVIDIA GPUs, but
-can also target pure CPU systems and now even contains experimental support for 
-Intel GPUs.</p>
+One implementation worth mentioning is Open SYCL. This project started under the
+name hipSYCL, which as its name suggests
+targets HIP for the backend to support AMD CPUs, but it has been extended to
+support all three major GPU families now using ptx for NVIDIA, amdgcn code for AMD and 
+SPIR-V for Intel GPUs, and the project is also working
+on multi-CPU support.</p>
 <h3 id="dpc-or-data-parallel-c">DPC++ or Data Parallel C++<a class="headerlink" href="#dpc-or-data-parallel-c" title="Permanent link">&para;</a></h3>
 <p>Data Parallel C++ is the oneAPI implementation of SYCL. It is basically a project
 by Intel to bring SYCL into LLVM, and all code is open sourced. The implementation does
@@ -1625,7 +1755,7 @@ also easing porting from NVIDIA to AMD hardware.</p>
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">January 25, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">February 10, 2023</span>
       
     
   </small>
