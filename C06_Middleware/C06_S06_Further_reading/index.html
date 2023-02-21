@@ -941,12 +941,14 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8" type="checkbox" id="__nav_8" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8" type="checkbox" id="__nav_8" checked>
       
       
       
@@ -955,12 +957,28 @@
             
           
         
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
       
       
         
         
         <div class="md-nav__link md-nav__link--index ">
           <a href="../">Middleware</a>
+          
+            <label for="__nav_8">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
           
         </div>
       
@@ -971,6 +989,100 @@
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../C06_S01_Introduction/" class="md-nav__link">
+        Introduction
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../C06_S02_Shared_memory/" class="md-nav__link">
+        Shared memory
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../C06_S03_Vector_computing/" class="md-nav__link">
+        Vector computing
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../C06_S04_Distributed_memory/" class="md-nav__link">
+        Distributed memory
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../C06_S05_Examples/" class="md-nav__link">
+        Examples
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Further reading
+      </a>
+      
+    </li>
+  
+
             
           
         </ul>
@@ -1251,6 +1363,7 @@
 <li><a href="https://github.com/oneapi-src/oneTBB">REpository on GitHub</a></li>
 </ul>
 </li>
+<li>Concurrency in languages for shared memory computing:<ul>
 <li><a href="https://docs.oracle.com/javase/tutorial/essential/concurrency/">Concurrency in "The Java<sup>TM</sup> Tutorials"</a></li>
 <li><a href="https://www.oreilly.com/library/view/concurrency-in-c/9781491906675/ch01.html">Concurrency in C#, in the O'Reilly "Concurrency in C# Cookbook"</a></li>
 <li><a href="https://go.dev/doc/effective_go#concurrency">Concurrency in Go, in "Effective Go"</a></li>
@@ -1260,20 +1373,51 @@
 <li><a href="https://www.hpcwire.com/2020/01/14/julia-programmings-dramatic-rise-in-hpc-and-elsewhere/">2020 article on Julia adoption</a></li>
 </ul>
 </li>
+</ul>
+</li>
 <li><a href="https://hpc-tutorials.llnl.gov/posix/">Pthreads programming tutorial at LLNL</a></li>
+<li>Mathematics libraries:<ul>
 <li><a href="https://netlib.org/blas/">BLAS - Basic Linear Algebra Subprograms</a></li>
 <li><a href="https://www.fftw.org/">FFTW, an optimised FFT implementation</a></li>
+</ul>
+</li>
+<li>MPI:<ul>
 <li><a href="https://www.mpi-forum.org/">MPI forum</a>, the standardisation committee</li>
 <li><a href="https://www.open-mpi.org/">Open MPI</a></li>
 <li><a href="https://www.mpich.org">MPICH</a></li>
 <li><a href="https://mvapich.cse.ohio-state.edu/">MVAPICH</a></li>
-<li><a href="https://charmplusplus.org/">Charm++</a>.
-TODO: Links below, check at the end of the slides.</li>
-<li><a href="">Chapel</a></li>
-<li><a href="">X10</a></li>
-<li><a href="">Fortress</a></li>
-<li><a href="">Co-array Fortran</a></li>
-<li><a href="">Unified Parallel C</a></li>
+</ul>
+</li>
+<li><a href="https://charmplusplus.org/">Charm++</a>.</li>
+<li>PGAS languages for distributed memory computing:<ul>
+<li>Chapel<ul>
+<li><a href="https://chapel-lang.org/">Chapel web page</a> with links to its social media</li>
+<li><a href="https://github.com/chapel-lang/">Chapel on GitHub</a></li>
+</ul>
+</li>
+<li>X10<ul>
+<li><a href="http://x10-lang.org/">X10 web page</a></li>
+<li><a href="https://github.com/x10-lang/x10">X10 on GitHub</a></li>
+</ul>
+</li>
+<li><a href="https://link.springer.com/referenceworkentry/10.1007/978-0-387-09766-4_190">Fortress</a></li>
+<li>Coarray fortran<ul>
+<li><a href="http://caf.rice.edu">A very dated web page at RICE university</a></li>
+<li><a href="https://www.nag.com/nagware/np/r62_doc/nag_f2008.html#AUTOTOC_3">An old page at NAG discussing coarrays in Fortran 2008</a></li>
+</ul>
+</li>
+<li><a href="https://upc.lbl.gov">Unified Parallel C @ Berkeley Lab</a></li>
+</ul>
+</li>
+<li>PGAS libraries<ul>
+<li><a href="http://openshmem.org/">OpenSHMEM</a></li>
+<li>GASPI<ul>
+<li><a href="http://www.gaspi.de">GASPI-Forum</a>, the consortium setting the GASPI standard</li>
+<li><a href="http://www.gpi-site.com">GPI-2</a>, an open source implementation made by the Fraunhofer Institute</li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 
   <hr>
@@ -1281,7 +1425,7 @@ TODO: Links below, check at the end of the slides.</li>
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">February 13, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">February 21, 2023</span>
       
     
   </small>
@@ -1306,6 +1450,42 @@ TODO: Links below, check at the end of the slides.</li>
       </main>
       
         <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="Footer" >
+      
+        
+        <a href="../C06_S05_Examples/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Examples" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Examples
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../../C07_Expectations/" class="md-footer__link md-footer__link--next" aria-label="Next: What can we expect?" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              What can we expect?
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
