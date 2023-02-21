@@ -82,12 +82,16 @@ nav:
 
 plugins:
   # show revision date at bottom of each page
-  - git-revision-date-localized
+  #- git-revision-date-localized
   # necessary for search to work
   - search
 
 markdown_extensions:
-  # notes, warnings, hints, ...
+  # Attributes (e.g., for lazy loading)
+  - attr_list
+  # Markdown in HTML
+  - md_in_html
+ # notes, warnings, hints, ...
   - admonition
   # code blocks with syntax highlighting, graphs
   - pymdownx.superfences:
