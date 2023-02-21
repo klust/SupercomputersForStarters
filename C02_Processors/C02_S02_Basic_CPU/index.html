@@ -1357,20 +1357,57 @@
 
 
 <h1 id="a-very-basic-cpu">A very basic CPU<a class="headerlink" href="#a-very-basic-cpu" title="Permanent link">&para;</a></h1>
-<p><img alt="The basic CPU" src="../../img/C02_S02_01_Simple_proc.png" /></p>
-<p><img alt="Inside the basic CPU" src="../../img/C02_S02_02_Simple_proc_exploded.png" /></p>
-<p><img alt="Instruction execution" src="../../img/C02_S02_03_Execution.png" /></p>
-
-  <hr>
-<div class="md-source-file">
-  <small>
-    
-      Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">January 25, 2023</span>
-      
-    
-  </small>
+<p>Let us start with a look at a very basic computer. It has two important components.
+The processor executes simple instructions, e.g., adding two numbers. The memory 
+stores the data in a linear structure. A clock governs the pace at which instructions
+are processed.</p>
+<figure>
+<p><img alt="The basic CPU" src="../../img/C02_S02_01_Simple_proc.png" />
+  <caption>A basic computer</caption></p>
+</figure>
+<p>Currently a processor is just as single chip, or in fact just a small part of
+a chip, but this was very different in the early days of computers based on chips.
+Fast processors often consisted of multiple chips, and sometimes even thousands of
+them.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The Cray 1, a supercomputer from 1976, had a processor built out of
+20,000 chips. The memory was built out of 73,278 chips.
+The mean time between failure was 50 hours, so whenever you
+bought such a machine you got a lot of spare parts with it and
+on-site technicians to replace the parts.</p>
 </div>
+<p>Let us now open up our simple processor and have a look inside.</p>
+<figure>
+<p><img alt="Inside the basic CPU" src="../../img/C02_S02_02_Simple_proc_exploded.png" />
+  <caption>A look inside the processor</caption></p>
+</figure>
+<p>It has several building blocks. 
+The ALU or Arithmetic and Logical Unit is the unit that does the 
+actual computations.
+The registers are a very small block of local memory. On modern 
+computers, the ALU can only use data that is already in one of the
+registers and will also write results to the registers. 30 years ago
+or more this was not always the case and some processors could operate
+directly on data from memory.
+Another important block is the Address Generation Unit with
+load/store unit and and the memory controller. This is the connection
+between the main memory and the registers. All data passes through
+the load/store unit with the AGU generating the actual address.
+The control unit is the part that coordinates all the work.</p>
+<p>In our very simple processor, instructions are executed one after
+another. But executing each instruction itself consists of multiple steps. Consider, e.g.,
+this oversimplified execution pattern distinguishing a few important steps:</p>
+<p><img alt="Instruction execution" src="../../img/C02_S02_03_Execution.png" /></p>
+<p>Instructions are fetched from memory and decoded in the first step. 
+In the second step, the operands of the instruction (the numbers on which it works)
+are transported from the registers to the ALU. In the next step the actual instruction
+is executed, e.g., two numbers are added. And in the last step the result is stored back
+in a register. Instructions involving storage would also consist out of multiple steps.
+The steps are synchronised with a clock. So in this simple example executing an instruction
+would take 4 clock ticks, so we could also say that we do 0.25 instructions per clock.</p>
+<p>Note however that different steps use different parts of the logic in the processor,
+and this is the key to improving performance.</p>
 
 
 
