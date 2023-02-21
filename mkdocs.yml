@@ -60,6 +60,12 @@ nav:
     - Building up the supercomputer: C05_Summary1/C05_S07_Building_up_the_supercomputer.md
   - Middleware:
     - C06_Middleware/index.md
+    - Introduction: C06_Middleware/C06_S01_Introduction.md
+    - Shared memory: C06_Middleware/C06_S02_Shared_memory.md
+    - Vector computing: C06_Middleware/C06_S03_Vector_computing.md
+    - Distributed memory: C06_Middleware/C06_S04_Distributed_memory.md
+    - Examples: C06_Middleware/C06_S05_Examples.md
+    - Further reading: C06_Middleware/C06_S06_Further_reading.md
   - What can we expect?:
     - C07_Expectations/index.md
   - Accelerators:
