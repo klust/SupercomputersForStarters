@@ -393,6 +393,8 @@
         
           
         
+          
+        
       
       
         
@@ -517,6 +519,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#conclusion-on-intra-processor-parallelism" class="md-nav__link">
+    Conclusion on intra-processor parallelism
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -618,6 +627,20 @@
     <li class="md-nav__item">
       <a href="../C02_S12_Lessons_learnt/" class="md-nav__link">
         Lessons learnt
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../C02_S13_Further_reading/" class="md-nav__link">
+        Further reading
       </a>
     </li>
   
@@ -1387,6 +1410,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#conclusion-on-intra-processor-parallelism" class="md-nav__link">
+    Conclusion on intra-processor parallelism
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1498,6 +1528,30 @@ form of SIMD computing and a vector computer with an instruction set that also
 supports so-called masking or prediction and scatter-gather operations.
 Which is in fact also the difference between the AVX-512 and AVX2 instruction 
 sets.</p>
+<h2 id="conclusion-on-intra-processor-parallelism">Conclusion on intra-processor parallelism<a class="headerlink" href="#conclusion-on-intra-processor-parallelism" title="Permanent link">&para;</a></h2>
+<p>There are two levels of parallelism in modern processors:</p>
+<ol>
+<li>
+<p>Trying to execute more instructions per clock cycle: <em>instruction-level parallelism</em>, abbreviated ILP.</p>
+<p>This is mostly hard work for the CPU control logic and for the compiler, and
+only a limited amount of work for the application developer.
+Moreover, you can expect a gain from this technology even without recompiling
+your application for a newer CPU if that CPU supports the same instruction set.</p>
+</li>
+<li>
+<p>Doing more work per instruction: data-level parallelism through vectorisation or other SIMD technologies</p>
+<p>This is a much harder job for the compiler as most programming languages do not 
+offer enough information to the compiler. The application developer often needs
+to help the compiler.</p>
+<p>Moreover, you will not gain from the addition of vector instructions to a processor
+design without recompiling for those vector instructions.</p>
+<p>In some applications a lot of the gain over the various generations of CPUs since the late
+'90s has come from better and wider vector instruction sets. But these improvements can
+only be delivered if an application gets recompiled for those new instructions (and then
+it won't run anymore on the older processors). This is a reason why on supercomputers
+applications often installed from source code rather than from binaries./</p>
+</li>
+</ol>
 
 
 
