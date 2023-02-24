@@ -109,3 +109,31 @@ supports so-called masking or prediction and scatter-gather operations.
 Which is in fact also the difference between the AVX-512 and AVX2 instruction 
 sets.
 
+
+## Conclusion on intra-processor parallelism
+
+There are two levels of parallelism in modern processors:
+
+1.  Trying to execute more instructions per clock cycle: *instruction-level parallelism*, abbreviated ILP.
+
+    This is mostly hard work for the CPU control logic and for the compiler, and
+    only a limited amount of work for the application developer.
+    Moreover, you can expect a gain from this technology even without recompiling
+    your application for a newer CPU if that CPU supports the same instruction set.
+
+2.  Doing more work per instruction: data-level parallelism through vectorisation or other SIMD technologies
+
+    This is a much harder job for the compiler as most programming languages do not 
+    offer enough information to the compiler. The application developer often needs
+    to help the compiler.
+
+    Moreover, you will not gain from the addition of vector instructions to a processor
+    design without recompiling for those vector instructions.
+
+    In some applications a lot of the gain over the various generations of CPUs since the late
+    '90s has come from better and wider vector instruction sets. But these improvements can
+    only be delivered if an application gets recompiled for those new instructions (and then
+    it won't run anymore on the older processors). This is a reason why on supercomputers
+    applications often installed from source code rather than from binaries./
+
+

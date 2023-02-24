@@ -28,6 +28,10 @@ parts together. E.g., the early generations of multiprocessor Opteron chips
 used a switch architecture, and current generation Intel CPUs use ring or
 in some cases (e.g., Sapphire Rapids server chips) a mesh network.
 
+Early examples of shared memory supercomputers go back to the early '80s. 
+Eg.g., machines such as the CrayX-MP from 1982 where shared memory computers with
+uniform memory access.
+
 <!-- TODO: Add some examples from the nineties. DEC Alpha was a switch? SUN Microsystems? -->
 
 Nowadays multiple processors are often integrated on a single piece of silicon
