@@ -15,9 +15,9 @@ This is one example of a *single instruction stream, multiple data stream*
 This was a very popular design in supercomputers in the 70s and 80s, but 
 then almost disappeared with only two or three vendors still making them
 (and only one still making them today).
-Examples are the CDC Start-100 from 1974 abd the Cray-1 from 1976. 
+Examples are the CDC STAR-100 from 1974 abd the Cray-1 from 1976. 
 The latter was the first vector computer to use a design with registers.
-The Start-100 streamed the data directly from and to memory.
+The STAR-100 streamed the data directly from and to memory.
 Currently NEC still makes vector computers though with a slightly different
 design as before for even faster speeds. Vector registers in the current
 NEX SX Aurora TSUBASA architecture are 256 double precision numbers wide,
