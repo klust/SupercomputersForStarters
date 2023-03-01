@@ -10,8 +10,9 @@ needed to drive the circuits also lowered proportional to linear dimensions.
 Circuit delays went down by 30% (x0.7), so frequencies went up by
 40% (0.7<sup>-1</sup>).
 
-Though the first cracks already appeared some generations earlier, this really
-broke down around 2006. 
+Though the first cracks already appeared some generations earlier
+(see, e.g., the problems with the Prescott Pentium 4 variant from 2004, built 
+on a 90 nm process), this really broke down around 2006. 
 No longer did all dimensions of elements on an integrated circuit scale as well
 and hence transistor density did not grow as fast anymore.
 Moreover, the threshold voltage of semiconductors, the minimum voltage to let them

@@ -197,7 +197,7 @@ carries two Slingshot connections. The connectors on both sides are for power an
 The next picture shows the outward facing side of the switch blade. There are 24
 electrical connectors, but each again carries two Slingshot links. At the far left
 and far right you can again note the connectors to the water cooling. Each switch
-itself can consume up to 250W and also needs proper cooling.
+itself can consume up to 250W and is also fully water-cooled.
 
 ![Switch blade, outward facing side](../img/C05_S07_13_Slingshot_outer.png)
 *Switch blade, outward facing side*
@@ -209,8 +209,7 @@ for LUMI-C two switch blades are needed in each switch chassis as each blade has
 those nodes have 8 network interfaces. Note that this also implies that the nodes on the same 
 compute blade of LUMI-C will be on two different switches even though in the node numbering they
 are numbered consecutively. For LUMI-G both nodes on a blade will be on a different pair of switches 
-and each node is connected to two switches. Thw switch blades are also water cooled (each one can 
-consume up to 250W). No current possible configuration of the Cray EX system needs that much switches.
+and each node is connected to two switches.
 
 The picture below gives an impression of how this works for blades with 4 CPU nodes with 1 (left) or
 2 (right) connections to the Slingshot interconnect.
@@ -286,7 +285,7 @@ So one of the fastest supercomputers of 1985 consumed only 1% of the power of th
 The cost of the Cray-2 is approximately 40-50 M$ in dollars of today, while the current cost of the 
 exascale machines is estimated at 500 M$ or more, so the cost was about 10% of today's fastest computers.
 
-??? Note "Funny fact"
+??? Note "Funny fact (click to expand)"
     In 1986, the University of Stuttgart got funding to buy a 4-processor Cray-2 system.
     It is still on display today, and it is a common practice to check if you still fit
     inside the system. But the picture below also gives a good impression of the small

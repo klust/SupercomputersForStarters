@@ -14,8 +14,9 @@ For a long time the cost per gate (or transistor) decreased rapidly with each
 new process generation. In fact, the cost per wafer did not increase much while the
 gate density doubled with each new process generation. This ended with the 28nm
 generation, From the 20nm generation on (which TSMC launched in 2014) the cost
-per gate did not longer decrease. Instead, the price per wafer started to grow 
-again. This is also the moment that gates on a chip could no longer be made as
+per gate did not longer decrease. Instead, the price per wafer started grew 
+much faster with avery new generation than the transistor density increased.
+This is also the moment that gates on a chip could no longer be made as
 flat 2D structures, but 3D structures were needed instead to control leakage,
 requiring more and more process steps as the miniaturisation further progressed.
 

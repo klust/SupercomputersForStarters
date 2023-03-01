@@ -36,7 +36,7 @@ Random access to small blocks of data is bad at all levels in computers, not onl
 Only the definition of "small" varies depending on the type of memory or storage. For RAM memory
 "small" is on the order of a cache line or 64 bytes on many popular CPUs, for permanent storage
 "small" is measured in kilobytes or even 10s or 100s of kilobytes for shared parallel file systems.
-We haven't discussed the architecture of main memory in much detail, ub there also streaming is 
+We haven't discussed the architecture of main memory in much detail, but there also streaming is 
 important to get the fastest performance as internally memory is also accessed and buffered in
 larger blocks than a single request, and a subsequent request to data that is already in that 
 larger buffer will be quicker than an access to data that is not.
@@ -103,14 +103,13 @@ Hierarchies appear in different ways in supercomputers, but also more and more i
 
 Memory is organised in a hierarchical way with typically 3 levels of cache where the first two
 levels tend to be organised per core while the third level is a cache that is shared by multiple
-if not all cores, and then often two or more levels of RAM memory. Many supercomputers are build
+if not all cores, and then often two or more levels of RAM memory. Many supercomputers are built
 out of building blocks with two processor sockets and accessing memory that is physically attached
 to the other socket is slower than accessing local main memory, but even within a socket not all
 memory might be equal. The latter is already the case on the AMD Epyc server processors and will
 also happen on some versions of the Intel Sapphire Rapids series that became available in early
 2023. PCs also have the same cache hierarchy, but the main memory has only one level unless you
 opt for some workstation-class systems that are really built using variants of processors for servers.
-
 
 There is also a hierarchy in the levels of parallelism for processing. Instruction level parallelism
 and vectorisation is parallelism at a very fine scale as it is done in the instruction stream itself
@@ -128,7 +127,7 @@ programming models for GPUs are very hierarchical.
 We can expect that parallel storage will also become more hierarchical than it is today as 
 supercomputer manufacturers are looking for ways to bring some storage again closer to the
 processing elements without losing too much of the manageability, and as flash storage
-will remain too expensive in the forseeable future to build an all flash file system
+will remain too expensive in the foreseeable future to build an all flash file system
 and hence can only be used for an extra level in the hierarchy.
 
 Exploiting the memory hierarchy is extremely important for performance as will also be

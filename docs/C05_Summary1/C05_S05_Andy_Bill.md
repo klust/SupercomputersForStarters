@@ -22,7 +22,7 @@ exploited the 80286, with OS/2, which was in fact mostly built by IBM. Though Mi
 should not be entirely to blame for this as it was not possible to use the extended 
 mode (actually called protected mode) while keeping compatibility with older DOS software also, except via an 
 undocumented trick (which is what OS/2 used). 
-The 80386 was the first processor of Intel that offered a 32-bit instruction set, and it 
+The 80386 launched in 1985 and was the first processor of Intel that offered a 32-bit instruction set, and it 
 was also designed to run old 16-bit DOS programs well together with 32-bit software. 
 Though there were some Unix variants that supported the CPU in 32-bit mode and 
 a 32-bit version of OS/2 in early 1992, it took Microsoft until Windows NT 3.1 in 
@@ -121,7 +121,7 @@ is that the quantum computer is still looking for an application in which it wil
 and currently needs to be attached to a rather powerful traditional computer also 
 simply to turn the information that it produces in something useful. The cooling needed
 for a quantum computer is also extremely expensive as it needs to be cooled to 
-nearly the absolute zero. EVery fraction of a Kelvin above the absolute zero makes the results
+nearly the absolute zero. Every fraction of a Kelvin above the absolute zero makes the results
 worse because of noise (which manifests itself as errors in the computation).
 Don't be fooled by the pictures you see of quantum computers: Most of these pictures don't even show
 the quantum computer nor all the hardware that is needed to measure the quantum state.
