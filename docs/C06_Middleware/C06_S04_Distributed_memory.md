@@ -39,7 +39,7 @@ becoming a necessity as just the amount of messages risks to overwhelm the netwo
 and the number of processes in an MPI job slows down program startup and collective communication
 (the type of communications where are processes compute a single result, e.g., a sum of numbers
 across all processes) become too expensive.
-Such applications are called * hybrid MPI/OpenMP applications* (assumiong they use OpenMP).
+Such applications are called *hybrid MPI/OpenMP applications* (assuming they use OpenMP).
 Examples of programs that are sometimes used in hybrid mode are QuantumESPRESSO, Gromacs and VASP.
 
 Examples of vendor-specific MPI libraries:
@@ -69,20 +69,23 @@ It is then up to the compiler to translate that in message for the underlying ha
 combination.
 These languages were all the hype between roughly 2000 and 2010 when DARPA funded the development 
 of new high performance high productivity languages through the HPCS program. 
-It led to the development of three languages: Fortress (bu Sun Microsystems), X10 (by IBM),
-anc Chapel (by Cray), but Chapel seems to be the only surviving language of that program that is 
+It led to the development of three languages: Fortress (by Sun Microsystems), X10 (by IBM),
+and Chapel (by Cray), but Chapel seems to be the only surviving language of that program that is 
 still begin developed by HPE Cray. 
 Two other languages of this type not developed in the DARPA program are co-array Fortran and
-Unified PArallel C. Co-array Fortran became part of the Fortran 2008 standard and some Fortran
+Unified Parallel C (UPC). Co-array Fortran became part of the Fortran 2008 standard and some Fortran
 compilers offer basic support for it. Unified Parallel C was derived from C99. It never became
 part of a standardisation process and as a result official support by compiler vendors is poor. 
-However, there are still compilers based on Clang and on GCC, and HPE Cray support UPC
+However, there are still compilers based on Clang and on GCC, and HPE Cray supports UPC
 in their Cray Compiling Environment compiler.
 
-The problem with PGAS languages is that performance is often a problem. Therefore codes sometimes
+The problem with PGAS languages is that performance is often poor. Therefore codes sometimes
 opt to still do some of the work with MPI.
 
 There are also library based approaches to PGAS. SHEM/OpenSHMEM and GASPI are just two examples.
-GASPI is also sometimes used as the runtime library underlying other PGAS languages.
+GASPI is also sometimes used as the runtime library underlying other PGAS languages. 
+Single-sided communications in MPI-2 and later MPI standards use a very similar approach as those
+libraries.
 
-PGAS languages and libraries have never become very popular.
+PGAS languages and libraries have never become very popular, maybe with the exception of single-sided 
+MPI communications.

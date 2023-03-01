@@ -2,7 +2,7 @@
 
 -   [OpenMP web site](https://www.openmp.org/)
 -   [Intel oneTBB home page](https://www.intel.com/content/www/us/en/developer/tools/oneapi/onetbb.html)
-    -   [REpository on GitHub](https://github.com/oneapi-src/oneTBB)
+    -   [Repository on GitHub](https://github.com/oneapi-src/oneTBB)
 -   Concurrency in languages for shared memory computing:
     -   [Concurrency in "The Java<sup>TM</sup> Tutorials"](https://docs.oracle.com/javase/tutorial/essential/concurrency/)
     -   [Concurrency in C#, in the O'Reilly "Concurrency in C# Cookbook"](https://www.oreilly.com/library/view/concurrency-in-c/9781491906675/ch01.html)
