@@ -6,7 +6,10 @@
     The joint bandwidth on the BeeGFS scratch file system at the CalcUA compute
     service in use in 2022 is on the order of 7 GB/s. At the same time,
     some NVMe SSDs for PCIe 4 also claim to offer a read bandwidth of 7 GB/s
-    and a write bandwidth that is not that much lower.
+    and a write bandwidth that is not that much lower, and the even newer
+    PCIe 5 generation can be even faster (at least with the proper I/O 
+    pattern as with a bad I/O pattern bandwidth can be as low as only 
+    100 MB/s).
 
     So one could wonder if we shouldn't use 105 of those drives instead.
 
