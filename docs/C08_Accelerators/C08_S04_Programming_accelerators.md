@@ -244,22 +244,23 @@ computing.
 of the frameworks mentioned here. It was first released in 2011 already but grew to a
 complete ecosystem with tools to support debugging, profiling and tuning also, and now even
 some support for distributed computing also. Kokkos already supports backends for CUDA
-and ROCm, and there are experimental backends that can also support the Intel GPUs that will
+and ROCm, and there are experimental backends (based on SYCL and OpenMP offload) 
+that can also support the Intel GPUs that will
 be used in the Aurora supercomputer.
 
 [RAJA](https://computing.llnl.gov/projects/raja-managing-application-portability-next-generation-platforms) 
 is a framework developed at Lawrence Livermore National Laboratory, based on standard C++11. 
 Just as Kokkos, RAJA has several backends supporting SIMD, threading through the TBB library or
-OpenMP, but also GPU computing through NVIDIA CUDA, AMD HIP and OpenMP offload, though not all 
-back-ends are as mature or support all features.In particular the TBB and OpenMP target offload 
+OpenMP, but also GPU computing through NVIDIA CUDA, AMD HIP, SYCL and OpenMP offload, though not all 
+back-ends are as mature or support all features.In particular the SIMD, TBB, SYCL and OpenMP target offload 
 (the latter needed for Intel GPUs) are still experimental at the time this section was
-written (October 2022).
+last revised (March 2023).
 
 [Alpaka](https://www.casus.science/research/software-repository/alpaka/) 
 is a framework developed by CASUS - Center for Advanced Systems Understanding of the 
 Helmholtz Zentrum Dresden Rossendorf. Alpaka also supports various backends, including a CUDA
 back-end for NVIDIA GPUs. There is also work going on on a HIP backend for AMD GPUs, with
-support for Intel GPUs coming through an OpenMP offload backend. 
+support for Intel GPUs coming through a SYCL and an OpenMP offloac backend. 
 
 
 ## Libraries
