@@ -69,6 +69,7 @@ nav:
     - Further reading: C06_Middleware/C06_S06_Further_reading.md
   - What can we expect?:
     - C07_Expectations/index.md
+    - Speed-up: C07_Expectations/C07_S01_Speedup.md
   - Accelerators:
     - C08_Accelerators/index.md
     - What are accelerators?: C08_Accelerators/C08_S01_What_are_accelerators.md
@@ -106,7 +107,15 @@ markdown_extensions:
   - pymdownx.tabbed
   - toc:
       permalink: true
+  # Mathematics
+  - pymdownx.arithmatex:
+      generic: true
 
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+  
 extra:
   # add links in bottom right
   social:

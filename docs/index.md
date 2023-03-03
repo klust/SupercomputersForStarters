@@ -45,6 +45,7 @@
     -   [Some examples](C06_Middleware/C06_S05_Examples.md)
     -   [Further reading](C06_Middleware/C06_S06_Further_reading.md)
 -   [What can we expect?](C07_Expectations/index.md)
+    -   [Speed-up](C07_Expectations/C07_S01_Speedup.md)
 -   [Accelerators](C08_Accelerators/index.md)
     -   [What are accelerators?](C08_Accelerators/C08_S01_What_are_accelerators.md)
     -   [Offloading](C08_Accelerators/C08_S02_Offloading.md)
