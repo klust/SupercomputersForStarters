@@ -13,7 +13,7 @@ and always managed to use all available processing power, sometimes not feeling 
 than the previous version of a package on a previous generation of hardware. With some
 packages it felt as if you didn't really get that much more work done quickly even though
 your hardware became faster and faster.
-However, beyond those law is also a frustration of Andy Grove who felt that Bill Gates
+However, beyond this law is also a frustration of Andy Grove who felt that Bill Gates
 wasn't always making proper use of new performance-enhancing features of the new processors
 and hence not using the new hardware to the full potential.
 Intel introduced the 80286 in 1982 and it was first used by IBM in the IBM AT in 1984, but

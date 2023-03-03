@@ -121,7 +121,7 @@ to be even coarser as the startup cost is higher and the communication between t
 is a lot more complicated then the communication between threads in a shared memory program.
 
 Discussing the hardware architecture and software parallelism models of GPUs in much detail is 
-outside the scope of this two-lecture introduction. However, bot the hardware and the lower-level
+outside the scope of this two-lecture introduction. However, both the hardware and the lower-level
 programming models for GPUs are very hierarchical.
 
 We can expect that parallel storage will also become more hierarchical than it is today as 
