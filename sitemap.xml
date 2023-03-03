@@ -231,6 +231,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://klust.github.io/SupercomputersForStarters/C07_Expectations/C07_S01_Speedup/</loc>
+         <lastmod>2023-03-03</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://klust.github.io/SupercomputersForStarters/C08_Accelerators/</loc>
          <lastmod>2023-03-03</lastmod>
          <changefreq>daily</changefreq>
