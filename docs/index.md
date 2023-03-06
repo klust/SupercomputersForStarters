@@ -47,6 +47,8 @@
 -   [What can we expect?](C07_Expectations/index.md)
     -   [Speed-up](C07_Expectations/C07_S01_Speedup.md)
     -   [Illustration: Matrix-matrix multiplication](C07_Expectations/C07_S02_Matrix_multiplication.md)
+    -   [Speed-up and efficiency of DGEMM](C07_Expectations/C07_S03_Scaling.md)
+    -   [Conclusions](C07_Expectations/C07_S04_Conclusions.md)
 -   [Accelerators](C08_Accelerators/index.md)
     -   [What are accelerators?](C08_Accelerators/C08_S01_What_are_accelerators.md)
     -   [Offloading](C08_Accelerators/C08_S02_Offloading.md)

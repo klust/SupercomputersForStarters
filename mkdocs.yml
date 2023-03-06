@@ -71,6 +71,8 @@ nav:
     - C07_Expectations/index.md
     - Speed-up: C07_Expectations/C07_S01_Speedup.md
     - Matrix multiplication: C07_Expectations/C07_S02_Matrix_multiplication.md
+    - Speed-up and efficiency: C07_Expectations/C07_S03_Scaling.md
+    - Conclusions: C07_Expectations/C07_S04_Conclusions.md
   - Accelerators:
     - C08_Accelerators/index.md
     - What are accelerators?: C08_Accelerators/C08_S01_What_are_accelerators.md
