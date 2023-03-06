@@ -107,13 +107,32 @@ only contain generic binaries compiled to run on as large a range of hardware as
 rather than binaries that exploit specific features of each processor to optimise
 performance.
 
+## But here's the problem...
+
 Of course it is easy to write bad performing code in any programming language, but the point is
 that there are languages where it is near impossible or even just impossible to write
 truly efficient code. One used to get away with that in the days that the performance-for-money
 ratio improved a lot with every new generation of hardware. But as we have discussed,
 these days are over for now and it may be a long time before they return. For now, progress
 will have to come from better, more efficient software that better exploits the features of
-current hardware. 
+current hardware, and we need computer languages that support that. We need computer languages
+that give the programmer sufficient control over data storage and data flows and hence help
+to exploit the hierarchy in memory in the node, and languages where parallelism is not
+an add-on but intrinsic to the language to make parallel programming less difficult.
+
+Before the '90s, computers were so expensive and so limited in what they could do 
+compared to even a basic PC today that researchers had to pay a lot of attention to 
+both good algorithms and a good implementation of those algorithms. After that,
+the attention to algorithms hasn't been that strong in all science domains, and the
+attention to a proper implementation has been poor, especially in the newer science domains.
+In some fields of scientific computing performance improvements have come as much from
+better numerical methods as from faster computers.
+
+Given the slow-down of performance growth of hardware at a constant budget, it is clear
+that performance growth will have to come from better algorithms and better software.
+
+
+## And a non-solution...
 
 There may be a lot of discussion today about how quantum computers or computers with optical
 components will solve all problems. This is just discussion by the hopeful. The reality today
@@ -140,9 +159,7 @@ partly also because there was a huge development cost that needed to be paid bac
 relatively low initial volumes, and it would still have required a lot of funding to become
 truly price-volume competitive with flash memory. The technology was abandoned in 2022 because of that. 
 
-
-
-
-
-
+Moreover, those new computer architectures (and certainly quantum computers) will also require to rethink
+algorithms and implementations. So why should we put our hope on those new architectures
+if today we already refuse to think about algorithms and implementations?
 
