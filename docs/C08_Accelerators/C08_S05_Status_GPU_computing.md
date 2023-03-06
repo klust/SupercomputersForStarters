@@ -217,18 +217,18 @@ In this figure we combine 4 Grace Hopper packages in a single node and have chos
 package directly to the interconnect for additional bandwidth.
 
 
-### Fully unified CPU and GPU: AMD MI300 and Intel Falcon Shores
+### Fully unified CPU and GPU: AMD MI300
 
-The AMD MI250X is really just a transition to the MI300 series and the 
-Intel Falcon Shores architecture, that go one step further beyond the integration
+The AMD MI250X is really just a transition to the MI300 series, 
+that goes one step further beyond the integration
 that the NVIDIA Grace Hopper architecture offers. 
 In that generation, expected to come to market in
-late 2023 in the case of AMD and 2024 or 2025 in the case of Intel, the CPU and GPU
+late 2023, the CPU and GPU
 will merge completely and share on-package memory. 
 In fact, the reality is that
 memory outside the package is also starting to limit CPU performance as an increasing number
 of CPU codes becomes memory bandwidth bound, so even for the CPU it makes sense to switch
-to smaller but much higher bandwidth memory in the package. The AMD MI300 and Intel Falcon Shores
+to smaller but much higher bandwidth memory in the package. The AMD MI300 
 will fully integrate the CPU and GPU chiplets and memory controllers with memory in a single
 package. 
 Whereas the MI250x has cache coherent memory but still a lot of overhead when the GPU wants to
@@ -261,3 +261,8 @@ DIMM slots or through (even slower) CXL memory boards. But for applications that
 large memory capacities and scale nicely over NUMA domains and then further over distributed memory
 nodes, the more uniform architecture will certainly make life easier and offer great performance
 benefits.
+
+Intel was also working on a similar design, code-named Falcon Shores that was intended to hit
+the market in 2024, but in an announcement in March 2023 it was said that the chip was postponed
+till 2025, and the announcement also mentioned it as a GPU, explicitly scrapping the XPU term they
+used before.
