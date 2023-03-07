@@ -22,6 +22,7 @@
     -   [Lessons learnt](C02_Processors/C02_S12_Lessons_learnt.md)
     -   [Further reading](C02_Processors/C02_S13_Further_reading.md)
 -   [The memory hierarchy](C03_Memory/index.md)
+    -   [The memory performance gap](C03_Memory/C03_S01_Performance_gap.md)
 -   [Storing data on supercomputers](C04_Storage/index.md)
     -   [Introduction](C04_Storage/C04_S01_Introduction.md)
     -   [Problems with a parallel disk setup](C04_Storage/C04_S02_Problems.md)
