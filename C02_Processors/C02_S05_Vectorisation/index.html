@@ -1640,8 +1640,8 @@ from lower precision data formats.</p>
 <p>The ARM instruction set has known the NEON vector instructions for quite a while already.
 These instructions use 128 bit registers, so can work on 2 double precision or 4 single precision
 floating point numbers. Even the processors in most mobile phones support these instructions.
-But the ARM architecture is also evolving. ARMD desinged the SVE instruction set
-(Scalable Vector Extenstion) together with Fujitsu for use in supercomputers. SVE instructions
+But the ARM architecture is also evolving. ARM designed the SVE instruction set
+(Scalable Vector Extension) together with Fujitsu for use in supercomputers. SVE instructions
 allow for different implementations with vector registers up to 2048 bit wide, which can store
 32 single precision or 64 double precision numbers, but also supports implementations with 
 registers as small as 128 bits. The implementation of Fujitsu which is used in the A64fx processor 
@@ -1649,7 +1649,7 @@ of the Fugaku supercomputer (which was the fastest machine in the Top500 lists f
 uses 512-bit registers. These instructions have been extended with SVE2 instructions that are more
 oriented towards integer computations and making the instruction set more useful for non-scientific
 applications. SVE2 is now part of the new ARMv9 architecture and used in, e.g., the processors
-of the Samsung S22 and S23 mobile phones.</p>
+of the Samsung S22 and S23 mobile phones, but also in the brand new NVIDIA Grace CPU.</p>
 <p>AMD also uses vector units int its GCN and CDNA GPUS, with 16-wide single precision 
 hardware and 64-wide single precision instructions (well, not completely true for CDNA2), 
 and in its RDNA GPUs, with 
