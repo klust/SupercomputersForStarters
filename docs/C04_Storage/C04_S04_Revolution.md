@@ -4,20 +4,23 @@
 
 ??? "University of Antwerp-specific"
     The joint bandwidth on the BeeGFS scratch file system at the CalcUA compute
-    service in use in 2022 is on the order of 7 GB/s. At the same time,
+    service in use in 2022 is on the order of 7-8 GB/s. At the same time,
     some NVMe SSDs for PCIe 4 also claim to offer a read bandwidth of 7 GB/s
     and a write bandwidth that is not that much lower, and the even newer
     PCIe 5 generation can be even faster (at least with the proper I/O 
     pattern as with a bad I/O pattern bandwidth can be as low as only 
     100 MB/s).
 
-    So one could wonder if we shouldn't use 105 of those drives instead.
+    So one could wonder if we shouldn't use 120 of those drives instead.
 
     There is of course the cost of the drives. But also a lot more server
     hardware would be needed simply to connect the drives and also to
-    support the bandwidth over the interconnect.
+    support the bandwidth over the interconnect. And as SSDs internally also
+    get their speed partially from parallelism, they only come close to their 
+    speed promises with the right file access pattern.
 
-The following table shows prices and properties for some drives in early 2022:
+The following table shows prices and properties for some drives available in early 2022,
+with a price update made in September 2023:
 
 
 |                  | Seagate Exos X20        | Seagate Nytro 3732 | Seagate  Nytro 3332 | Samsung 980 Pro  | Samsung 970 EVO Plus | Samsung 870 QVO  |
@@ -32,7 +35,7 @@ The following table shows prices and properties for some drives in early 2022:
 | DWPD             | ?                       | 10                 | 1                   | 0,33             | 0.33                 | 0.2 (@5 year)    |
 | Data written/day | ?                       | 32 TB/day          | 15.3 TB/day         | 0.66 TB/day      | 0.66 TB/day          | 1.5 TB/day       |
 | Time needed      |                         | 8h50m              | 4h15m               | 2m9s             | 3m20 s               | 50 m             |
-| Price            | 0.025-0.05 €/GB         | 0,85 €/GB          | 0,31 €/GB           | 0.16 €/GB        | 0.12 €/GB            | 0.08 €/GB        |
+| Price            | 0.025-0.05 €/GB         | 0,85 €/GB          | 0,31 €/GB           | 0.08 €/GB        | 0.06 €/GB            | 0.04 €/GB        |
 
 In this table we compare a popular high-quality hard drive for use in the datacenter with several
 NAND flash based drives, ordered from the highest to the lowest quality measured in durability first
@@ -77,7 +80,7 @@ and partly because of a phenomenon known as drive fragmentation, where data that
 together gets spread all over the disk instead of stored in a single zone of the disk. 
 There is software to try to correct the latter. But SSDs also get slower the more data
 is already on them, and this is more pronounced the more bits are stored per memory cell. 
-But SSDs have another problem: Just as regular hard drives, data is written in blocks.
+SSDs also have another problem: Just as regular hard drives, data is written in blocks.
 But data cannot be erased or overwritten in single blocks. Before overwriting data,
 the block has to be erased, but this can only be done in clusters of blocks. Therefore,
 if a drive is getting full and data is written and rewritten all the time, the drive
@@ -91,7 +94,7 @@ per cell, write speeds are much higher than when the drive is filling up and 3 o
 stored per cell.
 
 The table does however clearly show another problem of SSDs: endurance. Unfortunately 
-endurance for hard disks and SSDs is measure differently so that it is hard to compare
+endurance for hard disks and SSDs is measured differently so that it is hard to compare
 in the table. But basically, the Seagate Exos is suitable for near continuous reading
 and writing and will last for the 5 years of its warranty period. For SSDs the story 
 is very different. In the early years, an SSD memory cell could be erased and rewritten
@@ -130,9 +133,10 @@ a drive for archiving, and for storing data where the speed of the write operati
 really matter.
 
 This brings us to the last line of the table, the cost of the drives and here we see the 
-big problem of SSDs. The cheaper Samsung drives may only be 2 to 5 times more expensive 
-then the enterprise quality hard drive that we are comparing with, but this is really an
-apples-and-oranges comparison. Those cheaper SSDs are not really suitable for datacenter use.
+big problem of SSDs. The cheaper Samsung drives are starting to approach the price level of 
+the enterprise quality hard drive that we are comparing with, but this is really an
+apples-and-oranges comparison. Those cheaper SSDs are not really suitable for generic 
+datacenter use.
 One could imagine building a storage system with high capacity for high read
 load scenarios from the QVO drives, and some companies build such storage, but these drives
 are not suited for the typical load on supercomputer file systems, neither for a local drive
@@ -141,6 +145,12 @@ is) but then the cost is easily 10 times or more higher per byte than for good q
 drives. This is one of the reasons why SSDs are not used more in supercomputer storage.
 After all, in supercomputer storage we need storage with a high capacity that can deal with
 a high write load.
+
+Moreover, to benefit from the higher bandwidth that an SSD can deliver, it is not enough to 
+simply replace hard disks with SSDs. You'll need more and more powerful servers to move the
+data around between the network interfaces and the drives. Getting the full performance of
+modern SSDs would require an very expensive storage architecture so in fact any storage
+system would still be a compromise between bandwidth, capacity and cost.
 
 ??? "Nice to know"
     Around 2010 a file storage expert at KU Leuven looked at how storage was used on their

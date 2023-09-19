@@ -98,7 +98,7 @@ all compilers will probably come with examples where they offer a 100x or 1000x 
 increase over naively written pure Python code for small specific fragments.
 Cython is an example of an ahead-of-time compiler that needs some help as regular 
 Python code doesn't really offer enough type information to generate efficient code. 
-Numba and PyPy are two examples of just-in-time compilers wheve Numba seems to do best
+Numba and PyPy are two examples of just-in-time compilers where Numba seems to do best
 with code that heavily uses NumPy data structures while PyPy works better on non-NumPy
 code.
 

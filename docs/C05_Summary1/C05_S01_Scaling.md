@@ -4,7 +4,7 @@ like a very High-end Personal Computer.
 
 # Scaling
 
-The performance of a computar cannot be understood from a single parameter. Instead many
+The performance of a computer cannot be understood from a single parameter. Instead many
 parameters characterise the performance of computer. The clock speed of a CPU is only one
 of those parameters. There are also many lantencies that need to be taken into account:
 memory latencies at the various levels of the memory hierarchy and of storage, communication
@@ -19,10 +19,11 @@ of memory and storage.
 
 Not all these parameters are as cheap to scale, or improve over time at the same rate.
 As we will also discuss a bit further in this chapter, physical limitations have put a bound to
-improvments in CPU clock speed and latencies.
-The finite speed of light and speed of signals in copper wires is just one of those limitations.
+improvements in CPU clock speed and latencies.
+The finite speed of light (30 cm/ns in vacuum and roughly 20 cm/ns in glasfiber)
+and speed of signals in copper wires is just one of those limitations.
 The growth of the bandwidth of memory, disks and network connections tends to be slower
-than the growt of the theoretical peak performance of a computer system.
+than the growth of the theoretical peak performance of a computer system.
 
 As a result of these restrictions it is simply not possible to build a supercomputer were
 all these parameters would be, e.g., 100 times better than in your PC or smartphone so that your PC software

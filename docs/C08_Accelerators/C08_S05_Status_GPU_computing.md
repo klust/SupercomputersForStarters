@@ -235,7 +235,7 @@ Whereas the MI250x has cache coherent memory but still a lot of overhead when th
 access CPU memory or the other way around, in the MI300 generation the CPU and GPU memory
 is fully unified (physical and virtual), with both sharing the same memory controllers and memory, which will enable
 to fully eliminate redundant memory copies.
-MI300 was first mentioned at the AMD Financial Analyst Day in June 2022 and at 
+The MI300A was first mentioned at the AMD Financial Analyst Day in June 2022 and at 
 [CES'2023 (early January)](https://youtu.be/OMxU4BDIm4M?t=5382),
 where a full package was shown, but still with very little detail.
 It was announced the one MI300 package will combine a powerful GPU with 24 CPU cores 
@@ -246,7 +246,7 @@ the memory controllers as they produce less heat) and 9 chiplets at the top
 A supercomputer node based on this
 chip could look a bit like
 
-![A MI300 supercomputer node](../img/C08_S05_05_MI300.jpg)
+![A MI300A supercomputer node](../img/C08_S05_05_MI300.jpg)
 
 Here we see four packages integrating one or more CPU chiplets, one or more GPU dies and
 memory in a single packages. The four packages have an all-to-all connection likely using
