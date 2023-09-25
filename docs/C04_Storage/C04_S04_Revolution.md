@@ -152,6 +152,13 @@ data around between the network interfaces and the drives. Getting the full perf
 modern SSDs would require an very expensive storage architecture so in fact any storage
 system would still be a compromise between bandwidth, capacity and cost.
 
+One should also not be blinded by the bandwidth advantage of SSDs. It is true that in 
+equal circumstances, an SSD will usually be faster than its hard disk cousin for an operation.
+However, SSDs are also very sensitive to the file access pattern. Some very high bandwidth
+SSDs actually slow down to 1% of their maximum bandwidth when doing small random serialised
+accesses (the latter occurring when synchronous I/O from a single thread is used, which is
+not uncommon in applications that were not written by more experienced programmers).
+
 ??? "Nice to know"
     Around 2010 a file storage expert at KU Leuven looked at how storage was used on their
     cluster to determine which type of storage should be bought. It turned out that the
