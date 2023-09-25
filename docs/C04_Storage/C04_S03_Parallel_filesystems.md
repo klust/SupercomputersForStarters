@@ -37,30 +37,69 @@ This is called a parallel file system.
         was used on all clusters. However, increasing licensing costs made this impossible.
 
         Spectrum Scale/GPFS doesn't have the same two-layer architecture as Lustre or BeeGFS (or at least,
-        it is not visible), but does the full managment of the disks itself.
+        it is not visible), but does the full management of the disks itself.
 
     -   [Panasas PanFS](https://www.panasas.com/) is a storage system that has its roots in the
         same research project as Lustre. It is a commercial offering consisting of software and
-        dedicated hardware.
+        dedicated hardware. It is currently not in use at the VSC.
 
     -   [WEKA](https://www.weka.io/) is also a fully commercial offering, but one running on more
         standard file server hardware. It requires a full SSD system though which makes it a rather
-        expensive offering.
+        expensive offering. They claim to offer better small file performance than their competitors
+        and claim to have solved many of the metadata problems that we will mention below.
+        It is currently not in use at the VSC.
 
-In a parallel file system, the metadata is separated from the actual data. The metadata servers 
-take care of all metadata operations, which include controlling the process of opening and closing
-files. However, after that the content of the file can be served by multiple servers, called the
-*object servers* in Lustre and BeeGFS (but not to be confuse with object storage such as Amazon S3
-or Ceph). Each object server is responsible for certain parts of the file, but a big read or write
-access can engage multiple servers simultaneously. Parallel file systems will use their own client
-software to access the file storage. The metadata server(s) will pass all information that is needed
-to the clients on the nodes involved with the file access, so that the clients can then directly
-talk to the object servers that are involved with the data transfer. But since the metadata servers
-are not involved with the actual data transfer, it should be clear that opening and closing a file 
-is a more expensive operation, as the metadata server has to pass the necessary information to the
-client(s) when opening a file and orchestrate the opening and closing of the file with the object servers.
+In a parallel file system, the metadata is separated from the actual data. The picture below shows
+the (simplified) setup for Lustre or BeeGFS:
 
-Such a setup can produce very high bandwidth for large read and write operations coming from 
+<figure markdown>
+  ![Setup of a parallel file system](../img/C04_S04_Parallel_filesystem_layout.png)
+</figure>
+
+A Lustre of BeeGFS system consists of three components, all connected via a high performance network
+(often the interconnect that is also used for MPI, etc.):
+
+-   File system clients run on all compute and login nodes of the cluster. Applications talk to the 
+    client software which then talks to the servers.
+
+-   The metadata servers (MDS)
+    take care of all metadata operations, which include controlling the process of opening and closing
+    files. 
+    
+-   The Object Storage Servers (OSS) store the actual data of files. That data can be spread over multiple
+    object storage servers.
+
+    Note that this should not be confused with object storage such as Amazon S3 or Ceph.
+
+To open a file for reading or writing, the file system clients talk to the metadata server.
+The metadata server will then return information about the location and layout of the file (which
+object storage servers contain which parts of the file). 
+However, after that the content of the file can be served by all involved object storage servers
+and the metadata server is no longer involved in the process of reading the file.
+Hence multiple clients in a parallel job can talk to multiple object storage servers simultaneously
+and large files can be read with very high bandwidth if the file is indeed accessed in large read
+(or write) operations so that this parallelism can be exploited.
+
+Opening and closing files are expensive operations since they do not only involve the metadata
+server, but that metadata server also has to talk to the object storage servers for the file. 
+However, subsequent reads and writes have again a normal cost compared to regular file systems,
+and much higher bandwidths are possible as files are served from multiple servers. 
+Depending on the specifics of the file system, some other operations may also be rather expensive.
+E.g., on Lustre, doing an `ls -l` is an expensive operation as the size of the file is not 
+stored on the metadata server. The metadata server needs to request all object storage servers
+used by the file what the size of the chunk stored on that object storage server is.
+
+??? Remark "Storage Targets and Storage Servers"
+    The real picture is even a bit more complicated than above. Each object storage server
+    can have multiple drive pools attached, called the Object Storage Targets (OST), and files
+    are actually distributed across Object Storage Targets. Similarly, each metadata server
+    can have multiple Metadata Targets (MDT).
+
+    More redundancy reasons, each OST can be attached to two OSS so that if one OSS fails,
+    the other can take over.
+
+
+A parallel file system can produce very high bandwidth for large read and write operations coming from 
 optimised parallel software using the right libraries to optimise that data transport, and this
 at a very reasonable cost. However, it has trouble dealing with lots of small files, and
 metadata access, certainly to files in one directory, can be a bottleneck. Moreover, the
