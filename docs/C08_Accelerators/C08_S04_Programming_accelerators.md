@@ -152,7 +152,7 @@ C++-support, with NVIDIA and AMD still using a Fortran front-end developed by PG
 to the LLVM project while Intel is already experimenting with a new community-developed
 more modern front-end for Fortran. OpenACC support in the LLVM ecosystem will build upon the
 OpenMP support, the technology that we will discuss next, using extensions for those OpenACC
-features that still have no equivalent in OpenMP. However, as of version 15 (summer 2022)
+features that still have no equivalent in OpenMP. However, as of version 17 (early fall 2023)
 this support is still very incomplete and experimental.
 
 
