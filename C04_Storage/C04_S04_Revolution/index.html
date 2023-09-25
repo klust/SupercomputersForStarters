@@ -1838,6 +1838,12 @@ simply replace hard disks with SSDs. You'll need more and more powerful servers 
 data around between the network interfaces and the drives. Getting the full performance of
 modern SSDs would require an very expensive storage architecture so in fact any storage
 system would still be a compromise between bandwidth, capacity and cost.</p>
+<p>One should also not be blinded by the bandwidth advantage of SSDs. It is true that in 
+equal circumstances, an SSD will usually be faster than its hard disk cousin for an operation.
+However, SSDs are also very sensitive to the file access pattern. Some very high bandwidth
+SSDs actually slow down to 1% of their maximum bandwidth when doing small random serialised
+accesses (the latter occurring when synchronous I/O from a single thread is used, which is
+not uncommon in applications that were not written by more experienced programmers).</p>
 <details>
 <summary>Nice to know</summary>
 <p>Around 2010 a file storage expert at KU Leuven looked at how storage was used on their
