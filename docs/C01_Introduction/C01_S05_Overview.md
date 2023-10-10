@@ -43,13 +43,13 @@ claimed in the specifications.
 A supercomputer is much more than some hardware on which you run your application. As already
 suggested above, between the hardware and your applications sits a lot of other software that
 binds the hardware into a usable supercomputer. At the lowest level you have the operating system
-which may be just linux but sometimes is a modified version of linux with some features disabled that
+which may be just Linux but sometimes is a modified version of Linux with some features disabled that
 may harm the performance of a supercomputer and are not needed by real supercomputer applications.
 But on a supercomputer there is a lot of other software that sits between the hardware and basic OS
 on one hand and your application on the other hand. That software is often called *middleware*.
 
 Most readers of these notes may be only interested in the applications they want to run.
-However, some understanding of the hardware is needed even for simple things as starting a job,
+However, some understanding of the hardware is needed even for simple things such as starting a job,
 as a supercomputer is a multi-user machine and you need to ask exactly what you need to be able
 to run your application efficiently. 
 And not all software can run efficiently on all hardware, or even run at all. 
@@ -57,7 +57,7 @@ But it also requires some understanding of the middleware. Your application, if 
 developed to use supercomputers properly, will also use some of that middleware, and not all 
 middleware can be supported on all supercomputers.
 
-For developers even better hardware knowledge is required to understand how to write programs
+For developers, even better hardware knowledge is required to understand how to write programs
 efficiently, and you also need a good understanding of the middleware that will be used to develop
 your program.
 
@@ -72,6 +72,6 @@ In recent years, accelerators have also become a hot topic. As the cost, both th
 and energy cost, of supercomputers that are fully based on general-purpose hardware has become
 too high to sustain the growth of compute capacity, scientists have turned into other technologies,
 collectively known as accelerators, to further increase the performance at a lower investment and
-energy cost, but losing some of the easy-of-use and versatility of general purpose hardware.
+energy cost, but losing some of the ease-of-use and versatility of general purpose hardware.
 The most important types of compute accelerators and their programming models (and corresponding
 middleware) will be discussed in the [section on accelerators](../C08_Accelerators/index.md).

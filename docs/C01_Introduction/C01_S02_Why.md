@@ -35,11 +35,11 @@ reasons to use a supercomputer.
     turnaround time for a large computation, or because the computation is not
     even feasible on a smaller computer because of the required compute time 
     and memory capacity. This is also called **capability computing**. In
-    capability computing one typically thinks in terms of hours per job.
+    capability computing one typically thinks in terms of *hours per job*.
 
 2.  We may also want to use a supercomputer to improve throughput if we have to
     run a lot of smaller jobs. This is called **capacity computing**. In
-    capacity computing one typically thinks in terms of jobs per hour.
+    capacity computing one typically thinks in terms of *jobs per hour*.
 
 Furthermore, we can distinguish simulation and data processing as two big domains
 where supercomputing could be used. Some will add AI as a third pillar, but AI is
@@ -47,12 +47,13 @@ typically used for data processing and has requirements similar to the other dat
 processing jobs we will discuss.
 
 Supercomputers are really build for capability computing jobs. They can also accommodate
-capacity computing jobs, but many capacity computing jobs could be run equally well on
+many (but often not all types of) capacity computing jobs, 
+and often capacity computing jobs could be run equally well or better on
 just a network of servers, e.g., a cloud infrastructure, at possibly a much lower cost 
 (should the user be charged a realistic amount for the compute resources consumed).
 
 There are many examples of capability computing in simulation. Computational fluid dynamics
-of turbulent and even many laminar flow requires a huge amount of compute capacity. The
+of turbulent and even many laminar flows requires a huge amount of compute capacity. The
 demand becomes only higher when considering fluid-structure interactions causing, e.g., vibration
 of the structure. Another example is virtual crash tests during the design of cars. 
 That a car manufacturer can produce so much more different models than 30 years ago is partly
@@ -79,6 +80,7 @@ notes learned about this application) could truly be considered a supercomputer.
 
 Examples of capacity computing for data processing are many of the data mining applications that often 
 consist of many rather independent tasks. The processing of the CERN Large Hadron Collider data is also
-mostly capacity computing. Another example is a researcher from a Flemish university who used a VSC supercomputer
+mostly capacity computing (and one that doesn't always work well on large supercomputers). 
+Another example is a researcher from a Flemish university who used a VSC supercomputer
 to pre-process a text corpus consisting of newspaper articles of many years. All texts had to be grammatically analysed. After the preprocessing, a regular
 server was enough for the research.

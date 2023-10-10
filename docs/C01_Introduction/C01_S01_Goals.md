@@ -1,6 +1,6 @@
 # Goals
 
-The goals of these lecture notes are that at the end, the reader should be cable to answer
+The goals of these lecture notes are that at the end, the reader should be able to answer
 questions such as:
 
 -   Why would I consider using a supercomputer?
@@ -14,11 +14,14 @@ questions such as:
 The reader may be very much tempted to say **"I'm not a programmer, do I need to know all this?"**
 but one should realise a supercomputer is a very expensive machine and a large research infrastructure
 that should be used efficiently unless a cheap PC or smartphone. Whether a supercomputer will be used well
-depends on your choice of software. It also depends on the resources that you request when starting a program.
+depends on the problem you're trying to solve and on your choice of software. 
+It also depends on the resources that you request when starting a program.
 Unlike your PC, a supercomputer is a large shared infrastructure and you have to specify which part of the
-computer you need for your computations. And this requires an understanding of both the supercomputer that
-you are using and the needs of the software you're using. In fact, if the software cannot sufficiently well
-exploit the hardware of the supercomputer, you should be using a different type of computing such as simply
+computer you need for your computations. This requires an understanding of the supercomputer that
+you are using, the needs of the software you're using and the problem you're trying to solve. 
+In fact, if the software cannot sufficiently well
+exploit the hardware of the supercomputer, or if your problem is too small,
+you should be using a different type of computing such as simply
 a more powerful PC, or in some cases a cloud workstation.
 
 Another goal is also to make it very clear that a supercomputer is not a superscaled PC that does
@@ -45,14 +48,14 @@ what a thread is and how one should chose that number. That does require knowled
 ``sort`` command which is domain-specific help desk that only a help desk specialised in bio-informatics tools
 could help you with, but it also requires knowing what a thread is and what it is used for. You can't rely on
 the defaults as these are 768 MB for memory and a single thread, which are very nice defaults for a decent PC
-in 2005, but not for a supercomputer in 2022 (or not even a PC in 2022).
+in 2005, but not for a supercomputer in 2023 (or not even a PC in 2023).
 
 Finally, the next picture shows a number of terms copied from a VASP manual
 
 ![VASP terminology](../img/C01_S01_03_VASP_terms.jpg)
 
 The reader is confronted with a lot of technical terms that they need to understand to use VASP in a sufficiently
-optimal way. In fact, a vASP run may even fail if the parameters used in the simulations do not correspond 
+optimal way. In fact, a VASP run may even fail if the parameters used in the simulations do not correspond 
 to the properties of the hardware used for the run. 
 
 In general, running software on a supercomputer is not at all as transparent as it is on a PC, and there are many

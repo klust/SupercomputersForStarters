@@ -27,6 +27,6 @@ use all these processors in an efficient way without effort from the programmer.
 Yet there is no need to be too pessimistic either. 
 In some cases, in particular capacity computing, the efforts to get your job running efficiently can 
 be relatively minor and really just require setting up a parallel workflow to run a sufficient number
-of cases simultaneously. But developing code for capability computing is much more difficult, but then
+of cases simultaneously. Developing code for capability computing is often much more difficult, but then
 a supercomputer can let you compute results that you could not obtain in any other way. And in many cases
-someone else has done the work already for you and good software is already available.
+someone else has already done the work for you and good software is already available.
