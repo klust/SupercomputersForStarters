@@ -1,7 +1,7 @@
 # Instruction level parallelism 2: Superscalar processing
 
 A second way to improve the instruction throughput in a processor is to simply
-increase the number of ALU and load-store / address generation units.
+increase the number of ALU and load-store/address generation units.
 Of course this only makes sense if the instruction decoder in the control unit
 is also enhanced so that it can also decode multiple instructions simultaneously
 to keep those instruction units fed. This is called *superscalar execution* 
@@ -15,7 +15,7 @@ Combined with pipelining we would get the following scheme for execution instruc
   <caption>Pipelined superscalar execution</caption>
 </figure>
 
-OF course this only works if there are enough independent instructions to execute.
+Of course this only works if there are enough independent instructions to execute.
 
 With superscalar execution, and certainly when combined with pipelining, we have the
 potential to execute more than one instruction per clock cycle. 
@@ -34,14 +34,14 @@ but does so in a way that at the end of the execution the result is the same as 
 instructions were executed in-order (also taking into account error conditions etc.)
 This strategy is currently used by all modern high performance processors, and even by a
 lot of low power processors. E.g., both the performance and efficiency cores in the 
-12<sup>th</sup and 13<sup>th</sup> gen processors code named Alder Lake and Raptor Lake
-use are out-of-order pipelined superscalar processor cores. The ARM Cortex-A53 and Cortex-A55 processors
+12<sup>th</sup> and 13<sup>th</sup> gen processors code named Alder Lake and Raptor Lake
+are out-of-order pipelined superscalar processor cores. The ARM Cortex-A53 and Cortex-A55 processors
 that are often used as the efficiency cores in Android mobile phones are also pipelined
 superscalar processors, but with in-order execution only (the performance cores
 from the A-7x series are out-of-order execution cores though).
 
 Probably the oldest example of a superscalar design is the CDC 6600 introduced in 
-1964 (See, e.g., the [WikiPedia article on the CDC 6600](https://en.wikipedia.org/wiki/CDC_6600)).
+1964 (See, e.g., the [Wikipedia article on the CDC 6600](https://en.wikipedia.org/wiki/CDC_6600)).
 This processor had no pipelining and instructions required 10 or more cycles, but it had
 multiple specialised functional units, some in a single copy and others in two copies.
 And the IBM/360 Model 91, also from 1964 and already discussed in the

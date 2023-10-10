@@ -10,7 +10,7 @@ are processed.
   <caption>A basic computer</caption>
 </figure>
 
-Currently a processor is just as single chip, or in fact just a small part of
+Currently a processor is just as single chip, or in fact, just a small part of
 a chip, but this was very different in the early days of computers based on chips.
 Fast processors often consisted of multiple chips, and sometimes even thousands of
 them.
@@ -45,7 +45,8 @@ The control unit is the part that coordinates all the work.
 
 In our very simple processor, instructions are executed one after
 another. But executing each instruction itself consists of multiple steps. Consider, e.g.,
-this oversimplified execution pattern distinguishing a few important steps:
+this oversimplified execution pattern distinguishing a few important steps for executing
+an instruction in the ALU:
 
 ![Instruction execution](../img/C02_S02_03_Execution.png)
 

@@ -3,19 +3,19 @@
 Modern superscalar execution, with instruction reordering and other 
 mechanisms to increase IPC that we have not discussed, requires complicated
 logic and hence a lot of power. A common case that is well suited for
-superscalar execution as there can be lots of independent instructions
+superscalar execution as there can be lots of independent instructions,
 is working with vectors and matrices. 
 This led to the design of CPUs with instructions to work on vectors,
 i.e., with wider ALUs and wider registers that do not contain just a single
 number but a row of numbers. This has the potential to boost the speed
 without the full power requirements of a superscalar processor. 
-This is one example of a *single instruction stream, multiple data stream*
-(abbreviated as *SIMD*) architecture.
+This is one example of a **single instruction stream, multiple data stream**
+(abbreviated as **SIMD**) architecture.
 
 This was a very popular design in supercomputers in the 70s and 80s, but 
 then almost disappeared with only two or three vendors still making them
 (and only one still making them today).
-Examples are the CDC STAR-100 from 1974 abd the Cray-1 from 1976. 
+Examples are the CDC STAR-100 from 1974 and the Cray-1 from 1976. 
 The latter was the first vector computer to use a design with registers.
 The STAR-100 streamed the data directly from and to memory.
 Currently NEC still makes vector computers though with a slightly different
@@ -32,7 +32,7 @@ were introduced in 1996 and available in 1997 on an evolution of the Pentium pro
 the floating point registers in those processors for storing integer vectors so codes
 could not combine floating point instructions and integer vector instructions.
 Just a few years later, in 1999, Intel launched the SSE instruction set which used
-separate 128-bit registers. ORiginally they were only meant for single precision
+separate 128-bit registers. Originally they were only meant for single precision
 floating point numbers (so 4 elements in a vector), and they became available in 
 the Pentium III processor which was actually an evolution of the Pentium Pro and not of 
 the original Pentium. The instruction set was extended several times with SSE adding
@@ -70,7 +70,8 @@ of the Fugaku supercomputer (which was the fastest machine in the Top500 lists f
 uses 512-bit registers. These instructions have been extended with SVE2 instructions that are more
 oriented towards integer computations and making the instruction set more useful for non-scientific
 applications. SVE2 is now part of the new ARMv9 architecture and used in, e.g., the processors
-of the Samsung S22 and S23 mobile phones, but also in the brand new NVIDIA Grace CPU.
+of the Samsung S22 and S23 mobile phones, but also in the brand new NVIDIA Grace CPU that will
+be used in the GPU-accelerated nodes of the first European exascale supercomputer.
 
 AMD also uses vector units int its GCN and CDNA GPUS, with 16-wide single precision 
 hardware and 64-wide single precision instructions (well, not completely true for CDNA2), 
@@ -97,7 +98,7 @@ This design is shown in the following figure:
 
 The historical example of this design is the Thinking Machines connection machine 
 with the first generation CM-1 machine launched in 1983. However, NVIDIA GPUs are a 
-modern example of this design comparing 10s or even 100 of those SIMD processor
+modern example of this design combining 10s or even 100 of those SIMD processor
 (which they call SIMT processor) on a chip.
 
 Such processors may seen easy to program as it looks as if you can think in terms
@@ -133,7 +134,7 @@ There are two levels of parallelism in modern processors:
     In some applications a lot of the gain over the various generations of CPUs since the late
     '90s has come from better and wider vector instruction sets. But these improvements can
     only be delivered if an application gets recompiled for those new instructions (and then
-    it won't run anymore on the older processors). This is a reason why on supercomputers
-    applications often installed from source code rather than from binaries./
+    it won't run anymore on the older processors). This is one of the reasons reason why on supercomputers
+    applications are often installed from source code rather than from binaries.
 
 
