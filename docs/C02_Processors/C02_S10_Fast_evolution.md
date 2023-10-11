@@ -40,9 +40,10 @@ That machine had only 256 kB of memory but given the high cost had to be shared 
 
 Machines more oriented at home use or other personal use in 1977 were the Tandy TRS-80 model 1 and 
 the Apple II. They had processors with a clock speed of 1 to 2 MHz and no floating point hardware
-so floating point operations had to be emulated entirely in software, Because of that speeds were
-measured in flops per second rather than kiloflops or megaflops per second.
-The TRS-80 costed $400 (On the order of 125 EURO in 2021 money) at launch without the monitor 
+so floating point operations had to be emulated entirely in software. Because of that speeds were
+measured in flops per second rather than kiloflops or megaflops per second (and the speed of floating
+point emulation was probably on the order of 100-200 flops in double precision).
+The TRS-80 costed $400 (On the order of 2000 EURO in 2023 money) at launch without the monitor 
 and had 4 kB of ROM memory that stored the
 permanent software and 4 kB of RAM memory (but extensions up to first 16 kb and then 48 kB appeared quickly) 
 in its early version. The CPU ran at 1.7 MHz. The only permanent storage consisted

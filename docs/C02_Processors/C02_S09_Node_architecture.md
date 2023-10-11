@@ -1,10 +1,18 @@
 # Some node architectures
 
-## AMD Rome node (as used in Vaughan @ UAntwerp)
+We'll come back to this later also in more detail after discussing
+memory architectures.
 
-A large fraction of the compute nodes of the University of Antwerp cluster
-Vaughan consists of second generation AMD EPYC nodes (code-named Rome) 
-with 32 cores. 
+## AMD Rome node
+
+!!! Note "Examples of clusters that use this processor:"
+
+    -   Login nodes and large memory nodes on the EuroHPC pre-exascale system LUMI
+        (using a 64-core version)
+    -   Phase 1 of the Flemish Tier-1 system hortense
+        (using a 64-core version in the regular compute nodes)
+    -   Older nodes of the UAntwerpen cluster Vaughan,
+        using the 32-core variant shown in the picture in this section.
 
 <figure markdown>
   ![AMD Rome CPU of Vaughan](../img/C02_S09_01_AMD_Rome_1.png)
@@ -12,10 +20,11 @@ with 32 cores.
 </figure>
 
 Each CPU package of the variant of the Rome CPU used in Vaughan contains
-5 chiplets. 4 chiplets are identical and contain 2 groups of four cores
+5 chiplets (9 in LUMI and hortense). 
+4 chiplets (8 in LUMI and hortense) are identical and contain 2 groups of four cores
 each, with each core supporting 2 hardware threads. The group is also called
 the Compute Core Complex (CCX), the die the Compute Core Die or CCD.
-Each CCD then connects to the fifth die, the I/O die, with an
+Each CCD then connects to the other die, the I/O die, with an
 Inifinity Fabric link that is very similar to the links that are also
 used to connect the I/O dies in the two sockets. The I/O die also
 contains the memory controllers which in case of Vaughan connect
@@ -43,10 +52,6 @@ in that way so that the operating system might report 8 NUMA domains rather than
 
 One of the sockets (and in fact the I/O die in that socket) is then connected
 to the interconnect network card.
-
-A variant of this design is also used in the older compute nodes of the VSC cluster
-Hortense at the University of Ghent. Those node however use the 64-core variant with
-8 CCDs per socket, so 16 CCXs per socket (but still 8 NUMA domains per node).
 
 The European pre-exascale supercomputer LUMI operated by CSC in Finland, and the newer
 compute nodes of Hortense use 64-core third generation EPYC processors (code-named Milan)

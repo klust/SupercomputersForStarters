@@ -29,7 +29,7 @@ used a switch architecture, and current generation Intel CPUs use ring or
 in some cases (e.g., Sapphire Rapids server chips) a mesh network.
 
 Early examples of shared memory supercomputers go back to the early '80s. 
-Eg.g., machines such as the CrayX-MP from 1982 where shared memory computers with
+E.g., machines such as the CrayX-MP from 1982 where shared memory computers with
 uniform memory access.
 
 <!-- TODO: Add some examples from the nineties. DEC Alpha was a switch? SUN Microsystems? -->
@@ -52,7 +52,8 @@ in what is called the *socket*. The term processor nowadays typically refers to 
 
 !!! Remark
     In the world of NVIDIA GPUs, the word "core" has yet another meaning.
-    What NVIDIA calls a CUDA core is actually not a core but an ALU.
+    What NVIDIA calls a CUDA core is actually not a core but an ALU
+    (and one could even argue, just a small part of a wider ALU).
 
 This uniform memory access design does have a flaw though: 
 The more processors you try to link this
@@ -75,7 +76,7 @@ the days of the Nehalem processor which launched in late 2008:
 Each package, which could itself be a multi-core processor, has part of the system
 memory attached to it. The processor packages are connected through a special-purpose
 network that connects the packages in such a way that each core has access to all memory
-in the same way. These networks go under the name UltraPAth or UPI in recent Intel 
+in the same way. These networks go under the name UltraPath or UPI in recent Intel 
 designs, or Infinity Fabric or xGMI in the case of AMD (AMD uses more and more xGMI as the
 name for external connections while Infinity Fabric is used for the technology when used
 inside a package to connect the dies, but they are basically two variants of the same 
@@ -118,28 +119,27 @@ On the software side, shared memory processors are exploited through the mechani
 threads.
 
 A process is an operating system concept. It is basically a program being executed. 
-It is created when start an app on your phone, click on
+It is created when you start an app on your phone, click on
 a `.exe` file in Windows or most of the times when you type a command in Linux. 
 In modern operating systems, each process has an amount of (virtual) memory that processes 
-cannot access and can have exclusive access to files etc.. So it is the entity that owns
+cannot access and can have exclusive access to files etc. So it is the entity that owns
 a part of the shared resources.
 
 In the old days, like in the days of MS-DOS, the operating system of most PCs in the '80s, 
 there was only a single stream of instructions executed in the context of a process (and
-MS-DOS didn't even have a true notion of multiple procesesses). The early versions of UNIX
+MS-DOS didn't even have a true notion of multiple processes). The early versions of UNIX
 had decent support for multiple processes but could support only one instruction stream
 per process.
 
 The problem is that in such designs a single application cannot easily exploit multiple 
 processors. This was solved by threads. A thread is an instruction stream that is being
-executed in a process with an execution path that is independent on that of other threads
-(at least in the context of CPU threads, the word was abused in the GPU world giving it a
-different meaning). Threads of the same process share all resources. Every thread can
+executed in a process with an execution path that is independent on that of other threads. 
+Threads of the same process share all resources. Every thread can
 see all memory of the process. Even though there is some thread-private memory this
 is not protected from access by other threads. Things like file descriptors (the structure 
 that is created when you open a file) are also shared in a process.
 
-Threads can run on different cores, though one core can also execute multiple threads (hust
+Threads can run on different cores, though one core can also execute multiple threads (just
 as one core in older operating systems could execute multiple processes) by the mechanism of
 time sharing: The processor continuously switches between the execution of different threads.
 In modern operating systems users may have thousands of threads running simultaneously,
@@ -163,6 +163,12 @@ These threads can use almost the full capacity of a core and for reasons that wi
 clearer later in this course it is important to keep them on separate cores and not use
 more of those threads than there are cores. 
 
+!!! Remark
+    NVIDIA also abuses the word "thread" as the so-called threads on an NVIDIA GPU are not
+    independent of each other but need to execute in synchrony in groups of 32 called a warp.
+    The warp is a much closer equivalent to a thread on the CPU.
+
+
 ## Hardware threads
 
 Threads in the context of operating systems should not be confused with so-called hardware
@@ -173,15 +179,15 @@ does not contain enough parallelism to exploit all compute resources in such a c
 certainly the case for code with lots of tests with unpredictable results. 
 For those applications it may be beneficial to try to run multiple instruction streams simultaneously
 on a single physical core. So some CPUs can split up a physical core in multiple virtual
-cores. The each seem to have their own register set, but the threads running on those virtual
+cores. Each virtual core has its own architectural register set, but the threads running on those virtual
 cores effectively compete for all resources of the core. To the operating system, the virtual cores
 are seen as the actual cores on which threads are scheduled. So if, e.g., you have a computer with
 1 socket and 8 cores that can each support 2 virtual cores, the operating system will report the
 computer as having 16 cores (though it may understand that these are actually 8 pairs of two).
 
-This technology is known under different names. The generic name is *Simultaneous Multi-Threading* 
-or SMT which is also the term used by IBM for its POWER CPUs and by AMD for its Zen architecture CPUs 
-(Ryzen and EPYC). Intel uses the term hyper-threading instead and Oracle uses the term hardware threading.
+This technology is known under different names. The generic name is **Simultaneous Multi-Threading** 
+or **SMT** which is also the term used by IBM for its POWER CPUs and by AMD for its Zen architecture CPUs 
+(Ryzen and EPYC). Intel uses the term **hyper-threading** instead and Oracle uses the term **hardware threading**.
 
 The gain one can get from enabling SMT depends a lot on the architecture of the CPU and on the application.
 E.g., on the regular Intel Xeon or Core i7/i9 CPUs the gain is often rather limited. However, on the Xeon Phi
@@ -191,7 +197,7 @@ of the core at it was not capable to fetch and decode instructions from one hard
 clock cycles. Intel architecture cores in modern PCs that support SMT all support only two virtual cores per
 physical core. The Xeon Phi however supported four, and some recent IBM POWER processors support 8-way SMT.
 
-SMT is again full transparent for software when it comes to correctness of programs, but it is not transparent
+SMT is fully transparent for software when it comes to correctness of programs, but it is not transparent
 when it comes to performance. As the benefit for scientific applications is not always that large, 
 it is not always enabled on supercomputers. But even when it is enabled, with a careful selection of options
 when you start a process in a job you may still limit your use to a single virtual core per physical core,
@@ -201,11 +207,11 @@ disabled.
 
 ## Programming shared memory
 
-Automatic parallelisation is less succesful than automatic vectorisation. So in most cases you'll
+Automatic parallelisation is less successful than automatic vectorisation. So in most cases you'll
 have to do the work as a programmer. There are several approaches that we will discuss later 
 in [the chapter on middleware](../C06_Middleware/index.md).
 
-Of course one can exploit share memory parallelism easily in cases where you have to do a large number
+Of course one can exploit shared memory parallelism easily in cases where you have to do a large number
 of independent runs that don't need that much memory so that you can simply start a run on each core.
 But in other cases it will require a bit more work to exploit the shared memory level of parallelism,
 and even a redesign of algorithms as the best sequential one may not be the best in a parallel implementation.
