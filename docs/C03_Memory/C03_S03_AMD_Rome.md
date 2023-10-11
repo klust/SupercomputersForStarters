@@ -1,6 +1,7 @@
 # AMD Rome revisited
 
-The older nodes of the UAntwerpen cluster Vaughan and VSC Tier-1 system Hortense 
+The older nodes of the UAntwerpen cluster Vaughan, the VSC Tier-1 system Hortense 
+and the login nodes and data analytics nodes of the European pre-exascale supercomputer LUMI
 are equipped with AMD Rome processors. These CPUs have a very complex hierarchy:
 
 The picture below depicts the one of the older nodes of the UAntwerpen cluster

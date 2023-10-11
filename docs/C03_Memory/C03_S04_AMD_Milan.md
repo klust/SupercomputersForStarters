@@ -14,3 +14,7 @@ Doing that mapping on a node that is shared with multiple users is impossible as
 scheduler used on many clusters does not fully support the hierarchy and does not offer enough
 control over partial allocations on a node. After all, supercomputers and their system software
 are made in the first place for big applications that can fill one or more nodes...
+
+The Milan CPU is used in some of the newer nodes of the UAntwerpen cluster Vaughan, most
+phase 2 nodes of the VSC Tier-1 system hortense, and the regular compute nodes and GPU nodes
+of the EuroHPC pre-exascale system LUMI.

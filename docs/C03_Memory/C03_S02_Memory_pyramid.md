@@ -22,7 +22,8 @@ The typical hierarchy for a regular CPu is depicted above.
 -   The L3 cache is shared by a number of cores, sometimes even by all cores in 
     a socket
 
--   The next level in the hierarchy is the main RAM memory
+-   The next level in the hierarchy is the main RAM memory, which due to the NUMA
+    architecture may appear as multiple levels with different latency and bandwidth
 
 -   The last level is one that will actually be de-activated on many supercomputers
     as it is too slow: When RAM memory is exhausted, the OS can swap some of the
