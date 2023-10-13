@@ -9,17 +9,17 @@ the research phase, but there are other options.
 In the early days of distributed parallel computing, each vendor had its own
 communication library which meant that it was very difficult to write portable
 programs. 
-[PVM](https://www.cs.cmu.edu/Groups/pvm.html) which stands for "PArallel Virtual Machine"
+[PVM](https://www.cs.cmu.edu/Groups/pvm.html) which stands for "Parallel Virtual Machine"
 was a research project that developed a very popular library that could even be used to
-try to combine a couple of workstations to a distributed memory cluster. 
+combine a couple of workstations into a distributed memory cluster. 
 Being more a research project, and basically being developed by a small number of groups,
 it never really reached a level of support by supercomputer vendors themselves.
 
 However, just two years after the launch of PVM, a standardisation effort was started
 which led to the hugely successful [MPI standard](https://www.mpi-forum.org/) 
 which is still in use today. 
-MPI stands for Message Passing Interface.
-MPI is fully standardised. This implies that software that compiles with one MPI library
+MPI stands for Message Passing Interface
+and is fully standardised. This implies that software that compiles with one MPI library
 should also compile with any other MPI library adhering to that version of the standard.
 Compatibility is only at compile time though. The binary interface of the MPI libraries is
 not standardised and differs between implementations. 
@@ -37,7 +37,7 @@ domain (CCD on zen3 or CCX on Zen2).
 With the rapid increase of the number of cores on a supercomputer node this is more and more
 becoming a necessity as just the amount of messages risks to overwhelm the network adapter
 and the number of processes in an MPI job slows down program startup and collective communication
-(the type of communications where are processes compute a single result, e.g., a sum of numbers
+(the type of communications where all processes compute a single result, e.g., a sum of numbers
 across all processes) become too expensive.
 Such applications are called *hybrid MPI/OpenMP applications* (assuming they use OpenMP).
 Examples of programs that are sometimes used in hybrid mode are QuantumESPRESSO, Gromacs and VASP.
@@ -46,7 +46,7 @@ Examples of vendor-specific MPI libraries:
 
 -   Intel MPI is a derivative of MPICH,
 -   HPE Cray MPI is a derivative of MPICH,
--   Mellanox/NVIDIA distribute Open MPI.
+-   Mellanox/NVIDIA distributes Open MPI.
 
 
 ## Languages
@@ -77,7 +77,7 @@ Unified Parallel C (UPC). Co-array Fortran became part of the Fortran 2008 stand
 compilers offer basic support for it. Unified Parallel C was derived from C99. It never became
 part of a standardisation process and as a result official support by compiler vendors is poor. 
 However, there are still compilers based on Clang and on GCC, and HPE Cray supports UPC
-in their Cray Compiling Environment compiler.
+in their Cray Compiling Environment compiler (which is based on Clang).
 
 The problem with PGAS languages is that performance is often poor. Therefore codes sometimes
 opt to still do some of the work with MPI.

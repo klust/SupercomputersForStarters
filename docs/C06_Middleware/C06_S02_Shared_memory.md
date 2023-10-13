@@ -3,14 +3,14 @@
 When discussing shared memory parallelism in the 
 [section on processors](../C02_Processors/C02_S06_Shared_memory.md),
 we've already said that automatic shared memory parallelisation has not been
-ver successful so far.
+very successful so far.
 
 ## OpenMP
 
 One of the more popular ways today to develop scientific software that makes use
 of shared memory parallelism, is OpenMP.
 
-OpenMP works through compiler directives which are hints placed in the code in such
+OpenMP works through compiler directives, which are hints placed in the code in such
 a way that they would be neglected by compilers that don't know the directives.
 In C and C++ this is done via lines starting with `#pragma` while in Fortran a notation
 that would be interpreted as just another comment in the code is used (`!$OMP`).
@@ -37,14 +37,20 @@ introducing support for vectorisation and for offload to coprocessors (really de
 
 In OpenMP, the runtime behaviour such as the number of threads used and the mapping of those 
 threads on the cores of the node, are often set through environment variables that are in
-fact also partly standardised. Some codes will use OpenMP library functions instead and will
+fact also partly standardised (though many implementations add some others). 
+Some codes will use OpenMP library functions instead and will
 expect information from the user in, e.g., the input files.
 
 OpenMP for shared memory parallelism is currently widely supported in C/C++ and Fortran compilers
-for scientific use. On the VSC clusters it is supported in both the GNU C/C++ and Fortran compilers
-and the Intel compilers.
-On LUMI it is supported in all available C/C++ and Fortran compilers (GCC, AMD aocc and ROCm, and
-the Cray Compiling Environment compilers).
+for scientific use. 
+
+!!! Note "VSC users"
+    OpenMP is supported in both the GNU C/C++ and Fortran compilers
+    and the Intel compilers.
+
+!!! Note "LUMI Users"
+    On LUMI, OpenMP is supported in all available C/C++ and Fortran compilers (GCC, AMD aocc and ROCm, and
+    the Cray Compiling Environment compilers).
 
 
 ## Other approaches
@@ -76,5 +82,5 @@ computing first and have only started adding shared memory computing concepts in
 
 Lastly, one can use explicit OS threading, especially for task-based parallelism.
 Linux supports the POSIX standard for threads via the Pthreads library.
-This is very low-level thoug and rather cumbersome as now the programmer has to code all
-thread managment themselves. Certainly for data parallelism this is rarely a good idea.
+This is very low-level though and rather cumbersome as now the programmer has to code all
+thread management themselves. Certainly for data parallelism this is rarely a good idea.
