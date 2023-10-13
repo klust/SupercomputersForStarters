@@ -39,7 +39,8 @@ resources properly.
 It is important to select the software that you use with care and to follow
 the evolutions in your field. Hardware evolves, and some software packages
 evolve with the hardware while others stay behind.
-EuroHPC, the European initiative for supercomputer, and the USA funding agencies
+EuroHPC, the European initiative to make large supercomputers available at an
+international level, and the USA funding agencies
 and in particular the national labs, invest a lot of resources into improving
 or rewriting popular scientific software packages, and these are often available
 as open source or free to license for academic research.
@@ -106,23 +107,23 @@ look at the outcome of the research done on a supercomputer before deciding
 to fund the next one. So the user community can better optimise the scientific
 return and often economic return of a supercomputer to ensure funding for 
 the next machine. The way in which research can be made usable for companies
-is becomeing more and more important. And for companies, compute time comes
+is becoming more and more important. And for companies, compute time comes
 at a high cost so they are not often interested in using inefficient procedures
 to solve their problems.
 
 We also live in a time where energy comes with an increasing cost. One should 
 realise that supercomputers do consume a lot of energy. A supercomputer
 consuming only 100 kW is still small, and the biggest machines on earth at the
-moment are closer to 30 MW. The supercomputer world is looking at many ways
+moment are closer to 20 or 30 MW. The supercomputer world is looking at many ways
 to lower the energy consumption. Software that uses hardware more efficiently
 or uses more efficient hardware (such as accelerators) is often the easiest
 route to go...  Hardware designers have already developed ways to cool 
 supercomputers with water that is so warm even when it enters the 
-computer that "free cooling" can be used to cool the hot water that leaves
+computer, that "free cooling" can be used to cool the hot water that leaves
 the computer, i.e., just radiators and fans to pass the air over the radiator.
 Some centres are experimenting with heat recovery for the purpose of heating
 their buildings. 
-The waste hear of LUMI, a European pre-exascale machine installed in Kajaani,
+The waste heat of LUMI, a European pre-exascale machine installed in Kajaani,
 Finland, is used to [produce heat for the city of Kajaani](https://lumi-supercomputer.eu/the-waste-energy-of-lumi-supercomputer-produces-20-percent-of-the-district-heat-of-kajaani-csc-and-loiste-lampo-have-signed-an-agreement/).
 
 Another reaction one sometimes hears is *"But by the time I've reworked
@@ -183,7 +184,7 @@ for CPUs and GPU accelerators isn't really decreasing anymore. As a consequence,
 -   We cannot expect that performance per Watt will improve as quickly as it did in
     the past, again unless big architectural changes would bring a solution.
 
-Even though microprocessor and GPU manufacturers claims that computers 1000x as fast
+Even though microprocessor and GPU manufacturers claim that computers 1000x as fast
 as current computers will be possible in ten years, it remains to be seen for what
 applications this will be the case. Statements of that kind are usually misleading.
 E.g., when going from generation 1 to 2 one saw a twofold speed increase for application A,
@@ -208,3 +209,35 @@ no further training as they are very different things that react very differentl
 Similarly you cannot use a supercomputer in the same way as a regular PC or a smartphone.
 
 It is more and more the software that makes the supercomputer!
+
+
+## Summary of some lessons learnt
+
+**Lesson 0:** After going trough these lecture notes, you should realise that HPC truly
+stands for High-Performance Computing and is not synonym to High-end Personal Computer.
+A supercomputer is not a machine that is just like a PC but 100x or 1000x faster
+for everything.
+
+**Lesson 1:** These lecture notes also showed that software makes the supercomputer, as it is
+built from fairly standard components that find their use in other types of computers
+also (even the interconnect is moving in that direction), but it is the software that turns
+all of that hardware into a unique machine that can solve some problems no other system 
+can.
+
+**Lesson 2:** The three keywords of supercomputing are streaming, parallelism and hierarchy.
+
+**Lesson 3:** Whether a run on a supercomputer will be efficient or not, depends on three elements:
+
+1.   The hardware of the supercomputer,
+2.   the application used,
+3.   and the problem being solved. Larger problems usually mean that more resources can be
+     used efficiently.
+
+So unfortunately no support person can give you a simple recipe for your work that will always work...
+
+**Lesson 4:** It's crisis! (But many users don't believe this yet.) Transistors don't become cheaper
+anymore so we can't rely on that to get more and more compute power over time.
+
+And this brings us back to **lesson 1:** We'll have to focus more on high-quality software in the future
+if we want to keep supercomputing affordable yet want to be able to do more on supercomputers than
+we can do today!
