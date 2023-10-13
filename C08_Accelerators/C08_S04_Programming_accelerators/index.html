@@ -1795,14 +1795,15 @@ a mess, and standardisation still has to set in. This is not uncommon in the wor
 of supercomputing: The same happened with message passing where there were several
 proprietary technologies until the needs were sufficiently well understood to come to
 a standardisation.</p>
-<p>Currently there are three competing ecosystems growing:</p>
+<p>Currently there are three competing ecosystems:</p>
 <ol>
 <li>
 <p>NVIDIA was the first to market with a fairly complete ecosystem for GPGPU
     programming. They chose to make large parts of their technology proprietary
     to create a vendor lock-in and keep hardware prices high.</p>
-<p>CUDA is the main NVIDIA ecosystem. NVIDIA together with partners also created
-a set of compiler pragma's for C/C++ and Fortran for GPGPU programming with an
+<p>CUDA is the basis of the NVIDIA ecosystem. NVIDIA together with partners also 
+created OpenACC,a set of compiler pragma's for C/C++ and Fortran for GPGPU 
+programming, on paper managed by an
 open consortium, but many other compiler vendors are hesitant to pick those up.</p>
 <p>The NVIDIA toolset also offers some support for open, broadly standardised
 technologies, but the support is usually inferior to that for their proprietary
@@ -1811,15 +1812,15 @@ technologies or standards that are in practice largely controlled by them.</p>
 <li>
 <p>AMD is a latecomer to the market. Their software stack is called ROCm, and they
     open sourced all components to gain more traction in the market. They basically
-    focus on two technologies that we will discuss: HIP and Open MP.</p>
+    focus on two technologies that we will discuss: HIP and OpenMP.</p>
 </li>
 <li>
 <p>Intel calls its ecosystem oneAPI, as it tries to unify CPU and GPGPU programming,
     with libraries that make it easy to switch between a CPU-only version and a 
     GPGPU-accelerated version of an application.</p>
 <p>The oneAPI ecosystem is largely based on Data Parallel C++, an extension of SYCL,
-and Open MP compiler pragmas. </p>
-<p>The oneAPI is partly open-sourced. In some cases, only the API is available and 
+and OpenMP compiler pragmas. </p>
+<p>OneAPI is partly open-sourced. In some cases, only the API is available and 
 vendors should make their own implementation, but, e.g., the sources for their
 clang/LLVM based Data Parallel C++ compiler are available to all and this has
 been used already to make ports to NVIDIA and AMD GPU hardware.</p>
@@ -1838,13 +1839,14 @@ of the lower-level models. </p>
 reaching a level of maturity with less frequent major updates.</p>
 <h3 id="hip">HIP<a class="headerlink" href="#hip" title="Permanent link">&para;</a></h3>
 <p>HIP or <strong>H</strong>eterogeneous Computing <strong>I</strong>nterface for <strong>P</strong>ortability is AMD's 
-alternative to CUDA. It tries to be as close as possible as legally possible.
+alternative to CUDA. It tries to be as close to CUDA as legally possible
+and technically achievable on the AMD GPU architecture.
 The HIP API maps one-to-one on the CUDA API, making it possible to recompile HIP
 code with the CUDA tools using just a header file. In theory this process is
 without loss of performance, but there is one caveat: A kernel that is efficient
 on an AMD GPU may not be the most efficient option on a NVIDIA GPU as, e.g., the vector
-size is different. So careful programming is needed to ensure efficiency on both
-platforms.</p>
+size is different and memory sizes for the on-chip memory are also different. 
+So careful programming is needed to ensure efficiency on both platforms.</p>
 <p>HIP is purely based on C++ with currently no support for Fortran GPU kernels. 
 Feature-wise it is roughly comparable to CUDA 7 or 8, but features that cannot yet
 be supported by AMD hardware are missing. The ROCm platform also comes with a lot
@@ -1860,9 +1862,9 @@ develops vendor-neutral standards.</p>
 <p>OpenCL is a C and C++-based technology to develop code that not only runs on GPU accelerators,
 but the code can also be recompiled for CPU only, and some DSPs and FPGAs are also supported.
 This makes it a very versatile standard and it was for a long time a very attractive standard
-for commercial software development. It is by far not as advanced as CUD or not even HIP. 
+for commercial software development. It is by far not as advanced as CUDA or not even HIP. 
 The evolution of the standard has been very slow lately, with vendors hardly picking up 
-many of the features of the 2.x versions. This lead to version 3.0 of the standard that 
+many of the features of the 2.x versions. This led to version 3.0 of the standard that 
 defined a clear baseline and made the other features explicitly optional so that programmers
 at least know what they can expect. </p>
 <p>OpenCL is in principle supported on NVIDIA, AMD and Intel hardware, but the quality of the
@@ -1896,22 +1898,24 @@ spin-off creating tools for accelerator programming that failed in 2013. </p>
 <p>The OpenACC standard is currently controlled by the OpenACC Organization, and though it does
 count other companies that develop GPUs among its members, it still seems rather dominated by
 NVIDIA which may explain why other companies are somewhat hesitant to pick up the standard.
-The standard is at the time of writing of this section at version 3.1, released in November 2021,
+The standard is at the time of writing of this section at version 3.3, released in November 2022,
 but is updated almost annually in November.</p>
 <p>OpenACC is well supported on NVIDIA hardware through the NVIDIA HPC compilers (which is the 
 new name of the PGI compilers adopted after the integration of PGI in NVIDIA). GCC offers some 
 support on NVIDIA and some AMD hardware for version 2.6 of the standard (the November 2017 version) since version 10 of the
-GCC compilers., but the evolution is slow and performance is often not that great.
+GCC compilers, but the evolution is slow and performance is often not that great.
 More promising for the future is the work going on in the clang/LLVM community to support
 OpenACC, as this effort is largely driven by the USA national labs who want to avoid having
 to port all OpenACC-based code developed for the NVIDIA based pre-exascale supercomputers to
-other models to run on the new AMD and Intel based exascale supercomputers. In fact,
+other programming models to run on the new AMD and Intel based exascale supercomputers. In fact,
 the clang/LLVM ecosystem is the future for scientific computing and not the GNU Compiler
 Collection ecosystem as most compiler vendors already base their compilers on that technology.
 The NVIDIA, AMD and new Intel compilers are all based on LLVM and the clang frontend for C and
 C++-support, with NVIDIA and AMD still using a Fortran front-end developed by PGI and donated
-to the LLVM project while Intel is already experimenting with a new community-developed
-more modern front-end for Fortran. OpenACC support in the LLVM ecosystem will build upon the
+to the LLVM project while Intel is using its own front-end. 
+There is also a new community-developed modern front-end for Fortran but it is not yet ready
+for prime time as the optimisation is not yet that great.
+OpenACC support in the LLVM ecosystem will build upon the
 OpenMP support, the technology that we will discuss next, using extensions for those OpenACC
 features that still have no equivalent in OpenMP. However, as of version 17 (early fall 2023)
 this support is still very incomplete and experimental.</p>
@@ -1951,7 +1955,7 @@ for accelerators it still needs a specific compiler.</p>
 the standard, targeting not only GPUs, but also, e.g., the NEC SX Aurora Tsubasa vector
 boards. 
 Most if not all of these implementations are again based on Clang and LLVM.
-One implementation worth mentioning is Open SYCL. This project started under the
+One implementation worth mentioning is AdaptiveCpp. This project started under the
 name hipSYCL, which as its name suggests
 targets HIP for the backend to support AMD CPUs, but it has been extended to
 support all three major GPU families now using ptx for NVIDIA, amdgcn code for AMD and 
@@ -1992,7 +1996,7 @@ be used in the Aurora supercomputer.</p>
 is a framework developed at Lawrence Livermore National Laboratory, based on standard C++11. 
 Just as Kokkos, RAJA has several backends supporting SIMD, threading through the TBB library or
 OpenMP, but also GPU computing through NVIDIA CUDA, AMD HIP, SYCL and OpenMP offload, though not all 
-back-ends are as mature or support all features.In particular the SIMD, TBB, SYCL and OpenMP target offload 
+back-ends are as mature or support all features. In particular the SIMD, TBB, SYCL and OpenMP target offload 
 (the latter needed for Intel GPUs) are still experimental at the time this section was
 last revised (March 2023).</p>
 <p><a href="https://www.casus.science/research/software-repository/alpaka/">Alpaka</a> 
