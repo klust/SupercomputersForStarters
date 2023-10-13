@@ -1,12 +1,13 @@
 # Offloading
 
-In early accelerator generations (and this is still the case in 2022) a CPU cannot
+In early accelerator generations (and this is still mostly the case in 2023), a CPU cannot
 directly operate on data in the memory of the GPU and vice-versa. Instead data
 needs to be copied between the memory spaces. Multiple accelerators in a system
 may or may not share a memory space. NVIDIA NVLink for instance is a technology
-that can be used to link graphics cards together and create a shared memory space,
-but even then it is crucial for performance that data is as much as possible in
-the memory directly attached to a GPU when being used. Many modern GPUs for 
+that can be used to link graphics cards together and create some level of shared memory space,
+but coherency is also limited and in automatic page migration (migration of blocks of 
+memory of a fixed size, called a page) over the fast link
+is done. Many modern GPUs for 
 scientific computing include support for unified memory where CPU and GPUs in the
 system can share a single logical address space, but under the hood the data still
 needs to be copied. This feature has been present in, e.g., the NVIDIA Pascal and later 
@@ -19,36 +20,41 @@ by the accelerator.
 The main problem with this model is that all the data copying that is needed,
 whether explicitly triggered by the application or implicitly through the unified
 memory model of some modern GPUs, can really nullify the gain from the accelerator.
-This is no different from what we saw for distributed computing. Just as for distributed
-computing, the fraction of the algorithm that cannot be parallelized limits the speed-up,
-as does the communication overhead, for accelerators the fraction of the application and 
-the overhead to pass data to and from the accelerator will limit the speed-up that can
-be obtained from the accelerator. Hence it is clear that for future generations of
+This is no different from what we saw for distributed computing. 
+We have seen that for distributed computing, the fraction of the algorithm that cannot be parallelized
+puts a limit to the theoretical speed-up that can be reached, and the communication overhead 
+reduces the attainable speed-up even more.
+Something similar holds for computing with accelerators: there is always a part of the code
+that is not suitable for the accelerators, and that will limit the theoretical speed-up,
+but all the data copying to and from the accelerator reduces the attainable speed-up 
+even more.
+Hence it is clear that for future generations of
 accelerators, the main attention will be in making them more versatile to reduce the
 fraction that cannot be accelerated, and in integrating them closer with the CPU to reduce
 or eliminate the overhead in passing data between CPU and GPU.
 
-The first signs of this evolution were in some USA pre-exascale systems Summit and
+The first signs of this evolution were in the USA pre-exascale systems Summit and
 Sierra that used a IBM POWER9 CPUs and NVIDIA V100 GPUs. 
 Those GPUs were connected to the CPU through NVLink,
 NVIDIA's interconnect for GPUs, rather than only PCIe links, so that the memory spaces
-of CPU and GPU become physically merged, with all data directly addressable from GPU and
-CPU and cache coherency. 
+of CPU and GPU become more merged, with some level of cache coherency, though in 
+practice migration of pages remains necessary in most cases.
 
 This technology of the Summit and Sierra supercomputers is carried over to the first three
 planned exascale systems of the USA. Frontier, and the European supercomputer LUMI, use the
 MI250X variant of the AMD CDNA2 architecture. The nodes in these systems consist of 
 4 MI250X GPUs, with each GPU consisting of two dies, and a custom Zen3-based CPU code named Trento.
 AMD's InfinityFabric is not only used internally in each package to connect the dies (and the zen3
-chiplets with the I/O die in the Trento CPU), but also to connect the CPU packages to each other
-and the CPUs to the GPUs, hence creating a unified coherent memory space.
-This allows each CPU chiplet to access the memory of the closest attached GPU die with full cache coherency,
-but it is not clear if coherency is usable over the full system. 
-The Aurora supercomputer which uses
-Intel Sapphire Rapids CPUs and Ponte Vecchio GPUs will also support a unified and some level of cache-coherent
-memory space. NVIDIA was lagging a bit with the Ampere generation that has no longer a corresponding
-CPU that supports its NVLink connection, but will return with its own ARM-based CPU code named
-Grace and the Hopper GPU generation. The Grace Hopper superchip will combine a Grace CPU die and
+chiplets with the I/O die in the Trento CPU), but also to connect the GPU packages to each other
+and the CPUs to the GPUs, hence creating a unified coherent memory space with some level of cache coherency.
+It enables each CPU chiplet to access the memory of the closest attached GPU die with full cache coherency,
+but the coherency is not usable over the full system. 
+The Aurora supercomputer, which uses
+Intel Sapphire Rapids CPUs and Ponte Vecchio GPUs, will also support a unified memory 
+and some level of cache-coherent memory space. 
+NVIDIA was lagging a bit with the Ampere generation that has no longer a corresponding
+CPU that supports its NVLink connection, but returned with its own ARM-based CPU code named
+Grace and the Hopper GPU generation. The Grace Hopper superchip combines a Grace CPU die and
 a Hopper GPU die with a coherent interconnect between them, creating a coherent memory space
 between the CPU and GPU in the same package, though the available whitepapers suggest no 
 coherency between different CPU-GPU packages in the system. Placing a CPU and GPU in the same
@@ -62,7 +68,7 @@ and AMD claims that copy operations between CPU and GPU in a package will be com
 MI300-based products should start appearing towards the end of 2023 or early 2024. 
 Intel has also hinted at the Falcon Shores successor to Ponte Vecchio and Rialto Bridge, likely a 2024 or 2025 product, 
 that will also combine CPU and GPU chiplets in a single package with a fully unified memory
-space. 
+space, but has now postponed this to a later generation. 
 
 Note that current Intel or AMD-based PC's with integrated GPUs are not better in this respect.
 The CPU and integrated GPU share the physical RAM in the system, but each has its own

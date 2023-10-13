@@ -14,12 +14,15 @@ common terms to get bigger numbers, something that in particular NVIDIA is very 
 at) and comparing apples and oranges by comparing systems with a very different price
 or total cost of ownership, e.g., comparing a server with multiple accelerators costing
 60k EURO or more with a standard dual socket server costing only 10k EURO and using 
-only one fifth of the power.
+only one fifth of the power (these prices being what one actually paid for such nodes 
+in 2022).
 
 The NVIDIA vendor lock-in and its success in the market have made accelerators very 
 expensive. At the current price point, GPU computing only makes sense from a price point
 of view if the speed-up at the application level is a factor of 2.5 or more per accelerator card
-compared to a standard medium-sized dual socket node.
+compared to a standard medium-sized dual socket node. Due to the overdemand due to the
+explosion of AI, the situation is currently getting even worse as the prices of GPU cards
+rise faster than those of CPUs, so this may soon become a factor of 4 or 5 that you need to gain.
 
 As we have seen, some features of accelerators have been carried over to traditional CPUs 
 in the form of new instructions supporting vector and nowadays even matrix computing, and 
@@ -53,7 +56,8 @@ The amount of memory that can be used by a GPU will increase a lot the coming ye
 memory packages are getting bigger by stacking more dies in 3D, and the number of memory packages
 that can be integrated in the overall GPU package is increasing. As of 2022, 8 memory stacks in a
 GPU package is feasible as is shown by the AMD MI250(X) GPUs, while in 2023-2024 12 memory stacks
-in a single GPU package should become a possibility. The two combined may make memory sizes of 192 
+in a single GPU package should become a possibility. The size of the stacks is also increasing from
+16GB to 24GB (available very soon) or 32GB. The two combined may make memory sizes of 192 
 and likely even 384 GB possible by 2024 or 2025.
 
 The programming bottleneck can already be partially solved by unified memory, using memory pointers
@@ -78,16 +82,18 @@ copy those back, as the link that is used in those GPU systems to connect the CP
 links that are typically used to connect two CPU sockets. The NVIDIA Grace Hopper "superchip" shows the next 
 step. By integrating the CPU and GPU in the same package, it is possible to have a much higher bandwidth
 between both, reducing the copying bottleneck in cases where copying is still needed. 
-However, with the AMD MI300 and Intel Falcon Shores and without doubt a future unannounced NVIDIA product,
+However, with the AMD MI300A, and without doubt future Intel and NVIDA chips, 
 we will see even closer integration where CPU and GPU chiplets share the memory controllers.
 The Apple M series chips give an indication of what can be obtained with such a system, as 
 these systems perform way better in some applications that use acceleration than one would expect from
-looking at systems with discrete GPUs with similar theoretical performance.
-
-We will discuss this evolution in some more detail in the next section.
+looking at systems with discrete GPUs with similar theoretical performance. This can solve both the 
+third and fourth issue mentioned above.
 
 
 ## Evolution of GPU nodes
+
+We will now discuss this evolution in some more detail.
+
 
 ### GPU subsystem connected via PCIe
 
@@ -100,7 +106,7 @@ The red line between the two CPUs denotes a fully cache coherent link between th
 In 2016 this would very likely have been either Intel CPUs or IBM POWER CPUs, and both
 had proprietary fully cache coherent links to link CPUs in a shared memory system.
 The red link between the GPUs denotes a similarly proprietary connection between the
-CPUs for easy data transfer between the CPUs at typically a much higher bandwidth than
+GPUs for easy data transfer between the GPUs at typically a much higher bandwidth than
 that offered by the connections between the CPU and GPU. However, not all systems used
 such a link between graphics cards. A CPU was connected to the GPUs using PCIe, and
 similarly a network interface would also be connected to a CPU using PCIe.
@@ -134,12 +140,13 @@ LUMI and Frontier GPU nodes is:
 ![A simplified MI250X node](../img/C08_S05_03_MI250X.jpg)
 
 The GPU compute nodes of LUMI and Frontier use a special variant of the Zen3-based
-AMD Epyc processor. In this variant, the PCIe lanes are replaced by InfinityFabric
+AMD Epyc processor. In this variant, the PCIe lanes are replaced by Infinity Fabric
 connections. In an MI250X, the 4 GPU packages are connected with each other and with 
 the CPU through Infinity Fabric links. Each GPU package connects to its own quarter of
 the AMD Epyc processor (remember from earlier that the I/O die is subdivided in 4
 quarters, in this case each connected to two CPU chiplets with 8 cores each).
-This creates a coherent memory space. Also noteworthy is that the
+This creates a unified memory space with some level of coherency. 
+Also noteworthy is that the
 interconnect is no longer connected to the CPU, but the 4 network cards are each
 connected to a GPU package (through a PCIe interface). This makes this compute
 node really a GPU-first system, almost a system where the CPU is only used for
@@ -150,7 +157,7 @@ The true picture of the MI250X GPU node is a bit more complicated though. Each G
 contains two GPU dies, and these are connected to each other through some Infinity Fabric
 links. Each GPU die connects to 4 memory packages, with 64 GB of memory per GPU die.
 However, the connection between two GPU dies is sufficiently bandwidth-starved that
-programming wise a single GPU package should be considered as two separate GPUs. 
+programming-wise a single GPU package should be considered as two separate GPUs. 
 Each individual GPU die has its own InfinityFabric link to the CPU and seems to have a
 preferential CPU chiplet. Even though the connection between the GPU packages appears to 
 be an all-to-all connection, this is not true when one looks at the connections between
@@ -231,12 +238,12 @@ of CPU codes becomes memory bandwidth bound, so even for the CPU it makes sense 
 to smaller but much higher bandwidth memory in the package. The AMD MI300 
 will fully integrate the CPU and GPU chiplets and memory controllers with memory in a single
 package. 
-Whereas the MI250x has cache coherent memory but still a lot of overhead when the GPU wants to
-access CPU memory or the other way around, in the MI300 generation the CPU and GPU memory
+Whereas the MI250x has some level of cache coherency but still needs to rely on page transfers in
+most cases, in the MI300 generation the CPU and GPU memory
 is fully unified (physical and virtual), with both sharing the same memory controllers and memory, which will enable
-to fully eliminate redundant memory copies.
+to fully eliminate redundant memory copies at least when going between CPU and GPU in the same package.
 The MI300A was first mentioned at the AMD Financial Analyst Day in June 2022 and at 
-[CES'2023 (early January)](https://youtu.be/OMxU4BDIm4M?t=5382),
+[CES'2023 (early January 2023)](https://youtu.be/OMxU4BDIm4M?t=5382),
 where a full package was shown, but still with very little detail.
 It was announced the one MI300 package will combine a powerful GPU with 24 CPU cores 
 (presumably 3 Zen4 chiplets) and 8 HBM3 modules for a total of 128 GB RAM. The chip

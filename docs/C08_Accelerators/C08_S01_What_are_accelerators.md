@@ -47,10 +47,10 @@ GPUs fall in this family. Examples are
 
 -   NVIDIA Data Center series (previously also called the Tesla series). These started of as basically
     a more reliable version of the NVIDIA GeForce and Quadro GPUs, but currently, with the Ada Lovelace
-    GPUs and Hopper GPGPUs these lines start to diverge a bit (and even before, the cards really meant
+    GPUs and Hopper GPGPUs, these lines start to diverge a bit (and even before, the cards really meant
     for supercomputing had more hardware on them for double precision floating point computations).
     Strictly speaking the NVIDIA architecture is a single instruction multiple data (SIMD) architecture
-    but not one that uses explicit vector instructions, but the resulting capabilities are not really 
+    and not one that uses explicit vector instructions, but the resulting capabilities are not really 
     different from more regular vector computers (but then vector computers with an instruction set that
     also support scatter/gather instructions and predication, features that are missing from, e.g., 
     the AVX/AVX2 instruction set).
@@ -61,22 +61,22 @@ GPUs fall in this family. Examples are
     GCN though (used in, e.g., the Vega cards).
 
     AMD Instinct GPUs are used in the first USA exaflop computer Frontier (fastest system in the Top500
-    ranking of June and November 2022) and in the European LUMI system (fastest European system in the Top500 ranking
-    of June and November 2022). These computers use the CDNA2 architecture. A future USA exascale system, El Capitan, 
+    ranking of June and November 2022 and June 2023) and in the European LUMI system (fastest European system in the Top500 ranking
+    of June and November 2022 and June 2023). These computers use the CDNA2 architecture. A future USA exascale system, El Capitan, 
     planned for 2023 (or possibly 2024 with the supply chain disruptions largely due to Covid), will
-    employ a future version of the architecture, RDNA3, which will bring CPU and GPU very close together
+    employ a future version of the architecture, CDNA3, which will bring CPU and GPU very close together
     (but more about this later in this section).
 
 -   Intel is also moving into the market of GPGPU computing with their Xe graphics products. They
-    have supported using their integrated GPUs for computations for many years already, with even support
-    in their C/C++/Fortran compilers, but are now making a separate products for the supercomputing market
+    have supported GPU computing using their integrated GPUs for computations for many years already, with even support
+    in their C/C++/Fortran compilers, but are now making a separate product for the supercomputing market
     with the Intel Data Center GPU MAX series based on the Xe<sup>HPC</sup> architecture,
     which support additional data formats that are very needed for
     scientific computing applications. The first product in this line is 
     is also known as the GPU code named Ponte Vecchio that
     will be used in the USA Aurora supercomputer, which should become the second USA exaflop computer.
-    A future European pre-exascale system will also have a compute section with the successor of that 
-    chip, code named Rialto Bridge.
+    A future European pre-exascale system was planned to have a compute section with the successor of that 
+    chip, code named Rialto Bridge, but as that chip is cancelled it is not clear which GPU will be used instead.
 
 -   The NEC SX Aurora TSUBASA has a more traditional vector computing architecture, but is physically also
     an expansion card that is put in a regular Intel-compatible server. It is special in the sense that the
@@ -86,17 +86,15 @@ GPUs fall in this family. Examples are
     host program running on the Intel-compatible server offloading work to the vector processor.
 
 A second type of accelerator that became very popular recently, are accelerators for **matrix operations**,
-and in particular matrix multiplication or rank-k update. They were originally designed to speed up operations
-in certain types of neural networks, but were quickly gained support for additional data types that makes them
-useful for a range of AI and other HPC applications. Some are integrated on GPGPUs while others are specialised
-accelerators. The ones integrated in GPUs are most popular for supercomputing though:
+and in particular matrix multiplication or rank-k update. They were originally designed to speed up operations in certain types of neural networks, but quickly gained support for additional data types that makes them useful for a range of AI and other HPC applications. Some are integrated on GPGPUs while others are specialised accelerators. The ones integrated in GPUs are the most popular for supercomputing though:
 
--   NVIDIA Tensor cores in the V100 and later generations.
+-   NVIDIA Tensor cores in the V100 (Volta generation) and later generations (Ampere, Turing and Hopper).
 
 -   AMD matrix cores in the MI100 and later chips. The MI200 generation may be a little behind
     the similar-generation A100 NVIDIA cards when it comes to low-precision formats used in some
     AI applications, but it shines in higher-precision data formats (single and double precision
-    floating point).
+    floating point), as it was developed in the first place for the needs for the Frontier
+    exascale simulation whose procurement predated the days were AI became very popular.
 
 -   Intel includes their so-called Matrix Engines in the Ponte Vecchio GPGPUs.
 
@@ -115,7 +113,8 @@ specialised 2-bit CPUs for working with generic data.
 ### A note on the name "GPU"
 
 Though usually called GPU computing or GPGPU computing, the accelerators still have an architecture 
-similar to the programmable GPUs from 2010 and later, but may lack the full hardware rendering pipeline
+that is an evolution of that of the programmable GPUs from 2010 and later, 
+but often lack the full hardware rendering pipeline
 that one would expect on a true GPU. The increasing demand for performance while the cost per transistor
 tends to stay flat or even increase a bit and while new semiconductor manufacturing processes don't deliver
 the gains they used to 15 years ago, resulted in an evolution towards distinct "GPUs" for compute (traditional HPC and AI) and
@@ -136,7 +135,7 @@ even though it had only half as many transistors and a 30% smaller die in a slig
 process node. 
 The NVIDIA Hopper compute GPUs and Ada Lovelace rendering GPUS launched in late 2022
 were clearly designed together and
-share some characteristics, but are still very different beasts, this time stressed by
+share some characteristics, but are still very different beasts, this time emphasised by
 different code names.
 The ray tracing units present in the Ada architecture are not in the Hopper architecture, the raster
 engines also seem to be gone, and there is also no trace of video encoding blocks in the architectural
@@ -144,12 +143,12 @@ documentation, though there is hardware decoding for some video formats and JPEG
 be useful in AI applications.
 
 AMD only really started in GPU compute architectures towards late 2018 (with basically a first product
-just to try the software stack) and it architecture for compute and rendering GPUs have been diverging from the start.
+just to try the software stack) and its architectures for compute and rendering GPUs have been diverging from the start.
 AMD's rendering GPUs use the RDNA architecture of which the first iteration launched in 2019 and the 
 third iteration was launched by the end of 2022,
 while the compute GPUs use the CDNA architecture which is a descendant of the VEGA architecture with a relatively
-different structure of the compute units. The CDNA GPUs also lack the ray tracing units of RDNA2/3. 
-The texture units and raster engine also are missing.
+different structure of the compute units. The CDNA GPUs also lack the ray tracing units of RDNA2/3, 
+and the texture units and raster engine that are needed in rendering GPUs.
 
 It is to be expected that compute and render GPUs will only diverge more over time as it is increasingly impossible
 to build hardware that does both well and is still cost-effective for a large enough market. 

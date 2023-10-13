@@ -14,8 +14,8 @@ They were introduced in an update of the Pentium architecture in 1997. This inst
 reused 64-bit registers from the floating point unit, so both could not be used together.
 Two years later, in 1999, intel introduced the first version of SSE, which used new
 128-bit registers. 
-The MMX and SSE instruction sets made it feasible to process audio on the CPU and quickly
-erased the market of higher-end sound cards with DSPs. 
+The MMX and SSE instruction sets made it feasible to process audio on the CPU and 
+soon eliminated the market of higher-end sound cards with DSPs. 
 The SSE instruction set continued to evolve for several generations and also adopted support
 for floating point computing. It became essential to get the full performance out of Intel 
 CPUs in scientific codes.
@@ -57,7 +57,7 @@ As is the case for Intel, these extensions are also aimed at AI applications, su
 8-bit integer and bfloat16 data formats.
 
 Though these CPU instructions certainly don't make CPUs so fast that they beat GPUs, they
-also have two advantages over accelerators: there is no need to pass control to an remote processor,
+also have two advantages over accelerators: there is no need to pass control to a remote processor,
 which can save some time, and there are no issues with data needing to be moved. Also,
 one should not forget that a single GPU card for a supercomputer easily costs three times
 or more as much as a single CPU socket with memory (and even more if the lower end SKUs in
