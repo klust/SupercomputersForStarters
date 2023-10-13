@@ -1586,11 +1586,11 @@
 <p>When discussing shared memory parallelism in the 
 <a href="../../C02_Processors/C02_S06_Shared_memory/">section on processors</a>,
 we've already said that automatic shared memory parallelisation has not been
-ver successful so far.</p>
+very successful so far.</p>
 <h2 id="openmp">OpenMP<a class="headerlink" href="#openmp" title="Permanent link">&para;</a></h2>
 <p>One of the more popular ways today to develop scientific software that makes use
 of shared memory parallelism, is OpenMP.</p>
-<p>OpenMP works through compiler directives which are hints placed in the code in such
+<p>OpenMP works through compiler directives, which are hints placed in the code in such
 a way that they would be neglected by compilers that don't know the directives.
 In C and C++ this is done via lines starting with <code>#pragma</code> while in Fortran a notation
 that would be interpreted as just another comment in the code is used (<code>!$OMP</code>).</p>
@@ -1613,13 +1613,21 @@ as the code and the compilers adhere to the language standards and OpenMP standa
 introducing support for vectorisation and for offload to coprocessors (really designed with GPU computing in mind).</p>
 <p>In OpenMP, the runtime behaviour such as the number of threads used and the mapping of those 
 threads on the cores of the node, are often set through environment variables that are in
-fact also partly standardised. Some codes will use OpenMP library functions instead and will
+fact also partly standardised (though many implementations add some others). 
+Some codes will use OpenMP library functions instead and will
 expect information from the user in, e.g., the input files.</p>
 <p>OpenMP for shared memory parallelism is currently widely supported in C/C++ and Fortran compilers
-for scientific use. On the VSC clusters it is supported in both the GNU C/C++ and Fortran compilers
-and the Intel compilers.
-On LUMI it is supported in all available C/C++ and Fortran compilers (GCC, AMD aocc and ROCm, and
+for scientific use. </p>
+<div class="admonition note">
+<p class="admonition-title">VSC users</p>
+<p>OpenMP is supported in both the GNU C/C++ and Fortran compilers
+and the Intel compilers.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">LUMI Users</p>
+<p>On LUMI, OpenMP is supported in all available C/C++ and Fortran compilers (GCC, AMD aocc and ROCm, and
 the Cray Compiling Environment compilers).</p>
+</div>
 <h2 id="other-approaches">Other approaches<a class="headerlink" href="#other-approaches" title="Permanent link">&para;</a></h2>
 <p>C++ frameworks such as the Intel Thread Building Blocks (TBB) are also often used.
 The Intel TBB library is open-sourced and can be used with other compilers also.
@@ -1646,8 +1654,8 @@ Python and Matlab. Strangely enough though the language designers focused on dis
 computing first and have only started adding shared memory computing concepts in more recent years.</p>
 <p>Lastly, one can use explicit OS threading, especially for task-based parallelism.
 Linux supports the POSIX standard for threads via the Pthreads library.
-This is very low-level thoug and rather cumbersome as now the programmer has to code all
-thread managment themselves. Certainly for data parallelism this is rarely a good idea.</p>
+This is very low-level though and rather cumbersome as now the programmer has to code all
+thread management themselves. Certainly for data parallelism this is rarely a good idea.</p>
 
 
 

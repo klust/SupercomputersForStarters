@@ -1612,7 +1612,9 @@ the problem doesn't fit in memory or simply takes too much time to run.</p>
 the speed-up divided by <span class="arithmatex">\(X\)</span>, i.e., this would be <span class="arithmatex">\(100%\)</span> in the ideal case that
 using <span class="arithmatex">\(X\)</span> processors also speeds up the computations with a factor of <span class="arithmatex">\(X\)</span>.
 The more general definition is</p>
-<div class="arithmatex">\[ \epsilon(X,Y) =  \frac{X T(X)}{Y T(Y)}. \]</div>
+<div class="arithmatex">\[ \epsilon(X,Y) =  \frac{Y T(Y)}{X T(X)}, \]</div>
+<p>i.e., the total time spent by all <span class="arithmatex">\(Y\)</span> processors (with <span class="arithmatex">\(Y\)</span> ideally 1) divided
+by the total time spent by all <span class="arithmatex">\(X\)</span> processors.</p>
 <h2 id="amdahls-law-and-saturation">Amdahl's law and saturation<a class="headerlink" href="#amdahls-law-and-saturation" title="Permanent link">&para;</a></h2>
 <p>In the ideal case, running on <span class="arithmatex">\(X\)</span> processors instead of <span class="arithmatex">\(1\)</span> should make the application
 <span class="arithmatex">\(X\)</span> times faster, but this is never the case. The graph below shows three scenarios.</p>
@@ -1648,7 +1650,7 @@ But this is even more pronounced in a more realistic situation.</p>
 to even use 64 or 128 cores for this particular problem as the speed-up is lower than 
 for roughly 32 cores (and hence the execution time higher). However, going from 8 to 16 
 cores we also effectively gain only <span class="arithmatex">\(35\%\)</span> performance so one can wonder if this is worth
-the cost. The sweep spot for this problem is probably somewhere between 4 and 8 cores.</p>
+the cost. The sweet spot for this problem is probably somewhere between 4 and 8 cores.</p>
 <h2 id="what-does-this-mean">What does this mean?<a class="headerlink" href="#what-does-this-mean" title="Permanent link">&para;</a></h2>
 <p>Using <span class="arithmatex">\(X\)</span> times more processors will almost never speed up your application with a 
 factor of <span class="arithmatex">\(X\)</span> as there is always some overhead in using more cores. 
