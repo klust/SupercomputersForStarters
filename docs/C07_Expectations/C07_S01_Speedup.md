@@ -21,7 +21,11 @@ the speed-up divided by $X$, i.e., this would be $100%$ in the ideal case that
 using $X$ processors also speeds up the computations with a factor of $X$.
 The more general definition is
 
-\[ \epsilon(X,Y) =  \frac{X T(X)}{Y T(Y)}. \]
+\[ \epsilon(X,Y) =  \frac{Y T(Y)}{X T(X)}, \]
+
+i.e., the total time spent by all $Y$ processors (with $Y$ ideally 1) divided
+by the total time spent by all $X$ processors.
+
 
 ## Amdahl's law and saturation
 
@@ -67,7 +71,7 @@ Looking at the blue curve (the lower one) in the above graph shows that it makes
 to even use 64 or 128 cores for this particular problem as the speed-up is lower than 
 for roughly 32 cores (and hence the execution time higher). However, going from 8 to 16 
 cores we also effectively gain only $35\%$ performance so one can wonder if this is worth
-the cost. The sweep spot for this problem is probably somewhere between 4 and 8 cores.
+the cost. The sweet spot for this problem is probably somewhere between 4 and 8 cores.
 
 ## What does this mean?
 

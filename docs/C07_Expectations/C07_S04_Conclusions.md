@@ -9,7 +9,7 @@ only comes as a binary and would be using an older version of the BLAS
 library that does not yet contain a proper code path for the CPU you're using.
 
 As we have seen, it is also important to not reinvent the wheel. It is very
-likely tha there are already good libraries that you can use for time-consuming
+likely that there are already good libraries that you can use for time-consuming
 parts of your code, or maybe even a complete code for your problem that is
 much better than anything you can come up with in a short time. Writing a proper
 BLAS3 library is a Ph.D. thesis by itself...
@@ -22,8 +22,8 @@ hierarchy and optimise for the sizes of the caches using clever blocking
 inside the code. 
 
 With respect to speed-up and efficiency, the general rule is that for a fixed
-problem size using more cores will lead to lower efficiency (though there are
-some rare exceptions due to cache effects), while for a fixed number of cores
+problem size, using more cores will lead to lower efficiency (though there are
+some rare exceptions due to cache effects), while for a fixed number of cores,
 bigger problems will lead to higher efficiency. Supercomputers are made to 
 solve big problems.
 

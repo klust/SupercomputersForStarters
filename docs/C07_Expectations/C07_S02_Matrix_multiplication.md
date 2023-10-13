@@ -220,8 +220,8 @@ on a different set of elements of $B$ and $C$.
 ## But how can BLAS then even be faster?
 
 BLAS stands for Basic Linear Algebra Subprograms and is a library that contains basic 
-linear algebra building blocks used in other libraries such as LApack 
-(the latter a library to solve dense linear systems and eigenvalue problems).
+linear algebra building blocks used in other libraries such as Lapack 
+(a library to solve dense linear systems and eigenvalue problems).
 It was defined in three phases
 
 -   BLAS 1 from 1979 defined a set of vector-vector operations to make it easier to
