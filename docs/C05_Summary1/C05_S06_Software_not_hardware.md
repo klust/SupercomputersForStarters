@@ -75,7 +75,7 @@ upgrade a system and make it better during its lifetime.
 
 It is also largely the software that ensures that a supercomputer is still a different infrastructure
 from a server farm or a cloud infrastructure (though there is one element, the interconnect, that 
-still remains very important and tend to differ from those infrastructures also).
+still remains very important and tends to differ from those infrastructures also).
 Supercomputers focus on latency and staying close to "bare metal" to be able to get the
 maximum performance out of the hardware and to enable thousands of processors to work 
 together on solving big problems that cannot be split up in hundreds of almost independent

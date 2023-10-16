@@ -69,7 +69,7 @@ nav:
     - Building up the supercomputer: C05_Summary1/C05_S07_Building_up_the_supercomputer.md
   - Middleware:
     #- C06_Middleware/index.md # Comment out to avoid getting this in the next/previous page navigation.
-    - Introduction: C06_Middleware/C06_S01_Introduction.md
+    - "Middleware: Introduction": C06_Middleware/C06_S01_Introduction.md
     - Shared memory programming: C06_Middleware/C06_S02_Shared_memory.md
     - Vector programming: C06_Middleware/C06_S03_Vector_computing.md
     - Distributed memory programming: C06_Middleware/C06_S04_Distributed_memory.md
