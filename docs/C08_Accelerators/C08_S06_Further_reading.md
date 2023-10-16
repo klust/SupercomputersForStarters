@@ -1,6 +1,7 @@
 ---
 tags:
 -   CUDA
+-   ROCm
 -   HIP
 -   oneAPI
 -   OpenCL

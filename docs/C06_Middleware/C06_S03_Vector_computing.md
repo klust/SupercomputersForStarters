@@ -1,6 +1,6 @@
 ---
 tags:
--   vector computing
+-   vector instructions
 -   OpenMP
 ---
 

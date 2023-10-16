@@ -3,7 +3,7 @@ tags:
 -   shared memory
 -   distributed memory
 -   ILP (Instruction Level Parallelism)
--   vector computing
+-   vector instructions
 ---
 
 # Lessons learnt

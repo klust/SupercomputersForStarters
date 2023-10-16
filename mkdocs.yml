@@ -60,7 +60,7 @@ nav:
     - Further reading on storage: C04_Storage/C04_S06_Further_reading.md
   - Putting it all together:
     #- C05_Summary1/index.md # Comment out to avoid getting this in the next/previous page navigation.
-    - Scaling: C05_Summary1/C05_S01_Scaling.md
+    - Scaling of technology: C05_Summary1/C05_S01_Scaling.md
     - Dennard scaling: C05_Summary1/C05_S02_Dennard_scaling.md
     - Transistor cost: C05_Summary1/C05_S03_Cost_transistor.md
     - 3 keywords: C05_Summary1/C05_S04_Keywords.md
@@ -70,10 +70,10 @@ nav:
   - Middleware:
     #- C06_Middleware/index.md # Comment out to avoid getting this in the next/previous page navigation.
     - Introduction: C06_Middleware/C06_S01_Introduction.md
-    - Shared memory: C06_Middleware/C06_S02_Shared_memory.md
-    - Vector computing: C06_Middleware/C06_S03_Vector_computing.md
-    - Distributed memory: C06_Middleware/C06_S04_Distributed_memory.md
-    - Examples: C06_Middleware/C06_S05_Examples.md
+    - Shared memory programming: C06_Middleware/C06_S02_Shared_memory.md
+    - Vector programming: C06_Middleware/C06_S03_Vector_computing.md
+    - Distributed memory programming: C06_Middleware/C06_S04_Distributed_memory.md
+    - "Middleware: Examples": C06_Middleware/C06_S05_Examples.md
     - Further reading on middleware: C06_Middleware/C06_S06_Further_reading.md
   - What can we expect?:
     #- C07_Expectations/index.md # Comment out to avoid getting this in the next/previous page navigation.
@@ -102,6 +102,8 @@ plugins:
   - tags:
       #enabled: false
       tags_file: tags.md
+      # The following should do a case-insensitive sort of the tags but requires an insiders version at the moment:
+      tags_compare: !!python/name:material.plugins.tags.casefold
 
 markdown_extensions:
   # Attributes (e.g., for lazy loading)

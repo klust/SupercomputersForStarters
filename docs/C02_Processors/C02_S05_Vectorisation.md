@@ -1,6 +1,6 @@
 ---
 tags:
--   vector computing
+-   vector instructions
 ---
 
 # Data parallelism through vector computing

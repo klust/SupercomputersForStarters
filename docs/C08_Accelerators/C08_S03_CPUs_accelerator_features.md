@@ -1,3 +1,9 @@
+---
+tags:
+-   vector instructions
+-   matrix instructions
+---
+
 # CPUs with accelerator features
 
 In the (relatively young) history of personal computers and their microprocessors,
