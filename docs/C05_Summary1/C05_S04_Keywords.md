@@ -1,55 +1,7 @@
-# Three keywords: Streaming, Parallelism, and Hierarchy
+# Three keywords: Parallelism, hierarchy, and streaming
 
-There are three keywords in programming for supercomputers: streaming, parallelism and hierarchy,
+There are three keywords in programming for supercomputers: parallelism, hierarchy, and streaming,
 and we will now discuss each of them separately.
-
-
-## Streaming
-
-We have already mentioned several problems with data access on computers, not only supercomputers.
-
-*   Data access requires a lot of power. The further the data is from the processing units, the
-    more power it costs to get the data to the processing unit. But unfortunately we can only
-    store a limited amount of data really close to a processing unit.
-*   The further the memory is from the processing element, the higher the latency to get it 
-    there to process which was the main reason why cache memory was introduced (as it was introduced
-    long before the power associated with data transport became a problem).
-
-Hence getting the data flowing smoothly through the computer, all the way from permanent storage
-to processing, is key to performance.
-An important way to deal with latency is the use of caches. Some are fully managed in hardware,
-like the caches between CPU and RAM memory, while others are managed in software, e.g., file
-systems also have a caching mechanism.
-It is important to ensure that those caches can work efficiently, and that requires:
-
-*   predictable data accesses, so that prefetching mechanisms can fetch data into the cache
-    before it is needed so that part of the latency can be hidden, and
-*   data accesses in sufficiently large chunks to avoid that data in caches is never used and
-    hence wasted and so that the effective bandwidth is not too much reduced by latency.
-    If you'd fetch individual 4-byte numbers from RAM memory and if the memory latency would
-    be 100ns and if there would be no way to have those data accesses overlap as you cannot
-    predict what the next piece of data would be, then you effectively get at most a bandwidth of
-    4 bytes / 100ns / 1024^3 = 0,037 GByte/s which is only a fraction of the bandwidth 
-    one can get from RAM memory. 
-
-Random access to small blocks of data is bad at all levels in computers, not only supercomputers. 
-Only the definition of "small" varies depending on the type of memory or storage. For RAM memory
-"small" is on the order of a cache line or 64 bytes on many popular CPUs, for permanent storage
-"small" is measured in kilobytes or even 10s or 100s of kilobytes for shared parallel file systems.
-We haven't discussed the architecture of main memory in much detail, but there also streaming is 
-important to get the fastest performance as internally memory is also accessed and buffered in
-larger blocks than a single request, and a subsequent request to data that is already in that 
-larger buffer will be quicker than an access to data that is not.
-
-This is also not a new message. Some level of streaming has been important in supercomputers ever
-since the 70s, and when it comes to permanent storage it has been important on PCs ever since the 
-first PCs were build. One may have the impression that it has become less important with modern
-flash memory based SSDs, but that is only partly true. The latency is extremely small compared to
-any storage device that uses mechanically moving parts, but even then if you only access data
-through small files with size in the order of kilobytes so that the caching mechanisms in file
-systems cannot work, you will only reach a fraction of the theoretical bandwidth of those 
-devices, and this again becomes more and more pronounced with every new generation as the 
-peak bandwidth of SSDs improves quickly while the latency stays about the same. 
 
 
 ## Parallelism
@@ -85,7 +37,7 @@ and became essential for floating point performance with the Pentium 4 processor
 The first regular PCs with more than one core appeared already in 2006, and nowadays 4 cores or more
 are common in even laptops and the cheapest smartphones.
 
-In PCs single thread performance still improves over every generation but at the expense of steeply
+In PCs single thread performance still improves with every generation but at the expense of steeply
 rising power consumption. In servers and supercomputers the single thread performance has been 
 stagnating for several years already as they are more optimised for performance per Watt. Even though
 every new generation of core claims to do more work per clock cycle (better instruction level parallelism), 
@@ -136,5 +88,55 @@ memory parallel computing on that hierarchy is for many codes also important for
 One may of course wish that it would be different, but in practice some understanding of the
 hardware architecture is needed even if you are only using parallel computers and not programming
 them.
+
+
+## Streaming
+
+We have already mentioned several problems with data access on computers, not only supercomputers.
+
+*   Data access requires a lot of power. The further the data is from the processing units, the
+    more power it costs to get the data to the processing unit. But unfortunately we can only
+    store a limited amount of data really close to a processing unit.
+*   The further the memory is from the processing element, the higher the latency to get it 
+    there to process which was the main reason why a memory hierarchy was created and 
+    cache memory was introduced (as it was introduced
+    long before the power associated with data transport became a problem).
+
+Hence getting the data flowing smoothly through the memory hierarchy in the computer, 
+all the way from permanent storage
+to processing, is key to performance.
+An important way to deal with latency is the use of caches. Some are fully managed in hardware,
+like the caches between CPU and RAM memory, while others are managed in software, e.g., file
+systems also have a caching mechanism.
+It is important to ensure that those caches can work efficiently, and that requires:
+
+*   predictable data accesses, so that prefetching mechanisms can fetch data into the cache
+    before it is needed so that part of the latency can be hidden, and
+*   data accesses in sufficiently large chunks to avoid that data in caches is never used and
+    hence wasted and so that the effective bandwidth is not too much reduced by latency.
+    If you'd fetch individual 4-byte numbers from RAM memory and if the memory latency would
+    be 100ns and if there would be no way to have those data accesses overlap as you cannot
+    predict what the next piece of data would be, then you effectively get at most a bandwidth of
+    4 bytes / 100ns / 1024^3 = 0,037 GByte/s which is only a fraction of the bandwidth 
+    one can get from RAM memory. 
+
+Random access to small blocks of data is bad at all levels in computers, not only supercomputers. 
+Only the definition of "small" varies depending on the type of memory or storage. For RAM memory
+"small" is on the order of a cache line or 64 bytes on many popular CPUs, for permanent storage
+"small" is measured in kilobytes or even 10s or 100s of kilobytes for shared parallel file systems.
+We haven't discussed the architecture of main memory in much detail, but there also streaming is 
+important to get the fastest performance as internally memory is also accessed and buffered in
+larger blocks than a single request, and a subsequent request to data that is already in that 
+larger buffer will be quicker than an access to data that is not.
+
+This is also not a new message. Some level of streaming has been important in supercomputers ever
+since the 70s, and when it comes to permanent storage it has been important on PCs ever since the 
+first PCs were build. One may have the impression that it has become less important with modern
+flash memory based SSDs, but that is only partly true. The latency is extremely small compared to
+any storage device that uses mechanically moving parts, but even then if you only access data
+through small files with size in the order of kilobytes so that the caching mechanisms in file
+systems cannot work, you will only reach a fraction of the theoretical bandwidth of those 
+devices, and this again becomes more and more pronounced with every new generation as the 
+peak bandwidth of SSDs improves quickly while the latency stays about the same. 
 
 

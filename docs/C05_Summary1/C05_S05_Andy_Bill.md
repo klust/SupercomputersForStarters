@@ -59,7 +59,7 @@ improve the generated code, but the reality is that gathering that information a
 using it properly to improve the generated code is too expensive and cumbersome. 
 Abstracting away too much of the memory system is also not a good idea as making
 proper use of the memory hierarchy is essential for performance and one cannot expect
-compilers to do be able to do the necessary code transformations on their own.
+compilers to be able to do the necessary code transformations on their own.
 Integrating with code written in other programming languages that make it easier
 to write high-performance library routines is also very cumbersome.
 And getting garbage collection to work well in a distributed memory context also
@@ -135,7 +135,7 @@ that performance growth will have to come from better algorithms and better soft
 ## And a non-solution...
 
 There may be a lot of discussion today about how quantum computers or computers with optical
-components will solve all problems. This is just discussion by the hopeful. The reality today
+components will solve all problems. This is just a discussion by the hopeful. The reality today
 is that the quantum computer is still looking for an application in which it will excel,
 and currently needs to be attached to a rather powerful traditional computer also 
 simply to turn the information that it produces in something useful. The cooling needed

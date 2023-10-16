@@ -6,16 +6,16 @@ In the early 60s computers were still mostly build from individual transistors.
 There were already smaller slower and bigger faster computers, but architectures
 differed vastly. Powers of two for number of bits, or binary number representations
 were not yet standard. The first programming languages, Fortran for technical computing
-and Cobol for business computingv, already existed.
+and Cobol for business computing, already existed.
 
 In the late 60s and early 70s computer were build from 100s or 1000s of small
-integrated circuits (thoguh some already appeared earlier). In this era
+integrated circuits (though some already appeared earlier). In this era
 we saw smaller minicomputers and large mainframes. The minicomputers were 
 more scaled-down versions of the mainframes.
 
 By the second half of the 70s a very specific supercomputer architecture that was
-not very well suited for general computing appeared on the market: the vector computers
-build by Cray and CDC. Specialised hardware meant that software also had to be
+not very well suited for general computing appeared on the market: The vector computers
+built by Cray and CDC. Specialised hardware meant that software also had to be
 adapted: The compilers did need some assistance to generate proper vector code,
 and the first numeric libraries that helped exploit the vector architecture also
 appeared. 
@@ -24,7 +24,7 @@ By the second half of the 80s the next big paradigm shift showed up. It had beco
 prohibitively expensive to design supercomputer hardware. Vector machines were still
 fairly popular, but keeping developing them had become very expensive, while a market
 for smaller workstations that offered decent performance for the time appeared. 
-Hence labs and Intel started to experiment with building supercomputers that would
+Hence research labs and Intel started to experiment with building supercomputers that would
 reuse some of that workstation hardware. The first computer of that kind was probably
 the Cosmic Cube developed at Caltech which was based not even on a workstation
 processor but the two-chip 8086/8087 combo that was also used in personal computers.
@@ -56,7 +56,7 @@ investing in their home-grown interconnect technologies and still doing so today
 though Cray has been bought by HPE. One can argue though that the most recent Cray network
 technology, called SlingShot, is largely derived from Ethernet with some customisations that 
 are in fact also partly software. More than ever before does the system and application 
-software make the supercomputer: programming models implemented in libraries and
+software make the supercomputer: Programming models implemented in libraries and
 compilers to deal with distributed computing, parallel file systems to turn huge arrays
 of disks and servers into a high bandwidth file system capable of efficiently serving
 multi-terabyte data files to applications, applications that exploit all levels of
@@ -73,7 +73,7 @@ is easy to correct errors afterwards, and the cost of distributing it is low com
 the costs for hardware. As it is easy to continue improving software it is possible to
 upgrade a system and make it better during its lifetime.
 
-It is also largely the software that makes a supercomputer still a different infrastructure
+It is also largely the software that ensures that a supercomputer is still a different infrastructure
 from a server farm or a cloud infrastructure (though there is one element, the interconnect, that 
 still remains very important and tend to differ from those infrastructures also).
 Supercomputers focus on latency and staying close to "bare metal" to be able to get the

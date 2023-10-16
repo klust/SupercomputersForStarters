@@ -8,7 +8,7 @@ The performance of a computer cannot be understood from a single parameter. Inst
 parameters characterise the performance of computer. The clock speed of a CPU is only one
 of those parameters. There are also many lantencies that need to be taken into account:
 memory latencies at the various levels of the memory hierarchy and of storage, communication
-latency, but if you would study into more detail then is possible in these lecture notes how
+latency, but if you would study into more detail than is possible in these lecture notes how
 to obtain maximal performance from a computer, also latencies in instruction execution.
 And there is also the bandwidth of several components that has to be taken into account:
 bandwidth to the various levels of the memory hierarchy and to storage, bandwidth between
@@ -25,7 +25,7 @@ and speed of signals in copper wires is just one of those limitations.
 The growth of the bandwidth of memory, disks and network connections tends to be slower
 than the growth of the theoretical peak performance of a computer system.
 
-As a result of these restrictions it is simply not possible to build a supercomputer were
+As a result of these restrictions, it is simply not possible to build a supercomputer were
 all these parameters would be, e.g., 100 times better than in your PC or smartphone so that your PC software
 would simply run and run 100x faster. 
 In fact, the opposite may be true. For some applications a High-end PC is unbeatable because of 
