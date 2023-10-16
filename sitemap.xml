@@ -16,6 +16,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://klust.github.io/SupercomputersForStarters/tags/</loc>
+         <lastmod>2023-10-16</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://klust.github.io/SupercomputersForStarters/C01_Introduction/</loc>
          <lastmod>2023-10-16</lastmod>
          <changefreq>daily</changefreq>
@@ -312,6 +317,11 @@
     </url>
     <url>
          <loc>https://klust.github.io/SupercomputersForStarters/C09_Conclusions/</loc>
+         <lastmod>2023-10-16</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://klust.github.io/SupercomputersForStarters/tags/</loc>
          <lastmod>2023-10-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
