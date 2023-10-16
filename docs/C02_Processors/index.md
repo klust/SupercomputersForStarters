@@ -9,7 +9,7 @@
 -   [Distributed memory computing](C02_S07_Distributed_memory.md)
 -   [Parallelism in a modern (super)computer](C02_S08_Modern_supercomputer.md)
 -   [Node architecture](C02_S09_Node_architecture.md)
--   [Fast (past) evolution](CC02_S10_Fast_evolution.md)
+-   [Fast (past) evolution](C02_S10_Fast_evolution.md)
 -   [An important difference  between a PC and a supercomputer...](C02_S11_Difference.md)
 -   [Lessons learnt](C02_S12_Lessons_learnt.md)
 -   [Further reading](C02_S13_Further_reading.md)
