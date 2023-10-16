@@ -15,6 +15,7 @@
         -   Article ["AVX10/128 is a silly idea and should be completely removed from the specification"](https://chipsandcheese.com/2023/10/11/avx10-128-is-a-silly-idea-and-should-be-completely-removed-from-the-specification/)
             also contains nice information about the evolution of vector instruction sets in
             the x86 architecture.
+    -   [YouTube recording of a talk on the history of vector instructions in x86](https://www.youtube.com/watch?v=hcQbZpt1V0E)
 -   Interconnects to link processor packages together, or dies in a package,
     preserving global memory:
     -   [UPI - Intel Ulta Path Interconnect on WikiPedia](https://en.wikipedia.org/wiki/Intel_Ultra_Path_Interconnect)
@@ -22,3 +23,5 @@
     -   [UCIe - Unified Chiplet Interconnect Express](https://www.uciexpress.org/)
     -   [AMD Infinity Fabric](https://www.amd.com/en/technologies/infinity-architecture)
         -   [Very technical article on WikiChip](https://en.wikichip.org/wiki/amd/infinity_fabric)
+-   [YouTube playlist for this course](https://www.youtube.com/playlist?list=PL55zlrFQxxWaMJWK8TiSqYo4yAgizY70k) 
+    (with many of the videos for other chapters of these notes)
