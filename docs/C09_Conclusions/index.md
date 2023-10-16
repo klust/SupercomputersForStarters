@@ -1,3 +1,8 @@
+---
+tags:
+-   Julia
+---
+
 # Conclusions
 
 ## Cost-concious computing

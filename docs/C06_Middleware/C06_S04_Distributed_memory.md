@@ -1,3 +1,11 @@
+---
+tags:
+-   distributed memory
+-   MPI
+-   PGAS
+-   Julia
+---
+
 # Distributed memory supercomputing
 
 Automatic strategies through the compiler have never really made it past

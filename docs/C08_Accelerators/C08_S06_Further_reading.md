@@ -1,4 +1,18 @@
-# Further reading
+---
+tags:
+-   CUDA
+-   ROCm
+-   HIP
+-   oneAPI
+-   OpenCL
+-   OpenACC
+-   OpenMP
+-   SYCL
+-   Kokkos
+-   RAJA
+---
+
+# Further reading on accelerators
 
 -   AMD GPUs
   

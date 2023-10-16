@@ -1,3 +1,11 @@
+---
+tags:
+-   CUDA
+-   vector accelerator
+-   matrix accelerator
+-   FPGA
+---
+
 # What are accelerators?
 
 ## In short 

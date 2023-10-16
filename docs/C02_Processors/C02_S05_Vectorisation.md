@@ -1,3 +1,8 @@
+---
+tags:
+-   vector instructions
+---
+
 # Data parallelism through vector computing
 
 Modern superscalar execution, with instruction reordering and other 

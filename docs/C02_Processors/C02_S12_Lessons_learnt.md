@@ -1,3 +1,11 @@
+---
+tags:
+-   shared memory
+-   distributed memory
+-   ILP (Instruction Level Parallelism)
+-   vector instructions
+---
+
 # Lessons learnt
 
 We have seen that there are four levels of parallelism in supercomputer, and 

@@ -1,3 +1,10 @@
+---
+tags:
+-   shared memory
+-   OpenMP
+-   Julia
+---
+
 # Middleware for shared memory computing
 
 When discussing shared memory parallelism in the 
