@@ -1,3 +1,9 @@
+---
+tags:
+-   pipelined execution
+-   ILP (Instruction Level Parallelism)
+---
+
 # Instruction level parallelism 1: Pipelining
 
 Since different steps in the instruction execution process use different parts 

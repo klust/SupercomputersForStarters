@@ -1,3 +1,9 @@
+---
+tags:
+-   superscalar execution
+-   ILP (Instruction Level Parallelism)
+---
+
 # Instruction level parallelism 2: Superscalar processing
 
 A second way to improve the instruction throughput in a processor is to simply

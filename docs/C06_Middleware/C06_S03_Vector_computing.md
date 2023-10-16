@@ -1,3 +1,9 @@
+---
+tags:
+-   vector computing
+-   OpenMP
+---
+
 # Vector computing
 
 Automatic vectorization in compilers is moderately successful. The main problem

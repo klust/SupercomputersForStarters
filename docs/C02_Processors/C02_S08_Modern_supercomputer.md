@@ -1,3 +1,11 @@
+---
+tags:
+-   shared memory
+-   distributed memory
+-   ILP (Instruction Level Parallelism)
+-   NUMA
+---
+
 # Parallelism in a modern (super)computer
 
 A modern supercomputer combines all those levels of parallelism

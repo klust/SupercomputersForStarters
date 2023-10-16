@@ -1,3 +1,17 @@
+---
+tags:
+-   CUDA
+-   HIP
+-   OpenMP
+-   OpenACC
+-   SYCL
+-   oneAPI
+-   OpenCL
+-   Kokkos
+-   RAJA
+-   Alpaka
+---
+
 # Accelerator programming
 
 We will restrict ourselves to GPGPU programming as these are currently the most

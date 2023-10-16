@@ -1,3 +1,11 @@
+---
+tags:
+-   core
+-   shared memory
+-   SMP
+-   NUMA
+---
+
 # Shared-memory multiprocessing
 
 When making faster processors doesn't deliver enough gains to satisfy the

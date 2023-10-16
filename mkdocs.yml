@@ -42,8 +42,8 @@ nav:
     - Node architecture: C02_Processors/C02_S09_Node_architecture.md
     - Fast (past) evolution: C02_Processors/C02_S10_Fast_evolution.md
     - An important difference...: C02_Processors/C02_S11_Difference.md
-    - Lessons learnt: C02_Processors/C02_S12_Lessons_learnt.md
-    - Further reading: C02_Processors/C02_S13_Further_reading.md
+    - "Processors: Lessons learnt": C02_Processors/C02_S12_Lessons_learnt.md
+    - Further reading on processors: C02_Processors/C02_S13_Further_reading.md
   - The memory hierarchy:
     #- C03_Memory/index.md # Comment out to avoid getting this in the next/previous page navigation.
     - The memory performance gap: C03_Memory/C03_S01_Performance_gap.md
@@ -57,7 +57,7 @@ nav:
     - Parallel file systems: C04_Storage/C04_S03_Parallel_filesystems.md
     - A storage revolution?: C04_Storage/C04_S04_Revolution.md
     - To remember: C04_Storage/C04_S05_To_remember.md
-    - Further reading: C04_Storage/C04_S06_Further_reading.md
+    - Further reading on storage: C04_Storage/C04_S06_Further_reading.md
   - Putting it all together:
     #- C05_Summary1/index.md # Comment out to avoid getting this in the next/previous page navigation.
     - Scaling: C05_Summary1/C05_S01_Scaling.md
@@ -74,7 +74,7 @@ nav:
     - Vector computing: C06_Middleware/C06_S03_Vector_computing.md
     - Distributed memory: C06_Middleware/C06_S04_Distributed_memory.md
     - Examples: C06_Middleware/C06_S05_Examples.md
-    - Further reading: C06_Middleware/C06_S06_Further_reading.md
+    - Further reading on middleware: C06_Middleware/C06_S06_Further_reading.md
   - What can we expect?:
     #- C07_Expectations/index.md # Comment out to avoid getting this in the next/previous page navigation.
     - Speed-up: C07_Expectations/C07_S01_Speedup.md
@@ -88,15 +88,20 @@ nav:
     - CPUs with accelerator features: C08_Accelerators/C08_S03_CPUs_accelerator_features.md
     - Accelerator programming: C08_Accelerators/C08_S04_Programming_accelerators.md
     - Status of GPU computing: C08_Accelerators/C08_S05_Status_GPU_computing.md
-    - Further reading: C08_Accelerators/C08_S06_Further_reading.md
+    - Further reading on accelerators: C08_Accelerators/C08_S06_Further_reading.md
   - Conclusions:
     - C09_Conclusions/index.md
+  - Tags index: tags.md
 
 plugins:
   # show revision date at bottom of each page
   #- git-revision-date-localized
   # necessary for search to work
   - search
+  # Tag plugin
+  - tags:
+      #enabled: false
+      tags_file: tags.md
 
 markdown_extensions:
   # Attributes (e.g., for lazy loading)

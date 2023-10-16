@@ -1,3 +1,10 @@
+---
+tags:
+-   distributed memory
+-   MPI
+-   Beowulf
+---
+
 # Distributed memory computing
 
 NUMA shared memory machines also have their scaling limits .
