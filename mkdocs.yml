@@ -10,23 +10,27 @@ theme:
     #- navigation.tabs
     - navigation.top
     - navigation.indexes
+    # Add links to the next and previous page.
+    # Unfortunately this feature is rather limited and it is not easily possible
+    # to skip overview pages.
+    - navigation.footer
     - header.autohide
     - toc.follow
   palette:
     - primary: black
 
 nav:
-  - Home: index.md
+  - Table of contents: index.md
   - Preliminary words: C00_S00_preliminary.md
   - Introduction:
-    - C01_Introduction/index.md
+    #- C01_Introduction/index.md # Comment out to avoid getting this in the next/previous page navigation.
     - Goals: C01_Introduction/C01_S01_Goals.md
     - Why supercomputing?: C01_Introduction/C01_S02_Why.md
     - What it is not: C01_Introduction/C01_S03_What_it_is_not.md
     - A compartmentalised supercomputer: C01_Introduction/C01_S04_Compartmentalised.md
     - Overview of the notes: C01_Introduction/C01_S05_Overview.md
   - Processors for supercomputers:
-    - C02_Processors/index.md
+    #- C02_Processors/index.md # Comment out to avoid getting this in the next/previous page navigation.
     - Introduction: C02_Processors/C02_S01_Intro.md
     - A basic CPU: C02_Processors/C02_S02_Basic_CPU.md
     - ILP I - Pipelining: C02_Processors/C02_S03_ILP_I_Pipelining.md
@@ -41,13 +45,13 @@ nav:
     - Lessons learnt: C02_Processors/C02_S12_Lessons_learnt.md
     - Further reading: C02_Processors/C02_S13_Further_reading.md
   - The memory hierarchy:
-    - C03_Memory/index.md
+    #- C03_Memory/index.md # Comment out to avoid getting this in the next/previous page navigation.
     - The memory performance gap: C03_Memory/C03_S01_Performance_gap.md
     - The memory pyramid: C03_Memory/C03_S02_Memory_pyramid.md
     - AMD Rome: C03_Memory/C03_S03_AMD_Rome.md
     - AMD Milan: C03_Memory/C03_S04_AMD_Milan.md
   - Storing data on Supercomputers:
-    - C04_Storage/index.md
+    #- C04_Storage/index.md # Comment out to avoid getting this in the next/previous page navigation.
     - Introduction: C04_Storage/C04_S01_Introduction.md
     - Problems: C04_Storage/C04_S02_Problems.md
     - Parallel file systems: C04_Storage/C04_S03_Parallel_filesystems.md
@@ -55,7 +59,7 @@ nav:
     - To remember: C04_Storage/C04_S05_To_remember.md
     - Further reading: C04_Storage/C04_S06_Further_reading.md
   - Putting it all together:
-    - C05_Summary1/index.md
+    #- C05_Summary1/index.md # Comment out to avoid getting this in the next/previous page navigation.
     - Scaling: C05_Summary1/C05_S01_Scaling.md
     - Dennard scaling: C05_Summary1/C05_S02_Dennard_scaling.md
     - Transistor cost: C05_Summary1/C05_S03_Cost_transistor.md
@@ -64,7 +68,7 @@ nav:
     - Software, not hardware: C05_Summary1/C05_S06_Software_not_hardware.md
     - Building up the supercomputer: C05_Summary1/C05_S07_Building_up_the_supercomputer.md
   - Middleware:
-    - C06_Middleware/index.md
+    #- C06_Middleware/index.md # Comment out to avoid getting this in the next/previous page navigation.
     - Introduction: C06_Middleware/C06_S01_Introduction.md
     - Shared memory: C06_Middleware/C06_S02_Shared_memory.md
     - Vector computing: C06_Middleware/C06_S03_Vector_computing.md
@@ -72,13 +76,13 @@ nav:
     - Examples: C06_Middleware/C06_S05_Examples.md
     - Further reading: C06_Middleware/C06_S06_Further_reading.md
   - What can we expect?:
-    - C07_Expectations/index.md
+    #- C07_Expectations/index.md # Comment out to avoid getting this in the next/previous page navigation.
     - Speed-up: C07_Expectations/C07_S01_Speedup.md
     - Matrix multiplication: C07_Expectations/C07_S02_Matrix_multiplication.md
     - Speed-up and efficiency: C07_Expectations/C07_S03_Scaling.md
     - Conclusions: C07_Expectations/C07_S04_Conclusions.md
   - Accelerators:
-    - C08_Accelerators/index.md
+    #- C08_Accelerators/index.md # Comment out to avoid getting this in the next/previous page navigation.
     - What are accelerators?: C08_Accelerators/C08_S01_What_are_accelerators.md
     - Offloading: C08_Accelerators/C08_S02_Offloading.md
     - CPUs with accelerator features: C08_Accelerators/C08_S03_CPUs_accelerator_features.md
@@ -87,7 +91,6 @@ nav:
     - Further reading: C08_Accelerators/C08_S06_Further_reading.md
   - Conclusions:
     - C09_Conclusions/index.md
-
 
 plugins:
   # show revision date at bottom of each page
