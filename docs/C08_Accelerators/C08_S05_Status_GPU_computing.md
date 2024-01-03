@@ -224,50 +224,66 @@ In this figure we combine 4 Grace Hopper packages in a single node and have chos
 package directly to the interconnect for additional bandwidth.
 
 
-### Fully unified CPU and GPU: AMD MI300
+### Fully unified CPU and GPU: AMD MI300A
 
-The AMD MI250X is really just a transition to the MI300 series, 
+The AMD MI250X is really just a transition to the MI300 "Antares" series, 
 that goes one step further beyond the integration
 that the NVIDIA Grace Hopper architecture offers. 
-In that generation, expected to come to market in
-late 2023, the CPU and GPU
-will merge completely and share on-package memory. 
+In that generation, announced in December 2023, 
+one of the variants (the MI300A) merges the CPU and GPU completely,
+as CPU cores and GPU Compute Units are integrated in a single package and share 
+the memory controllers and on-package memory.
 In fact, the reality is that
 memory outside the package is also starting to limit CPU performance as an increasing number
 of CPU codes becomes memory bandwidth bound, so even for the CPU it makes sense to switch
-to smaller but much higher bandwidth memory in the package. The AMD MI300 
-will fully integrate the CPU and GPU chiplets and memory controllers with memory in a single
+to smaller but much higher bandwidth memory in the package. 
+
+The AMD MI300A
+fully integrates the CPU and GPU chiplets and memory controllers with memory in a single
 package. 
 Whereas the MI250x has some level of cache coherency but still needs to rely on page transfers in
-most cases, in the MI300 generation the CPU and GPU memory
+most cases, in the MI300A the CPU and GPU memory
 is fully unified (physical and virtual), with both sharing the same memory controllers and memory, which will enable
 to fully eliminate redundant memory copies at least when going between CPU and GPU in the same package.
 The MI300A was first mentioned at the AMD Financial Analyst Day in June 2022 and at 
 [CES'2023 (early January 2023)](https://youtu.be/OMxU4BDIm4M?t=5382),
 where a full package was shown, but still with very little detail.
-It was announced the one MI300 package will combine a powerful GPU with 24 CPU cores 
-(presumably 3 Zen4 chiplets) and 8 HBM3 modules for a total of 128 GB RAM. The chip
-will consists of 13 chiplets stacked in two layers, with 4 chiplets at the bottom (presumably 
-the memory controllers as they produce less heat) and 9 chiplets at the top 
-(which could be 3 CPU chiplets and 6 CDNA3 GPU dies?). 
-A supercomputer node based on this
-chip could look a bit like
+It was launched in AMD's [AI event on December 6, 2023](https://www.youtube.com/watch?v=tfSZqjxsr0M&t=6051s).
+The [MI300A](https://www.amd.com/en/products/accelerators/instinct/mi300/mi300a.html) 
+combines 24 zen4 CPU cores with 228 CDNA3 GPU Compute Units in a single package.
+The package contains 13 chiplets stacked into two layers. 
+The bottom layer contains 4 chiplets with the memory controllers and 
+last level cache. These 4 chiplets connect to 8 HBM3 memory modules 
+offering a total of 128 GB of memory with a bandwidth of 5.3 TB/s.
+On top of this are 6 GPU chiplets with 38 Compute Units each,
+and 3 CPU chiplets with 8 zen4 cores each.
+The bandwidth between these 13 chiplets is much higher than between the MI250X
+chiplets, enabling the whole package to function as a single GPU.
+
+The MI300A will be used as the basis of the El Capitan exascale supercomputer
+installed at Lawrence Livermore National Laboratory in the USA. 
+The basic design of the node is shown in the following picture:
 
 ![A MI300A supercomputer node](../img/C08_S05_05_MI300.jpg)
 
-Here we see four packages integrating one or more CPU chiplets, one or more GPU dies and
-memory in a single packages. The four packages have an all-to-all connection likely using
+Here we see four MI300A packages. These four packages have an all-to-all connection using
 a new generation of InfinityFabric, and each GPU packages also connects to a network card
-using PCIe. It is expected that the techniques to connect dies will have evolved enough
-that the GPU dies in a single package will work as a single GPU. In fact, those improved
-connections will also be needed to have equal access to memory from the GPU and CPU chiplets.
+using PCIe.
 
-It does look though that the total memory capacity of such a node may be rather limited, unless
-there would be some unannounced feature to attach slower external memory, e.g., through additional
-DIMM slots or through (even slower) CXL memory boards. But for applications that don't need those
+The total memory capacity of such a node is rather limited. 
+It is not clear why AMD chose to use the 16 GB memory packages rather than the 
+24 GB ones (which would have resulted in 192 GB of memory per package), 
+as the latter are used in the MI300X which is the discrete, PCIe-attached
+version of the MI300 GPUs. It may be for cost reasons, or simply because the
+verification and production of MI300A started a few months before MI300X and the 24 GB
+packages may not have been available yet.
+But for applications that don't need those
 large memory capacities and scale nicely over NUMA domains and then further over distributed memory
 nodes, the more uniform architecture will certainly make life easier and offer great performance
 benefits.
+
+In Europe, HLRS has ordered a small system based on MI300A GPUs to prepare for a bigger
+exascale system using a future AMD GPU later in the decade.
 
 Intel was also working on a similar design, code-named Falcon Shores that was intended to hit
 the market in 2024, but in an announcement in March 2023 it was said that the chip was postponed
