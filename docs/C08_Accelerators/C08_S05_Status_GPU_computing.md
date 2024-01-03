@@ -111,21 +111,23 @@ that offered by the connections between the CPU and GPU. However, not all system
 such a link between graphics cards. A CPU was connected to the GPUs using PCIe, and
 similarly a network interface would also be connected to a CPU using PCIe.
 
-Later designs tried to move the network interconnect closer to the GPUs, as they
-perform the majority of the calculations and hence also contain the data that should
-be send to other nodes. A typical 4-GPU node based on the NVIDIA Ampere A100 GPU launched
+A typical 4-GPU node based on the NVIDIA Ampere A100 GPU launched
 in 2020 would look similar to:
 
 ![2020 NVIDIA A100](../img/C08_S05_02_2020_A100.jpg)
 
 There are many variants of quad GPU designs with the A100 GPU, with single and dual
-socket CPU servers. However, it is often advantageous to have all GPUs connected to
-a single CPU, but only the single socket AMD Epyc CPU has enough PCIe connections
-to do so and still be able to also attach one or two network interface cards.
-The above design solves this in a different way. It uses two PCIe switches (the magenta
-circles), and each PCIe switch connects the CPU to two of the GPUs and a network 
-interface card (the latter denoted by the dark purple line). This also brings the
-network very close to the GPU. 
+socket CPU servers. However, as some 2020-era CPUs didn't have enough PCIe lanes
+to connect 4 GPUs, 2 network cards and in some cases also some local fast SSDs
+on two sockets (let alone a single CPU socket),
+a different solution was needed. 
+The above design solves this by using two PCIe switches (the magenta
+circles), and each PCIe switch connects the CPU to two of the GPUs. 
+In the above design two network cards are used per node, one connected to
+each of the CPU sockets. Some variants of the design will connect the network 
+cards and/or NVMe SSDs (a type of SSD that uses the PCIe interface for fast data
+transfer) also to the switches for better direct data transfer between 
+the interconnect and the GPUs and/or the SSDs and the GPUs.
 
 
 ### Cache-coherent interconnect between CPU and GPU
