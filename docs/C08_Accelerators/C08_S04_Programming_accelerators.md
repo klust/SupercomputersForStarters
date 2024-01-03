@@ -152,7 +152,7 @@ The OpenACC standard is currently controlled by the OpenACC Organization, and th
 count other companies that develop GPUs among its members, it still seems rather dominated by
 NVIDIA which may explain why other companies are somewhat hesitant to pick up the standard.
 The standard is at the time of writing of this section at version 3.3, released in November 2022,
-but is updated almost annually in November.
+but is updated almost annually in November (there was no update in 2023).
 
 OpenACC is well supported on NVIDIA hardware through the NVIDIA HPC compilers (which is the 
 new name of the PGI compilers adopted after the integration of PGI in NVIDIA). GCC offers some 

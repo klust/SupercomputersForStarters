@@ -31,11 +31,14 @@ One could consider data parallelism as a special case of task parallelism
 where each task is "operate on a particular part of the data". But OpenMP does
 offer some mechanisms for work distribution when used for data-parallel computing.
 
+<!-- TODO: Update version of OpenMP below in case of a new version. -->
 OpenMP is a fairly open standard. OpenMP directives are not vendor-specific. 
+OpenMP has been around since 1997, when shared memory computing was still a technology 
+mostly used in bigger servers and supercomputers. 
 The latest version at the last revision of this chapter is OpenMP 5.2, which was launched
-at the Supercomputing Conference in November 2021, but it has been around since 1997,
-when shared memory computing was still a technology mostly used in bigger servers and
-supercomputers. The standard nature implies that code
+at the Supercomputing Conference in November 2021, and version 6.0 of the standard
+is currently (early 2024) in the preview stage, aiming for a release at SC'24 in November 2024.
+The standard nature implies that code
 developed with one compiler with OpenMP support will also compile with another compiler as long
 as the code and the compilers adhere to the language standards and OpenMP standard. 
 
