@@ -82,5 +82,5 @@ that performance.
 
 So we do note a fast evolution. But it is not by accident that the comparison was with a computer from 2014.
 After that the evolution started to slow down a bit, but more about that later in the 
-chapter ["Putting it all together"](../../C05_Summary1)...
+chapter ["Putting it all together"](../C05_Summary1/index.md)...
 

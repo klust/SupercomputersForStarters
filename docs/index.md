@@ -1,6 +1,6 @@
 # Supercomputers for Starters
 
--   [Some preliminary words](C00_S00_preliminary)
+-   [Some preliminary words](C00_S00_preliminary.md)
 -   [Introduction](C01_Introduction/index.md)
     -   [Goals](C01_Introduction/C01_S01_Goals.md)
     -   [Why supercomputing](C01_Introduction/C01_S02_Why.md)
