@@ -14,7 +14,7 @@ one where multiple servers can be used concurrently to access a single file.
 This is called a parallel file system. 
 
 ??? "Popular examples and their use at the VSC"
-    -   [Lustre](https://www.lustre.org/) is probably the most used file parallel file system on large supercomputers.
+    -   [Lustre](https://www.lustre.org/) is probably the most used parallel file system on large supercomputers.
         It is used at KU Leuven, the VSC Tier-1 system Hortense at UGent and on the 
         [LUMI](https://lumi-supercomputer.eu/) system in Finland, a pre-exascale
         supercomputer project to which Belgium and Flanders participate.
@@ -56,7 +56,7 @@ the (simplified) setup for Lustre or BeeGFS:
   ![Setup of a parallel file system](../img/C04_S04_Parallel_filesystem_layout.png)
 </figure>
 
-A Lustre of BeeGFS system consists of three components, all connected via a high performance network
+A Lustre or BeeGFS system consists of three components, all connected via a high performance network
 (often the interconnect that is also used for MPI, etc.):
 
 -   File system clients run on all compute and login nodes of the cluster. Applications talk to the 
@@ -135,7 +135,7 @@ way to scale to supercomputer storage.
     can deal better with small files than a parallel file system can. It is, e.g., a 
     good file system for users who want to build their own Python or R installation.
 
-    The largest file system is a roughly 0.6 PB scratch file system. That uses 105
+    The largest file system is a roughly 0.7 PB scratch file system. That uses 120
     regular hard drives spread over 7 object servers for the storage of the data,
     and a number of SSDs for the metadata. The low latency of SSDs is very important
     to get good performance from the metadata servers, and again a broken SSD won't

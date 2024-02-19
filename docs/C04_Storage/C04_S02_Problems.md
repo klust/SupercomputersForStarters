@@ -55,11 +55,7 @@ RAID techniques used to increase the reliability of the storage system. However,
 the smallest amount of storage that can be allocated in a file system, it also implies that very small
 files will still take a lot of space on such a file system (the size of a block), though some file systems
 may have a solution for really small files. This can lead to a waste of space if many small files
-are used like that. The disk setup used at the UAntwerp HPC service until 2020 suffered from this problem.
-In fact, we once had a user who managed to store 36 bytes worth of data while consuming over 640 kiB on the file 
-system as each of the 5 numbers were written to a separate file, effectively using 128 kiB per number (the block
-size of that file system) and 512 bytes to store the directory information for each file. Now the first 
-IBM-compatible PCs had a memory limit of 640 kiB...
+are used like that.
 
 The second solution is to use a 2-level hierarchy. Big files are split in a special way in smaller files
 called objects that are then stored on smaller separate servers called the object servers. 
@@ -74,7 +70,8 @@ and how the files are used.
 
 ??? info "UAntwerp-specific"
     The supercomputer storage of the CalcUA facility of the University of Antwerp used the IBM Spectrum Scale
-    file system (then still known as GPFS) for its disk volumes. The scratch storage had a block size
+    file system (then still known as GPFS) for its disk volumes. 
+    The scratch storage on the system in use at UAntwerpen between 2015 and 2020 had a block size
     of 128 kiB. One user managed to store 36 bytes worth of data while consuming over 640 kiB on the file 
     system as each of the 5 numbers were written to a separate file, effectively using 128 kiB per number (the block
     size of that file system) and 512 bytes to store the directory information for each file. 
@@ -90,7 +87,7 @@ and how the files are used.
 
 On your PC, the storage sits both physically and logically very close to the processor. 
 The fastest SSDs, NVMe drives, are often even directly connected to the CPU, and on the
-M-series MAc this is even taken one step further, with part of the drive (the controller) 
+M-series Mac this is even taken one step further, with part of the drive (the controller) 
 integrated into the CPU (though this probably saves more on power consumption than it
 gives additional speed). Moreover, at the logical level, there is only one file system
 in between your program and the drive. The program talks directly to the OS which talks 
@@ -117,11 +114,11 @@ This comes with a number of consequences:
 
 -   Programs that open and close hundreds of small files in a short time may work slower than
     on a PC. This is particularly true if all data access comes from a single thread as your
-    program will be waiting for data all the time. That software also puts a very high load on\
+    program will be waiting for data all the time. That software also puts a very high load on
     the file systems of a supercomputer, to the extent that several supercomputer centres nowadays
     take measures to keep that software off the supercomputers.
 
--   Unpredictable file access patterns may make things even worse as any logic to prefetch data\
+-   Unpredictable file access patterns may make things even worse as any logic to prefetch data
     and hide latency will fail.
 
 One may wonder why supercomputers don't always provide local drives to cope with the slowness of
@@ -164,7 +161,7 @@ shared storage. There are many reasons:
     load, while the use suggested here, as a temporary buffer for the duration of a job, is precisely
     a scenario with a high write load. 
 
-    Replacing broken hardware is an issue, made worst because of the dense construction of a supercomputer.
+    Replacing broken hardware is an issue, made worse because of the dense construction of a supercomputer.
 
 One may wonder why local drives are so much more common in cloud infrastructure. The constraints in cloud
 infrastructure are different. 
@@ -176,6 +173,10 @@ infrastructure are different.
     large scale, with often an even more custom hardware design, and they are simply overprovisioned.
     E.g., a server may have two SSD drives where the software will simply switch over to the second
     drive when the first one breaks, but the broken one will never be replaced.
+
+-   The density of material is usually also lower than in a supercomputer as they are not so much built
+    for the lowest of the lowest latency. Typical work done on cloud infrastructure is less latency 
+    sensitive than parallel computations done on a supercomputer.
 
 -   The management model of a cloud infrastructure is also very different. Cloud is based on virtualisation
     technologies to isolate users, and let users built a virtual network of servers in which regular Linux
