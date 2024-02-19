@@ -29,7 +29,7 @@ reducing the component size, and in fact chip designers usually need to chose be
 a slight speed increase and a slight lowering of the power consumption per transistor.
 As a result of this designers need to look much harder for architectural improvements than
 before for further speed increases.
-The breakdown of dennard scaling is also part of the reason why latencies of various components
+The breakdown of Dennard scaling is also part of the reason why latencies of various components
 and subsystems do no longer improve much.
 
 Transferring data has become the major source of power consumption in computers, more than

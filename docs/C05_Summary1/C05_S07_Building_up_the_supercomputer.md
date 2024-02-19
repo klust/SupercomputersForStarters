@@ -127,7 +127,7 @@ well designed to reduce the amount of fragile cables, is the Cray EX architectur
 The HPE Cray EX architecture is currently (2023-2024) used for some of the
 biggest supercomputers in the world, including the 3 first US exascale systems Frontier, Aurora and El Capitan
 and the pre-exascale system Perlmutter, the European pre-exascale system LUMI
-and the Swiss system Alps that will be extended with GPU nodes in 2023.
+and the Swiss system Alps that will be extended with GPU nodes in 2024.
 
 ![Cray EX supercomputer](../img/C05_S07_09_Cray_EX.jpg)
 *Structure of the Cray EX supercomputer*

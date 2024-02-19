@@ -7,7 +7,7 @@ and we will now discuss each of them separately.
 ## Parallelism
 
 Parallelism is important at all levels in supercomputers.
-We have thoroughly discussed the 4 levels of parallelism in a the processing units in a supercomputer:
+We have discussed the 4 levels of parallelism in the processing units in a supercomputer extensively:
 Instruction Level Parallelism and vectorisation (and in fact, recently matrix computations) in the
 core, the use of multiple cores in shared memory setup, and distributed memory parallel computing.
 We've also seen that parallelism is important in the design of storage systems for supercomputers,
@@ -58,8 +58,8 @@ levels tend to be organised per core while the third level is a cache that is sh
 if not all cores, and then often two or more levels of RAM memory. Many supercomputers are built
 out of building blocks with two processor sockets and accessing memory that is physically attached
 to the other socket is slower than accessing local main memory, but even within a socket not all
-memory might be equal. The latter is already the case on the AMD Epyc server processors and will
-also happen on some versions of the Intel Sapphire Rapids series that became available in early
+memory might be equal. The latter is already the case on the AMD Epyc server processors for some time and now
+also happens on some versions of the Intel Sapphire Rapids series that became available in early
 2023. PCs also have the same cache hierarchy, but the main memory has only one level unless you
 opt for some workstation-class systems that are really built using variants of processors for servers.
 
@@ -110,11 +110,11 @@ like the caches between CPU and RAM memory, while others are managed in software
 systems also have a caching mechanism.
 It is important to ensure that those caches can work efficiently, and that requires:
 
-*   predictable data accesses, so that prefetching mechanisms can fetch data into the cache
+*   Predictable data accesses, so that prefetching mechanisms can fetch data into the cache
     before it is needed so that part of the latency can be hidden, and
-*   data accesses in sufficiently large chunks to avoid that data in caches is never used and
+*   Data accesses in sufficiently large chunks to avoid that data in caches is never used and
     hence wasted and so that the effective bandwidth is not too much reduced by latency.
-    If you'd fetch individual 4-byte numbers from RAM memory and if the memory latency would
+*   E.g., if you'd fetch individual 4-byte numbers from RAM memory and if the memory latency would
     be 100ns and if there would be no way to have those data accesses overlap as you cannot
     predict what the next piece of data would be, then you effectively get at most a bandwidth of
     4 bytes / 100ns / 1024^3 = 0,037 GByte/s which is only a fraction of the bandwidth 
@@ -137,6 +137,8 @@ any storage device that uses mechanically moving parts, but even then if you onl
 through small files with size in the order of kilobytes so that the caching mechanisms in file
 systems cannot work, you will only reach a fraction of the theoretical bandwidth of those 
 devices, and this again becomes more and more pronounced with every new generation as the 
-peak bandwidth of SSDs improves quickly while the latency stays about the same. 
+peak bandwidth of SSDs improves quickly while the latency actually gets worse as more bits
+are stored per cell, and doesn't really change much over generation for a given number of
+bits per cell. 
 
 
