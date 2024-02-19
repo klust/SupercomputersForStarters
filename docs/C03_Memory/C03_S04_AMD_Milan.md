@@ -1,3 +1,10 @@
+---
+tags:
+-   LUMI
+-   Vaughan
+-   Hortense
+---
+
 # AMD Milan revisited
 
 The AMD Milan generation that succeeded the Rome generation offers a slight simplification

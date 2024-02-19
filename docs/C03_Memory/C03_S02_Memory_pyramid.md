@@ -31,6 +31,10 @@ The typical hierarchy for a regular CPu is depicted above.
     the disk as an additional storage space, but then one that we need to 
     manage ourselves in software.
 
+    Some supercomputers will offer several types of disk storage. Typically a smaller
+    volume based on SSD technology and a slower but larger volume based on regular
+    hard disks.
+
 Even this picture is still oversimplified. Processors have other types of small caches,
 but those are harder to exploit by our programming style so we should not really take
 them into account here. RAM memory may also exist out of multiple layers instead of the
@@ -38,6 +42,11 @@ one depicted in the picture.
 
 -   The Intel Xeon Max 9xxx series has 64 GB of high-bandwidth RAM on each socket and then
     up to 1 TB or more of lower bandwidth memory connected externally to the socket.
+
+    This chip is used in a small subsection of the EuroHPC pre-exascale system
+    [MareNostrum 5](https://www.bsc.es/ca/marenostrum/marenostrum-5)
+    (and were planned for the pre-exascale system Leonardo also but it is not
+    clear at the moment if they will be in the final machine).
 
 -   Recently for large memory computers, and especially for database systems, a new type
     of RAM package was proposed that is connected to an expansion card on the CXL-bus,

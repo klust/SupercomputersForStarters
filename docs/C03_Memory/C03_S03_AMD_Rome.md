@@ -1,3 +1,10 @@
+---
+tags:
+-   LUMI
+-   Vaughan
+-   Hortense
+---
+
 # AMD Rome revisited
 
 The older nodes of the UAntwerpen cluster Vaughan, the VSC Tier-1 system Hortense 
