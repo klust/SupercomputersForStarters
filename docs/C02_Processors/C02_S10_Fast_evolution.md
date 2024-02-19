@@ -45,8 +45,9 @@ measured in flops per second rather than kiloflops or megaflops per second (and 
 point emulation was probably on the order of 100-200 flops in double precision).
 The TRS-80 costed $400 (On the order of 2000 EURO in 2023 money) at launch without the monitor 
 and had 4 kB of ROM memory that stored the
-permanent software and 4 kB of RAM memory (but extensions up to first 16 kb and then 48 kB appeared quickly) 
-in its early version. The CPU ran at 1.7 MHz. The only permanent storage consisted
+permanent software and 4 kB of RAM memory in its early version 
+(but extensions up to first 16 kb and then 48 kB appeared quickly) 
+The CPU ran at 1.7 MHz. The only permanent storage consisted
 of tape which in fact was just a regular cassette that could also be used for music.
 
 ![AMD Rome CPU of Vaughan](../img/C02_S10_01_TRS80.jpg)
@@ -84,3 +85,5 @@ So we do note a fast evolution. But it is not by accident that the comparison wa
 After that the evolution started to slow down a bit, but more about that later in the 
 chapter ["Putting it all together"](../C05_Summary1/index.md)...
 
+!!! Note "More material"
+    -   [YouTube video comparing a Cray-1 with the iPhone 13](https://www.youtube.com/watch?v=MRPYi9pLaeQ)

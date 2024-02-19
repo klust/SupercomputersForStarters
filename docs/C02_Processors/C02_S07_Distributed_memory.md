@@ -31,14 +31,33 @@ The concept is shown in the following figure:
 The picture looks almost exactly as the one for NUMA shared memory, but there is one
 big difference: the nature of the network. The network cannot support direct memory
 access (and coherency of caches, something that we have not seen yet) as in the
-NUMA shared memory case, has a higher latency and lower bandwidth, but can
+NUMA shared memory case, and has a higher latency and lower bandwidth, but can
 economically cover longer distances. The network is used for communication via
 sending and receiving software-initiated messages. There is no joint global
 address space (at least not in hardware, some companies have tried to emulate
-that in software). There is an evolution towards interconnects with some limited
+that in software). 
+There is an evolution towards interconnects with some limited
 memory semantics that make it easier to create some kind of global address space,
 but not to the extent that it is as transparent to use as in the case of a 
 NUMA shared memory machine.
+
+??? Note "Virtual shared memory solutions"
+    Many research projects and startups have tried to emulate shared memory over
+    distributed memory cluster interconnects. Some software presented a virtual
+    machine to the OS, while other software solutions work more at the user level
+    and just try to present a shared memory to an application.
+
+    ScaleMP was a now defunct company that made a virtual shared memory machine
+    running over InfiniBand clusters. That software was also offered on the first
+    Tier-1 system of the Vlaams Supercomputer Centrum for those users who needed
+    more memory and a larger number of cores in shared memory than nodes at that
+    time could offer.
+
+    These technologies are not very important anymore today as the scalability
+    limits of shared memory, especially at the software level, can be reached
+    already on a single node.
+
+
 
 As there is no direct access to the memory of another node, it is also not possible
 to run a process across nodes. So an application will consist of multiple processes,
@@ -56,7 +75,7 @@ build powerful microprocessors that could evolve much faster than the large purp
 supercomputer processors (that also needed to shrink in size as the size became the
 limiting factor for the clock speed). The Cosmic Cube, built at Caltech in 1981
 using standard Intel processors similar to the ones used in the first IBM personal
-computer, was probably the first example. Intel build and commercialised an evolved
+computer, was probably the first example. Intel built and commercialised an evolved
 version of that design with their series of iPSC supercomputers. However, by 
 the '90s, the more traditional supercomputer builders also adopted this design,
 with, e.g., the IBM SP/1 and SP/2 that
@@ -65,7 +84,7 @@ Exemplar that used HP PA-RISC processors (which they also used in their workstat
 UNIX servers) and the Cray T3D based on DEC Alpha processors (again a processor for
 workstations and UNIX servers).
 
-!!! Note "Early distributed memory supercomputers in Belgium"
+??? Note "Early distributed memory supercomputers in Belgium"
     The department of computer science of the KU Leuven has operated two smaller
     computers from the iPSC series, basically to be able to develop code to then run
     on bigger supercomputers of that type elsewhere.
@@ -75,12 +94,14 @@ workstations and UNIX servers).
 Another evolution got triggered in the early '90s. In 1994 Linux 1.0 was launched
 which worked well on standard PC hardware of those days. Researchers came up with the
 idea of combining very standard off-the-shelf PC's or small servers often running Linux with very
-standard off-the-shelf network technology (Ethernet, in 1994 this was still only 10 Mbits per second,
+standard off-the-shelf network technology (Ethernet, in 1994 this was still 
+only 10 Mbits per second using the 10BASE-T standard,
 with 100 Mbit/s technology only being standardised in 1995). These clusters were called
 "Beowulf" clusters. The name refers to one of the first such clusters build in 1994 at NASA.
 However, a 100% Beowulf design had many shortcomings. The Ethernet technology of those days
 was way too slow to build a system that would be able to run a lot of software in a scalable
-way on a large cluster. Reliability was also a problem. PC's and workstations still crashed
+way on a large cluster. 
+Reliability was also a problem. PC's and workstations still crashed
 rather often. Now one crash every 50 days may not seem a real problem for a workstation or PC, 
 but if you build a supercomputer with 1000 such computers you can expect 20 node crashes per day
 making it impossible to run an application at the full scale of the machine. To build a proper

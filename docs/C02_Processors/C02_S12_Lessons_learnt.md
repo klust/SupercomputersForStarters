@@ -53,3 +53,7 @@ number of nodes you will experience a lot more problems than you are used to fro
 running small problems on a PC. It is not a good idea to run a large
 multi-day job without making sure that it stores enough data from time to time to
 restart an interrupted computation.
+E.g., assume that on a cluster a node crashes on average once every two years and
+assume that those events are independent on different nodes. Then basically the chance
+that a 100-node job can run successfully for 7 days is less than 40%. 
+

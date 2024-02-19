@@ -4,11 +4,11 @@ Long ago supercomputers were build from specialised processors designed specific
 for supercomputers. This was in the days that chip technology used large geometries and
 the speed of even multichip processors was limited by the switching speed of transistors
 and not by physical distance. Cheaper minicomputers and the early personal computers used
-single chip processors while mainframes and supercomputers used processors that were build
+single chip processors while mainframes and supercomputers used processors that were built
 from multiple chips, sometimes several thousands of them, that often also used a faster but more
 expensive technology (e.g., ECL instead of CMOS).
 
-Halfway the '80s things started to change slowly. The processors for PC's that were build
+Halfway the '80s things started to change slowly. The processors for PC's that were built
 from 1 or 2 chip packages (in the case of 2, one for the floating point instructions and one for
 everything else) became more competitive, not yet in speed, but in price/performance,
 leading to new supercomputer architectures based on those much cheaper processors.
@@ -30,7 +30,7 @@ the amount of work a CPU can do during each clock cycle. These improvements fall
 -   Improvements that enable to execute more instructions per clock cycle: this is called
     **instruction level parallelism**, and
 -   improvements that enable the CPU to do more work per instruction, and the main strategy here is
-    ** vectorization** and nowadays even **matrix computing**.
+    **vectorization** and nowadays even **matrix computing**.
 
 Yet those improvements were not enough to satisfy the ever growing need for compute speed of
 researchers, so two more strategies were used:

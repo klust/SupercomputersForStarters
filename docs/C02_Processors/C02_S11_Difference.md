@@ -62,7 +62,7 @@ cores its power consumption can temporarily increase to 253 W until the chip bec
 For the performance cores the base frequency is 3 GHz but one core can clock up to 5.8 GHz 
 to run single threaded applications at very high speed. Intel's top server chip at that time
 was the 4<sup>th</sup> generation Xeon Scalable processor code named Sapphire Rapids. 
-The core is actually very similar to the cores used in Raptor Lake, though the latter have 
+The core is actually very similar to the performance cores used in Raptor Lake, though the latter have 
 the AVX-512 instructions disabled as these instructions are not supported by the 
 efficiency cores. The top-in-the-line variant, with 60 cores, runs those cores at a base
 frequency of only 1.9 GHz, 35% slower than the PC processor, and only allows the frequency 
@@ -102,7 +102,7 @@ more than three times that of the 4-core part at the same quoted power level.
 
 This shows that if your software or at least your workflow is not parallel, running
 on a supercomputer is a waste of money. Then there is no faster machine to run your
-application than a high-end gaming PC (though you can omit the expensive graphics card
+single-threaded application than a high-end gaming PC (though you can omit the expensive graphics card
 as your software will probably not be able to use that one properly either). 
 And incidentally, these PC's also tend to have disk storage that is way faster than
 a supercomputer can offer for disk access patterns with lots of small random reads,
@@ -110,7 +110,8 @@ something that we will discuss in the
 [chapter of storage](../C04_Storage/index.md).
 
 **Supercomputers need appropriate software to function as a supercomputer! 
-In fact, one key point of supercomputing since the mid '80s has been adapting 
+In fact, one key point of supercomputing since the mid '80s 
+(and early 80's in research) has been adapting 
 software to be able to use cheaper hardware at scale rather than investing
 in extremely expensive hardware that still cannot do the job as well as
 good software can do.**

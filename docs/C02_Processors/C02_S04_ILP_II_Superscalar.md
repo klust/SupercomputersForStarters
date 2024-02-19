@@ -30,7 +30,14 @@ It also creates another opportunity: Specialised ALUs. Modern processors will ha
 ALUs for integer instructions and for floating point instructions, and in fact, some of those
 units may only be capable of executing some of those integer or floating point instructions.
 
-In personal computers this technology appeared in the '90s. 
+Probably the oldest example of a superscalar design is the CDC 6600 introduced in 
+1964 (See, e.g., the [Wikipedia article on the CDC 6600](https://en.wikipedia.org/wiki/CDC_6600)).
+This processor had no pipelining and instructions required 10 or more cycles, but it had
+multiple specialised functional units, some in a single copy and others in two copies.
+And the IBM/360 Model 91, also from 1964 and already discussed in the
+[section on pipelining](C02_S03_ILP_I_Pipelining.md), also offered superscalar execution.
+
+It took nearly 30 years before this technology was also used in processors for PC's. 
 The Intel Pentium processor launched in 1993 implements a pipelined superscalar architecture
 pretty much as on this slide, but both pipelines are not created equal and the compiler
 had a lot of work to do to keep both pipelines used well.
@@ -40,18 +47,12 @@ but does so in a way that at the end of the execution the result is the same as 
 instructions were executed in-order (also taking into account error conditions etc.)
 This strategy is currently used by all modern high performance processors, and even by a
 lot of low power processors. E.g., both the performance and efficiency cores in the 
-12<sup>th</sup> and 13<sup>th</sup> gen processors code named Alder Lake and Raptor Lake
+12<sup>th</sup>, 13<sup>th</sup> and 14<sup>th</sup> gen processors 
+code named Alder Lake, Raptor Lake (refresh) and Meteor Lake,
 are out-of-order pipelined superscalar processor cores. The ARM Cortex-A53 and Cortex-A55 processors
 that are often used as the efficiency cores in Android mobile phones are also pipelined
 superscalar processors, but with in-order execution only (the performance cores
 from the A-7x series are out-of-order execution cores though).
-
-Probably the oldest example of a superscalar design is the CDC 6600 introduced in 
-1964 (See, e.g., the [Wikipedia article on the CDC 6600](https://en.wikipedia.org/wiki/CDC_6600)).
-This processor had no pipelining and instructions required 10 or more cycles, but it had
-multiple specialised functional units, some in a single copy and others in two copies.
-And the IBM/360 Model 91, also from 1964 and already discussed in the
-[section on pipelining](C02_S03_ILP_I_Pipelining.md), also offered superscalar execution.
 
 IPC increase through more and more sophisticated superscalar execution
 is one of the motors behind speed increases of processors. 

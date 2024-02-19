@@ -33,11 +33,11 @@ on a single die (a single piece of silicon) and the Core 2 Quad that had two suc
 dies in a single package. In more sophisticated designs a switch is used,
 or as switches also have size limits, a mesh or ring network to connect all
 parts together. E.g., the early generations of multiprocessor Opteron chips
-used a switch architecture, and current generation Intel CPUs use ring or
+used a switch architecture, and current generation Intel CPUs use a ring or
 in some cases (e.g., Sapphire Rapids server chips) a mesh network.
 
 Early examples of shared memory supercomputers go back to the early '80s. 
-E.g., machines such as the CrayX-MP from 1982 where shared memory computers with
+E.g., machines such as the CrayX-MP from 1982 were shared memory computers with
 uniform memory access.
 
 <!-- TODO: Add some examples from the nineties. DEC Alpha was a switch? SUN Microsystems? -->
@@ -118,7 +118,8 @@ up to 8 cores and their own memory, and those chiplets were linked together via 
 Infinity Fabric network (and the same network was also used to link two sockets). It is still
 somewhat present in newer AMD CPUs also, though mostly in a different way that we will return to later
 in this course. It is also expected to show up strongly in the higher core count Intel Sapphire Rapids
-CPUs launched in early '2023, but at the time of writing we have no good performance data available yet.
+CPUs launched in early '2023 (but very hard to get initially), 
+but at the time of writing we have no good performance data available yet.
 
 
 ## A look at the software side

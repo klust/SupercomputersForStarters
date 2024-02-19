@@ -26,16 +26,18 @@ two dependent instructions.
 
 This is also the first example of so-called **instruction-level parallelism**:
 The processor is working on multiple instructions simultaneously.
-Pipelining has been used in processors for PC's since the mid '80s,
+In supercomputers and other very large computers, pipelining appeared already
+in the middle of the 1960s. The IBM System/360 Model 1 from 1964 and the
+CDC 7600 (Control Data Corporation) from 1967 were some of the first examples.
+(One of the co-founders of CDC was Seymour Cray who later started another 
+company, Cray Research, the manufacturer of the Cray 1 mentioned in the previous
+section.)
+
+20 years later, pipelining also appeared in processors for PC's,
 with the Intel i386 and i486 the first Intel CPUs to implement some 
 form of pipelining. The i386 (also known as 80386), launched in 1985, 
 could not even execute 1 instruction per clock in theory, but the i486 
 (also known as the 80486) which launched in 1989 implemented pipelining more
 or less as described here.
 
-In supercomputers and other very large computers, pipelining appeared already
-much earlier. The IBM System/360 Model 1 from 1964 and the
-CDC 7600 (Control Data Corporation) from 1967 were some of the first examples.
-(One of the co-founders of CDC was Seymour Cray who later started another 
-company, Cray Research, the manufacturer of the Cray 1 mentioned in the previous
-section.)
+
