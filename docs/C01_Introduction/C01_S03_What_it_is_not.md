@@ -24,9 +24,13 @@ so modern supercomputers are instead parallel computers combining thousands of r
 that are not that different from those in a PC to get the job done. And software will not automatically
 use all these processors in an efficient way without effort from the programmer.
 
+This holds for both simulation and data processing. Processing large quantities of data may
+also require to change the way data is stored and accessed by the application.
+
 Yet there is no need to be too pessimistic either. 
 In some cases, in particular capacity computing, the efforts to get your job running efficiently can 
 be relatively minor and really just require setting up a parallel workflow to run a sufficient number
-of cases simultaneously. Developing code for capability computing is often much more difficult, but then
+of cases simultaneously (if data management doesn't become the bottleneck then). 
+Developing code for capability computing is often much more difficult, but then
 a supercomputer can let you compute results that you could not obtain in any other way. And in many cases
 someone else has already done the work for you and good software is already available.

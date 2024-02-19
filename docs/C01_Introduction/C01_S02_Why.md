@@ -44,7 +44,8 @@ reasons to use a supercomputer.
 Furthermore, we can distinguish simulation and data processing as two big domains
 where supercomputing could be used. Some will add AI as a third pillar, but AI is
 typically used for data processing and has requirements similar to the other data 
-processing jobs we will discuss.
+processing jobs we will discuss. And sometimes the finished AI model is then used 
+as part of the model in a simulation.
 
 Supercomputers are really build for capability computing jobs. They can also accommodate
 many (but often not all types of) capacity computing jobs, 
@@ -70,7 +71,9 @@ an example of capacity computing. Sometimes one really has a combination of capa
 capability computing, e.g., when doing a parameter analysis for a more complex system.
 
 Data processing can also lead to capability computing. One example is the visualisation of very large data sets
-or simulation results, were a visualisation workstation may not be enough. Another example are the
+or simulation results, were a visualisation workstation may not be enough. 
+Training AI models is also data-driven and often very data-intensive.
+Another example are the
 electronic stamps offered by the US postal services, certainly in the initial years. Buyers of electronic
 stamps would get codes that they can each use once, but of course US postal needs to check not only if a 
 code is valid but also if it has not been used yet. And a clever abuser may share codes with someone 
