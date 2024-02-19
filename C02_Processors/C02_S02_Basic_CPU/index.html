@@ -1899,6 +1899,18 @@ The steps are synchronised with a clock. So in this simple example executing an 
 would take 4 clock ticks, so we could also say that we do 0.25 instructions per clock.</p>
 <p>Note however that different steps use different parts of the logic in the processor,
 and this is the key to improving performance.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>In the past there were computers that worked with data straight from memory without
+registers. Current Intel CPUs still have for compatibility reasons with the older 
+generation chips instructions that get data from memory and in the same instruction 
+also use it for an arithmetic or logic operation, but in modern implementations these instructions are 
+broken up in the hardware into an instruction that transfers between main memory
+and memory in the register space, and a second instruction that does the arithmetic
+or logic operation. So the above picture with instructions that work on data in 
+registers and instructions that transfer data between registers and main memory, is
+accurate enough to understand the basics of modern computing.</p>
+</div>
 
 
 

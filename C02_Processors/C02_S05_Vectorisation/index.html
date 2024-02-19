@@ -1960,6 +1960,7 @@ much shorter vector lengths.</p>
 were introduced in 1996 and available in 1997 on an evolution of the Pentium processor. They basically re-used
 the floating point registers in those processors for storing integer vectors so codes
 could not combine floating point instructions and integer vector instructions.
+They were meant for media processing and not all for scientific computing.
 Just a few years later, in 1999, Intel launched the SSE instruction set which used
 separate 128-bit registers. Originally they were only meant for single precision
 floating point numbers (so 4 elements in a vector), and they became available in 
@@ -1968,12 +1969,10 @@ the original Pentium. The instruction set was extended several times with SSE ad
 double precision floating point numbers and some integer instructions in the Pentium 4, 
 and with further extensions in the SSE3 and SSE4.x instruction sets. MMX instructions are
 not present anymore in modern Intel processors in 64-bit mode, but the SSE instructions
-are still present. 
+are still present and were exploited in a lot of good scientific computing codes.
 A further extension came with the AVX instruction set in the Sandy Bridge generation in
 2011. The vector registers were extended to 256 bits and could now handle 4 double precision
-or 8 single precision numbers simultaneously. These processors were also used in the first
-Tier-1 cluster of the Vlaams Supercomputer Centrum, installed in 2012, and in the
-hopper cluster of the University of Antwerp. AVX2 extended the AVX instruction set 
+or 8 single precision numbers simultaneously. AVX2 extended the AVX instruction set 
 in the Haswell generation and came at the same time as the FMA3 instructions,
 the so-called fused multiply-add instructions that combine a multiplication and an
 addition in the form a*b+c, effectively doubling the number of floating point operations
@@ -1998,13 +1997,27 @@ of the Fugaku supercomputer (which was the fastest machine in the Top500 lists f
 uses 512-bit registers. These instructions have been extended with SVE2 instructions that are more
 oriented towards integer computations and making the instruction set more useful for non-scientific
 applications. SVE2 is now part of the new ARMv9 architecture and used in, e.g., the processors
-of the Samsung S22 and S23 mobile phones, but also in the brand new NVIDIA Grace CPU that will
+of the Samsung S22, S23 and S24 mobile phones, but also in the brand new NVIDIA Grace CPU that will
 be used in the GPU-accelerated nodes of the first European exascale supercomputer.</p>
 <p>AMD also uses vector units int its GCN and CDNA GPUS, with 16-wide single precision 
 hardware and 64-wide single precision instructions (well, not completely true for CDNA2), 
 and in its RDNA GPUs, with 
 32-wide single precision hardware and instructions. The Intel GPUs are also based
 on vector computing units with 8-wide units for most basic operations.</p>
+<details class="note">
+<summary>Vector instructions in VSC clusters</summary>
+<p>The Intel Sandy Bridge processors, the ones to introduce the AVX instruction set,
+were also used in the first
+Tier-1 cluster of the Vlaams Supercomputer Centrum, installed in 2012, and in the
+hopper cluster of the University of Antwerp.</p>
+<p>AVX2 was really popular, even when AVX-512 was already around, as AMD only adopted AVX-521
+in their 4<sup>th</sup> generation EPYC CPUs code named Genoa, and as Intel has never really
+adopted the instruction set in the PC space. The University of Antwerp cluster Leibniz used
+the intel CPUs code name Broadwell, as did the older section of the second VSC tier-1 computer, BrENIAC.
+Vaughan and the third VSC tier-1 computer use
+2<sup>nd</sup> and 3<sup>rd</sup> gen EPYC CPUs code named Rome and Milan respectively which
+also provide the AVX2 and FMA3 instructions.</p>
+</details>
 <h2 id="another-type-of-simd-computing">Another type of SIMD computing<a class="headerlink" href="#another-type-of-simd-computing" title="Permanent link">&para;</a></h2>
 <p>There is however another way to reduce the overhead of superscalar execution
 that works well for vector operations. </p>
