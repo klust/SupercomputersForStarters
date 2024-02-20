@@ -25,7 +25,22 @@ the interface that your program compiled with that library links to). MPI is a n
 of a library with a well standardised API but non-standardised ABI. 
 OpenMP may be very standardised at the level of the programming language, but 
 implementers of the runtime libraries have total freedom except for some functions
-defined by the OpenMP standard. All this implies that a program that is compiled 
+defined by the OpenMP standard. 
+
+You can also look at it from the point of view of the software that sits between the hardware
+and the OS on one side, and the application on the other side. 
+That layer of "middleware" has to be compatible with the API or ABI used by the application
+(API for applications that come as sources, ABI for applications that come already compiled),
+but it also has to be compatible with the hardware and the OS kernel drivers and extensions
+on the machine. Software that comes as binaries can be problematic. The middleware on the cluster
+(MPI libraries, ...) may not be ABI-compatible with the binaries of the application, and if the 
+application comes with its own "middleware" libraries, they may not be able to fully exploit
+the hardware on the cluster, hardware drivers offered by the OS, or kernel modules
+(or may not even work at all).
+This is not a problem that containers can solve, despite all claims that some people
+make about the portability of containers.
+
+All this also implies that a program that is compiled 
 with one compiler or one MPI library, cannot use the runtime libraries of another compiler
 or a different MPI library when running. One one hand, this implies that mixing compilers
 in your environment can cause problems which is why so many clusters are very strict about

@@ -62,7 +62,7 @@ Examples of vendor-specific MPI libraries:
 Some programming languages have distributed memory concurrent computing built into the language
 itself. 
 
-One such language that we already mentioned is Julia. 
+One such language that we already mentioned is [Julia](https://julialang.org/). 
 
 Another example is 
 [Charm++](https://charmplusplus.org/), a language that is used in the popular molecular dynamics
@@ -72,13 +72,14 @@ code NAMD but also in a few other lesser known or more specialised applications.
 ## PGAS languages
 
 Partitionad Global Address Space (PGAS) languages distinguish between local and remote memory
-but allow the latter to be used almost as it it is local memory, though with a severe speed penalty.
+but allow the latter to be used almost as if it is local memory, though with a severe speed penalty.
 It is then up to the compiler to translate that in message for the underlying hardware/OS/middleware
 combination.
 These languages were all the hype between roughly 2000 and 2010 when DARPA funded the development 
 of new high performance high productivity languages through the HPCS program. 
 It led to the development of three languages: Fortress (by Sun Microsystems), X10 (by IBM),
-and Chapel (by Cray), but Chapel seems to be the only surviving language of that program that is 
+and [Chapel](https://chapel-lang.org/) (by Cray), but Chapel seems to be the only surviving
+language of that DARPA program and is 
 still begin developed by HPE Cray. 
 Two other languages of this type not developed in the DARPA program are co-array Fortran and
 Unified Parallel C (UPC). Co-array Fortran became part of the Fortran 2008 standard and some Fortran

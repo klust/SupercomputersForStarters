@@ -39,11 +39,12 @@ tags:
     -   [Fortress](https://link.springer.com/referenceworkentry/10.1007/978-0-387-09766-4_190)
     -   Coarray fortran
         -   [A very dated web page at RICE university](http://caf.rice.edu)
-        -   [An old page at NAG discussing coarrays in Fortran 2008](https://www.nag.com/nagware/np/r62_doc/nag_f2008.html#AUTOTOC_3)
+        -   [An page at NAG discussing coarrays in Fortran 2008](https://support.nag.com/nagware/np/r71_doc/manual/compiler_10_2.html#AUTOTOC_10_2_3)
     -   [Unified Parallel C @ Berkeley Lab](https://upc.lbl.gov)
 -   PGAS libraries
     -   [OpenSHMEM](http://openshmem.org/)
     -   GASPI
-        -   [GASPI-Forum](http://www.gaspi.de), the consortium setting the GASPI standard
+        -   [GASPI-Standard](https://github.com/GASPI-Forum/GASPI-Standard), defined by the GASPI-Forum, 
+            the consortium setting the GASPI standard
         -   [GPI-2](http://www.gpi-site.com), an open source implementation made by the Fraunhofer Institute
 

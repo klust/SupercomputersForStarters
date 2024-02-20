@@ -34,8 +34,8 @@ As these directives are standardised, they should work with all compilers that s
 the standard.
 One major criticism to the OpenMP vectorisation directives is that they are too much
 prescriptive rather than descriptive. Prescriptive means that they force the compiler
-to do certain things, while prescriptive means that they just give the compiler additional
-information to let the compiler decide if it is worth vectorising the code.
+to do certain things, while descriptive means that they only give the compiler additional
+information but let the compiler decide if and how it is worth vectorising the code.
 
 
 ## Libraries
