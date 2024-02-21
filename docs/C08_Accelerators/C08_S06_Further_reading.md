@@ -46,9 +46,6 @@ tags:
 
     -   [AMD ROCm information portal](https://docs.amd.com/)
 
-    -   [AMD HIP fundamentals](https://developer.amd.com/resources/rocm-learning-center/fundamentals-of-hip-programming/)
-
-    -   [HIP API Guides](https://docs.amd.com/category/HIP%20API%20Guides)
 
 -   Intel oneAPI
 
@@ -72,7 +69,7 @@ tags:
 
     -   [Khronos Group SYCL documentation](https://www.khronos.org/sycl/resources)
 
-    -   [Open SYCL (formerly hipSYCL)](https://github.com/OpenSYCL/OpenSYCL)
+    -   [AdpativeCpp (formerly hipSYCL)](https://github.com/AdaptiveCpp/AdaptiveCpp)
 
     -   [Intel oneAPI DPC++/C++ compiler](https://www.intel.com/content/www/us/en/developer/tools/oneapi/dpc-compiler.html)
 

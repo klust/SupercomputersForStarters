@@ -21,7 +21,7 @@ widely used accelerators in supercomputers.
 ## The current state
 
 Accelerator programming is, also due to the early stage of the technology, still
-a mess, and standardisation still has to set in. This is not uncommon in the world
+a mess, and standardisation is only setting in now. This is not uncommon in the world
 of supercomputing: The same happened with message passing where there were several
 proprietary technologies until the needs were sufficiently well understood to come to
 a standardisation.
@@ -33,9 +33,10 @@ Currently there are three competing ecosystems:
     to create a vendor lock-in and keep hardware prices high.
 
     CUDA is the basis of the NVIDIA ecosystem. NVIDIA together with partners also 
-    created OpenACC,a set of compiler pragma's for C/C++ and Fortran for GPGPU 
-    programming, on paper managed by an
-    open consortium, but many other compiler vendors are hesitant to pick those up.
+    created OpenACC, a set of compiler pragma's for C/C++ and Fortran for GPGPU 
+    programming. OpenACC is on paper managed by an
+    open consortium, but many other compiler vendors are hesitant to pick 
+    up the technology.
 
     The NVIDIA toolset also offers some support for open, broadly standardised
     technologies, but the support is usually inferior to that for their proprietary
@@ -123,7 +124,8 @@ non-NVIDIA hardware.
 OpenCL is largely superseded by newer technologies developed by the Khronos Group.
 Vulkan is their effort to create an API that unifies 3D graphics and computing and is mostly
 oriented towards game programming etc., but less towards supercomputing (as several GPUs used
-for supercomputing even start omitting graphics-specific circuits) while SYCL, which we will 
+for supercomputing even start omitting graphics-specific circuits hence don't have the 
+hardware anymore to run Vulkan) while SYCL, which we will 
 discuss later in these notes, is a new initiative for GPGPU programming.
 
 
@@ -187,7 +189,7 @@ to decide what it should do rather then enforcing the compiler to do something i
 with the prescriptive nature being criticised a lot by the OpenACC community who claimed superiority
 because of this. It also contained much better support for debuggers, performance monitoring tools, etc.
 
-OpenMP has since had minor extensions i the form of version 5.1 at SC'20 and 5.2 at SC'21. The
+OpenMP has since had minor extensions in the form of version 5.1 at SC'20 and 5.2 at SC'21. The
 standard is controlled by a much larger consortium than the OpenACC standard.
 
 OpenMP is an important technology in the AMD ROCm and Intel oneAPI ecosystems. Intel has in fact
@@ -279,7 +281,7 @@ last revised (March 2023).
 is a framework developed by CASUS - Center for Advanced Systems Understanding of the 
 Helmholtz Zentrum Dresden Rossendorf. Alpaka also supports various backends, including a CUDA
 back-end for NVIDIA GPUs. There is also work going on on a HIP backend for AMD GPUs, with
-support for Intel GPUs coming through a SYCL and an OpenMP offloac backend. 
+support for Intel GPUs coming through a SYCL and an OpenMP offload backend. 
 
 
 ## Libraries

@@ -36,8 +36,11 @@ There are several problems with current GPU designs:
 
 1.  The amount of memory that a GPU can address directly and has fast enough access to,
     is limited. 2020 GPUs were limited to 32-48 GB of memory, in early 2021 a 80 GB GPU
-    appeared on the market, and in 2022 it is technically possible to have 128 GB on
-    a single package. But this is still small to typical memory sizes on a regular dual
+    appeared on the market, in 2022, the first GPU with 128 GB of memory appeared
+    on the market (AMD MI250/MI250X), 
+    and in (very) late 2023, the first GPUs with 192 GB of memory
+    became available (AMD MI300X). 
+    But this is still small to typical memory sizes on a regular dual
     socket server that is much slower than the GPU.
 
 2.  Programming bottleneck: Having to organise all data transport manually and working with
@@ -54,11 +57,11 @@ However, there is hope.
 
 The amount of memory that can be used by a GPU will increase a lot the coming years. Both the
 memory packages are getting bigger by stacking more dies in 3D, and the number of memory packages
-that can be integrated in the overall GPU package is increasing. As of 2022, 8 memory stacks in a
-GPU package is feasible as is shown by the AMD MI250(X) GPUs, while in 2023-2024 12 memory stacks
-in a single GPU package should become a possibility. The size of the stacks is also increasing from
-16GB to 24GB (available very soon) or 32GB. The two combined may make memory sizes of 192 
-and likely even 384 GB possible by 2024 or 2025.
+that can be integrated in the overall GPU package is increasing. 
+In (very) late 2023, the first GPUs with 192 GB of memory appeared on the market, using
+8 24 GB packages. It is expected that by 2025 the number of packages might grow to 12,
+with 32 GB packages also becoming available, resulting in 384 GB of RAM.
+(The current HBM standard, HBM3E, theoretically even allows 64 GB packages.)
 
 The programming bottleneck can already be partially solved by unified memory, using memory pointers
 that work on both CPU and GPU, and further hardware support for virtual memory that can then trigger
@@ -75,7 +78,7 @@ or to connect GPUs to each other in the MI100 and MI200 generations.
 The Intel Ponte Vecchio GPU combined with the Sapphire Rapids CPU that will be used in the Aurora supercomputer
 supports a similar feature, as does the NVIDIA Grace CPU and Hopper GPU integrated in a single package.
 
-The physical sharing of memory spaces with a level of cache coherency is also the first step in solving
+The physical sharing of memory spaces with some level of coherency is also the first step in solving
 the problem of copying data back and forth all the time. E.g., if a CPU can access memory attached to the 
 GPU without risks of coherency problems, then there is less need to copy full memory pages and also not to 
 copy those back, as the link that is used in those GPU systems to connect the CPU to GPU is as fast as the
@@ -104,7 +107,7 @@ to the CPUs. A typical design would have been:
 
 The red line between the two CPUs denotes a fully cache coherent link between the CPUs. 
 In 2016 this would very likely have been either Intel CPUs or IBM POWER CPUs, and both
-had proprietary fully cache coherent links to link CPUs in a shared memory system.
+had proprietary fully cache coherent links to link CPUs (but not GPUs) in a shared memory system.
 The red link between the GPUs denotes a similarly proprietary connection between the
 GPUs for easy data transfer between the GPUs at typically a much higher bandwidth than
 that offered by the connections between the CPU and GPU. However, not all systems used
@@ -130,7 +133,7 @@ transfer) also to the switches for better direct data transfer between
 the interconnect and the GPUs and/or the SSDs and the GPUs.
 
 
-### Cache-coherent interconnect between CPU and GPU
+### Coherent interconnect between CPU and GPU
 
 The next evolution of this design is used in the USA pre-exascale systems
 Sierra and Summit, both using IBM POWER9 CPUs and NVIDIA Volta V100 GPUs.
@@ -166,26 +169,27 @@ be an all-to-all connection, this is not true when one looks at the connections 
 the GPU dies. 
 
 
-### Integration of CPU and GPU in a single package: NVIDIA GH100
+### Integration of CPU and GPU in a single package: NVIDIA GH200
 
 Even though the MI250X has a level of cache coherency, using the memory in a unified matter
 is still a problem, partly because of the extra latency introduced by the fairly long distance
 between the CPU and GPU, partly also because of the limited memory bandwidth on the CPU side.
-NVIDIA's Grace Hopper Superchip, expected in 2023, works on those two problems by integrating
+NVIDIA's Grace Hopper Superchip, available in 2024, works on those two problems by integrating
 the CPU and GPU on a single package and not only putting the GPU memory, but also the
 CPU memory on that package. 
 The CPU part is called Grace and is a CPU based on the ARMv9 architecture, the newest
 version of the ARM architecture at the time of design of the Grace processor.
 The GPU part of the package is the Hopper architecture and similar to the one in the
 SXM and PCIe cards released in the fall of 2022, but with all 6 memory controllers
-enabled.
+enabled and faster HBM3e memory (also used in the regular H200 GPU).
 
 The CPU and GPU still both have their own memory controllers and basically behave as
 separate NUMA domains, but as the connection between the two has been brought on-chip
 the bandwidth between CPU and GPU is a lot higher than in the MI250X architecture
 OR the Summit and Sierra systems with IBM POWER9 and NVIDIA V100 chips.
-The CPU memory is not provided through external DIMMs, but through a number of internal 
-LPDDR5X modules integrated in the CPU-GPU package in a similar way as the GPU memory has
+The CPU memory is not provided through external DIMMs, but through a number of internal
+LPDDR5X modules (for a total of 480 GB) 
+integrated in the CPU-GPU package in a similar way as the GPU memory has
 been integrated in the package for a number of generations already. 
 Integration of this memory type is popular in smartphones where it saves both space
 and power, and is also used in the Apple Silicon M-series chips, where in addition to
@@ -193,10 +197,7 @@ space and power savings it also provides higher bandwidth. In the Grace chip it
 enables a very high memory bandwidth for the CPU, even 20% better than what the 
 AMD EPYC 4 generation offers per socket (but not as much as the Intel Sapphire Rapids
 MAX chips that incorporate a small amount of GPU-style memory in the package) while 
-still offering a high memory capacity. Pre-release material claims up to 512 GB per CPU, 
-but this number has to be taken with a grain of salt as it does not correspond to the
-available memory modules that can be found in catalogues of memory providers in early
-2023.
+still offering a high memory capacity.
 
 The Grace Hopper superchip provides two types of external connections. There are a number
 of regular PCIe connections that come from the CPU die. They can be used to attach, e.g., network
