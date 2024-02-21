@@ -1,3 +1,9 @@
+---
+tags:
+-   BLAS
+---
+
+
 # Illustration: Matrix-matrix multiplication
 
 Let us illustrate the effect of the importance of optimising memory access patterns
@@ -117,7 +123,7 @@ performance of 22.4 Gflops at a clock speed of 2.8 GHz.
 The reason for taking this older cluster is that the caches are still relatively
 small so that a smaller problem size can be used to demonstrate the effect of 
 cache misses without having to go to such a large problem size that the run time
-for the worst variants becomes prohibitively extensive to test easily.
+for the worst variants becomes prohibitively large to test easily.
 
 The results are summarised in the following table:
 
@@ -125,8 +131,8 @@ The results are summarised in the following table:
 |:----------------------------|---------:|----------:|
 | *ijk*                       | 17.16    | 1.821     |
 | *jik*                       | 24.35    | 1.283     |
-| *ikj*                       | 63.68    | **0.491** |
-| *jki*                       |  9.87    | **3.165** |
+| *ikj*                       | 63.68    | <span style="color:crimson;">**0.491**</span> |
+| *jki*                       |  9.87    | <span style="color:green;">**3.165**</span>   |
 | *kij*                       | 40.77    | 0.7666    | 
 | *kji*                       | 13.29    | 2.352     |
 | F95 MATMULT                 |  9.51    | 3.285     |
@@ -233,12 +239,14 @@ It was defined in three phases
 -   BLAS 3 extended BLAS in 1988 with matrix-matrix operations, that help to better exploit
     a cache hierarchy.
 
-There is a reference implementation of the BLAS API in Fortran, but that implementation doesn't
+There is a [reference implementation of the BLAS API in Fortran](https://www.netlib.org/blas/), 
+but that implementation doesn't
 really give you a high performance. However, vendors of microprocessors invest a lot of time in
 making an optimised implementation for their processors, and there are also a couple of open source
 projects that did so. A popular closed source vendor implementation is the Intel MKL library
-(which contains much more than just BLAS). OpenBLAS and BLISS are two recent open source 
-implementations.
+(which contains much more than just BLAS). The MKL routines are very well optimised for each
+Intel processor, but not so much for competing compatible processors.
+OpenBLAS and BLISS are two recent open source implementations.
 
 The DGEMM code in an optimised BLAS library is a lot more complex than any of our six variants.
 Optimised implementations work by splitting the matrices in small blocks that fit in cache
@@ -253,17 +261,17 @@ Blocking for cache reuse is a strategy used by many optimised libraries, also in
 In the following table we repeated our experiment but now comparing the GNU Fortran compiler
 to the Intel (classic) Fortran compiler:
 
-| Variant                 |GNU Gflops | Intel Gflops |
-|:------------------------|-----------|-------------:|
-| *ijk*                   | 1.821     | 1.60         | 
-| *jik*                   | 1.283     | 3.40         |
-| *ikj*                   | 0.491     | 1.60         |
-| *jki*                   | 3.165     | 3.40         |
-| *kij*                   | 0.7666    | 10.74        |
-| *kji*                   | 2.352     | 10.68        |
-| F95 MATMULT             | 3.285     | 10.97        |
-| BLAS dgemm (1 thread)   | 14.60     | 24.75        |
-| BLAS dgemm (20 threads) | 396.42    | 417,64       |
+| Variant                 |GNU Gflops | Intel Gflops                                |
+|:------------------------|-----------|--------------------------------------------:|
+| *ijk*                   | 1.821     | <span style="color:crimson;">1.60</span>    | 
+| *jik*                   | 1.283     | <span style="color:darkviolet;">3.40</span> |
+| *ikj*                   | 0.491     | <span style="color:crimson;">1.60</span>    |
+| *jki*                   | 3.165     | <span style="color:darkviolet;">3.40</span> |
+| *kij*                   | 0.7666    | <span style="color:green;">10.74</span>     |
+| *kji*                   | 2.352     | <span style="color:green;">10.68</span>     |
+| F95 MATMULT             | 3.285     | 10.97                                       |
+| BLAS dgemm (1 thread)   | 14.60     | 24.75                                       |
+| BLAS dgemm (20 threads) | 396.42    | 417,64                                      |
 
 Not only does the Intel compiler in general produce better performance than the GNU compiler
 for this code, with the fastest result being more than three times faster than the best
@@ -289,8 +297,8 @@ more interesting result:
 |:---------------------------|---------:|----------:|
 | *ijk*                      |  297.40  |   0.105   |
 | *jik*                      |  295.53  |   0.106   |
-| *ikj*                      | 1002.28  | **0.031** |
-| *jki*                      |   11.67  | **2.678** |
+| *ikj*                      | 1002.28  | <span style="color:crimson;">**0.031**</span> |
+| *jki*                      |   11.67  | <span style="color:green;">**2.678**</span>   |
 | *kij*                      | 1002.48  |   0.031   | 
 | *kji*                      |   15.85  |   1.971   |
 | F95 MATMULT                |   17.06  |   1.832   |

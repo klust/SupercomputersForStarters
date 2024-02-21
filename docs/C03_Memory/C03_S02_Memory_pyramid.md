@@ -1,3 +1,9 @@
+---
+tags:
+-   BLAS
+---
+
+
 # The memory pyramid
 
 ![Memory pyramid](../img/C03_S02_01_Memory_pyramid.png)

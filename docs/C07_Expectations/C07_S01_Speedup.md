@@ -25,6 +25,9 @@ The more general definition is
 
 i.e., the total time spent by all $Y$ processors (with $Y$ ideally 1) divided
 by the total time spent by all $X$ processors.
+Note that this is wall time and not some user time or user+system time reported
+by the operating system as one way one can lose efficiency is by simply not being
+able to use all resources continuously.
 
 
 ## Amdahl's law and saturation
@@ -37,7 +40,7 @@ $X$ times faster, but this is never the case. The graph below shows three scenar
   <caption>Ideal speed-up, Amdahl's law and saturation</caption>
 </figure>
 
-The top line shows the ideal speed-up. However, Amdahl noted already in
+The top line (in green) shows the ideal speed-up. However, Amdahl noted already in
 the late '60s that using parallelism would have its limitations as every program
 will have some part that cannot be executed in parallel. Even if the parallel
 section could be executed on an infinite number of processors, the total run time
@@ -78,9 +81,14 @@ the cost. The sweet spot for this problem is probably somewhere between 4 and 8 
 Using $X$ times more processors will almost never speed up your application with a 
 factor of $X$ as there is always some overhead in using more cores. 
 There are some rare cases where this is not the case though and where you may see 
-what is called a superlinear speed-up. This is due to cache effects. As you are using
-more cores, the problem per core becomes smaller and as a consequence more of it may
-fit into the caches, improving the performance of a core.
+what is called a superlinear speed-up. This is due to memory and cache effects. 
+As you are using
+more cores, the problem per core becomes smaller and as a consequence 
+more of it may
+fit into the caches, improving the performance of a core, or at a coarser level,
+if you're using more memory than is available per core in a machine when using a low
+core number, at some point the memory use per core will become small enough that each 
+core only uses memory from its own NUMA domain.
 
 There is also no rule like program A runs best on $X$ processors. 
 The optimal number of processors $X$ does not only depend on the application that you're

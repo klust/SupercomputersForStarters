@@ -1,3 +1,9 @@
+---
+tags:
+-   BLAS
+---
+
+
 # Conclusions of this chapter
 
 It is important to realise that not all codes are created equal, even if
