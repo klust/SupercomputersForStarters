@@ -11,8 +11,9 @@ We have discussed the 4 levels of parallelism in the processing units in a super
 Instruction Level Parallelism and vectorisation (and in fact, recently matrix computations) in the
 core, the use of multiple cores in shared memory setup, and distributed memory parallel computing.
 We've also seen that parallelism is important in the design of storage systems for supercomputers,
-with even specialised shared storage systems. However, as we have mentioned, in fact all but the
-most basic SSDs in PCs and smartphones also rely on parallelism to reach the high bandwidth 
+with even specialised shared storage systems for supercomputer. 
+However, as we have mentioned, in fact SSDs in PCs and smartphones also rely on parallelism 
+to reach the high bandwidth 
 and high number of IO operations per second they promise to be capable of.
 We haven't discussed main memory in that much detail, but in fact modern computer memory also
 relies on parallelism. modern processor packages offer multiple memory controllers that work
@@ -43,9 +44,9 @@ stagnating for several years already as they are more optimised for performance 
 every new generation of core claims to do more work per clock cycle (better instruction level parallelism), 
 the clock speed is often also lowered so that the net gain is practically zero.
 
-Just as streaming is almost as important on PCs as on supercomputers, the same also holds for parallelism. 
+However, parallelism is almost as important on PCs as on supercomputers, though the latter take it even more to the extreme. 
 There is only one level of parallelism that is specific to supercomputers: distributed memory parallelism.
-And at the file system levels PCs also tend to be a lot more forgiving for bad access patterns, even though
+And at the file system level PCs also tend to be a lot more forgiving for bad access patterns, even though
 you will still be exploiting only 10 percent or less of the potential of your storage.
 
 

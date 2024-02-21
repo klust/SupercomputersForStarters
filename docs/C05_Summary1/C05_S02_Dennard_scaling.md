@@ -30,7 +30,9 @@ a slight speed increase and a slight lowering of the power consumption per trans
 As a result of this designers need to look much harder for architectural improvements than
 before for further speed increases.
 The breakdown of Dennard scaling is also part of the reason why latencies of various components
-and subsystems do no longer improve much.
+and subsystems do no longer improve much. E.g., switches in a network are also processors
+and these don't become any faster anymore, so the latency of a switch cannot improve 
+anymore.
 
 Transferring data has become the major source of power consumption in computers, more than
 doing the actual computations. Nowadays it takes more power to transfer two numbers from 

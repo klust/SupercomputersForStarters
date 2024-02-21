@@ -36,7 +36,7 @@ metadata of the parallel file system.
 The lower part contains again two servers. These servers run the parallel file system
 in virtual machines. Both the metadata and object servers run on those servers.
 The drives for the metadata are in the storage system in the upper half. The hard
-drives for the object servers are in the storage enclosers just above and just
+drives for the object servers are in the storage enclosures just above and just
 below the servers. Each box can contain 4 groups of 15 hard disks.
 
 
@@ -44,7 +44,7 @@ below the servers. Each box can contain 4 groups of 15 hard disks.
 
 The regular compute nodes of the UAntwerpen clusters are spread over several
 racks. The picture below shows 3 racks of compute nodes from the cluster called
-"Leibniz" which was installed in 2017 and will be decommisioned in 2024, and
+"Leibniz" which was installed in 2017 and will be decommissioned in 2024, and
 some leftover nodes from the even older compute cluster Hopper.
 
 ![UA cluster Leibniz compute nodes](../img/C05_S07_03_UA_cluster.png)
@@ -52,12 +52,12 @@ some leftover nodes from the even older compute cluster Hopper.
 The nodes of Leibniz are grouped in groups of 24 compute nodes. Each group consists
 of 6 enclosures that each have the same width and height as the login and admin nodes,
 but now house 4 2-socket servers. These are basically trays that half half the height
-and half the width of the enclosure. At the fron there is again room for disks, 12 per
+and half the width of the enclosure. At the front there is again room for disks, 12 per
 enclosure so 3 per node, but these are largely empty. In fact, filling them up completely
 would even be bad for the cooling of the node as cold air is sucked in from the front and
 leaves again at the rear side.
 
-Above each group of 24 compute nodes there is a swich with 40 ports. 24 of those ports connect
+Above each group of 24 compute nodes there is a switch with 40 ports. 24 of those ports connect
 to the compute nodes, while the other 16 go to a series of switches mounted at the top that 
 connect the switches with each other and with the storage and admin nodes of the cluster. 
 This network architecture is called a tree.
@@ -105,7 +105,7 @@ two rows. This is shown in the picture below:
 ![Muk from the inside](../img/C05_S07_06_Muk_inside.png)
 
 We can again distinguish the coolers, and the racks in between have perforated doors at the inside.
-Depending on the cluster, the temperature inside that hot aisle can be as high as 34 or 40 degrees,
+Depending on the cluster, the temperature inside that hot aisle can be as high as 35 or 40 degrees,
 while the temperature in the data centre itself is kept at 20 to 25 degrees with that generation
 of hardware.
 
@@ -129,8 +129,10 @@ biggest supercomputers in the world, including the 3 first US exascale systems F
 and the pre-exascale system Perlmutter, the European pre-exascale system LUMI
 and the Swiss system Alps that will be extended with GPU nodes in 2024.
 
-![Cray EX supercomputer](../img/C05_S07_09_Cray_EX.jpg)
-*Structure of the Cray EX supercomputer*
+<figure markdown>
+  ![Cray EX supercomputer](../img/C05_S07_09_Cray_EX.jpg)
+  <caption>Structure of the Cray EX supercomputer</caption>
+</figure>
 
 Let's now have a look at how everything connects together to the European pre-exascale 
 supercomputer LUMI. LUMI has two types of main compute nodes:
@@ -163,8 +165,10 @@ interfaces and connecting to two nodes. The picture below shows a very similar n
 but with 4 network cards each providing 2 network connections rather than 2 such cards.
 On LUMI, only the middle ones are present.
 
-![Cray EX 425 node](../img/C05_S07_10_EX_425.jpg)
-*Blade with 4 CPU nodes and 8 Slingshot ports*
+<figure markdown>
+  ![Cray EX 425 node](../img/C05_S07_10_EX_425.jpg)
+  <caption>Blade with 4 CPU nodes and 8 Slingshot ports</caption>
+</figure>
 
 At the front of this blade there are two connections to for the water cooling. The 
 network connections are on the back but are not visible in this picture.
@@ -177,8 +181,10 @@ blades one can find the connections to the cooling manifolds that distribute coo
 water to the blades. One compute blade of LUMI-G can consume up to 5kW, so the power
 density of this setup is incredible, with 40 kW for a single compute chassis.
 
-![Cray EX AMD 250x node](../img/C05_S07_11_EX_AMDMI250.png)
-*Blade with 2 MI250x GPU nodes and 8 Slingshot ports*
+<figure markdown>
+  ![Cray EX AMD 250x node](../img/C05_S07_11_EX_AMDMI250.png)
+  <caption>Blade with 2 MI250x GPU nodes and 8 Slingshot ports</caption>
+</figure>
 
 The back of each cabinet is equally genius. At the back each cabinet has 8 switch chassis,
 each matching the position of a compute chassis. The switch chassis contains the connection to
@@ -191,16 +197,20 @@ The picture below shows a Slingshot switch blade, with the side facing the compu
 at the front. It has 8 square connectors, one each to each compute blade, but each connector
 carries two Slingshot connections. The connectors on both sides are for power and monitoring.
 
-![Switch blade, side facing compute blades](../img/C05_S07_12_Slingshot_inner.png)
-*Switch blade, side facing the compute blades, with 8 double ports*
+<figure markdown>
+  ![Switch blade, side facing compute blades](../img/C05_S07_12_Slingshot_inner.png)
+  <caption>Switch blade, side facing the compute blades, with 8 double ports</caption>
+</figure>
 
 The next picture shows the outward facing side of the switch blade. There are 24
 electrical connectors, but each again carries two Slingshot links. At the far left
 and far right you can again note the connectors to the water cooling. Each switch
 itself can consume up to 250W and is also fully water-cooled.
 
-![Switch blade, outward facing side](../img/C05_S07_13_Slingshot_outer.png)
-*Switch blade, outward facing side*
+<figure markdown>
+  ![Switch blade, outward facing side](../img/C05_S07_13_Slingshot_outer.png)
+  <caption>Switch blade, outward facing side</caption>
+</figure>
 
 
 As each switch blade carries two ports per compute blade,
@@ -216,7 +226,7 @@ The picture below gives an impression of how this works for blades with 4 CPU no
 
 ![Slingshot connection](../img/C05_S07_14_Slingshot_connections.png)
 
-The left picture is not completely right as the interface coming from NMC0 should not connect to the HSS
+The picture is not completely right as the interface coming from NMC0 should not connect to the HSS
 port but to the Switch 3 port. In these pictures, each node has two CPUs and those CPUs are next to each 
 other, not on top of each other, so the nodes are arranged in a 2x2 grid. Between each node pair there are
 4 PCIe connectors, 2 of wich connect to the upper node and 2 of which to the lower node. NMC0 and NMC1 are
@@ -227,7 +237,7 @@ Slingshot connection per CPU or two per node, Node 0 and 1 both connect to two s
 while node 2 and 3 also both connect to two switches, the ones in slots 5 and 7. This setup gives each CPU
 direct access to the interconnect without interfering with the other CPU in the node.
 
-There are still free positions in the switch chassis as there is currently no node type that had more than
+There are still free positions in the switch chassis as there is currently no node type that has more than
 8 network ports per blade. These could still be useful in the future though. If not for an interconnect,
 one could, e.g., export PCIe ports to the back and attach, e.g., PCIe-based storage via blades as the 
 switch blade environment is certainly less hostile to such storage than the very dense and very hot
