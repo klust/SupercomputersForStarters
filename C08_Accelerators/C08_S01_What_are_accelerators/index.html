@@ -2084,7 +2084,9 @@ GPUs fall in this family. Examples are</p>
     GPUs and Hopper GPGPUs, these lines start to diverge a bit (and even before, the cards really meant
     for supercomputing had more hardware on them for double precision floating point computations).
     Strictly speaking the NVIDIA architecture is a single instruction multiple data (SIMD) architecture
-    and not one that uses explicit vector instructions, but the resulting capabilities are not really 
+    that does not use explicit vector instructions, but scalar instructions that have to be executed 
+    in lock-step across multiple "threads".
+    The resulting capabilities are not really 
     different from more regular vector computers (but then vector computers with an instruction set that
     also support scatter/gather instructions and predication, features that are missing from, e.g., 
     the AVX/AVX2 instruction set).</p>
@@ -2095,11 +2097,16 @@ GPUs fall in this family. Examples are</p>
     architecture. The CDNA architecture is a further evolution of their previous graphics architecture
     GCN though (used in, e.g., the Vega cards).</p>
 <p>AMD Instinct GPUs are used in the first USA exaflop computer Frontier (fastest system in the Top500
-ranking of June and November 2022 and June 2023) and in the European LUMI system (fastest European system in the Top500 ranking
-of June and November 2022 and June 2023). These computers use the CDNA2 architecture. A future USA exascale system, El Capitan, 
-planned for 2023 (or possibly 2024 with the supply chain disruptions largely due to Covid), will
-employ a future version of the architecture, CDNA3, which will bring CPU and GPU very close together
-(but more about this later in this section).</p>
+ranking of June and November 2022 and June and November 2023) 
+and in the European LUMI system (fastest European system in the Top500 ranking
+of June and November 2022 and June and November 2023). 
+These computers use the CDNA2 architecture. A future USA exascale system, El Capitan, 
+planned for 2024 at the moment (after delays partly caused by supply chain disruptions due to Covid), will
+employ the CDNA3, launched in December 2023, which brings CPU and GPU very close together in one 
+of the variants and the variant used in El Capitan
+(but more about this later in this section).
+HLRS (Stuttgart, Germany) is also investing in this technology for its Hunter system which is a
+development system for an upcoming exascale system based on a yet unannounced GPU.</p>
 </li>
 <li>
 <p>Intel is also moving into the market of GPGPU computing with their Xe graphics products. They
@@ -2133,7 +2140,9 @@ and in particular matrix multiplication or rank-k update. They were originally d
     the similar-generation A100 NVIDIA cards when it comes to low-precision formats used in some
     AI applications, but it shines in higher-precision data formats (single and double precision
     floating point), as it was developed in the first place for the needs for the Frontier
-    exascale simulation whose procurement predated the days were AI became very popular.</p>
+    exascale simulation whose procurement predated the days were AI became very popular.
+    The MI300 generation launched in December 2023 should be very competitive with the
+    NVIDIA H100 and H200, also for lower precision data formats.</p>
 </li>
 <li>
 <p>Intel includes their so-called Matrix Engines in the Ponte Vecchio GPGPUs.</p>
@@ -2142,10 +2151,15 @@ and in particular matrix multiplication or rank-k update. They were originally d
 <p>The NVIDIA tensor cores, AMD matrix cores and Intel matrix engines are all integrated very closely with
     the vector processing hardware on their GPGPUs, However, there are also dedicated matrix computing accelerators,
     in particular in accelerators specifically designed for AI, such as the Google TPU (Tensor Processing Unit).</p>
-<p>Most neural network accelerators on smartphone processors also fall in this category as they are usually
-in a physically distinct area from the GPU hardware in the SOC (though not a separate chip or die).</p>
 </li>
 </ul>
+<details class="note">
+<summary>Neural network accelerators in smartphones and PCs</summary>
+<p>Some neural network accelerators on smartphone processors also fall in this category as they are usually
+in a physically distinct area from the GPU hardware in the SOC (though not a separate chip or die).
+Not all neural network accelerators are of the matrix computing type though. E.g., the AMD XDNA
+architecture, used in some Ryzen chips, is based on vector processors.</p>
+</details>
 <p>A third and so far less popular accelerator in supercomputing is an FPGA accelerator, which stands for
 Field Programmable Gate Array. This is hardware designed to be fully configured after manufacturing,
 allowing the user to create a specialised processor for their application. One could, e.g., imagine creating
@@ -2158,7 +2172,7 @@ that one would expect on a true GPU. The increasing demand for performance while
 tends to stay flat or even increase a bit and while new semiconductor manufacturing processes don't deliver
 the gains they used to 15 years ago, resulted in an evolution towards distinct "GPUs" for compute (traditional HPC and AI) and
 graphics rendering. We've outlined this already a bit when discussing the types of accelerators earlier
-on this page. It also implies that compute GPUs doe not always support typical graphics software stacks 
+on this page. It also implies that compute GPUs do not always support typical graphics software stacks 
 such as OpenGL or Vulcan, or that part of these stacks have to rely on software-based rendering accelerated
 by the vector functions of the GPU rather than full hardware rendering.</p>
 <p>The NVIDIA line-up has had different cards for compute and rendering for quite a while already. 
@@ -2171,11 +2185,11 @@ both chips. E.g., the A100 had much more FP64 hardware and more tensor hardware,
 while the GA102 had ray tracing cores and offered much more regular precision CUDA cores,
 even though it had only half as many transistors and a 30% smaller die in a slightly larger 
 process node. 
-The NVIDIA Hopper compute GPUs and Ada Lovelace rendering GPUS launched in late 2022
+The NVIDIA Hopper compute GPUs and Ada Lovelace rendering GPUs launched in late 2022
 were clearly designed together and
 share some characteristics, but are still very different beasts, this time emphasised by
 different code names.
-The ray tracing units present in the Ada architecture are not in the Hopper architecture, the raster
+The ray tracing units present in the Ada Lovelace architecture are not in the Hopper architecture, the raster
 engines also seem to be gone, and there is also no trace of video encoding blocks in the architectural
 documentation, though there is hardware decoding for some video formats and JPEG images as these can
 be useful in AI applications.</p>
@@ -2187,7 +2201,10 @@ while the compute GPUs use the CDNA architecture which is a descendant of the VE
 different structure of the compute units. The CDNA GPUs also lack the ray tracing units of RDNA2/3, 
 and the texture units and raster engine that are needed in rendering GPUs.</p>
 <p>It is to be expected that compute and render GPUs will only diverge more over time as it is increasingly impossible
-to build hardware that does both well and is still cost-effective for a large enough market. </p>
+to build hardware that does both well and is still cost-effective for a large enough market. 
+When we also add the cloud and regular server market, at the AI level, we can also expect that there will be cards that
+specialise in deep learning inference computations only, and more versatile cards that are suitable for training.
+This is again just a matter of costs and size of markets, and also triggered by stagnating transistor costs.</p>
 
 
 

@@ -2293,7 +2293,7 @@
 widely used accelerators in supercomputers.</p>
 <h2 id="the-current-state">The current state<a class="headerlink" href="#the-current-state" title="Permanent link">&para;</a></h2>
 <p>Accelerator programming is, also due to the early stage of the technology, still
-a mess, and standardisation still has to set in. This is not uncommon in the world
+a mess, and standardisation is only setting in now. This is not uncommon in the world
 of supercomputing: The same happened with message passing where there were several
 proprietary technologies until the needs were sufficiently well understood to come to
 a standardisation.</p>
@@ -2304,9 +2304,10 @@ a standardisation.</p>
     programming. They chose to make large parts of their technology proprietary
     to create a vendor lock-in and keep hardware prices high.</p>
 <p>CUDA is the basis of the NVIDIA ecosystem. NVIDIA together with partners also 
-created OpenACC,a set of compiler pragma's for C/C++ and Fortran for GPGPU 
-programming, on paper managed by an
-open consortium, but many other compiler vendors are hesitant to pick those up.</p>
+created OpenACC, a set of compiler pragma's for C/C++ and Fortran for GPGPU 
+programming. OpenACC is on paper managed by an
+open consortium, but many other compiler vendors are hesitant to pick 
+up the technology.</p>
 <p>The NVIDIA toolset also offers some support for open, broadly standardised
 technologies, but the support is usually inferior to that for their proprietary
 technologies or standards that are in practice largely controlled by them.</p>
@@ -2379,7 +2380,8 @@ non-NVIDIA hardware.</p>
 <p>OpenCL is largely superseded by newer technologies developed by the Khronos Group.
 Vulkan is their effort to create an API that unifies 3D graphics and computing and is mostly
 oriented towards game programming etc., but less towards supercomputing (as several GPUs used
-for supercomputing even start omitting graphics-specific circuits) while SYCL, which we will 
+for supercomputing even start omitting graphics-specific circuits hence don't have the 
+hardware anymore to run Vulkan) while SYCL, which we will 
 discuss later in these notes, is a new initiative for GPGPU programming.</p>
 <h2 id="compiler-directives">Compiler directives<a class="headerlink" href="#compiler-directives" title="Permanent link">&para;</a></h2>
 <p>In these models, there are no separate sources for the GPU that are compiled with a separate
@@ -2431,7 +2433,7 @@ It became a more descriptive and less prescriptive model (offering the compiler 
 to decide what it should do rather then enforcing the compiler to do something in a particular way),
 with the prescriptive nature being criticised a lot by the OpenACC community who claimed superiority
 because of this. It also contained much better support for debuggers, performance monitoring tools, etc.</p>
-<p>OpenMP has since had minor extensions i the form of version 5.1 at SC'20 and 5.2 at SC'21. The
+<p>OpenMP has since had minor extensions in the form of version 5.1 at SC'20 and 5.2 at SC'21. The
 standard is controlled by a much larger consortium than the OpenACC standard.</p>
 <p>OpenMP is an important technology in the AMD ROCm and Intel oneAPI ecosystems. Intel has in fact
 supported OpenMP offload to some of its own GPUs for many years, long before establishing the oneAPI
@@ -2505,7 +2507,7 @@ last revised (March 2023).</p>
 is a framework developed by CASUS - Center for Advanced Systems Understanding of the 
 Helmholtz Zentrum Dresden Rossendorf. Alpaka also supports various backends, including a CUDA
 back-end for NVIDIA GPUs. There is also work going on on a HIP backend for AMD GPUs, with
-support for Intel GPUs coming through a SYCL and an OpenMP offloac backend. </p>
+support for Intel GPUs coming through a SYCL and an OpenMP offload backend. </p>
 <h2 id="libraries">Libraries<a class="headerlink" href="#libraries" title="Permanent link">&para;</a></h2>
 <p>One can often rely on already existing libraries when developing software for GPUs.</p>
 <p>NVIDIA CUDA comes with a wide range of libraries.</p>

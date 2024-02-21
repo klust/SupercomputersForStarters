@@ -2017,6 +2017,17 @@
               <article class="md-content__inner md-typeset">
                 
                   
+  
+<nav class="md-tags" >
+  
+    
+    
+    
+      <a href="../../tags/#blas" class="md-tag">BLAS</a>
+    
+  
+</nav>
+
 
 
 <h1 id="illustration-matrix-matrix-multiplication">Illustration: Matrix-matrix multiplication<a class="headerlink" href="#illustration-matrix-matrix-multiplication" title="Permanent link">&para;</a></h1>
@@ -2120,7 +2131,7 @@ performance of 22.4 Gflops at a clock speed of 2.8 GHz. </p>
 <p>The reason for taking this older cluster is that the caches are still relatively
 small so that a smaller problem size can be used to demonstrate the effect of 
 cache misses without having to go to such a large problem size that the run time
-for the worst variants becomes prohibitively extensive to test easily.</p>
+for the worst variants becomes prohibitively large to test easily.</p>
 <p>The results are summarised in the following table:</p>
 <table>
 <thead>
@@ -2144,12 +2155,12 @@ for the worst variants becomes prohibitively extensive to test easily.</p>
 <tr>
 <td style="text-align: left;"><em>ikj</em></td>
 <td style="text-align: right;">63.68</td>
-<td style="text-align: right;"><strong>0.491</strong></td>
+<td style="text-align: right;"><span style="color:crimson;"><strong>0.491</strong></span></td>
 </tr>
 <tr>
 <td style="text-align: left;"><em>jki</em></td>
 <td style="text-align: right;">9.87</td>
-<td style="text-align: right;"><strong>3.165</strong></td>
+<td style="text-align: right;"><span style="color:green;"><strong>3.165</strong></span></td>
 </tr>
 <tr>
 <td style="text-align: left;"><em>kij</em></td>
@@ -2256,12 +2267,14 @@ It was defined in three phases</p>
 <li>BLAS 3 extended BLAS in 1988 with matrix-matrix operations, that help to better exploit
     a cache hierarchy.</li>
 </ul>
-<p>There is a reference implementation of the BLAS API in Fortran, but that implementation doesn't
+<p>There is a <a href="https://www.netlib.org/blas/">reference implementation of the BLAS API in Fortran</a>, 
+but that implementation doesn't
 really give you a high performance. However, vendors of microprocessors invest a lot of time in
 making an optimised implementation for their processors, and there are also a couple of open source
 projects that did so. A popular closed source vendor implementation is the Intel MKL library
-(which contains much more than just BLAS). OpenBLAS and BLISS are two recent open source 
-implementations.</p>
+(which contains much more than just BLAS). The MKL routines are very well optimised for each
+Intel processor, but not so much for competing compatible processors.
+OpenBLAS and BLISS are two recent open source implementations.</p>
 <p>The DGEMM code in an optimised BLAS library is a lot more complex than any of our six variants.
 Optimised implementations work by splitting the matrices in small blocks that fit in cache
 and compute the matrix-matrix product out of the matrix-matrix products of those smaller blocks.
@@ -2282,32 +2295,32 @@ to the Intel (classic) Fortran compiler:</p>
 <tr>
 <td style="text-align: left;"><em>ijk</em></td>
 <td>1.821</td>
-<td style="text-align: right;">1.60</td>
+<td style="text-align: right;"><span style="color:crimson;">1.60</span></td>
 </tr>
 <tr>
 <td style="text-align: left;"><em>jik</em></td>
 <td>1.283</td>
-<td style="text-align: right;">3.40</td>
+<td style="text-align: right;"><span style="color:darkviolet;">3.40</span></td>
 </tr>
 <tr>
 <td style="text-align: left;"><em>ikj</em></td>
 <td>0.491</td>
-<td style="text-align: right;">1.60</td>
+<td style="text-align: right;"><span style="color:crimson;">1.60</span></td>
 </tr>
 <tr>
 <td style="text-align: left;"><em>jki</em></td>
 <td>3.165</td>
-<td style="text-align: right;">3.40</td>
+<td style="text-align: right;"><span style="color:darkviolet;">3.40</span></td>
 </tr>
 <tr>
 <td style="text-align: left;"><em>kij</em></td>
 <td>0.7666</td>
-<td style="text-align: right;">10.74</td>
+<td style="text-align: right;"><span style="color:green;">10.74</span></td>
 </tr>
 <tr>
 <td style="text-align: left;"><em>kji</em></td>
 <td>2.352</td>
-<td style="text-align: right;">10.68</td>
+<td style="text-align: right;"><span style="color:green;">10.68</span></td>
 </tr>
 <tr>
 <td style="text-align: left;">F95 MATMULT</td>
@@ -2364,12 +2377,12 @@ more interesting result:</p>
 <tr>
 <td style="text-align: left;"><em>ikj</em></td>
 <td style="text-align: right;">1002.28</td>
-<td style="text-align: right;"><strong>0.031</strong></td>
+<td style="text-align: right;"><span style="color:crimson;"><strong>0.031</strong></span></td>
 </tr>
 <tr>
 <td style="text-align: left;"><em>jki</em></td>
 <td style="text-align: right;">11.67</td>
-<td style="text-align: right;"><strong>2.678</strong></td>
+<td style="text-align: right;"><span style="color:green;"><strong>2.678</strong></span></td>
 </tr>
 <tr>
 <td style="text-align: left;"><em>kij</em></td>
@@ -2409,6 +2422,9 @@ core.</p>
 
 
 
+
+  
+  
 
 
 
