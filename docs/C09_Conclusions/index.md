@@ -81,7 +81,7 @@ codes run orders of magnitude faster when rewritten in Julia.
 The same holds for languages meant for scripting, with Python the most used one
 in scientific computing. Such languages were never designed for efficiency and
 for tasks that execute continuously and require a lot of CPU time. 
-Python can be acceptable when it is used to bind modules together that themselves
+Python is acceptable when it is used to bind modules together that themselves
 each are highly optimised C/C++ code, but it is very hard to get pure Python code
 to work efficiently. There have been several efforts to try to write just-in-time
 compilers that can increase the efficiency of pure Python code, but none of the
@@ -148,8 +148,12 @@ almost 4 GHz in 2005, but from then on evolution slowed down
 (and took even a step back for a while) and now we are somewhere
 close to 6 GHz for processors that are really optimised for sequential
 code and consume a lot of power. It also became harder and harder
-to get gains from increased instruction level parallelism. Instead of
-that, we saw growing popularity of vector instructions and the use
+to get gains from increased instruction level parallelism. 
+Some remarkable gains were made again in the last couple of years,
+but mostly in processors that were not as good as the best ones
+available when it comes to IPC.
+Instead of
+that, we saw growing popularity of vector instructions and recently the use
 of multiple cores. 8 to 16 cores is not uncommon anymore in regular
 PC's, and the first 24-core PC processor was announced in late 2022.
 So the further speed increases almost exclusively came from
