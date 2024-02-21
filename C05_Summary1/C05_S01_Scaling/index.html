@@ -1891,17 +1891,20 @@
                   
 
 
-<p>In this chapter we summarise the previous three chapters on processor, memory and storage technology.
-We also want to stress that HPC stands for High Performance Computing and that a supercomputer is not 
+<p>In this chapter we combine some of our findings from the previous three chapters on processor, memory and storage technology,
+look at it from a more system-integrated view, and also look a bit more at other aspects
+of the evolution throughout the years.</p>
+<p>We also want to stress once again that HPC stands for High Performance Computing and that a supercomputer is not 
 like a very High-end Personal Computer.</p>
 <h1 id="scaling">Scaling<a class="headerlink" href="#scaling" title="Permanent link">&para;</a></h1>
-<p>The performance of a computer cannot be understood from a single parameter. Instead many
+<p>The performance of a computer cannot be understood from a single parameter. 
+Instead we've seen that many
 parameters characterise the performance of computer. The clock speed of a CPU is only one
-of those parameters. There are also many lantencies that need to be taken into account:
+of those parameters. There are also many latencies that need to be taken into account:
 memory latencies at the various levels of the memory hierarchy and of storage, communication
 latency, but if you would study into more detail than is possible in these lecture notes how
 to obtain maximal performance from a computer, also latencies in instruction execution.
-And there is also the bandwidth of several components that has to be taken into account:
+The bandwidth of several components also has to be taken into account:
 bandwidth to the various levels of the memory hierarchy and to storage, bandwidth between
 CPUs in a shared memory system and bandwidth of the interconnect. And the number of
 instructions a CPU can execute simultaneously is also a kind of bandwidth.
@@ -1910,7 +1913,8 @@ of memory and storage.</p>
 <p>Not all these parameters are as cheap to scale, or improve over time at the same rate.
 As we will also discuss a bit further in this chapter, physical limitations have put a bound to
 improvements in CPU clock speed and latencies.
-The finite speed of light (30 cm/ns in vacuum and roughly 20 cm/ns in glasfiber)
+The finite speed of light (30 cm/ns in vacuum and roughly 20 cm/ns in glasfiber,
+or 10 cm/cycle in vacuum for a 3 GHz processor)
 and speed of signals in copper wires is just one of those limitations.
 The growth of the bandwidth of memory, disks and network connections tends to be slower
 than the growth of the theoretical peak performance of a computer system.</p>

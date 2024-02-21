@@ -1972,7 +1972,11 @@ Andy in this law is Andy Grove, CEO of Intel and later Chairman of the board bet
 In those days Dennard scaling and the rapid evolution of semiconductor technology made a rapid 
 growth of processing power for PCs possible and the single chip designs from Intel were quickly
 catching up with the much more expensive often multi-chip designs for workstation and server
-processors. Bill in this law is Bill Gates, founder of Micorosft and its CEO and Chairman between
+processors. New architectural features were added that made them more and more like
+the processors that were used in much bigger computers and capable of running multiple
+bigger applications safely together on a single machine, even for multiple users
+simultaneously.
+Bill in this law is Bill Gates, founder of Microsoft and its CEO and Chairman between
 1975 and 2000. Especially in the '90s, when GUIs became popular, PC software rapidly expanded
 and always managed to use all available processing power, sometimes not feeling any faster
 than the previous version of a package on a previous generation of hardware. With some
@@ -1992,7 +1996,8 @@ was also designed to run old 16-bit DOS programs well together with 32-bit softw
 Though there were some Unix variants that supported the CPU in 32-bit mode and 
 a 32-bit version of OS/2 in early 1992, it took Microsoft until Windows NT 3.1 in 
 July 1993 to come with an OS for typical PC use that fully exploited the 32-bit 
-features of the 80386 (by then succeeded by the 80486 and Pentium).</p>
+features and process isolation features for safe and robust multitasking of the 80386 
+(by then succeeded by the 80486 and Pentium).</p>
 <p>It used to be common practice in much of the scientific computing community to 
 ridicule Microsoft and to claim that UNIX and UNIX-derived operating systems are superior.
 A large part of the scientific computing community isn't doing any better though
@@ -2012,7 +2017,7 @@ to execution efficiency and hence is a good way to slow down modern hardware.</p
 Java, and many other programming languages from that area, may have good ideas to 
 improve programmer productivity or make it easier to run code on multiple machines,
 but this also came at a cost of performance. The first versions of the Java virtual 
-machine were just slow, and even later versions based on a just-in-time compiler are
+machine were just slow, and even later versions based on a just-in-time compiler (JIT compiler) are
 not that spectacular. Designers of just-in-time compilers have long promised us better
 performance than regular compilers as they can use runtime information to further
 improve the generated code, but the reality is that gathering that information and
@@ -2049,9 +2054,9 @@ much code. In fact, the Python designers aren't really to blame for this as the
 language was developed with a completely different purpose in mind and did a good job
 at that for a very long time. There have been several efforts to develop just-in-time compilers
 (and an ahead-of-time compiler to C) 
-for Python, but as of today there is still no JIT that does well on most Python code,
+for Python, but as of today there is still no just-in-time compiler that does well on most Python code,
 and several companies that invested in the development of one have given up, though 
-all compilers will probably come with examples where they offer a 100x or 1000x speed
+all just-in-time compilers will probably come with examples where they offer a 100x or 1000x speed
 increase over naively written pure Python code for small specific fragments.
 Cython is an example of an ahead-of-time compiler that needs some help as regular 
 Python code doesn't really offer enough type information to generate efficient code. 
@@ -2093,8 +2098,8 @@ nearly the absolute zero. Every fraction of a Kelvin above the absolute zero mak
 worse because of noise (which manifests itself as errors in the computation).
 Don't be fooled by the pictures you see of quantum computers: Most of these pictures don't even show
 the quantum computer nor all the hardware that is needed to measure the quantum state.
-The most popular pictures tend to show the nice-looking multistage cooling system.
-The same holds for optical computers. The reality there is that we are still very far from 
+The most popular pictures tend to show the nice-looking multistage cooling system.</p>
+<p>The same holds for optical computers. The reality there is that we are still very far from 
 integrated optical circuits, let alone ones that are powerful enough to do computations quicker than
 our current computers. The amount of money needed to develop that technology into something
 useful may turn out to be prohibitive unless we really hit barriers very hard.</p>

@@ -1920,7 +1920,7 @@ processor but the two-chip 8086/8087 combo that was also used in personal comput
 led to the Intel iPSC product line of supercomputer built out of regular 80386 and later
 the Intel i860 RISC processors. Other manufacturers also picked up the idea, e.g.,
 IBM with the SP line using processors developed for their POWER workstations in 1993
-(IBM also build a vector computer in the late 80s). By 1995 distributed memory 
+(IBM also built a vector computer in the late 80s). By 1995 distributed memory 
 computers based on processors designed for workstations or PCs already took a lot
 of the top spots in the Top 500 list, a list of fastest supercomputers on the 
 Linpack benchmark. Supercomputer manufacturers differentiated more in their
@@ -1931,7 +1931,7 @@ manufacturer. </p>
 when Linux started to become more popular among researchers and when Intel processors
 for PCs had fully caught up with typical workstation processors in terms of performance,
 gradually pushing the latter out of the market as the growing design costs had to
-be amortised on a too low volumes. 
+be amortised on a too low volume. 
 Modern supercomputers try to minimise the hardware cost by reusing technologies 
 that have other larger volume applications also and in some cases even reusing 
 more volume hardware. Even custom network technologies, for a long time the feature
@@ -1973,6 +1973,11 @@ applications where different tasks that can be executed in parallel are fairly i
 of each other (think of the thousands of requests coming in on web servers), though
 there are cloud infrastructures that are good enough to build small virtual clusters
 capable of running reasonably sized simulations.
+Cloud infrastructures may be rather dense, but supercomputers tend to be built even more
+dense to reduce costs even more (the cables connecting parts are very expensive),
+and improve latencies as much as possible. But that density also comes with new restrictions.
+E.g., local disks are not only a management problem but in fact it becomes physically
+difficult to add them to a node and ensure that all components get proper cooling.
 Supercomputers and cloud infrastructures have also very different exploitation models.
 That partly results from the different type of environment they intend to offer, but is also 
 partly the result of the fact that many supercomputers are installed in supercomputer centres
@@ -1991,9 +1996,7 @@ infrastructure where there is a financial incentive to think economically and wh
 uncommon to keep some servers a bit longer to, e.g., save on the data transport cost to bring
 data from a remote data store service to a local (virtualised) disk. The full virtualisation 
 that is often used also makes it a lot easier for the system to clean up afterwards, making
-it easier to offer local storage in a manageable way (and cloud servers tend to be larger also
-which also eases offering local storage, while supercomputers are built as compact as possible
-for better internode communication performance and to be able to use cheaper cabling).</p>
+it easier to offer local storage in a manageable way.</p>
 
 
 
