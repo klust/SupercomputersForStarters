@@ -39,9 +39,13 @@ This is called a parallel file system.
         Spectrum Scale/GPFS doesn't have the same two-layer architecture as Lustre or BeeGFS (or at least,
         it is not visible), but does the full management of the disks itself.
 
-    -   [Panasas PanFS](https://www.panasas.com/) is a storage system that has its roots in the
-        same research project as Lustre. It is a commercial offering consisting of software and
-        dedicated hardware. It is currently not in use at the VSC.
+    -   [VDURA PanFS](https://www.vdura.com/) is a storage system that has its roots in the
+        same research project as Lustre. The company used to be called Panasas and had an
+        offering that was based on their own custom-built hardware. In early 2024 they changed 
+        their name to VDURA and switched to a fully software-defined storaga model, offering
+        their PanFS software stack on generic hardware instead.
+
+        It is not in use at the VSC.
 
     -   [WEKA](https://www.weka.io/) is also a fully commercial offering, but one running on more
         standard file server hardware. It requires a full SSD system though which makes it a rather
