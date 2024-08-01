@@ -41,4 +41,4 @@
     in parallel applications, and is also used in the implementation of HDF5, netCDF and likely other libraries.
 
 -   Jülich Supercomputer Centre (between Aachen and Köln) organises [a lot of trainings](https://www.fz-juelich.de/en/ias/jsc/news/events/training-courses).
-    The anual training "Parallel I/O and Data Formats" is particularly relevant for this chapter of this tutorial.
+    The annual training "Parallel I/O and Data Formats" is particularly relevant for this chapter of this tutorial.
