@@ -60,7 +60,8 @@ defunct Xeon Phi processor, a processor specifically designed for supercomputers
 got a new life in the server variant of the Skylake architecture (Skylake X) and the more
 recent Ice Lake and Sapphire Rapids processors. In fact, Intel keeps adding new instructions
 for new data formats, especially for AI where some deep learning applications can benefit
-from lower precision data formats.
+from lower precision data formats. To reorganise the mess around AVX-512 and its extensions,
+Intel has now introduced the AVX10 instruction set. 
 
 The ARM instruction set has known the NEON vector instructions for quite a while already.
 These instructions use 128 bit registers, so can work on 2 double precision or 4 single precision
@@ -74,8 +75,11 @@ of the Fugaku supercomputer (which was the fastest machine in the Top500 lists f
 uses 512-bit registers. These instructions have been extended with SVE2 instructions that are more
 oriented towards integer computations and making the instruction set more useful for non-scientific
 applications. SVE2 is now part of the new ARMv9 architecture and used in, e.g., the processors
-of the Samsung S22, S23 and S24 mobile phones, but also in the brand new NVIDIA Grace CPU that will
-be used in the GPU-accelerated nodes of the first European exascale supercomputer.
+of the Samsung S22, S23 and S24 mobile phones, the Apple A18 processor uses in the iPhone 16 series and
+the Apple M4 processor used in various Mac models and some iPads,
+but also in the  NVIDIA Grace CPU that will
+be used in the GPU-accelerated nodes of the first European exascale supercomputer and is also 
+used in the GPU-accelerated nodes of the Swiss Alps supercomputer operated by CSCS.
 
 AMD also uses vector units int its GCN and CDNA GPUS, with 16-wide single precision 
 hardware and 64-wide single precision instructions (well, not completely true for CDNA2), 
@@ -96,6 +100,23 @@ on vector computing units with 8-wide units for most basic operations.
     Vaughan and the third VSC tier-1 computer use
     2<sup>nd</sup> and 3<sup>rd</sup> gen EPYC CPUs code named Rome and Milan respectively which
     also provide the AVX2 and FMA3 instructions.
+
+    AVX-512 appeared in Intel Skylake and later generations, and in AMD EPYC Zen4 CPUs (code named Genoa)
+    and later. Skylake and later generation Intel CPUs can be found in the VUB Hydra compute service,
+    the Intel-based partitions of the UGent clusters and the KU Leuven Genious and wICE clusters.
+    The VUB Hydra cluster also has a number of nodes with AMD Zen4 CPUs.
+
+??? Note "One step further: Matrix instructions"
+    It hasn't stopped with vector instructions. To support AI inference, GPUs have introduced
+    matrix instructions, basically matrix multiplication, though often only for low-precision
+    data formats though the AMD CDNA2 an later variants of this architecture also have them
+    for single (FP32) and double (FP64) precision data formats.
+
+    These also are starting to make their way into CPUs. Intel has already defined the AVX
+    instruction set of low-precision matrix operations, implemented in some of their server CPUs.
+    IBM introduced the MMA (Matrix-Multiply Assist) instructions in POWER10. And the ARM v9.2
+    instruction set introduced the optional Arm Scalable Matrix Extension (SME) instruction set
+    extension.
 
 
 ## Another type of SIMD computing
