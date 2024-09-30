@@ -4,6 +4,8 @@ site_dir: "site/SupercomputersForStarters"
 
 theme:
   name: material
+  greetings: Welcome to the Supercomputers for Starters training"
+  language: en
   features:
     - navigation.instant
     - navigation.tracking
@@ -16,8 +18,23 @@ theme:
     - navigation.footer
     - header.autohide
     - toc.follow
+    - content.code.annotate
+    - content.code.copy
   palette:
-    - primary: black
+    - primary: vscentrum
+  icon:
+    admonition:
+      demo: fontawesome/solid/computer-mouse
+      exercise: fontawesome/solid/screwdriver-wrench
+      remark: fontawesome/solid/comment-dots
+      bug: fontawesome/solid/robot
+      audience: fontawesome/solid/people-group
+      solution: fontawesome/solid/wand-magic-sparkles
+      technical: fontawesome/solid/book-open-reader
+      intermediate: fontawesome/solid/graduation-cap
+      advanced: fontawesome/solid/user-graduate
+      vscentrum: fontawesome/solid/building-flag
+      nice-to-know: fontawesome/regular/lightbulb
 
 nav:
   - Table of contents: index.md
@@ -133,6 +150,9 @@ extra_javascript:
   - https://polyfill.io/v3/polyfill.min.js?features=es6
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
   
+extra_css:
+  - stylesheets/extra.css
+ 
 extra:
   # add links in bottom right
   social:
