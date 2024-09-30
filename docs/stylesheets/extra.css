@@ -20,12 +20,13 @@
     --md-primary-fg-color: rgba(242, 142, 36, 0.95);
     --md-primary-fg-color--light: rgba(242, 142, 36, 0.7);
     --md-primary-fg-color--dark: rgba(242, 142, 36, 1.0);
-    --md-primary-bg-color: hsla(0, 0%, 100%, 1);
-    --md-primary-bg-color--light: hsla(0, 0%, 100%, 0.7);
-    --md-accent-fg-color: hsla(0, 0%, 0%, 1);
+    --md-primary-bg-color: hsla(0, 0%, 0%, 1);
+    --md-primary-bg-color--light: hsla(0, 0%, 0%, 0.7);
+    --md-accent-fg-color: rgb(125, 58, 22);
     --md-accent-fg-color--transparent: hsla(0, 0%, 0%, 0.1);
     --md-accent-bg-color: hsla(0, 0%, 100%, 1);
     --md-accent-bg-color--light: hsla(0, 0%, 100%, 0.7);
+    --md-typeset-a-color: rgb(217, 108, 49);
 }
 
 [data-md-color-primary=vscentrum] {
@@ -43,7 +44,6 @@
     --md-accent-fg-color--transparent: hsla(0, 0%, 0%, 0.1);
     --md-accent-bg-color: hsla(0, 0%, 100%, 1);
     --md-accent-bg-color--light: hsla(0, 0%, 100%, 0.7);
-    --md-typeset-a-color: rgb(217, 108, 49);
 }
 [data-md-color-primary=vscentrum] .md-button {
     background:var(--md-primary-fg-color);

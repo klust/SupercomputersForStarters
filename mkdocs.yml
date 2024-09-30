@@ -21,7 +21,9 @@ theme:
     - content.code.annotate
     - content.code.copy
   palette:
+    - scheme: vscentrum
     - primary: vscentrum
+    - accent: vscentrum
   icon:
     admonition:
       demo: fontawesome/solid/computer-mouse
