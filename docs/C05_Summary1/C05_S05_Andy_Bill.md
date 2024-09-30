@@ -50,6 +50,10 @@ went on to develop Matlab into what it is today. Matlab evolved into an
 excellent system to prototype numerical algorithms. However, its language
 is not nearly as efficient as traditional programming languages when it comes
 to execution efficiency and hence is a good way to slow down modern hardware.
+The one thing that Matlab does rather well, but only when used by a good Matlab
+programmer who understands how Matlab works, is exploiting the vector compute
+facilities of modern processors thanks to its use of optimised linear algebra
+libraries.
 
 <center>**What Andy giveth, James taketh away**</center>
 
@@ -105,7 +109,8 @@ Cython is an example of an ahead-of-time compiler that needs some help as regula
 Python code doesn't really offer enough type information to generate efficient code. 
 Numba and PyPy are two examples of just-in-time compilers where Numba seems to do best
 with code that heavily uses NumPy data structures while PyPy works better on non-NumPy
-code.
+code. Python 3.13 now also comes with a JIT, but it is disabled by default and the 
+performance improvements so far are little if there are any at all.
 
 Never mind that we also tend install Python and its packages from repositories that often
 only contain generic binaries compiled to run on as large a range of hardware as possible

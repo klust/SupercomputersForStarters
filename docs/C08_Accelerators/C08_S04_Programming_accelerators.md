@@ -97,6 +97,16 @@ counterpart to further ease porting code from the CUDA ecosystem to the AMD ROCm
 HIP also comes with two tools that help in reworking CUDA code into HIP code, though 
 both typically need some manual intervention.
 
+HIP can now also be used on Intel GPUs, though this is not provided by Intel itself but
+by the [CHIP-SPV project](https://github.com/CHIP-SPV) which itself builds on the
+[HIPCL](https://github.com/cpc/hipcl) and
+[HIPLZ](https://www.anl.gov/argonne-scientific-publications/pub/183259) projects.
+This basically turns HIP into a technology that can support all three GPU 
+families currently used in large supercomputers. Some PC graphics cards are also
+supported (AMD only supports some RDNA cards in HIP, and CHIP-SPV can also be 
+used with some Intel graphics cards or integrated graphics).
+
+
 ### OpenCL
 
 OpenCL or Open Compute Language is a framework for heterogeneous computing developed by
@@ -163,18 +173,20 @@ GCC compilers, but the evolution is slow and performance is often not that great
 More promising for the future is the work going on in the clang/LLVM community to support
 OpenACC, as this effort is largely driven by the USA national labs who want to avoid having
 to port all OpenACC-based code developed for the NVIDIA based pre-exascale supercomputers to
-other programming models to run on the new AMD and Intel based exascale supercomputers. In fact,
+other programming models to run on the new AMD and Intel based exascale supercomputers. 
+NVIDIA is now also contributing elements of its own implementation. In fact,
 the clang/LLVM ecosystem is the future for scientific computing and not the GNU Compiler
 Collection ecosystem as most compiler vendors already base their compilers on that technology.
 The NVIDIA, AMD and new Intel compilers are all based on LLVM and the clang frontend for C and
 C++-support, with NVIDIA and AMD still using a Fortran front-end developed by PGI and donated
 to the LLVM project while Intel is using its own front-end. 
 There is also a new community-developed modern front-end for Fortran but it is not yet ready
-for prime time as the optimisation is not yet that great.
+for prime time as the optimisation is not yet that great (but it is getting close).
 OpenACC support in the LLVM ecosystem will build upon the
 OpenMP support, the technology that we will discuss next, using extensions for those OpenACC
-features that still have no equivalent in OpenMP. However, as of version 17 (early fall 2023)
-this support is still very incomplete and experimental.
+features that still have no equivalent in OpenMP, though NVIDIA is now also trying to push its
+implementation. 
+As of version 19 (early fall 2023) this support is still very incomplete and experimental.
 
 
 ### OpenMP
@@ -265,23 +277,23 @@ computing.
 of the frameworks mentioned here. It was first released in 2011 already but grew to a
 complete ecosystem with tools to support debugging, profiling and tuning also, and now even
 some support for distributed computing also. Kokkos already supports backends for CUDA
-and ROCm, and there are experimental backends (based on SYCL and OpenMP offload) 
-that can also support the Intel GPUs that will
-be used in the Aurora supercomputer.
+and ROCm, and there are experimental backend based on SYCL
+that can also support the Intel GPUs that are
+used in the Aurora supercomputer.
 
 [RAJA](https://computing.llnl.gov/projects/raja-managing-application-portability-next-generation-platforms) 
-is a framework developed at Lawrence Livermore National Laboratory, based on standard C++11. 
+is a framework developed at Lawrence Livermore National Laboratory, based on standard C++14. 
 Just as Kokkos, RAJA has several backends supporting SIMD, threading through the TBB library or
 OpenMP, but also GPU computing through NVIDIA CUDA, AMD HIP, SYCL and OpenMP offload, though not all 
 back-ends are as mature or support all features. In particular the SIMD, TBB, SYCL and OpenMP target offload 
 (the latter needed for Intel GPUs) are still experimental at the time this section was
-last revised (March 2023).
+last revised (October 2024).
 
 [Alpaka](https://www.casus.science/research/software-repository/alpaka/) 
 is a framework developed by CASUS - Center for Advanced Systems Understanding of the 
 Helmholtz Zentrum Dresden Rossendorf. Alpaka also supports various backends, including a CUDA
-back-end for NVIDIA GPUs. There is also work going on on a HIP backend for AMD GPUs, with
-support for Intel GPUs coming through a SYCL and an OpenMP offload backend. 
+back-end for NVIDIA GPUs and a HIP backend for AMD GPUs. The most recent versions now also
+support SYCL in the Intel icpx compiler.
 
 
 ## Libraries

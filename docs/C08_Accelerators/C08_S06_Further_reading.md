@@ -89,7 +89,10 @@ tags:
 
     -   [Alpaka information on the CASUS web site](https://www.casus.science/research/software-repository/alpaka/)
 
-    -   [Alpaka information on GitHub](https://github.com/alpaka-group/alpaka)
+    -   [Alpaka information on GitHub](https://github.com/alpaka-group/alpaka). The README is the best
+        source of information on compatibility with various compilers and backend technologies.
+
+    -   [Alpaka documentation](https://alpaka.readthedocs.io/en/stable/)
 
     -   [Alpaka training from 2020 on YouTube](https://www.youtube.com/playlist?list=PLVyQXsMxRYdEoahVQAqf9_rewGj3VkXb4)
 
