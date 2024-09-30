@@ -2188,7 +2188,7 @@ process node.
 The NVIDIA Hopper compute GPUs and Ada Lovelace rendering GPUs launched in late 2022
 were clearly designed together and
 share some characteristics, but are still very different beasts, this time emphasised by
-different code names.
+different code names. 
 The ray tracing units present in the Ada Lovelace architecture are not in the Hopper architecture, the raster
 engines also seem to be gone, and there is also no trace of video encoding blocks in the architectural
 documentation, though there is hardware decoding for some video formats and JPEG images as these can
@@ -2199,9 +2199,18 @@ AMD's rendering GPUs use the RDNA architecture of which the first iteration laun
 third iteration was launched by the end of 2022,
 while the compute GPUs use the CDNA architecture which is a descendant of the VEGA architecture with a relatively
 different structure of the compute units. The CDNA GPUs also lack the ray tracing units of RDNA2/3, 
-and the texture units and raster engine that are needed in rendering GPUs.</p>
+and the texture units and raster engine that are needed in rendering GPUs.
+AMD has announced it is working on a more unified architecture again, UDNA, but expect specialised variants
+for different workloads.</p>
+<p>Intel has its Xe architecture, with different variants for integrated graphics, discrete rendering cards,
+and compute. The latter is the Data Center GPU MAX (code-named Ponte Vecchio) used in the USA supercomputer
+Aurora.</p>
 <p>It is to be expected that compute and render GPUs will only diverge more over time as it is increasingly impossible
 to build hardware that does both well and is still cost-effective for a large enough market. 
+Within compute-oriented GPUs we are also starting to see a split between architectures optimised for traditional 
+HPC with lots of FP64 compute power, and architectures more optimised for the lower-precision data formats that 
+are popular in AI applications and less emphasis on FP64 compute which is still required by many scientific computing
+applications. One example is the NVIDIA Blackwell B200 compute GPU line that appears on the market at the end of 2024.
 When we also add the cloud and regular server market, at the AI level, we can also expect that there will be cards that
 specialise in deep learning inference computations only, and more versatile cards that are suitable for training.
 This is again just a matter of costs and size of markets, and also triggered by stagnating transistor costs.</p>
