@@ -2123,7 +2123,11 @@ DRAM technology as main memory. It is in fact a standard practice in smartphones
 The Apple Silicon M-series processors also use this technology, with a data path of 512 bits wide
 (8 64-bit channels) in the Max-series, resulting in a memory bandwidth to the CPU and integrated GPU
 that is higher than the per-socket memory bandwidth in many supercomputer CPUs. 
-It is also a standard technology in GPUs for scientific computing.
+The technology is now also starting to appear in x86-based PCs. E.g., the Intel Core Ultra 200V series
+code named Lunar Lake have all memory integrated in the socket, but so far this is only done for 
+a reduction of power and increase of the clock speed of the memory bus, but not to get a wider
+memory bus.</p>
+<p>It is also a standard technology in GPUs for scientific computing.
 E.g., the AMD MI100 and NVIDIA V100 GPUs for scientific computing and the Fujitsu A64fx CPU for
 supercomputers all have a 4096-bit wide data bus to memory (in fact, 4 1024-bit buses and but at a slower speed).
 The NVIDIA A100 and regular H100 have 5120 bit wide buses (in fact, 5 1024 bit buses), 
@@ -2131,7 +2135,7 @@ the NEC SX-Aurora TSUBASA first and second gen vector accelerators have a 6144 b
 and the AMD MI250X GPU used in LUMI and its successor the MI300 series 
 have even an 8192 wide bus (in fact, 8 1024-bit buses).
 However, that memory is limited in capacity. E.g., the MI250X is limited to 128 GB
-and the newer MI300X to 192 GB (the largest of all GPUs in early 2024).
+and the newer MI300X to 192 GB (the largest of all GPUs available in the early fall of 2024).
 All these processors or accelerators use various generations of so-called HBM memory.</p>
 <!-- E.g., the theoretical peak memory bandwidth of an MI250X is 3.2 TB/s and the peak memory bandwidth
 of an NVIDIA H100 compute GPU is around 2 TB/s -->
