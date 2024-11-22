@@ -114,60 +114,73 @@ that is often used also makes it a lot easier for the system to clean up afterwa
 it easier to offer local storage in a manageable way.
 
 <!-- Censored by Maria Girone <Maria.Girone@cern.ch> in the LUMI texts where a very similar text was used. -->
-??? Example "Case Study: Bringing CERN LHC computations to an HPC infrastructure."
-    This example illustrates that cloud and HPC infrastructures are different and that
-    moving from a cloud infrastructure to an HPC infrastructure may require thinking a lot
-    about the software and the way data is handled.
+## Case Study: Bringing CERN LHC computations to an HPC infrastructure.
 
-    CERN came telling on a EuroHPC Summit Week before the COVID pandemic that they would start using more
-    HPC and less cloud and that they expected a 40% cost reduction that way.
-    At that time they were working with CSCS to bring part of the computations to the 
-    Piz Daint system, a very large Cray supercomputer. 
-    It turned out to be a lot harder than expected, to quote from the CSCS website:
-    *["The data access patterns and rates of our workflows are not typical of a supercomputer environment. 
-    In addition, for some workflows, certain resource requirements exceed what a 
-    general-purpose supercomputer typically provides; a lot of tuning therefore needs to be put in place."](https://www.cscs.ch/science/physics/2019/piz-daint-takes-on-tier-2-function-in-worldwide-lhc-computing-grid)*
-    And in the end the conclusion was that 
-    *[""Piz Daint" is slightly more cost-effective."](https://www.cscs.ch/science/physics/2019/piz-daint-takes-on-tier-2-function-in-worldwide-lhc-computing-grid).*
+This example illustrates that cloud and HPC infrastructures are different and that
+moving from a cloud infrastructure to an HPC infrastructure may require thinking a lot
+about the software and the way data is handled.
 
-    Several publications show the work that needed to be done. E.g.,
-    [F.G. Sciacca on behalf of the ATLAS Collaboration, "Enabling ATLAS big data processing on Piz Daint at CSCS", EPJ Web of Conferences **245**, 09005(2020)](https://doi.org/10.1051/epjconf/202024509005)
-    shows that in the end a dedicated partition had to be created as the needs for the LHC
-    processing were to different to fit in the regular HPC compute partitions of Piz Daint.
-    To quote from the paper, *["A large part of the codebase, like event generators and detector
-    simulation toolkits feature legacy code that has historically been developed according to the serial
-    paradigm: events are processed serially on a single thread and embarrassingly parallel processing
-    occurs for scalability purposes in multi-processor systems. HPC systems, on the contrary are
-    usually optimised for scalable parallel software that exploits the tight interconnection between
-    nodes and makes use of accelerators. In addition, network and I/O patterns diﬀer greatly from
-    those of HEP workloads. This raises the necessity of adapting the HPC to such aspects of the
-    HEP computational environment."](https://doi.org/10.1051/epjconf/202024509005)*
+[From 2013 on and maybe even earlier](https://indico.cern.ch/event/218847/contributions/449408/attachments/353870/492918/ATLAS-HPC-v03.pdf), CERN started an effort to try to move some of their computing
+off grid and cloud infrastructures and onto HPC infrastructures, hoping for a large cost benefit
+as HPC clusters tend to come cheaper than many grid systems. 
+They were working with CSCS (among others) to bring part of the computations to the 
+Piz Daint system, a very large Cray supercomputer. The first reports of this effort
+appeared around 2015, see, e.g., 
+[A. Filipic et al., ATLAS computing on CSCS HPC, Journal of Physics: Conference Series 664 (2015) 092011](http://dx.doi.org/10.1088/1742-6596/664/9/092011).
+It turned out to be a lot harder than expected, to quote from the CSCS website:
+*["The data access patterns and rates of our workflows are not typical of a supercomputer environment. 
+In addition, for some workflows, certain resource requirements exceed what a 
+general-purpose supercomputer typically provides; a lot of tuning therefore needs to be put in place."](https://www.cscs.ch/science/physics/2019/piz-daint-takes-on-tier-2-function-in-worldwide-lhc-computing-grid)*
+And in the end the conclusion was that 
+*[""Piz Daint" is slightly more cost-effective."](https://www.cscs.ch/science/physics/2019/piz-daint-takes-on-tier-2-function-in-worldwide-lhc-computing-grid).*
 
-    Additional hardware and system software needed to be brought in, including servers to bring 
-    CernVM-FS to the compute nodes in a way compatible with the Cray environment of Piz Daint.
-    Large Cray systems limit the number of Linux daemons running on the compute nodes as the
-    so-called "OS jitter" from those daemons can limit scalability. 
-    Hence only the Lustre parallel filesystem is available
-    as a remote filesystem on the compute nodes, while other remote file systems are served through
-    a so-called Data Virtualisation Service (DVS), forwarding all requests to a set of management 
-    nodes that run the actual filesystem software. 
-    A specifically tuned GPFS file system also needed to be installed (and also needed additional
-    hardware) as it turned out to perform better than Lustre under the load of the CERN applications.
-    A significant portion of the cost advantage of an HPC infrastructure was lost due to the 
-    cost of all the customizations and additional hardware.
+Several publications show the work that needed to be done. E.g.,
+[F.G. Sciacca on behalf of the ATLAS Collaboration, "Enabling ATLAS big data processing on Piz Daint at CSCS", EPJ Web of Conferences **245**, 09005(2020)](https://doi.org/10.1051/epjconf/202024509005)
+shows that in the end a dedicated partition had to be created as the needs for the LHC
+processing were to different to fit in the regular HPC compute partitions of Piz Daint.
+To quote from the paper, *["A large part of the codebase, like event generators and detector
+simulation toolkits feature legacy code that has historically been developed according to the serial
+paradigm: events are processed serially on a single thread and embarrassingly parallel processing
+occurs for scalability purposes in multi-processor systems. HPC systems, on the contrary are
+usually optimised for scalable parallel software that exploits the tight interconnection between
+nodes and makes use of accelerators. In addition, network and I/O patterns diﬀer greatly from
+those of HEP workloads. This raises the necessity of adapting the HPC to such aspects of the
+HEP computational environment."](https://doi.org/10.1051/epjconf/202024509005)*
 
-    It is clear that a center can only adapt an HPC system to such applications if there is a sufficient
-    additional budget, not only for the hardware but also for the additional system administration tasks,
-    and that the more usual case for all but extremely large projects is that the workflow has
-    to adapt to the HPC cluster as even if money and resources would not be a problem, it is not feasible to make
-    (likely conflicting) modifications to an infrastructure for each project. And a dedicated partition for each
-    application is not an option either as that makes it impossible to run large scalable applications
-    at the scale of the full machine. The latter may not be a huge issue for a Tier-2 system in the VSC
-    (but it could be from a management point of view) as users who want to run big jobs can move up
-    to larger systems, 
-    but it is an issue for supercomputers that are built in the first place to enable very large jobs,
-    as to some extent the Flemish Tier-1 systems but even more the European-level Tier-0 supercomputers,
-    as moving elsewhere to an even bigger machine is then impossible.
+Additional hardware and system software needed to be brought in, including servers to bring 
+CernVM-FS to the compute nodes in a way compatible with the Cray environment of Piz Daint.
+Large Cray systems limit the number of Linux daemons running on the compute nodes as the
+so-called "OS jitter" from those daemons can limit scalability. 
+Hence only the Lustre parallel filesystem is available
+as a remote filesystem on the compute nodes, while other remote file systems are served through
+a so-called Data Virtualisation Service (DVS), forwarding all requests to a set of management 
+nodes that run the actual filesystem software. 
+A specifically tuned GPFS file system also needed to be installed (and also needed additional
+hardware) as it turned out to perform better than Lustre under the load of the CERN applications.
+A significant portion of the cost advantage of an HPC infrastructure was lost due to the 
+cost of all the customizations and additional hardware.
+
+HPC infrastructures can be a lot cheaper than cloud infrastructures when looking at cost per
+teraFLOP. But this is only because hardware costs are cut by using proper software at the system and
+at the application level. E.g., build storage that can produce very high bandwidth at a reasonable cost
+per PB, but with the compromise that operations on lots of small files are not possible. (Scaling that
+is very costly if possible at all.) Some of the larger supercomputers are really developed following the
+paradigm that "the best part is no part" (e.g., no local disks), also to increase the reliability as when scaling to exascale,
+reliability becomes a huge problem. See also the subsection 
+["A real supercomputer: The Cray EX" in the next section of this chapter](C05_S07_Building_up_the_supercomputer.md#a-real-supercomputer-the-hpe-cray-ex).
+
+It is clear that a center can only adapt an HPC system to such applications if there is a sufficient
+additional budget, not only for the hardware but also for the additional system administration tasks,
+and that the more usual case for all but extremely large projects is that the workflow has
+to adapt to the HPC cluster as even if money and resources would not be a problem, it is not feasible to make
+(likely conflicting) modifications to an infrastructure for each project. And a dedicated partition for each
+application is not an option either as that makes it impossible to run large scalable applications
+at the scale of the full machine. The latter may not be a huge issue for a Tier-2 system in the VSC
+(but it could be from a management point of view) as users who want to run big jobs can move up
+to larger systems, 
+but it is an issue for supercomputers that are built in the first place to enable very large jobs,
+as to some extent the Flemish Tier-1 systems but even more the European-level Tier-0 supercomputers,
+as moving elsewhere to an even bigger machine is then impossible.
 <!-- END censored text -->
 
 
