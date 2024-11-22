@@ -1294,6 +1294,17 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Software, not hardware
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -1303,6 +1314,34 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#case-study-bringing-cern-lhc-computations-to-an-hpc-infrastructure" class="md-nav__link">
+    <span class="md-ellipsis">
+      Case Study: Bringing CERN LHC computations to an HPC infrastructure.
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1930,6 +1969,23 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#case-study-bringing-cern-lhc-computations-to-an-hpc-infrastructure" class="md-nav__link">
+    <span class="md-ellipsis">
+      Case Study: Bringing CERN LHC computations to an HPC infrastructure.
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -2050,15 +2106,17 @@ data from a remote data store service to a local (virtualised) disk. The full vi
 that is often used also makes it a lot easier for the system to clean up afterwards, making
 it easier to offer local storage in a manageable way.</p>
 <!-- Censored by Maria Girone <Maria.Girone@cern.ch> in the LUMI texts where a very similar text was used. -->
-<details class="example">
-<summary>Case Study: Bringing CERN LHC computations to an HPC infrastructure.</summary>
+<h2 id="case-study-bringing-cern-lhc-computations-to-an-hpc-infrastructure">Case Study: Bringing CERN LHC computations to an HPC infrastructure.<a class="headerlink" href="#case-study-bringing-cern-lhc-computations-to-an-hpc-infrastructure" title="Permanent link">&para;</a></h2>
 <p>This example illustrates that cloud and HPC infrastructures are different and that
 moving from a cloud infrastructure to an HPC infrastructure may require thinking a lot
 about the software and the way data is handled.</p>
-<p>CERN came telling on a EuroHPC Summit Week before the COVID pandemic that they would start using more
-HPC and less cloud and that they expected a 40% cost reduction that way.
-At that time they were working with CSCS to bring part of the computations to the 
-Piz Daint system, a very large Cray supercomputer. 
+<p><a href="https://indico.cern.ch/event/218847/contributions/449408/attachments/353870/492918/ATLAS-HPC-v03.pdf">From 2013 on and maybe even earlier</a>, CERN started an effort to try to move some of their computing
+off grid and cloud infrastructures and onto HPC infrastructures, hoping for a large cost benefit
+as HPC clusters tend to come cheaper than many grid systems. 
+They were working with CSCS (among others) to bring part of the computations to the 
+Piz Daint system, a very large Cray supercomputer. The first reports of this effort
+appeared around 2015, see, e.g., 
+<a href="http://dx.doi.org/10.1088/1742-6596/664/9/092011">A. Filipic et al., ATLAS computing on CSCS HPC, Journal of Physics: Conference Series 664 (2015) 092011</a>.
 It turned out to be a lot harder than expected, to quote from the CSCS website:
 <em><a href="https://www.cscs.ch/science/physics/2019/piz-daint-takes-on-tier-2-function-in-worldwide-lhc-computing-grid">"The data access patterns and rates of our workflows are not typical of a supercomputer environment. 
 In addition, for some workflows, certain resource requirements exceed what a 
@@ -2089,6 +2147,14 @@ A specifically tuned GPFS file system also needed to be installed (and also need
 hardware) as it turned out to perform better than Lustre under the load of the CERN applications.
 A significant portion of the cost advantage of an HPC infrastructure was lost due to the 
 cost of all the customizations and additional hardware.</p>
+<p>HPC infrastructures can be a lot cheaper than cloud infrastructures when looking at cost per
+teraFLOP. But this is only because hardware costs are cut by using proper software at the system and
+at the application level. E.g., build storage that can produce very high bandwidth at a reasonable cost
+per PB, but with the compromise that operations on lots of small files are not possible. (Scaling that
+is very costly if possible at all.) Some of the larger supercomputers are really developed following the
+paradigm that "the best part is no part" (e.g., no local disks), also to increase the reliability as when scaling to exascale,
+reliability becomes a huge problem. See also the subsection 
+<a href="../C05_S07_Building_up_the_supercomputer/#a-real-supercomputer-the-hpe-cray-ex">"A real supercomputer: The Cray EX" in the next section of this chapter</a>.</p>
 <p>It is clear that a center can only adapt an HPC system to such applications if there is a sufficient
 additional budget, not only for the hardware but also for the additional system administration tasks,
 and that the more usual case for all but extremely large projects is that the workflow has
@@ -2101,7 +2167,6 @@ to larger systems,
 but it is an issue for supercomputers that are built in the first place to enable very large jobs,
 as to some extent the Flemish Tier-1 systems but even more the European-level Tier-0 supercomputers,
 as moving elsewhere to an even bigger machine is then impossible.</p>
-</details>
 <!-- END censored text -->
 
 
