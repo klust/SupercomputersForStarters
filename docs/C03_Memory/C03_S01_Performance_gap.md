@@ -119,7 +119,8 @@ the NEC SX-Aurora TSUBASA first and second gen vector accelerators have a 6144 b
 and the AMD MI250X GPU used in LUMI and its successor the MI300 series 
 have even an 8192 wide bus (in fact, 8 1024-bit buses).
 However, that memory is limited in capacity. E.g., the MI250X is limited to 128 GB
-and the newer MI300X to 192 GB (the largest of all GPUs available in the early fall of 2024).
+and the newer MI325X to 256 GB (the largest of all GPUs available in the early 2025, 
+and in fact there is 288 GB of memory physically in the package but not all can be used).
 All these processors or accelerators use various generations of so-called HBM memory.
 
 <!-- E.g., the theoretical peak memory bandwidth of an MI250X is 3.2 TB/s and the peak memory bandwidth
@@ -156,7 +157,7 @@ In fact, even for that memory a hierarchy is used, typically with three levels:
 
 -   The level 3 or L3 cache is typically shared by a number of cores (but not always by all cores).
     Both the total capacity and capacity per core is all over the place in modern CPUs. E.g.,
-    on AMD Milan and Genoa EPYC CPUs the L3 cache is shared by all cores of a CCD (chiplet) and
+    on AMD Genoa and Turin EPYC CPUs the L3 cache is shared by all cores of a CCD (chiplet) and
     is 32 MB or 96 MB per CCD.
 
 Some vendors are starting to experiment with even different technologies. E.g, Intel now has
