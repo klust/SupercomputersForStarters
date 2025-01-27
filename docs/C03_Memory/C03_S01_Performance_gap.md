@@ -43,12 +43,12 @@ Each socket has 12 64-bit memory channels running at a data rate of up to
 
 |                         | 1996 Pentium Pro | 2025 AMD EPYC 9755 | Change             |
 |:------------------------|-----------------:|-------------------:|--------------------|
-| Peak flops              | 0.2 Gflops       | 11,059 Gflops      | $\times 22,120$    |
+| Peak flops              | 0.2 Gflops       | 11,059 Gflops      | $\times 55,296$    |
 | Peak memory bandwidth   | 0.52 GB/s        | 576 GB/s           | $\times 1,108$     |
 | Memory latency          | 300 ns           | 80-120 ns          | $/ 2.5 - 4$        |
 | Latency in clock cycles | 60 cycles        | 216-324 cycles     | $\times 3.6 - 5.4$ |
 
-While peak flops have exploded over this period - a factor of over 22,000 on a per 
+While peak flops have exploded over this period - a factor of over 55,000 on a per 
 socket basis between chips that are meant for technical computing - the memory bandwidth
 has not followed that pace as it grew only with a factor of 1,108. 
 And even worse, memory latency only decreased with a 
