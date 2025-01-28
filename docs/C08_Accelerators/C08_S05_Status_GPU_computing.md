@@ -38,9 +38,10 @@ There are several problems with current GPU designs:
     is limited. 2020 GPUs were limited to 32-48 GB of memory, in early 2021 a 80 GB GPU
     appeared on the market, in 2022, the first GPU with 128 GB of memory appeared
     on the market (AMD MI250/MI250X), 
-    and in (very) late 2023, the first GPUs with 192 GB of memory
-    became available (AMD MI300X). 
-    But this is still small to typical memory sizes on a regular dual
+    in (very) late 2023, the first GPUs with 192 GB of memory
+    became available (AMD MI300X) and by the end of 2024 the first GPUs with
+    256 GB of useable memory made their appearance (MI325X). 
+    But this is still relatively small to typical memory sizes on a regular dual
     socket server that is much slower than the GPU.
 
 2.  Programming bottleneck: Having to organise all data transport manually and working with
