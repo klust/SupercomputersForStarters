@@ -31,11 +31,13 @@ and is fully standardised. This implies that software that compiles with one MPI
 should also compile with any other MPI library adhering to that version of the standard.
 Compatibility is only at compile time though. The binary interface of the MPI libraries is
 not standardised and differs between implementations. 
+The current version of the standard is 4.1, which was launched in November 2023.
 There are two main public domain implementations, [Open MPI](https://www.open-mpi.org/)
 and [MPICH](https://www.mpich.org), 
 which has an offspring that one could consider a third implementation,
 [MVAPICH](https://mvapich.cse.ohio-state.edu/).
 Most vendor based MPI libraries are derived from one of these implementations.
+Note that the version of the MPI standard and version number of those libraries are not the same!
 
 Many MPI programs skip the shared memory level, using one single-threaded process per
 core or even hardware thread. On modern CPUs it may be more efficient though to combine

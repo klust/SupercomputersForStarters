@@ -98,7 +98,8 @@ HIP also comes with two tools that help in reworking CUDA code into HIP code, th
 both typically need some manual intervention.
 
 HIP can now also be used on Intel GPUs, though this is not provided by Intel itself but
-by the [CHIP-SPV project](https://github.com/CHIP-SPV) which itself builds on the
+by the [chipStar compiler ](https://github.com/CHIP-SPV/chipStar)
+from the [CHIP-SPV project](https://github.com/CHIP-SPV) which itself builds on the
 [HIPCL](https://github.com/cpc/hipcl) and
 [HIPLZ](https://www.anl.gov/argonne-scientific-publications/pub/183259) projects.
 This basically turns HIP into a technology that can support all three GPU 
@@ -163,8 +164,8 @@ spin-off creating tools for accelerator programming that failed in 2013.
 The OpenACC standard is currently controlled by the OpenACC Organization, and though it does
 count other companies that develop GPUs among its members, it still seems rather dominated by
 NVIDIA which may explain why other companies are somewhat hesitant to pick up the standard.
-The standard is at the time of writing of this section at version 3.3, released in November 2022,
-but is updated almost annually in November (there was no update in 2023).
+The standard is at the time of writing of this section at version 3.3, released in November 2022.
+Until then it was updated almost annually, but development stagnated after version 3.3.
 
 OpenACC is well supported on NVIDIA hardware through the NVIDIA HPC compilers (which is the 
 new name of the PGI compilers adopted after the integration of PGI in NVIDIA). GCC offers some 
@@ -186,7 +187,7 @@ OpenACC support in the LLVM ecosystem will build upon the
 OpenMP support, the technology that we will discuss next, using extensions for those OpenACC
 features that still have no equivalent in OpenMP, though NVIDIA is now also trying to push its
 implementation. 
-As of version 19 (early fall 2023) this support is still very incomplete and experimental.
+As of version 19 (early fall 2024) this support is still very incomplete and experimental.
 
 
 ### OpenMP
@@ -201,8 +202,9 @@ to decide what it should do rather then enforcing the compiler to do something i
 with the prescriptive nature being criticised a lot by the OpenACC community who claimed superiority
 because of this. It also contained much better support for debuggers, performance monitoring tools, etc.
 
-OpenMP has since had minor extensions in the form of version 5.1 at SC'20 and 5.2 at SC'21. The
-standard is controlled by a much larger consortium than the OpenACC standard.
+OpenMP has since had minor extensions in the form of version 5.1 at SC'20 and 5.2 at SC'21,
+and a major update to 6.0 at SC'24. 
+The standard is controlled by a much larger consortium than the OpenACC standard.
 
 OpenMP is an important technology in the AMD ROCm and Intel oneAPI ecosystems. Intel has in fact
 supported OpenMP offload to some of its own GPUs for many years, long before establishing the oneAPI
@@ -276,9 +278,8 @@ computing.
 [Kokkos](https://kokkos.org/) is a framework developed by Sandia National Labs and probably the most popular one
 of the frameworks mentioned here. It was first released in 2011 already but grew to a
 complete ecosystem with tools to support debugging, profiling and tuning also, and now even
-some support for distributed computing also. Kokkos already supports backends for CUDA
-and ROCm, and there are experimental backend based on SYCL
-that can also support the Intel GPUs that are
+some support for distributed computing also. Kokkos supports backends for CUDA, ROCm and
+SYCL, the latter to support the Intel GPUs that are
 used in the Aurora supercomputer.
 
 [RAJA](https://computing.llnl.gov/projects/raja-managing-application-portability-next-generation-platforms) 
@@ -287,9 +288,9 @@ Just as Kokkos, RAJA has several backends supporting SIMD, threading through the
 OpenMP, but also GPU computing through NVIDIA CUDA, AMD HIP, SYCL and OpenMP offload, though not all 
 back-ends are as mature or support all features. In particular the SIMD, TBB, SYCL and OpenMP target offload 
 (the latter needed for Intel GPUs) are still experimental at the time this section was
-last revised (October 2024).
+last revised (January 2025).
 
-[Alpaka](https://www.casus.science/research/software-repository/alpaka/) 
+[Alpaka](https://alpaka.readthedocs.io/) 
 is a framework developed by CASUS - Center for Advanced Systems Understanding of the 
 Helmholtz Zentrum Dresden Rossendorf. Alpaka also supports various backends, including a CUDA
 back-end for NVIDIA GPUs and a HIP backend for AMD GPUs. The most recent versions now also

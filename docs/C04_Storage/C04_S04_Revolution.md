@@ -19,38 +19,39 @@
     get their speed partially from parallelism, they only come close to their 
     speed promises with the right file access pattern.
 
-The following table shows prices and properties for some drives available in early 2022,
-with a price update made in September 2023:
+The following table shows prices and properties for some drives available in early 2025:
 
 
-|                  | Seagate Exos X20        | Seagate Nytro 3732 | Seagate  Nytro 3332 | Samsung 980 Pro  | Samsung 970 EVO Plus | Samsung 870 QVO  |
-|------------------|-------------------------|--------------------|---------------------|------------------|----------------------|------------------|
-| Technology       | spinning magnetic disks | 3D eTLC NAND flash | 3D eTLC NAND flash  | TLC V-NAND flash | TLC V-NAND flash     | QLC V-NAND Flash |
-| Market           | datacenter (SAS)        | datacenter (SAS)   | datacenter (2xSAS)  | prosumer (NVMe)  | consumer (NVMe)      | consumer (SATA)  |
-| Capacity         | 20 TB                   | 3.2 TB             | 15.36 TB            | 2 TB             | 2 TB                 | 8 TB             |
-| Read speed       | 0.28 GB/s               | 1.1 GB/s           | 1.05-2.1 GB/s       | 7 GB/s           | 3.5 GB/s             | 0.56 GB/s        |
-| Write speed      | 0.28 GB/s               | 1 GB/s             | 0.95-1 GB/s         | 5.1 GB/s         | 3.3 GB/s             | 0.53 GB/s        |
-| Latency          | 4,16 ms                 | 20 µs ???          | 20 µs ???           | 20 µs ???        | 20 µs ???            | 20 µs ???        |
-| Endurance        | ?                       | 58.4 PB            | 28 PB               | 1.2 PB           | 1.2 PB               | 2.88 PB          |
-| DWPD             | ?                       | 10                 | 1                   | 0,33             | 0.33                 | 0.2 (@5 year)    |
-| Data written/day | ?                       | 32 TB/day          | 15.3 TB/day         | 0.66 TB/day      | 0.66 TB/day          | 1.5 TB/day       |
-| Time needed      |                         | 8h50m              | 4h15m               | 2m9s             | 3m20 s               | 50 m             |
-| Price            | 0.025-0.05 €/GB         | 0,85 €/GB          | 0,31 €/GB           | 0.08 €/GB        | 0.06 €/GB            | 0.04 €/GB        |
+|                  | Seagate Exos X20        | Seagate Nytro 3750   | Seagate  Nytro 3350  | Samsung 990 Pro  | Samsung 970 EVO Plus | Samsung 870 QVO  |
+|------------------|-------------------------|----------------------|----------------------|------------------|----------------------|------------------|
+| Technology       | spinning magnetic disks | 3D eTLC NAND flash   | 3D eTLC NAND flash   | TLC V-NAND flash | TLC V-NAND flash     | QLC V-NAND Flash |
+| Market           | datacenter (SAS)        | datacenter (SAS 3.0) | datacenter (SAS 3.0) | prosumer (NVMe)  | consumer (NVMe)      | consumer (SATA)  |
+| Capacity         | 20 TB                   | 3.2 TB               | 15.36 TB             | 4 TB             | 2 TB                 | 8 TB             |
+| Read speed       | 0.28 GB/s               | 2.2 GB/s             | 2.1 GB/s             | 7.45 GB/s        | 3.5 GB/s             | 0.56 GB/s        |
+| Write speed      | 0.28 GB/s               | 1.8 GB/s             | 1.1 GB/s             | 6.9 GB/s         | 3.3 GB/s             | 0.53 GB/s        |
+| Latency          | 4,16 ms                 | 50 µs ???            | 50 µs ???            | 50 µs ???        | 50 µs ???            | 100 µs ???       |
+| Endurance        | ?                       | 58.4 PB              | 28 PB                | 2.4 PB           | 1.2 PB               | 2.88 PB          |
+| DWPD             | ?                       | 10                   | 1                    | 0,33             | 0.33                 | 0.2 (@5 year)    |
+| Data written/day | ?                       | 32 TB/day            | 15.3 TB/day          | 1.32 TB/day      | 0.66 TB/day          | 1.5 TB/day       |
+| Time needed      |                         | 4h2m                 | 3h51m                | 2m57s            | 3m20 s               | 50 m             |
+| Price            | 0.02-0.05 €/GB          | 0,82 €/GB            | 0,33 €/GB            | 0.075 €/GB       | 0.085 €/GB           | 0.04 €/GB        |
 
 In this table we compare a popular high-quality hard drive for use in the datacenter with several
 NAND flash based drives, ordered from the highest to the lowest quality measured in durability first
 and speed second.
 
-The Nytro 3732 is a very high endurance drive but only exists in relatively small capacities.
+The Nytro 3750 is a very high endurance drive but only exists in relatively small capacities.
 It uses a SAS interface which is very popular in servers as it is a good interface to build
 large disk systems, where the drives are also further away from the CPU or in this case the
-drive controller. The 3332 is a somewhat similar drive but with much higher capacity but lower
-endurance. It has two SAS interfaces that can be used to get double the bandwidth.
-The Samsung 980 Pro is a NVMe drive in M.2-format, meant to be put in a PCIe 4 slot on
+drive controller. The 3350 is a somewhat similar drive but with much higher capacity but lower
+endurance. It has the same type of SAS interface as the Nytro 3750.
+The Samsung 990 Pro is a NVMe drive in M.2-format, meant to be put in a PCIe 4 NVMe slot on
 the motherboard. This is a much faster interface than the one used in the two Nytro drives,
 which also explains its very high speed. But it is also a less scalable interface as long
 distance connections would be expensive, as are the switches that would be needed if the
-CPU does ot provide enough PCIe connections itself. The Samsung 970 EVO Plus is a slightly
+CPU does ot provide enough PCIe connections itself. It exists in capacities up to 4 TB
+and we took the largest one which is also the most cost-effective in EURO per GB.
+The Samsung 970 EVO Plus is a slightly
 lower-end drive with a slower interface. All these drives use so-called TCL NAND, which
 stands for Triple Level Cell NAND, meaning that it stores 3 bits per memory cell. 
 The last drive, the Samsung 870 QVO differs in two aspects from the other SAMSUNG drives
@@ -68,7 +69,7 @@ the speed. The smaller drives in a given series may not have enough banks of fla
 to fully exploit all the parallelism that the controller chip of the drive (itself a
 processor more powerful than those in the first smartphones) is capable of using.
 
-The main weakness of hard drives and strength of flash drives becomes immediately clean
+The main weakness of hard drives and strength of flash drives becomes immediately clear
 when we look at the rows for (peak) read and write speed and for latency: Hard disks have 
 much lower peak read and write speeds and a latency that is orders of magnitude higher.
 Note that we did not find precise latency numbers for the flash drives in the table,
@@ -99,7 +100,7 @@ in the table. But basically, the Seagate Exos is suitable for near continuous re
 and writing and will last for the 5 years of its warranty period. For SSDs the story 
 is very different. In the early years, an SSD memory cell could be erased and rewritten
 several thousands of times without failing. However, both the miniaturisation and the use
-of multiple bits per cell have severely lowered that life span. Some flash memory cell
+of multiple bits per cell have severely lowered that life span. Some flash memory cells
 can be erased and rewritten only 150 to 500 times without failing. Drives try to compensate
 for that by very clever write and erase strategies and by keeping some spare storage on the
 drive that can be used to replace worn out parts, so that a fixed size can be reported to
@@ -111,11 +112,11 @@ normalised to a 5-year life span of the drive. Another measure is the amount of 
 that can be written per day to have a 5 year life span of the drive. It is obvious that the
 larger the drive, the more data can be written also. We compare this with how long it would
 take to write that daily capacity to the drive in the (invalid) assumption that we could 
-write at the maximum write bandwidth. Now we see that the Nytro 3732 is a very good drive.
+write at the maximum write bandwidth. Now we see that the Nytro 3750 is a very good drive.
 It supports 10 DWPD and even at its relatively small capacity this is still so much data per day 
 that one could probably write almost continuously to it. It is certainly a drive suitable for
 a scenario with high write loads, as is the case for supercomputer scratch storage.
-For the Nytro 3332 which is 1 DWPD it is really only the capacity that saves us. It is slow
+For the Nytro 3350 which is 1 DWPD it is really only the capacity that saves us. It is slow
 enough that one can still write a lot of data to it. But if we would use a smaller and cheaper
 1 DWPD in, e.g., a compute node, we would probably run into problems as that local drive in the
 compute node would typically be used to contain a temporary copy of large data sets, and hence 
@@ -140,11 +141,13 @@ datacenter use.
 One could imagine building a storage system with high capacity for high read
 load scenarios from the QVO drives, and some companies build such storage, but these drives
 are not suited for the typical load on supercomputer file systems, neither for a local drive
-or for, e.g., the scratch file system. Some SSDs are suitable (and the Nytro 3732 certainly
+or for, e.g., the scratch file system. Some SSDs are suitable (and the Nytro 3750 certainly
 is) but then the cost is easily 10 times or more higher per byte than for good quality hard
 drives. This is one of the reasons why SSDs are not used more in supercomputer storage.
 After all, in supercomputer storage we need storage with a high capacity that can deal with
-a high write load.
+a high write load. And even though some people claim prices will go down, since 2022 this 
+cannot be observed from the data in the various editions of the above table. In fact, between 
+early 2024 and early 2025, prices for some drives have even gone up a bit again.
 
 Moreover, to benefit from the higher bandwidth that an SSD can deliver, it is not enough to 
 simply replace hard disks with SSDs. You'll need more and more powerful servers to move the

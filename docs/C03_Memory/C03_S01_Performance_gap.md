@@ -15,7 +15,7 @@ processor performance.
 Let us compare a workstation-class Intel architecture processor from 
 1996 (that would have been used in distributed memory supercomputers based
 on the Intel architecture) with the high-end AMD processor used in 
-several big supercomputers around 2023.
+several big supercomputers appearing from 2025 on.
 
 The 1996 processor would have been an Intel Pentium Pro processor running at a 
 clock speed of 200 MHz and capable of 1 floating point operation per cycle, so
@@ -24,35 +24,34 @@ been PC100 SDRAM. The memory latency would have been on the order of 300 ns,
 and the processor had a 64-bit memory bus running at 66 MHz, so was capable
 of a theoretical peak memory bandwidth of 0.52 GB/s.
 
-The 2023 Intel architecture processor would have been the AMD 4<sup>th</sup> gen EPYC 9654
-processor, a processor from the Genoa family. This beast has 96 cores that 
-can run at 2.4 GHz (guaranteed base clock with proper cooling). 
+The 2025 Intel architecture processor would have been the AMD 5<sup>th</sup> gen EPYC 9755
+processor, a processor from the Turin family. This beast has 128 cores that 
+can run at 2.7 GHz (guaranteed base clock with proper cooling). 
 When counting the so-called fused
 multiply-add instruction as two floating point operations (a fused 
 multiply-add instruction is an instruction that computes $a*b+c$ in a single
-pass), and taking into account that each core has 2 256-bit vector units,
-the chip is capable of 16 floating point operations per cycle per core
+pass), and taking into account that each core has 2 512-bit full function vector units,
+the chip is capable of 32 floating point operations per cycle per core
 which translates into a theoretical peak floating point performance 
-of 3686 Gflops. Its memory architecture is DDR5, with a memory latency
+of 11059 Gflops. Its memory architecture is DDR5, with a memory latency
 of somewhere around 110-120 ns. 
 You'll find different and lower numbers also, but it all depends on
 how you measure (to the core, to the socket, first byte or the whole
 cache line, ...) and whether you take best case or average performance.
-Each socket has 12 64-bit memory channels running at a data rate of
-4800 MHz, so the theoretical peak memory bandwidth is 461 GB/s.
+Each socket has 12 64-bit memory channels running at a data rate of up to
+6,000 MHz, so the theoretical peak memory bandwidth is 576 GB/s.
 
-|                         | 1996 Pentium Pro | 2023 AMD EPYC 9654 | Change             |
+|                         | 1996 Pentium Pro | 2025 AMD EPYC 9755 | Change             |
 |:------------------------|-----------------:|-------------------:|--------------------|
-| Peak flops              | 0.2 Gflops       | 3686 Gflops        | $\times 18,430$    |
-| Peak memory bandwidth   | 0.52 GB/s        | 461 GB/s           | $\times 890$       |
+| Peak flops              | 0.2 Gflops       | 11,059 Gflops      | $\times 55,296$    |
+| Peak memory bandwidth   | 0.52 GB/s        | 576 GB/s           | $\times 1,108$     |
 | Memory latency          | 300 ns           | 80-120 ns          | $/ 2.5 - 4$        |
-| Latency in clock cycles | 60 cycles        | 192-288 cycles     | $\times 3.2 - 4.8$ |
+| Latency in clock cycles | 60 cycles        | 216-324 cycles     | $\times 3.6 - 5.4$ |
 
-While peak flops have exploded over this period - a factor of over 18,000 on a per 
+While peak flops have exploded over this period - a factor of over 55,000 on a per 
 socket basis between chips that are meant for technical computing - the memory bandwidth
-has not followed that pace as it grew only with a factor of 890. And we actually took
-the first member of a new generation that usually gives higher bandwidth per core or
-per flop for the 2023 chip. And even worse, memory latency only decreased with a 
+has not followed that pace as it grew only with a factor of 1,108. 
+And even worse, memory latency only decreased with a 
 factor around 3 and has in fact been stagnant for many years now.
 This is an excellent example of how parameters of a computer system evolve at vastly
 different rates.
@@ -61,16 +60,15 @@ Memory bandwidth is clearly a problem. The 1996 Pentium Pro could produce 1.6 GB
 of double precision floating point results which is three times the bandwidth of the
 memory system. And this does not yet take into account that to produce those results,
 one needs input too. So clearly this chip could not work at full speed at all if all
-data has to come from main memory. However, for the 2023 AMD EPYC processor the situation
-is even much worse. That chip can in theory produce 29,488 GB/s of results with is over
-60 times the memory bandwidth (and its predecessor was even worse as there was a big
-generational jump in memory bandwidth). So clearly this chip would be running at an
+data has to come from main memory. However, for the 2025 AMD EPYC processor the situation
+is even much worse. That chip can in theory produce 88,472 GB/s of results with is over
+150 times the memory bandwidth. So clearly this chip would be running at an
 even lower fraction of its peak speed if all data had to come from memory.
 
 The memory latency is an even bigger problem. 300ns latency on the Pentium Pro means
 that 60 floating point operations could have been done in that period. 
-However, the 120ns latency on the AMD EPYC from 2023 corresponds to more than 400,000
-floating point operations. Obviously this is an exaggeration as the 2023 chip is a multi-core
+However, the 120ns latency on the AMD EPYC from 2025 corresponds to more than 1.3 million
+floating point operations. Obviously this is an exaggeration as the 2025 chip is a multi-core
 chip and in fact multiple cores can use different parts of the main memory in parallel,
 but still...
 
@@ -121,7 +119,8 @@ the NEC SX-Aurora TSUBASA first and second gen vector accelerators have a 6144 b
 and the AMD MI250X GPU used in LUMI and its successor the MI300 series 
 have even an 8192 wide bus (in fact, 8 1024-bit buses).
 However, that memory is limited in capacity. E.g., the MI250X is limited to 128 GB
-and the newer MI300X to 192 GB (the largest of all GPUs available in the early fall of 2024).
+and the newer MI325X to 256 GB (the largest of all GPUs available in the early 2025, 
+and in fact there is 288 GB of memory physically in the package but not all can be used).
 All these processors or accelerators use various generations of so-called HBM memory.
 
 <!-- E.g., the theoretical peak memory bandwidth of an MI250X is 3.2 TB/s and the peak memory bandwidth
@@ -158,7 +157,7 @@ In fact, even for that memory a hierarchy is used, typically with three levels:
 
 -   The level 3 or L3 cache is typically shared by a number of cores (but not always by all cores).
     Both the total capacity and capacity per core is all over the place in modern CPUs. E.g.,
-    on AMD Milan and Genoa EPYC CPUs the L3 cache is shared by all cores of a CCD (chiplet) and
+    on AMD Genoa and Turin EPYC CPUs the L3 cache is shared by all cores of a CCD (chiplet) and
     is 32 MB or 96 MB per CCD.
 
 Some vendors are starting to experiment with even different technologies. E.g, Intel now has
