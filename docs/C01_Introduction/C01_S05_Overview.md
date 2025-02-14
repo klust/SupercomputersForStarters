@@ -26,7 +26,7 @@ software to bind all hardware together to a very powerful machine.
 
 Yet much of what you learn about supercomputers is also useful for programming PC's. Modern
 PC's also increasingly rely on parallelism, and this has become very visible with the AMD
-Ryzen-based PC's and the 12th Gen and later Intel processors. In fact, smartphones arrived
+Ryzen-based PC's and the 12th Gen Core and later Intel processors. In fact, smartphones arrived
 there even earlier as 8-core Android smartphones have been around since 2013.
 PC's also have most of the memory hierarchy that you'll find in supercomputers, and taking
 that hierarchy into account when writing software is as important for PC's as it is for

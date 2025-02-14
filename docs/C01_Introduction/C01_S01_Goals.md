@@ -12,8 +12,8 @@ questions such as:
 -   What can and can we not expect from a supercomputer?
 
 The reader may be very much tempted to say **"I'm not a programmer, do I need to know all this?"**
-but one should realise a supercomputer is a very expensive machine and a large research infrastructure
-that should be used efficiently unless a cheap PC or smartphone. Whether a supercomputer will be used well
+but one should realise that a supercomputer is a very expensive machine and a large research infrastructure
+that should be used efficiently, unless a cheap PC or smartphone. Whether a supercomputer will be used well,
 depends on the problem you're trying to solve and on your choice of software. 
 It also depends on the resources that you request when starting a program.
 Unlike your PC, a supercomputer is a large shared infrastructure and you have to specify which part of the

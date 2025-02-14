@@ -66,9 +66,10 @@ in what is called the *socket*. The term processor nowadays typically refers to 
 This uniform memory access design does have a flaw though: 
 The more processors you try to link this
 way, the harder and less economical it becomes to have uniform memory access.
-The limit seems to be at around 8 to 16 cores, though some CPU manufacturers
-have succeeded in going further while still giving a near uniform access 
-of all CPUs to all memory. The connection to the memory does tend to become
+For a long time, the limit seemed to be at around 8 to 16 cores, 
+though the very high core number packages on the market today do
+succeed in offering a near uniform memory access to all cores.
+The connection to the memory does tend to become
 a bottleneck in such designs (and there are other bottlenecks also that
 are far too complicated to discuss in this short course).
 
@@ -111,15 +112,15 @@ All current multiple-socket server CPUs use a NUMA architecture, e.g., the Intel
 IBM POWER processors. 
 Probably the largest NUMA design in terms of the number of sockets was the SGI Altix UV system
 which could scale to 64 sockets. After the merger with HPE it was renamed to HPE Superdome Flex.
-(The current version as of 2023 scales to only 32 sockets.)
+(The current version as of 2025 scales to only 32 sockets.)
 Currently one may even have NUMA within a chip. This was very pronounced with the 
 first generation AMD EPYC server processor code-named Naples, which had 4 chiplets each with
 up to 8 cores and their own memory, and those chiplets were linked together via an internal
 Infinity Fabric network (and the same network was also used to link two sockets). It is still
 somewhat present in newer AMD CPUs also, though mostly in a different way that we will return to later
-in this course. It is also expected to show up strongly in the higher core count Intel Sapphire Rapids
-CPUs launched in early '2023 (but very hard to get initially), 
-but at the time of writing we have no good performance data available yet.
+in this course. It is also showing up in the higher core count Intel Sapphire Rapids
+CPUs launched in early '2023, where a single socket should be treated as 4 NUMA regions each
+with a quarter of the memory connected to the socket.
 
 
 ## A look at the software side

@@ -34,7 +34,7 @@ The ALU or Arithmetic and Logical Unit is the unit that does the
 actual computations.
 The registers are a very small block of local memory. On modern 
 computers, the ALU can only use data that is already in one of the
-registers and will also write results to the registers. 30 years ago
+registers and will also write results to the registers. 40 years ago
 or more this was not always the case and some processors could operate
 directly on data from memory.
 Another important block is the Address Generation Unit with
@@ -64,7 +64,7 @@ and this is the key to improving performance.
 !!! Note
     In the past there were computers that worked with data straight from memory without
     registers. Current Intel CPUs still have for compatibility reasons with the older 
-    generation chips instructions that get data from memory and in the same instruction 
+    generation chips, instructions that get data from memory and in the same instruction 
     also use it for an arithmetic or logic operation, but in modern implementations these instructions are 
     broken up in the hardware into an instruction that transfers between main memory
     and memory in the register space, and a second instruction that does the arithmetic
