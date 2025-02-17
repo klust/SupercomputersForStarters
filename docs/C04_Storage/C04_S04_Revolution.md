@@ -270,7 +270,7 @@ built-in support for that memory.
 
 HPE is working a what they call a 
 [near-node storage system code-named Rabbits](https://www.hpcwire.com/2021/02/18/livermores-el-capitan-supercomputer-hpe-rabbit-storage-nodes/)
-for the third USA exascale computer, El Capitan. 
+targetting the third USA exascale computer, El Capitan. 
 It consists of a storage server that sits close to a number of compute nodes with
 fast dedicated PCIe connection to each of them. The server has its own processor so can
 work independently from the compute nodes to, e.g., transfer data that was written

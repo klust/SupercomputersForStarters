@@ -51,8 +51,7 @@ one depicted in the picture.
 
     This chip is used in a small subsection of the EuroHPC pre-exascale system
     [MareNostrum 5](https://www.bsc.es/ca/marenostrum/marenostrum-5)
-    (and were planned for the pre-exascale system Leonardo also but it is not
-    clear at the moment if they will be in the final machine).
+    (and were planned for the pre-exascale system Leonardo).
 
 -   Recently for large memory computers, and especially for database systems, a new type
     of RAM package was proposed that is connected to an expansion card on the CXL-bus,

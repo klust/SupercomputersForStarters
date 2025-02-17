@@ -98,8 +98,9 @@ both physically and logically further away from your application. Physically bec
 there are (at least) two processors and a network involved (and on the server side disks
 usually not be as close to the processor as on your PC, except in some of the most expensive
 storage systems). The physical delay caused by the network may not be that important with
-hard disk storage, but it is important when accessing SSDs or cached storage. 
-The software adds even more delays. After all, your program talks to a network file system
+hard disk storage, or even when accessing SSDs or cached storage unless that storage
+would be in another building on another campus. 
+The software adds a lot of delay though. After all, your program talks to a network file system
 which then sends the request to the server where it also has to pass through multiple layers
 of software: through the network stack, to the file server software, to the file system (which may
 be similar to that on your PC but doesn't have to), and back through the network stack before

@@ -20,12 +20,12 @@ A good step towards improved use of supercomputer file systems is to use appropr
 data formats. Libraries such as
 [HDF5](https://www.hdfgroup.org/solutions/hdf5/),
 [netCDF](https://www.unidata.ucar.edu/software/netcdf/),
-[ADIOS](https://csmd.ornl.gov/adios)
+[ADIOS](https://adios2.readthedocs.io)
 and [SIONlib](https://apps.fz-juelich.de/jsc/sionlib/docu/index.html)
 help to organise large amounts of data in a small number of files that work well
 on supercomputers. 
 For some compression formats libraries exist that can be used to read data from the
-compressed archive directly into memory which may already improve performance when\
+compressed archive directly into memory which may already improve performance when
 a lot of small files would otherwise be read in, but of course it requires adapting
 the code to use such a library rather than the functions calls to read from the 
 file system.
