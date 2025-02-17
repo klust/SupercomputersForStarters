@@ -1977,25 +1977,26 @@
 three of them are also relevant for PCs or even smartphones:</p>
 <ol>
 <li>
-<p>Instruction level parallelism through pipelining and superscalar execution,
+<p><strong>Instruction level parallelism</strong> through pipelining and superscalar execution,
     present to some degree in virtually all processor designs these days, even
-    very low power ones for smartphones.</p>
+    very low power ones for smartphones. These are techniques to do <em>more instructions
+    per clock cycle</em>.</p>
 </li>
 <li>
-<p>Vector instructions (and now coming up, matrix instructions) to do more work
-    per instruction. These are also used in even a lot of low power designs,
+<p><strong>Vector instructions</strong> (and now coming up, <strong>matrix instructions</strong>) to do <em>more work
+    per instruction.</em> These are also used in even a lot of low power designs,
     have been crucial to get additional performance from even PC processors in the 
     past 20 years, and are even useful in lots of integer based compute tasks
     on modern CPUs (AI inference, image and sound processing, ...)</p>
 </li>
 <li>
-<p>Shared memory parallelism: Many cores sharing a single memory space. 
+<p><strong>Shared memory parallelism:</strong> Many cores sharing a single memory space. 
     This type of parallelism is also present in PCs and even smartphones,
     but supercomputers take it to a larger scale, reaching limits of scalability
     of operating systems.</p>
 </li>
 <li>
-<p>Distributed memory parallelism. This is the only level of parallelism that is
+<p><strong>Distributed memory parallelism.</strong> This is the only level of parallelism that is
     not found in your PC or smartphone. Both may more and more rely on distributed
     apps where some of the functionality comes from remote servers, but this kind
     of distribution uses very different techniques from what is needed to run, e.g.,

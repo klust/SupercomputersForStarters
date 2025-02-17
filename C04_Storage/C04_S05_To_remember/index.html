@@ -1961,12 +1961,12 @@ be avoided where possible.</p>
 data formats. Libraries such as
 <a href="https://www.hdfgroup.org/solutions/hdf5/">HDF5</a>,
 <a href="https://www.unidata.ucar.edu/software/netcdf/">netCDF</a>,
-<a href="https://csmd.ornl.gov/adios">ADIOS</a>
+<a href="https://adios2.readthedocs.io">ADIOS</a>
 and <a href="https://apps.fz-juelich.de/jsc/sionlib/docu/index.html">SIONlib</a>
 help to organise large amounts of data in a small number of files that work well
 on supercomputers. 
 For some compression formats libraries exist that can be used to read data from the
-compressed archive directly into memory which may already improve performance when\
+compressed archive directly into memory which may already improve performance when
 a lot of small files would otherwise be read in, but of course it requires adapting
 the code to use such a library rather than the functions calls to read from the 
 file system.
