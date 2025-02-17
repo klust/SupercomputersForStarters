@@ -45,7 +45,7 @@ advanced vector instructions are also disabled in the performance cores).
 PC's often also use their GPU to accelerate some applications.
 And from late 2023 on specialised accelerators for AI deep learning inference
 computations also gained popularity and were even integrated in some AMD and
-some Intel Meteor Lake CPUs.
+some Intel Meteor Lake and Arrow Lake CPUs.
 
 Smartphones are not that different from modern PC's. Many smartphones contain two
 or three types or cores, or at least a single type in two different versions, one version

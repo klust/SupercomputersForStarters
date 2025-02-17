@@ -11,22 +11,23 @@ tags:
 We have seen that there are four levels of parallelism in supercomputer, and 
 three of them are also relevant for PCs or even smartphones:
 
-1.  Instruction level parallelism through pipelining and superscalar execution,
+1.  **Instruction level parallelism** through pipelining and superscalar execution,
     present to some degree in virtually all processor designs these days, even
-    very low power ones for smartphones.
+    very low power ones for smartphones. These are techniques to do *more instructions
+    per clock cycle*.
 
-2.  Vector instructions (and now coming up, matrix instructions) to do more work
-    per instruction. These are also used in even a lot of low power designs,
+2.  **Vector instructions** (and now coming up, **matrix instructions**) to do *more work
+    per instruction.* These are also used in even a lot of low power designs,
     have been crucial to get additional performance from even PC processors in the 
     past 20 years, and are even useful in lots of integer based compute tasks
     on modern CPUs (AI inference, image and sound processing, ...)
 
-3.  Shared memory parallelism: Many cores sharing a single memory space. 
+3.  **Shared memory parallelism:** Many cores sharing a single memory space. 
     This type of parallelism is also present in PCs and even smartphones,
     but supercomputers take it to a larger scale, reaching limits of scalability
     of operating systems.
 
-4.  Distributed memory parallelism. This is the only level of parallelism that is
+4.  **Distributed memory parallelism.** This is the only level of parallelism that is
     not found in your PC or smartphone. Both may more and more rely on distributed
     apps where some of the functionality comes from remote servers, but this kind
     of distribution uses very different techniques from what is needed to run, e.g.,

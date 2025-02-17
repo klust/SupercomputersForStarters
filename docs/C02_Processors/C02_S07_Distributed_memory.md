@@ -47,11 +47,12 @@ NUMA shared memory machine.
     machine to the OS, while other software solutions work more at the user level
     and just try to present a shared memory to an application.
 
-    ScaleMP was a now defunct company that made a virtual shared memory machine
+    ScaleMP was a company that made a virtual shared memory machine
     running over InfiniBand clusters. That software was also offered on the first
     Tier-1 system of the Vlaams Supercomputer Centrum for those users who needed
     more memory and a larger number of cores in shared memory than nodes at that
-    time could offer.
+    time could offer. In 2021 ScaleMP was bought by SAP, and its products are no
+    longer available.
 
     These technologies are not very important anymore today as the scalability
     limits of shared memory, especially at the software level, can be reached
