@@ -73,7 +73,7 @@ Integrating with code written in other programming languages that make it easier
 to write high-performance library routines is also very cumbersome.
 And getting garbage collection to work well in a distributed memory context also
 requires build-in support in the virtual machines for this type of parallelism
-and cannot be done via a simple library add-on (there has been an effort do do MPI
+and cannot be done via a simple library add-on (there has been an effort to do MPI
 for Java but that didn't work well because of this).
 Granted not everything about Java is bad though. The language did support concurrency
 in the base language and was hence ready for shared memory execution.
@@ -101,7 +101,8 @@ much code. In fact, the Python designers aren't really to blame for this as the
 language was developed with a completely different purpose in mind and did a good job
 at that for a very long time. There have been several efforts to develop just-in-time compilers
 (and an ahead-of-time compiler to C) 
-for Python, but as of today there is still no just-in-time compiler that does well on most Python code,
+for Python. 
+But as of today there is still no just-in-time compiler that does well on most Python code,
 and several companies that invested in the development of one have given up, though 
 all just-in-time compilers will probably come with examples where they offer a 100x or 1000x speed
 increase over naively written pure Python code for small specific fragments.
@@ -115,7 +116,9 @@ performance improvements so far are little if there are any at all.
 Never mind that we also tend install Python and its packages from repositories that often
 only contain generic binaries compiled to run on as large a range of hardware as possible
 rather than binaries that exploit specific features of each processor to optimise
-performance.
+performance. And the way Python packages are distributed, is also not very friendly to
+large parallel filesystems as Python packages tend to come as many small files...
+
 
 ## But here's the problem...
 

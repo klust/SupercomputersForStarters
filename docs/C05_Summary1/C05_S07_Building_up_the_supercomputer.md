@@ -124,10 +124,10 @@ solution described above. An example of a fully water cooled system that is also
 well designed to reduce the amount of fragile cables, is the Cray EX architecture.
 
 
-The HPE Cray EX architecture is currently (2023-2024) used for some of the
+The HPE Cray EX architecture is currently (2025) used for some of the
 biggest supercomputers in the world, including the 3 first US exascale systems Frontier, Aurora and El Capitan
 and the pre-exascale system Perlmutter, the European pre-exascale system LUMI
-and the Swiss system Alps that will be extended with GPU nodes in 2024.
+and the Swiss system Alps.
 
 <figure markdown>
   ![Cray EX supercomputer](../img/C05_S07_09_Cray_EX.jpg)
@@ -229,7 +229,7 @@ The picture below gives an impression of how this works for blades with 4 CPU no
 The picture is not completely right as the interface coming from NMC0 should not connect to the HSS
 port but to the Switch 3 port. In these pictures, each node has two CPUs and those CPUs are next to each 
 other, not on top of each other, so the nodes are arranged in a 2x2 grid. Between each node pair there are
-4 PCIe connectors, 2 of wich connect to the upper node and 2 of which to the lower node. NMC0 and NMC1 are
+4 PCIe connectors, 2 of which connect to the upper node and 2 of which to the lower node. NMC0 and NMC1 are
 the Slingshot network cards, and each has 2 PCIe connections that go to connectors that connect to 
 different nodes. In the left picture, with one Slingshot connection per compute node, node 0 and 1 connect
 to the switch in slot 3 while node 2 and 3 connect to the switch in node 7. In the right picture, with one
