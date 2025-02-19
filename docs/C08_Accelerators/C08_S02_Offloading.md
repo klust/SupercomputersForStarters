@@ -46,11 +46,11 @@ MI250X variant of the AMD CDNA2 architecture. The nodes in these systems consist
 4 MI250X GPUs, with each GPU consisting of two dies, and a custom Zen3-based CPU code named Trento.
 AMD's InfinityFabric is not only used internally in each package to connect the dies (and the zen3
 chiplets with the I/O die in the Trento CPU), but also to connect the GPU packages to each other
-and the CPUs to the GPUs, hence creating a unified coherent memory space with some level of cache coherency.
+and the CPUs to the GPUs, hence creating a unified memory space with some level of cache coherency.
 It enables each CPU chiplet to access the memory of the closest attached GPU die with full cache coherency,
 but the coherency is not usable over the full system. 
 The Aurora supercomputer, which uses
-Intel Sapphire Rapids CPUs and Ponte Vecchio GPUs, will also support a unified memory 
+Intel Sapphire Rapids CPUs and Ponte Vecchio GPUs, also supports a unified memory 
 and some level of cache-coherent memory space. 
 NVIDIA was lagging a bit with the Ampere generation that has no longer a corresponding
 CPU that supports its NVLink connection, but returned with its own ARM-based CPU code named

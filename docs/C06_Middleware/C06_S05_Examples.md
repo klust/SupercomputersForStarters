@@ -12,7 +12,7 @@ and [a complete section in the FAQ](https://www.quantum-espresso.org/faq/faq-par
 And both make it very clear that running the code properly is all but an automatic process...
 
 [GROMACS](https://www.gromacs.org/) is a molecular dynamics code. 
-The new 2023 manual has a 
+The new current manual has a 
 [section explaining the various parallelisation schemes](https://manual.gromacs.org/current/user-guide/mdrun-performance.html#parallelization-schemes)
 which includes vectorisation, OpenMP, an MPI library implemented on top of threading,
 MPI, GPU acceleration (which we will discuss in a later section) and a hybrid model

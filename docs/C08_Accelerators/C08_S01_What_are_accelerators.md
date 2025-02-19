@@ -71,12 +71,12 @@ GPUs fall in this family. Examples are
     GCN though (used in, e.g., the Vega cards).
 
     AMD Instinct GPUs are used in the first USA exaflop computer Frontier (fastest system in the Top500
-    ranking of June and November 2022 and June and November 2023) 
+    ranking from June 2022 till June 2024) 
     and in the European LUMI system (fastest European system in the Top500 ranking
-    of June and November 2022 and June and November 2023). 
-    These computers use the CDNA2 architecture. A future USA exascale system, El Capitan, 
-    planned for 2024 at the moment (after delays partly caused by supply chain disruptions due to Covid), will
-    employ the CDNA3, launched in December 2023, which brings CPU and GPU very close together in one 
+    from June 2022 till June 2024). 
+    These computers use the CDNA2 architecture. The latest USA exascale system
+    and fastest system in the Top500 list of November 2024, El Capitan, 
+    employs the CDNA3, launched in December 2023, which brings CPU and GPU very close together in one 
     of the variants and the variant used in El Capitan
     (but more about this later in this section).
     HLRS (Stuttgart, Germany) is also investing in this technology for its Hunter system which is a
@@ -89,9 +89,11 @@ GPUs fall in this family. Examples are
     which support additional data formats that are very needed for
     scientific computing applications. The first product in this line is 
     is also known as the GPU code named Ponte Vecchio that
-    will be used in the USA Aurora supercomputer, which should become the second USA exaflop computer.
-    A future European pre-exascale system was planned to have a compute section with the successor of that 
-    chip, code named Rialto Bridge, but as that chip is cancelled it is not clear which GPU will be used instead.
+    is used in the USA Aurora supercomputer, the second USA exaflop computer
+    (albeit slightly slower than Frontier, the first one).
+    One of the European pre-exascale systems was planned to have a compute section with the successor of that 
+    chip, code named Rialto Bridge, so that there would be large systems in Europe with NVIDIA, AMD
+    and Intel GPUs, but as that chip is cancelled they switch to NVIDIA GPUs.
 
 -   The NEC SX Aurora TSUBASA has a more traditional vector computing architecture, but is physically also
     an expansion card that is put in a regular Intel-compatible server. It is special in the sense that the
@@ -110,8 +112,8 @@ and in particular matrix multiplication or rank-k update. They were originally d
     AI applications, but it shines in higher-precision data formats (single and double precision
     floating point), as it was developed in the first place for the needs for the Frontier
     exascale simulation whose procurement predated the days were AI became very popular.
-    The MI300 generation launched in December 2023 should be very competitive with the
-    NVIDIA H100 and H200, also for lower precision data formats.
+    The MI300 generation launched in December 2023 is very competitive with the
+    NVIDIA H100 and H200 though, also for lower precision data formats.
 
 -   Intel includes their so-called Matrix Engines in the Ponte Vecchio GPGPUs.
 
@@ -182,7 +184,7 @@ to build hardware that does both well and is still cost-effective for a large en
 Within compute-oriented GPUs we are also starting to see a split between architectures optimised for traditional 
 HPC with lots of FP64 compute power, and architectures more optimised for the lower-precision data formats that 
 are popular in AI applications and less emphasis on FP64 compute which is still required by many scientific computing
-applications. One example is the NVIDIA Blackwell B200 compute GPU line that appears on the market at the end of 2024.
+applications. One example is the NVIDIA Blackwell B200 compute GPU line that appeared on the market at the end of 2024.
 When we also add the cloud and regular server market, at the AI level, we can also expect that there will be cards that
 specialise in deep learning inference computations only, and more versatile cards that are suitable for training.
 This is again just a matter of costs and size of markets, and also triggered by stagnating transistor costs.

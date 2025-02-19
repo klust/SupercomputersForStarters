@@ -54,10 +54,11 @@ Matrix accelerators, although fairly new in the market, are also already startin
 influence CPU instruction sets. 
 IBM has added matrix instructions for both AI and linear algebra (the latter requiring 
 single and double precision floating point) to the POWER10 processor.
-Intel has already some instructions in some CPUs but only for low-precision inference, but
-will add a new instruction set extension called AMX in Sapphire Rapids, a server CPU that
-should come out in late 2022 or early 2023. It is still only meant for AI applications,
-supporting 4 and 8-bit integers and Googles bfloat16 data format.
+Intel had already some instructions in some CPUs but only for low-precision inference, but
+really jumped upon this with a new instruction set extension called AMX launched with 
+the Sapphire Rapids server CPUs that came out in 2023. It is still only meant for AI applications,
+supporting 8-bit integers and Googles bfloat16 data format. 
+A later version, for the 2024 Granite Rapids processor, also supports FP16.
 Similarly the ARM V9-A instruction set adds Scalable Matrix Extensions to the architecture.
 As is the case for Intel, these extensions are also aimed at AI applications, supporting 
 8-bit integer and bfloat16 data formats.

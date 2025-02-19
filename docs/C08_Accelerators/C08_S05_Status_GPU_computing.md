@@ -47,7 +47,7 @@ There are several problems with current GPU designs:
 2.  Programming bottleneck: Having to organise all data transport manually and working with
     separate memory spaces is a pain.
 
-3.  The link between the CPU and the GPU is a bottleneck. The PCIe buss that typically links the CPU to the GPU has 
+3.  The link between the CPU and the GPU is a bottleneck. The PCIe bus that typically links the CPU to the GPU has 
     a rather limited bandwidth compared to either the bandwidth of the CPU memory of the bandwidth
     of GPU memory. 
 
@@ -76,7 +76,7 @@ systems (as we discussed before) but is now also seen in the MI250X GPU from AMD
 version of the MI200 family connecting to the CPU through InfinityFabric, the same interconnect that AMD 
 uses internally in its sockets to link the CPU dies to the I/O die, and also uses to connect CPU sockets
 or to connect GPUs to each other in the MI100 and MI200 generations. 
-The Intel Ponte Vecchio GPU combined with the Sapphire Rapids CPU that will be used in the Aurora supercomputer
+The Intel Ponte Vecchio GPU combined with the Sapphire Rapids CPU that is used in the Aurora supercomputer
 supports a similar feature, as does the NVIDIA Grace CPU and Hopper GPU integrated in a single package.
 
 The physical sharing of memory spaces with some level of coherency is also the first step in solving
@@ -187,7 +187,7 @@ enabled and faster HBM3e memory (also used in the regular H200 GPU).
 The CPU and GPU still both have their own memory controllers and basically behave as
 separate NUMA domains, but as the connection between the two has been brought on-chip
 the bandwidth between CPU and GPU is a lot higher than in the MI250X architecture
-OR the Summit and Sierra systems with IBM POWER9 and NVIDIA V100 chips.
+or the Summit and Sierra systems with IBM POWER9 and NVIDIA V100 chips.
 The CPU memory is not provided through external DIMMs, but through a number of internal
 LPDDR5X modules (for a total of 480 GB) 
 integrated in the CPU-GPU package in a similar way as the GPU memory has
@@ -264,7 +264,7 @@ and 3 CPU chiplets with 8 zen4 cores each.
 The bandwidth between these 13 chiplets is much higher than between the MI250X
 chiplets, enabling the whole package to function as a single GPU.
 
-The MI300A will be used as the basis of the El Capitan exascale supercomputer
+The MI300A is used as the basis of the El Capitan exascale supercomputer
 installed at Lawrence Livermore National Laboratory in the USA. 
 The basic design of the node is shown in the following picture:
 

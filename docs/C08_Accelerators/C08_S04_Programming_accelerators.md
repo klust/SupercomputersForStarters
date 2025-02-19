@@ -129,7 +129,7 @@ implementation is not always spectacular. There are also some open source implem
 with varying hardware support. It has been used in supercomputing software though it was not 
 always the only model offered as several packages also contained specialised CUDA code for better 
 performance on NVIDIA hardware. The molecular dynamics package GROMACS is one example,
-and they will be switching away from OpenCL to newer technologies to support 
+and but they switched away from OpenCL to a newer technology, SYCL, to support 
 non-NVIDIA hardware.
 
 OpenCL is largely superseded by newer technologies developed by the Khronos Group.
@@ -187,7 +187,7 @@ OpenACC support in the LLVM ecosystem will build upon the
 OpenMP support, the technology that we will discuss next, using extensions for those OpenACC
 features that still have no equivalent in OpenMP, though NVIDIA is now also trying to push its
 implementation. 
-As of version 19 (early fall 2024) this support is still very incomplete and experimental.
+As of version 19 (early fall 2024) OpenACC support is still very incomplete and experimental.
 
 
 ### OpenMP
@@ -235,8 +235,8 @@ There are several compilers in development with varying levels of support for
 the standard, targeting not only GPUs, but also, e.g., the NEC SX Aurora Tsubasa vector
 boards. 
 Most if not all of these implementations are again based on Clang and LLVM.
-One implementation worth mentioning is AdaptiveCpp. This project started under the
-name hipSYCL, which as its name suggests
+One implementation worth mentioning is [AdaptiveCpp](https://github.com/AdaptiveCpp/AdaptiveCpp). 
+This project started under the name hipSYCL, which as its name suggests
 targets HIP for the backend to support AMD CPUs, but it has been extended to
 support all three major GPU families now using ptx for NVIDIA, amdgcn code for AMD and 
 SPIR-V for Intel GPUs, and the project is also working
@@ -307,6 +307,9 @@ AMD ROCm provides several libraries that mimic (subsets of) libraries in the CUD
 also easing porting from NVIDIA to AMD hardware.
 
 Intel has adapted several of its CPU libraries to use GPU acceleration also in its oneAPI platform.
+
+HPE Cray also has accelerated versions of many routines from its LibSci math library
+for NVIDIA and AMD GPUs used in Cray systems.
 
 However, there are also several vendor-neutral libraries, e.g.,
 

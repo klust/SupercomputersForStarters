@@ -16,8 +16,11 @@ tags:
 
 -   AMD GPUs
   
-    -   [Whitepaper: Introducing AMD CDNA<sup>TM</sup> 2 Architecture](https://www.amd.com/system/files/documents/amd-cdna2-white-paper.pdf)
+    -   [Whitepaper: Introducing AMD CDNA(tm) 2 Architecture](https://www.amd.com/content/dam/amd/en/documents/instinct-business-docs/white-papers/amd-cdna2-white-paper.pdf)
         which includes information on how the MI250X connects to the CPU, and on the vector and matrix cores of the GPU.
+  
+    -   [Whitepaper: Introducing AMD CDNA(tm) 3 Architecture](https://www.amd.com/content/dam/amd/en/documents/instinct-tech-docs/white-papers/amd-cdna-3-white-paper.pdf)
+        is a whitepaper covering both the MI300A APU and MI300X GPU.
   
     -   [HPCwire article on the AMD MI300 APU](https://www.hpcwire.com/2022/06/21/amds-mi300-apus-to-power-exascale-el-capitan-supercomputer/)
         that will be used in the El Capitan supercomputer.
@@ -51,6 +54,16 @@ tags:
 
     -   [Intel oneAPI overview](https://www.intel.com/content/www/us/en/developer/tools/oneapi/overview.html)
 
+-   HIP
+
+    -   [HIP in ROCm(tm)](https://rocm.docs.amd.com/projects/HIP/en/latest/)
+    
+    -   Implementation for Intel GPUs: 
+        [chipStar compiler](https://github.com/CHIP-SPV/chipStar) from the 
+        [CHIP-SPV project](https://github.com/CHIP-SPV) which itself builds on the
+        [HIPCL](https://github.com/cpc/hipcl) and
+        [HIPLZ](https://www.anl.gov/argonne-scientific-publications/pub/183259) projects.
+
 -   OpenCL
 
     -   [Khronos Group OpenCL documentation](https://www.khronos.org/opencl/)
@@ -59,7 +72,10 @@ tags:
 
     -   [The OpenACC Organization](https://www.openacc.org)
 
-    -   [Clacc, OpenACC in LLVM project page](https://csmd.ornl.gov/project/clacc)
+    -   [Clacc, OpenACC in LLVM project page](https://www.exascaleproject.org/highlight/clacc-an-open-source-openacc-compiler-and-source-code-translation-project/)
+
+    -   [Paper: "Clacc: OpenACC for C/C++ in Clang"](https://doi.org/10.1177/10943420241261976)
+        from ORNL
 
 -   OpenMP
 
@@ -87,7 +103,7 @@ tags:
 
 -   Alpaka abstraction library
 
-    -   [Alpaka information on the CASUS web site](https://www.casus.science/research/software-repository/alpaka/)
+    -   [Alpaka information on the Helmhotz web site](https://helmholtz.software/software/alpaka)
 
     -   [Alpaka information on GitHub](https://github.com/alpaka-group/alpaka). The README is the best
         source of information on compatibility with various compilers and backend technologies.
@@ -101,3 +117,11 @@ tags:
     -   [MAGMA](https://icl.utk.edu/magma/)
 
     -   [heFFTe](https://icl.utk.edu/fft/)
+
+-   CPU instruction set extensions
+
+    -   ["What is Intel^(r)^ Advanced Matrix Extensions (Intel^(r)^ AMX)?"](https://www.intel.com/content/www/us/en/products/docs/accelerator-engines/what-is-intel-amx.html)
+        with pointers to further documentation.
+
+    -   [ARM SME Overview](https://developer.arm.com/documentation/109246/0100/SME-Overview)
+  

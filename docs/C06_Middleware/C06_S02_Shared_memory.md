@@ -33,9 +33,10 @@ offer some mechanisms for work distribution when used for data-parallel computin
 
 <!-- TODO: Update version of OpenMP below in case of a new version. -->
 OpenMP is a fairly open standard. OpenMP directives are not vendor-specific. 
-OpenMP has been around since 1997, when shared memory computing was still a technology 
+OpenMP has been around since 1997 (for Fortran) or 1998 (for C/C++), 
+when shared memory computing was still a technology 
 mostly used in bigger servers and supercomputers. 
-The latest version at the last revision of this chapter is OpenMP 6.0, which was launched
+The latest version at the last revision of this chapter is OpenMP 6.0, which was released
 at the Supercomputing Conference in November 2024.
 The standard nature implies that code
 developed with one compiler with OpenMP support will also compile with another compiler as long

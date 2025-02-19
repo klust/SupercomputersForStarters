@@ -17,7 +17,7 @@ the research phase, but there are other options.
 In the early days of distributed parallel computing, each vendor had its own
 communication library which meant that it was very difficult to write portable
 programs. 
-[PVM](https://www.cs.cmu.edu/Groups/pvm.html) which stands for "Parallel Virtual Machine"
+[PVM](https://www.epm.ornl.gov/pvm/pvm_home.html) which stands for "Parallel Virtual Machine"
 was a research project that developed a very popular library that could even be used to
 combine a couple of workstations into a distributed memory cluster. 
 Being more a research project, and basically being developed by a small number of groups,
@@ -79,12 +79,16 @@ It is then up to the compiler to translate that in message for the underlying ha
 combination.
 These languages were all the hype between roughly 2000 and 2010 when DARPA funded the development 
 of new high performance high productivity languages through the HPCS program. 
-It led to the development of three languages: Fortress (by Sun Microsystems), X10 (by IBM),
+It led to the development of three languages: 
+[Fortress](https://en.wikipedia.org/wiki/Fortress_(programming_language)) (by Sun Microsystems), 
+[X10](https://en.wikipedia.org/wiki/X10_(programming_language)) (by IBM),
 and [Chapel](https://chapel-lang.org/) (by Cray), but Chapel seems to be the only surviving
 language of that DARPA program and is 
 still begin developed by HPE Cray. 
-Two other languages of this type not developed in the DARPA program are co-array Fortran and
-Unified Parallel C (UPC). Co-array Fortran became part of the Fortran 2008 standard and some Fortran
+Two other languages of this type not developed in the DARPA program are 
+[co-array Fortran](https://en.wikipedia.org/wiki/Coarray_Fortran) and
+[Unified Parallel C (UPC)](https://upc.lbl.gov/). 
+Co-array Fortran became part of the Fortran 2008 standard and some Fortran
 compilers offer basic support for it. Unified Parallel C was derived from C99. It never became
 part of a standardisation process and as a result official support by compiler vendors is poor. 
 However, there are still compilers based on Clang and on GCC, and HPE Cray supports UPC
