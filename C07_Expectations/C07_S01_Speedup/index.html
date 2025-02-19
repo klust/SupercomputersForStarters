@@ -2107,13 +2107,16 @@ core number, at some point the memory use per core will become small enough that
 core only uses memory from its own NUMA domain.</p>
 <p>There is also no rule like program A runs best on <span class="arithmatex">\(X\)</span> processors. 
 The optimal number of processors <span class="arithmatex">\(X\)</span> does not only depend on the application that you're
-using. It also depends on the problem being solved. As we will see further in this
-chapter, the bigger the problem, the higher the optimal number of cores.
-Moreover, it also depends on the cluster: the characteristics of the CPU, the interconnect, ...,
+using. It also depends on the cluster: the characteristics of the CPU, the interconnect, ...,
 all have an influence on the number of cores that can be used with reasonable efficiency.
 In general, on supercomputers with a slower interconnect with less bandwidth or more
 latency, fewer cores can be used for any given problem, even if those cores are the same
-as on the computer with faster interconnect.</p>
+as on the computer with faster interconnect.
+But most importantly, the optimal number <span class="arithmatex">\(X\)</span> of processors also depends on the problem being solved. 
+As we will see further in this
+chapter, the bigger the problem, the higher the optimal number of cores.
+This is why a supercomputer support team cannot tell you: If you use VASP, then use
+that number of nodes. </p>
 <p>The general rule is though that bigger problems give you a better speed-up and efficiency
 for a given number of cores, or let you use a larger number of processors for a given 
 target efficiency.</p>
