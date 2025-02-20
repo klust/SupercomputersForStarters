@@ -319,6 +319,8 @@
       
         
       
+        
+      
     
     
     
@@ -443,6 +445,27 @@
   
   <span class="md-ellipsis">
     Overview of the notes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../C01_Introduction/C01_S06_Further_reading/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Further reading
   </span>
   
 
@@ -1497,6 +1520,17 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Further reading on middleware
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -1506,6 +1540,34 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#general-interest" class="md-nav__link">
+    <span class="md-ellipsis">
+      General interest
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1930,6 +1992,23 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#general-interest" class="md-nav__link">
+    <span class="md-ellipsis">
+      General interest
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1974,15 +2053,29 @@
 
 <h1 id="further-reading-on-middleware">Further reading on middleware<a class="headerlink" href="#further-reading-on-middleware" title="Permanent link">&para;</a></h1>
 <ul>
-<li><a href="https://www.openmp.org/">OpenMP web site</a></li>
+<li>OpenMP<ul>
+<li><a href="https://www.openmp.org/">OpenMP Architecture Review Board web site</a></li>
+<li>VSC users: <a href="https://docs.vscentrum.be/software/openmp_for_shared_memory_programming.html">"OpenMP for shared memory programming" page</a></li>
+</ul>
+</li>
 <li><a href="https://www.intel.com/content/www/us/en/developer/tools/oneapi/onetbb.html">Intel oneTBB home page</a><ul>
 <li><a href="https://github.com/oneapi-src/oneTBB">Repository on GitHub</a></li>
 </ul>
 </li>
 <li>Concurrency in languages for shared memory computing:<ul>
 <li><a href="https://docs.oracle.com/javase/tutorial/essential/concurrency/">Concurrency in "The Java<sup>TM</sup> Tutorials"</a></li>
+<li>C#:<ul>
 <li><a href="https://www.oreilly.com/library/view/concurrency-in-c/9781491906675/ch01.html">Concurrency in C#, in the O'Reilly "Concurrency in C# Cookbook"</a></li>
+<li><a href="https://learn.microsoft.com/en-us/dotnet/csharp/">Microsoft Visual Studio C# documentation</a></li>
+<li>The <a href="https://www.mono-project.com">Mono framework</a> 
+    enables running C# programs on Linux and macOS</li>
+</ul>
+</li>
+<li>Go<ul>
 <li><a href="https://go.dev/doc/effective_go#concurrency">Concurrency in Go, in "Effective Go"</a></li>
+<li><a href="https://go.dev">Go home page</a></li>
+</ul>
+</li>
 <li><a href="https://docs.julialang.org/en/v1/">Julia 1.x documentation</a><ul>
 <li>with a <a href="https://docs.julialang.org/en/v1/manual/parallel-computing/">page on parallelism</a></li>
 <li>and on <a href="https://docs.julialang.org/en/v1/base/multi-threading/">multithreading</a></li>
@@ -2003,13 +2096,19 @@
 <li><a href="https://www.open-mpi.org/">Open MPI</a></li>
 <li><a href="https://www.mpich.org">MPICH</a></li>
 <li><a href="https://mvapich.cse.ohio-state.edu/">MVAPICH</a></li>
+<li>VSC users: <a href="https://docs.vscentrum.be/software/mpi_for_distributed_programming.html">"MPI distributed programming" page in the VSC docs</a></li>
 </ul>
 </li>
-<li><a href="https://charmplusplus.org/">Charm++</a>.</li>
+<li>Charm++:<ul>
+<li><a href="https://charmplusplus.org/">Charm++ .org web site</a>.</li>
+<li><a href="http://charm.cs.uiuc.edu">Charm++ web site at UIUC</a></li>
+</ul>
+</li>
 <li>PGAS languages for distributed memory computing:<ul>
 <li>Chapel<ul>
 <li><a href="https://chapel-lang.org/">Chapel web page</a> with links to its social media</li>
 <li><a href="https://github.com/chapel-lang/">Chapel on GitHub</a></li>
+<li><a href="https://www.facebook.com/ChapelLanguage">Chapel on Facebook</a></li>
 </ul>
 </li>
 <li>X10<ul>
@@ -2021,6 +2120,7 @@
 <li>Coarray fortran<ul>
 <li><a href="http://caf.rice.edu">A very dated web page at RICE university</a></li>
 <li><a href="https://support.nag.com/nagware/np/r71_doc/manual/compiler_10_2.html#AUTOTOC_10_2_3">An page at NAG discussing coarrays in Fortran 2008</a></li>
+<li><a href="https://gcc.gnu.org/wiki/Coarray">Coarray support in gfortran</a></li>
 </ul>
 </li>
 <li><a href="https://upc.lbl.gov">Unified Parallel C @ Berkeley Lab</a></li>
@@ -2036,6 +2136,10 @@
 </li>
 </ul>
 </li>
+</ul>
+<h2 id="general-interest">General interest<a class="headerlink" href="#general-interest" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://www.nextplatform.com/2018/11/02/compiling-history-to-understand-the-future/">TheNextPlatform article "Compiling history to understand the future"</a></li>
 </ul>
 
 
