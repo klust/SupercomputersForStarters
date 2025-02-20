@@ -23,5 +23,3 @@
     -   [UCIe - Unified Chiplet Interconnect Express](https://www.uciexpress.org/)
     -   AMD Infinity Fabric
         -   [Very technical article on WikiChip](https://en.wikichip.org/wiki/amd/infinity_fabric)
--   [YouTube playlist for this course](https://www.youtube.com/playlist?list=PL55zlrFQxxWaMJWK8TiSqYo4yAgizY70k) 
-    (with many of the videos for other chapters of these notes)

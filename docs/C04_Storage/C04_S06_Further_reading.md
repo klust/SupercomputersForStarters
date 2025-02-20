@@ -48,4 +48,16 @@
 
 -   [Rabbit storage in the El Capitan user guide](https://hpc.llnl.gov/documentation/user-guides/using-el-capitan-systems/file-systems-rabbits)
 
-    -   [YouTube movie on Rabbit Storage](https://www.youtube.com/watch?v=xccViZtVye4)
+    -   [YouTube video on Rabbit Storage](https://www.youtube.com/watch?v=xccViZtVye4)
+
+
+## Illustration
+
+Vastly different SSD speeds depending on capacity, showing that parallelism is important there too:
+-   2022 M2 MacBook Pro 13” (launched in June 2022)
+    -   [Review on ArsTechnica]9https://arstechnica.com/gadgets/2022/06/m2-macbook-pros-256gb-ssd-is-only-about-half-as-fast-as-the-m1-versions/
+    -   [Review on ExtremeTech](https://www.extremetech.com/computing/337476-base-model-macbook-pro-with-m2-has-slower-ssd-than-the-m1-version)
+-   2016 iPhone 7 32 GB compared to the 128GB and 256GB SKUs
+    -   [ExtremeTech article](https://www.extremetech.com/mobile/238006-iphone-7-storage-tests-show-higher-end-models-are-significantly-faster-than-the-32gb-version), 
+        with a more technical explanation of what’s going on.
+    -   [Article on CNET](https://www.cnet.com/tech/mobile/yes-your-32gb-iphone-7s-storage-is-slower-but-heres-why-it-doesnt-matter/)

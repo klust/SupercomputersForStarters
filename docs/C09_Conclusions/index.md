@@ -250,3 +250,4 @@ anymore so we can't rely on that to get more and more compute power over time.
 And this brings us back to **lesson 1:** We'll have to focus more on high-quality software in the future
 if we want to keep supercomputing affordable yet want to be able to do more on supercomputers than
 we can do today!
+

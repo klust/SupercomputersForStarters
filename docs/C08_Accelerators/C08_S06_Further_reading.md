@@ -91,6 +91,8 @@ tags:
 
     -   [Intel oneAPI DPC++ compiler GitHub](https://github.com/intel/llvm/tree/sycl#oneapi-dpc-compiler)
 
+-   [Intel oneAPI overview](https://www.intel.com/content/www/us/en/developer/tools/oneapi/overview.html)
+
 -   Kokkos
 
     -   [Kokkos ecosystem home page](https://kokkos.org/)
@@ -100,6 +102,8 @@ tags:
     -   [RAJA home page](https://computing.llnl.gov/projects/raja-managing-application-portability-next-generation-platforms)
 
     -   [RAJA documentation](https://raja.readthedocs.io/)
+  
+    -   [Raja GitHub](https://github.com/LLNL/RAJA)
 
 -   Alpaka abstraction library
 
