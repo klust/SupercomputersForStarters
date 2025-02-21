@@ -26,8 +26,9 @@ tags:
     -   [Julia 1.x documentation](https://docs.julialang.org/en/v1/)
         -   with a [page on parallelism](https://docs.julialang.org/en/v1/manual/parallel-computing/)
         -   and on [multithreading](https://docs.julialang.org/en/v1/base/multi-threading/)
-        -   [Julia YouTube channlel](https://www.youtube.com/user/JuliaLanguage) with plenty of good tutorial videos
+        -   [Julia YouTube channel](https://www.youtube.com/user/JuliaLanguage) with plenty of good tutorial videos
         -   [2020 article on Julia adoption](https://www.hpcwire.com/2020/01/14/julia-programmings-dramatic-rise-in-hpc-and-elsewhere/)
+        -   [ArsTechnica article "The unreasonable effectiveness of the Julia programming language](https://arstechnica.com/science/2020/10/the-unreasonable-effectiveness-of-the-julia-programming-language/)
 -   [Pthreads programming tutorial at LLNL](https://hpc-tutorials.llnl.gov/posix/)
 -   Mathematics libraries:
     -   [BLAS - Basic Linear Algebra Subprograms](https://netlib.org/blas/)
