@@ -17,7 +17,7 @@ the research phase, but there are other options.
 In the early days of distributed parallel computing, each vendor had its own
 communication library which meant that it was very difficult to write portable
 programs. 
-[PVM](https://www.epm.ornl.gov/pvm/pvm_home.html) which stands for "Parallel Virtual Machine"
+[PVM](https://en.wikipedia.org/wiki/Parallel_Virtual_Machine) which stands for "Parallel Virtual Machine"
 was a research project that developed a very popular library that could even be used to
 combine a couple of workstations into a distributed memory cluster. 
 Being more a research project, and basically being developed by a small number of groups,
@@ -31,7 +31,9 @@ and is fully standardised. This implies that software that compiles with one MPI
 should also compile with any other MPI library adhering to that version of the standard.
 Compatibility is only at compile time though. The binary interface of the MPI libraries is
 not standardised and differs between implementations. 
-The current version of the standard is 4.1, which was launched in November 2023.
+The current version of the standard is 5.0, which was launched in June 2025, which
+adds a specification for an Application Binary Interface (ABI) which should make it possible
+to swap one MPI implementation for another one also after compiling the program.
 There are two main public domain implementations, [Open MPI](https://www.open-mpi.org/)
 and [MPICH](https://www.mpich.org), 
 which has an offspring that one could consider a third implementation,

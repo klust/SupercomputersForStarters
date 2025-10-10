@@ -42,7 +42,7 @@ make about the portability of containers.
 
 All this also implies that a program that is compiled 
 with one compiler or one MPI library, cannot use the runtime libraries of another compiler
-or a different MPI library when running. One one hand, this implies that mixing compilers
+or a different MPI library when running. On one hand, this implies that mixing compilers
 in your environment can cause problems which is why so many clusters are very strict about
 which programs can be used with which other programs. On the other hand, it also implies that
 getting programs that come as precompiled binaries to run on a cluster, is not always
@@ -73,12 +73,12 @@ distributed memory, but will do so in a different order that is more suited to e
     Getting precompiled binaries to run is a particular problem on LUMI. 
     It needs an MPI library with explicit support for the Slingshot 11
     interconnect for good performance, which implies that it must use the
-    libfabric library on LUMI. Cray MPICH does so and supports the 
+    libfabric library on LUMI. Cray MPICH 8 does so and supports the 
     "MPICH 3.4 ABI", so it can replace other MPICH libraries that support
     that ABI at least if there are no other runtime or general library
     conflicts. But Open MPI had a different ABI and Open MPI software 
-    rarely runs well on LUMI, and certainly cannot use GPU-aware MPI
-    on LUMI at the moment (late 2023).
+    rarely runs well on LUMI, and with GPU-aware MPI
+    still a bit of a pain (late 2025).
 
     The same can happen with software that is compiled with a newer version
     of ROCm than we have on the system. Sometimes the functionality needed by
