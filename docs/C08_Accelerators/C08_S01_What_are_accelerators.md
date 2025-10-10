@@ -93,7 +93,7 @@ GPUs fall in this family. Examples are
     (albeit slightly slower than Frontier, the first one).
     One of the European pre-exascale systems was planned to have a compute section with the successor of that 
     chip, code named Rialto Bridge, so that there would be large systems in Europe with NVIDIA, AMD
-    and Intel GPUs, but as that chip is cancelled they switch to NVIDIA GPUs.
+    and Intel GPUs, but as that chip was cancelled, they switched to NVIDIA GPUs.
 
 -   The NEC SX Aurora TSUBASA has a more traditional vector computing architecture, but is physically also
     an expansion card that is put in a regular Intel-compatible server. It is special in the sense that the
@@ -119,7 +119,7 @@ and in particular matrix multiplication or rank-k update. They were originally d
 
 -   The NVIDIA tensor cores, AMD matrix cores and Intel matrix engines are all integrated very closely with
     the vector processing hardware on their GPGPUs, However, there are also dedicated matrix computing accelerators,
-    in particular in accelerators specifically designed for AI, such as the Google TPU (Tensor Processing Unit).
+    in particular some accelerators specifically designed for AI, such as the Google TPU (Tensor Processing Unit).
 
 
 ??? Note "Neural network accelerators in smartphones and PCs"
@@ -170,14 +170,14 @@ just to try the software stack) and its architectures for compute and rendering 
 AMD's rendering GPUs use the RDNA architecture of which the first iteration launched in 2019 and the 
 third iteration was launched by the end of 2022,
 while the compute GPUs use the CDNA architecture which is a descendant of the VEGA architecture with a relatively
-different structure of the compute units. The CDNA GPUs also lack the ray tracing units of RDNA2/3, 
+different structure of the compute units. The CDNA GPUs also lack the ray tracing units of RDNA 2 and later, 
 and the texture units and raster engine that are needed in rendering GPUs.
 AMD has announced it is working on a more unified architecture again, UDNA, but expect specialised variants
-for different workloads.
+for different workloads. We may see that architecture in 2026.
 
 Intel has its Xe architecture, with different variants for integrated graphics, discrete rendering cards,
 and compute. The latter is the Data Center GPU MAX (code-named Ponte Vecchio) used in the USA supercomputer
-Aurora.
+Aurora, though that one has not been widely deployed ans looks increasingly like a dead end.
 
 It is to be expected that compute and render GPUs will only diverge more over time as it is increasingly impossible
 to build hardware that does both well and is still cost-effective for a large enough market. 
@@ -187,4 +187,7 @@ are popular in AI applications and less emphasis on FP64 compute which is still 
 applications. One example is the NVIDIA Blackwell B200 compute GPU line that appeared on the market at the end of 2024.
 When we also add the cloud and regular server market, at the AI level, we can also expect that there will be cards that
 specialise in deep learning inference computations only, and more versatile cards that are suitable for training.
+In fact, AMD is already offering the XDNA cards for use in servers specifically for inference,
+and in the summer of 2025, NVIDIA announced the Rubin CPX as a GPU focussing on the specific needs of
+[certain types of inference (the compute bound types)](https://developer.nvidia.com/blog/nvidia-rubin-cpx-accelerates-inference-performance-and-efficiency-for-1m-token-context-workloads/). 
 This is again just a matter of costs and size of markets, and also triggered by stagnating transistor costs.

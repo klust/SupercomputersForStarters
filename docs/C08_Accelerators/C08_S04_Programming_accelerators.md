@@ -164,8 +164,10 @@ spin-off creating tools for accelerator programming that failed in 2013.
 The OpenACC standard is currently controlled by the OpenACC Organization, and though it does
 count other companies that develop GPUs among its members, it still seems rather dominated by
 NVIDIA which may explain why other companies are somewhat hesitant to pick up the standard.
-The standard is at the time of writing of this section at version 3.3, released in November 2022.
-Until then it was updated almost annually, but development stagnated after version 3.3.
+The standard is at the time of writing of this section at version 3.4, released in June 2025.
+Until 2022 (when 3.3 was released in November), the standard was updated almost annually,
+but (fortunately) the release cadence slowed down considerably after that as neither compilers
+nor users could keep up with the rapid evolution.
 
 OpenACC is well supported on NVIDIA hardware through the NVIDIA HPC compilers (which is the 
 new name of the PGI compilers adopted after the integration of PGI in NVIDIA). GCC offers some 
@@ -211,7 +213,12 @@ supported OpenMP offload to some of its own GPUs for many years, long before est
 ecosystem. GCC has had some support for OpenMP offload to NVIDIA hardware since version 7 and to 
 some AMD hardware since version 10. However, as is the case for OpenACC, it may not be the most
 performant option on the market. The clang/LLVM ecosystem is working hard for full support of
-the newest OpenMP standards. The AMD and new oneAPI Intel compilers are in fact fully based
+the newest OpenMP standards, though they too are struggling to keep up. Support is already
+rather good in C and C++, but with clang 20 (March 2025), a newly rewritten Fortran compiler
+was also introduced with improved support for OpenMP, also for GPU programming, an area where
+the previous LLVM-based Fortran compiler was lacking a bit.
+Clang/LLVM has become the compiler family of choice for a lot of modern CPU architectures and 
+for accelerator programming. The AMD and new oneAPI Intel compilers are in fact fully based
 on clang and LLVM using some of their own plug-ins to offer additional features, and the NVIDIA 
 HPC compiler also largely seems to be based on this technology. NVIDIA and AMD also use the LLVM
 backend to compile CUDA and HIP kernels respectively, showing once more that this is the compiler
@@ -286,9 +293,9 @@ used in the Aurora supercomputer.
 is a framework developed at Lawrence Livermore National Laboratory, based on standard C++14. 
 Just as Kokkos, RAJA has several backends supporting SIMD, threading through the TBB library or
 OpenMP, but also GPU computing through NVIDIA CUDA, AMD HIP, SYCL and OpenMP offload, though not all 
-back-ends are as mature or support all features. In particular the SIMD, TBB, SYCL and OpenMP target offload 
-(the latter needed for Intel GPUs) are still experimental at the time this section was
-last revised (January 2025).
+back-ends are as mature or support all features. In particular the SIMD, TBB and OpenMP target offload 
+are less complete and should be considered experimental at the time this section was
+last revised (October 2025).
 
 [Alpaka](https://alpaka.readthedocs.io/) 
 is a framework developed by CASUS - Center for Advanced Systems Understanding of the 

@@ -230,8 +230,8 @@ package directly to the interconnect for additional bandwidth.
 
 ### Fully unified CPU and GPU: AMD MI300A
 
-The AMD MI250X is really just a transition to the MI300 "Antares" series, 
-that goes one step further beyond the integration
+The AMD MI250X was really just a transition to the MI300 "Antares" series, 
+that in one variant goes one step further beyond the integration
 that the NVIDIA Grace Hopper architecture offers. 
 In that generation, announced in December 2023, 
 one of the variants (the MI300A) merges the CPU and GPU completely,
@@ -291,5 +291,7 @@ exascale system using a future AMD GPU later in the decade.
 
 Intel was also working on a similar design, code-named Falcon Shores that was intended to hit
 the market in 2024, but in an announcement in March 2023 it was said that the chip was postponed
-till 2025, and the announcement also mentioned it as a GPU, explicitly scrapping the XPU term they
-used before.
+till 2025 (but it did not show up), 
+and the announcement also mentioned it as a GPU, explicitly scrapping the XPU term they
+used before. Since then, Intel went silent and it is not even clear if they will launch another
+datacenter-ready GPU for general compute and AI.

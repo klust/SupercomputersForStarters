@@ -68,9 +68,11 @@ and memory in a single package. The CPU and GPU dies no longer have physically d
 and AMD claims that copy operations between CPU and GPU in a package will be completely unnecessary.
 MI300A was launched in December 2023 with almost immediate availability and is used in the El Capitan
 supercomputer which became the number 1 in the Top-500 list in November 2024. 
-Intel has also hinted at the Falcon Shores successor to Ponte Vecchio and Rialto Bridge, likely a 2025 or 2026 product, 
+Intel has also hinted at the Falcon Shores successor to Ponte Vecchio and Rialto Bridge, 
+originally planned to be a 2025 or 2026 product, 
 that will also combine CPU and GPU chiplets in a single package with a fully unified memory
-space, but has now postponed this to a later generation. 
+space, but has now postponed this to a later generation, it it appears at all as Intel has become
+rather silent about future GPU evolutions. 
 
 Note that current Intel or AMD-based PC's with integrated GPUs are not better in this respect.
 The CPU and integrated GPU share the physical RAM in the system, but each has its own
