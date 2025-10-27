@@ -53,6 +53,11 @@ This is called a parallel file system.
         and claim to have solved many of the metadata problems that we will mention below.
         It is currently not in use at the VSC.
 
+    -   [VAST](https://www.vastdata.com/) is another vendor offering a 100% SSD system. They try
+        to use cheaper SSDs, which does come with a performance hit compared to the WEKA solution. They
+        also use many tricks to store data both secure and relatively efficient, but those tricks work
+        best on a file system with a high read load and not too many writes.
+
 In a parallel file system, the metadata is separated from the actual data. The picture below shows
 the (simplified) setup for Lustre or BeeGFS:
 

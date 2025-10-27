@@ -197,7 +197,8 @@ computer as having 16 cores (though it may understand that these are actually 8 
 
 This technology is known under different names. The generic name is **Simultaneous Multi-Threading** 
 or **SMT** which is also the term used by IBM for its POWER CPUs and by AMD for its Zen architecture CPUs 
-(Ryzen and EPYC). Intel uses the term **hyper-threading** instead and Oracle uses the term **hardware threading**.
+(Ryzen and EPYC). Intel uses the term **hyper-threading** instead and Oracle used the term **hardware threading**
+when it was building its own SPARC-based CPUs.
 
 The gain one can get from enabling SMT depends a lot on the architecture of the CPU and on the application.
 E.g., on the regular Intel Xeon or Core i7/i9 CPUs the gain is often rather limited. However, on the Xeon Phi
