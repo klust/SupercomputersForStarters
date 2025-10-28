@@ -29,8 +29,8 @@ which is still in use today.
 MPI stands for Message Passing Interface
 and is fully standardised. This implies that software that compiles with one MPI library
 should also compile with any other MPI library adhering to that version of the standard.
-Compatibility is only at compile time though. The binary interface of the MPI libraries is
-not standardised and differs between implementations. 
+Compatibility is only at compile time though. The binary interface of the MPI libraries was
+not standardised and differs between implementations until MPI 5.0. 
 The current version of the standard is 5.0, which was launched in June 2025, which
 adds a specification for an Application Binary Interface (ABI) which should make it possible
 to swap one MPI implementation for another one also after compiling the program.

@@ -171,7 +171,7 @@ growing budgets to match are mostly over.
 
 The focus in computing is also more and more on performance per Watt as
 energy bills become prohibitively high for supercomputer centres and 
-centres operating large server farms or as portability matters as in 
+centres operating large server farms, or as portability matters as in 
 smartphones, where you want more and more performance while the battery
 capacity isn't increasing that quickly. This implies more but slower
 cores, so more need to exploit parallelism and less single-thread performance.
@@ -238,7 +238,7 @@ can.
 **Lesson 3:** Whether a run on a supercomputer will be efficient or not, depends on three elements:
 
 1.   The hardware of the supercomputer,
-2.   the application used,
+2.   the software, i.e., the application used but of course also the quality of the middleware and OS,
 3.   and the problem being solved. Larger problems usually mean that more resources can be
      used efficiently.
 

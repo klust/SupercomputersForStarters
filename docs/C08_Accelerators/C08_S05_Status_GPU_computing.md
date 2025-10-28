@@ -60,9 +60,10 @@ The amount of memory that can be used by a GPU will increase a lot the coming ye
 memory packages are getting bigger by stacking more dies in 3D, and the number of memory packages
 that can be integrated in the overall GPU package is increasing. 
 In (very) late 2023, the first GPUs with 192 GB of memory appeared on the market, using
-8 24 GB packages. It is expected that by 2025 the number of packages might grow to 12,
-with 32 GB packages also becoming available, resulting in 384 GB of RAM.
+8 24 GB packages. By 2025, we saw 32GB and 36GB packages, increasing memory to 288 GB.
 (The current HBM standard, HBM3E, theoretically even allows 64 GB packages.)
+At some point, a growth to 12 packages was expected, but that hasn't happened so far, probably
+due to space constraints.
 
 The programming bottleneck can already be partially solved by unified memory, using memory pointers
 that work on both CPU and GPU, and further hardware support for virtual memory that can then trigger

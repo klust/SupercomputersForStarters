@@ -181,15 +181,21 @@ NVIDIA is now also contributing elements of its own implementation. In fact,
 the clang/LLVM ecosystem is the future for scientific computing and not the GNU Compiler
 Collection ecosystem as most compiler vendors already base their compilers on that technology.
 The NVIDIA, AMD and new Intel compilers are all based on LLVM and the clang frontend for C and
-C++-support, with NVIDIA and AMD still using a Fortran front-end developed by PGI and donated
-to the LLVM project while Intel is using its own front-end. 
-There is also a new community-developed modern front-end for Fortran but it is not yet ready
-for prime time as the optimisation is not yet that great (but it is getting close).
+C++-support.
+For Fortran support, different strategies are used by different compilers.
+For a long time, the LLVM community used an older frontend developed by PGI and donated
+to the LLVM project. However, the community was also developing a more modern frontend
+that became the default frontend in March 2025 with LLVM 20. 
+It may still need some time to mature further and to become competitive with commercial compilers,
+but it has seen rapid performance improvements through the years of development.
+Nvidia is still using the classic frontend from PGI (now fully owned by NVIDIA),
+AMD is switching to the new frontend in ROCm 7 and likely also in an upcoming release of the
+AOCC compilers, and Intel is using its own frontend on top of LLVM code generation.
 OpenACC support in the LLVM ecosystem will build upon the
 OpenMP support, the technology that we will discuss next, using extensions for those OpenACC
 features that still have no equivalent in OpenMP, though NVIDIA is now also trying to push its
 implementation. 
-As of version 19 (early fall 2024) OpenACC support is still very incomplete and experimental.
+As of version 21 (early fall 2025) OpenACC support is still very incomplete and experimental.
 
 
 ### OpenMP
