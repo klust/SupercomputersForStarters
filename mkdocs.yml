@@ -123,7 +123,7 @@ plugins:
       #enabled: false
       tags_file: tags.md
       # The following should do a case-insensitive sort of the tags but requires an insiders version at the moment:
-      tags_compare: !!python/name:material.plugins.tags.casefold
+      #tags_compare: !!python/name:material.plugins.tags.casefold
 
 markdown_extensions:
   # Attributes (e.g., for lazy loading)
