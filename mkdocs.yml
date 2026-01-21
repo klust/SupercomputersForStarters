@@ -124,6 +124,10 @@ plugins:
       tags_file: tags.md
       # The following should do a case-insensitive sort of the tags but requires an insiders version at the moment:
       #tags_compare: !!python/name:material.plugins.tags.casefold
+      # The next does not produce an error but does not have the desired effect either.
+      #tags_compare: !!python/name:material.plugins.tags.tag_name_casefold
+      # Other workaround found on the web, but this also fails as the plugins cannot be found:
+      #tags_compare: !!python/name:plugins.tagsort.mysort
 
 markdown_extensions:
   # Attributes (e.g., for lazy loading)
